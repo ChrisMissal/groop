@@ -1,1 +1,1 @@
-﻿<% Response.Redirect("~/Home") %>
+﻿<%  Response.Redirect("~/home")%>

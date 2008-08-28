@@ -2,7 +2,7 @@
 
 namespace CRIneta.Website.Controllers
 {
-    public class SponsorController : Controller
+    public class MeetingController : Controller
     {
         public ActionResult Index()
         {
@@ -10,6 +10,11 @@ namespace CRIneta.Website.Controllers
         }
 
         public ActionResult List()
+        {
+            return View();
+        }
+
+        public ActionResult Show()
         {
             return View();
         }

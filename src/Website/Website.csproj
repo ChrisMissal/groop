@@ -106,6 +106,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MeetingController.cs" />
     <Compile Include="Controllers\SponsorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -117,41 +118,6 @@
     <Compile Include="Routing\RouteConfigurator.cs" />
     <Compile Include="Services\Email\IEmailService.cs" />
     <Compile Include="Services\Email\SmtpEmailService.cs" />
-    <Compile Include="Views\Account\ChangePassword.aspx.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Account\ChangePassword.aspx.designer.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Account\ChangePasswordSuccess.aspx.cs">
-      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Account\ChangePasswordSuccess.aspx.designer.cs">
-      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Account\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Account\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Shared\Error.aspx.cs">
-      <DependentUpon>Error.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Shared\Error.aspx.designer.cs">
-      <DependentUpon>Error.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
@@ -171,7 +137,6 @@
       <Link>windsor.config.xml</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Layouts\Default.Master" />
     <Content Include="Views\Sponsor\Index.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -190,11 +155,16 @@
     <Content Include="Content\images\spacer.gif" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Meeting\Index.aspx" />
+    <Content Include="Views\Meeting\List.aspx" />
+    <Content Include="Views\Meeting\Show.aspx" />
     <Content Include="Views\Shared\Controls\footerExample.ascx" />
     <Content Include="Views\Shared\Controls\rightExample.ascx" />
     <Content Include="Views\Shared\Controls\mainExample.ascx" />
     <Content Include="Views\Shared\Controls\header.ascx" />
     <Content Include="Views\Layouts\Puzzled.Master" />
+    <Content Include="Views\Sponsor\List.aspx" />
+    <Content Include="Views\Sponsor\Show.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
