@@ -1,6 +1,6 @@
 using CRIneta.Model.Domain;
 using NUnit.Framework;
-using NUnit.Framework.Syntax.CSharp;
+using NUnit.Framework.SyntaxHelpers;
 
 namespace CRIneta.UnitTests.Model.Domain
 {
