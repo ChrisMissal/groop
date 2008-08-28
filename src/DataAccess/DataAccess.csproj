@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Migrations\001_AddSponsors.cs" />
     <Compile Include="Migrations\002_AddPeople.cs" />
+    <Compile Include="Migrations\003_AddFacilities.cs" />
+    <Compile Include="Migrations\004_AddEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
