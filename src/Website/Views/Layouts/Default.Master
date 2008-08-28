@@ -1,4 +1,6 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="CRIneta.Website.Views.Layouts.Default" %>
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="System.Web.Mvc" %>
+<%@ Import Namespace="Microsoft.Web.Mvc"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,7 +15,7 @@
 
         <div id="header">
             <div id="title">
-                <h1>My Sample MVC Application</h1>
+                <h1>CRIneta</h1>
             </div>
               
              <div id="logindisplay">
