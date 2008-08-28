@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Website.Views.Account
+namespace CRIneta.Website.Views.Account
 {
     public partial class ChangePassword : ViewPage
     {
