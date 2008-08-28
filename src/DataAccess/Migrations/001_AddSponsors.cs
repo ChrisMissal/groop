@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Data;
 using SubSonic;
-using System.Data;
 
 namespace CRIneta.DataAccess.Migrations
 {
