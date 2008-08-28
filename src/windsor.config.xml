@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns="MyWindsorSchema">
+    <facilities>
+        <facility id="logging"
+            type="Castle.Facilities.Logging.LoggingFacility, Castle.Facilities.Logging"
+            loggingApi="log4net"
+            configFile="log4net.config" />
+    </facilities>
+    <properties>
+        <Smtp.Host>192.168.223.2</Smtp.Host>
+        <Smtp.Port>25</Smtp.Port>
+        <Smtp.From>webmaster@jpcycles.com</Smtp.From>
+    </properties>
+    <components>
+        <!-- General -->
+
+        <component id="IEmailService"
+                       service="CRIneta.Website.Services.Email.IEmailService,  CRIneta.Website"
+                       type=" CRIneta.Website.Services.Email.SmtpEmailService, CRIneta.Website">
+            <parameters>
+                <host>#{Smtp.Host}</host>
+                <port>#{Smtp.Port}</port>
+                <defaultFrom>#{Smtp.From}</defaultFrom>
+            </parameters>
+        </component>
+
+    </components>
+</configuration>

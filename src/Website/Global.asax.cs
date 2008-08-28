@@ -1,29 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Castle.Core;
+using CRIneta.Website.Helpers;
+using CRIneta.Website.Routing;
+using MvcContrib.Castle;
 
-namespace Website
+namespace CRIneta.Website
 {
     public class GlobalApplication : System.Web.HttpApplication
     {
-        public static void RegisterRoutes(RouteCollection routes)
-        {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                "Default",                                              // Route name
-                "{controller}/{action}/{id}",                           // URL with parameters
-                new { controller = "Home", action = "Index", id = "" }  // Parameter defaults
-            );
-
-        }
-
         protected void Application_Start()
         {
-            RegisterRoutes(RouteTable.Routes);
+            RegisterRoutesAndControllers();
+
+            ControllerBuilder.Current.SetControllerFactory(new WindsorControllerFactory(IoC.GetContainer()));
+            ControllerBuilder.Current.DefaultNamespaces.Add("CRI");
+
+            setupRoutes();
+        }
+
+        public static void RegisterRoutesAndControllers()
+        {
+            IoC.Register<IRouteConfigurator, RouteConfigurator>("route-configurator");
+
+            //add all controllers
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+            {
+                if (typeof(IController).IsAssignableFrom(type))
+                {
+                    IoC.Register(type.Name.ToLower(), type, LifestyleType.Transient);
+                }
+            }
+        }
+
+        private static void setupRoutes()
+        {
+            var configurator = IoC.Resolve<IRouteConfigurator>();
+            configurator.RegisterRoutes();
         }
     }
 }
