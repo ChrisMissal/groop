@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
 namespace CRIneta.Website.Controllers
 {
-
     [HandleError]
     public class AccountController : Controller
     {
-
         public AccountController()
             : this(null, null)
         {
@@ -24,22 +20,13 @@ namespace CRIneta.Website.Controllers
             Provider = provider ?? Membership.Provider;
         }
 
-        public IFormsAuthentication FormsAuth
-        {
-            get;
-            private set;
-        }
+        public IFormsAuthentication FormsAuth { get; private set; }
 
-        public MembershipProvider Provider
-        {
-            get;
-            private set;
-        }
+        public MembershipProvider Provider { get; private set; }
 
         [Authorize]
         public ActionResult ChangePassword(string currentPassword, string newPassword, string confirmPassword)
         {
-
             ViewData["Title"] = "Change Password";
             ViewData["PasswordLength"] = Provider.MinRequiredPasswordLength;
 
@@ -50,7 +37,7 @@ namespace CRIneta.Website.Controllers
             }
 
             // Basic parameter validation
-            List<string> errors = new List<string>();
+            var errors = new List<string>();
 
             if (String.IsNullOrEmpty(currentPassword))
             {
@@ -59,8 +46,8 @@ namespace CRIneta.Website.Controllers
             if (newPassword == null || newPassword.Length < Provider.MinRequiredPasswordLength)
             {
                 errors.Add(String.Format(CultureInfo.InvariantCulture,
-                         "You must specify a new password of {0} or more characters.",
-                         Provider.MinRequiredPasswordLength));
+                                         "You must specify a new password of {0} or more characters.",
+                                         Provider.MinRequiredPasswordLength));
             }
             if (!String.Equals(newPassword, confirmPassword, StringComparison.Ordinal))
             {
@@ -69,7 +56,6 @@ namespace CRIneta.Website.Controllers
 
             if (errors.Count == 0)
             {
-
                 // Attempt to change password
                 MembershipUser currentUser = Provider.GetUser(User.Identity.Name, true /* userIsOnline */);
                 bool changeSuccessful = false;
@@ -99,7 +85,6 @@ namespace CRIneta.Website.Controllers
 
         public ActionResult ChangePasswordSuccess()
         {
-
             ViewData["Title"] = "Change Password";
 
             return View();
@@ -107,7 +92,6 @@ namespace CRIneta.Website.Controllers
 
         public ActionResult Login(string username, string password, bool? rememberMe)
         {
-
             ViewData["Title"] = "Login";
 
             // Non-POST requests should just display the Login form 
@@ -117,7 +101,7 @@ namespace CRIneta.Website.Controllers
             }
 
             // Basic parameter validation
-            List<string> errors = new List<string>();
+            var errors = new List<string>();
 
             if (String.IsNullOrEmpty(username))
             {
@@ -126,13 +110,11 @@ namespace CRIneta.Website.Controllers
 
             if (errors.Count == 0)
             {
-
                 // Attempt to login
                 bool loginSuccessful = Provider.ValidateUser(username, password);
 
                 if (loginSuccessful)
                 {
-
                     FormsAuth.SetAuthCookie(username, rememberMe ?? false);
                     return RedirectToAction("Index", "Home");
                 }
@@ -150,14 +132,12 @@ namespace CRIneta.Website.Controllers
 
         public ActionResult Logout()
         {
-
             FormsAuth.SignOut();
             return RedirectToAction("Index", "Home");
         }
 
         public ActionResult Register(string username, string email, string password, string confirmPassword)
         {
-
             ViewData["Title"] = "Register";
             ViewData["PasswordLength"] = Provider.MinRequiredPasswordLength;
 
@@ -168,7 +148,7 @@ namespace CRIneta.Website.Controllers
             }
 
             // Basic parameter validation
-            List<string> errors = new List<string>();
+            var errors = new List<string>();
 
             if (String.IsNullOrEmpty(username))
             {
@@ -181,8 +161,8 @@ namespace CRIneta.Website.Controllers
             if (password == null || password.Length < Provider.MinRequiredPasswordLength)
             {
                 errors.Add(String.Format(CultureInfo.InvariantCulture,
-                         "You must specify a password of {0} or more characters.",
-                         Provider.MinRequiredPasswordLength));
+                                         "You must specify a password of {0} or more characters.",
+                                         Provider.MinRequiredPasswordLength));
             }
             if (!String.Equals(password, confirmPassword, StringComparison.Ordinal))
             {
@@ -191,14 +171,13 @@ namespace CRIneta.Website.Controllers
 
             if (errors.Count == 0)
             {
-
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
-                MembershipUser newUser = Provider.CreateUser(username, password, email, null, null, true, null, out createStatus);
+                MembershipUser newUser = Provider.CreateUser(username, password, email, null, null, true, null,
+                                                             out createStatus);
 
                 if (newUser != null)
                 {
-
                     FormsAuth.SetAuthCookie(username, false /* createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
                 }
@@ -243,13 +222,16 @@ namespace CRIneta.Website.Controllers
                     return "The user name provided is invalid. Please check the value and try again.";
 
                 case MembershipCreateStatus.ProviderError:
-                    return "The authentication provider returned an error. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
+                    return
+                        "The authentication provider returned an error. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
 
                 case MembershipCreateStatus.UserRejected:
-                    return "The user creation request has been canceled. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
+                    return
+                        "The user creation request has been canceled. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
 
                 default:
-                    return "An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
+                    return
+                        "An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
             }
         }
     }
@@ -267,13 +249,18 @@ namespace CRIneta.Website.Controllers
 
     public class FormsAuthenticationWrapper : IFormsAuthentication
     {
+        #region IFormsAuthentication Members
+
         public void SetAuthCookie(string userName, bool createPersistentCookie)
         {
             FormsAuthentication.SetAuthCookie(userName, createPersistentCookie);
         }
+
         public void SignOut()
         {
             FormsAuthentication.SignOut();
         }
+
+        #endregion
     }
 }
