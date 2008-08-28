@@ -1,0 +1,5 @@
+Here are the tool requirements to develop on this project:
+
+1) Visual Studio 2008 SP1 Professional or above
+
+2) SQL Server Express 2005 (this is a free download)
