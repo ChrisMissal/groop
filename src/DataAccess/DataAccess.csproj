@@ -57,9 +57,6 @@
     <None Include="Migrate_up.cmd" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Migrations\Readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Database\" />
     <Folder Include="Mappings\" />
   </ItemGroup>
