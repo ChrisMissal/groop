@@ -13,6 +13,8 @@ namespace CRIneta.DataAccess.Migrations
             sponsors.AddColumn("Name", DbType.String, 255, false, "");
             sponsors.AddColumn("ImageUrl", DbType.String, 255, false, "");
             sponsors.AddLongText("Description", false, "");
+            sponsors.AddColumn("Sequence", DbType.Int32, 0, false);
+            sponsors.AddColumn("IsVisible", DbType.Boolean, 0, false, "0");
         }
 
         public override void Down()
