@@ -191,6 +191,10 @@
     <Content Include="Content\images\spacer.gif" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Shared\Controls\footerExample.ascx" />
+    <Content Include="Views\Shared\Controls\rightExample.ascx" />
+    <Content Include="Views\Shared\Controls\mainExample.ascx" />
+    <Content Include="Views\Shared\Controls\header.ascx" />
     <Content Include="Views\Layouts\Puzzled.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
