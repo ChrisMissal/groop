@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CRIneta.Website.Views.Account.Register" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CRIneta.Website.Views.Account.Register" %>
 
 <asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Account Creation</h2>

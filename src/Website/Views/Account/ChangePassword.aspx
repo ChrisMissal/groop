@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="CRIneta.Website.Views.Account.ChangePassword" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="CRIneta.Website.Views.Account.ChangePassword" %>
 
 <asp:Content ID="changePasswordContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Change Password</h2>

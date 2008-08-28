@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CRIneta.Website.Views.Account.Login" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CRIneta.Website.Views.Account.Login" %>
 
 <asp:Content ID="loginContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Login</h2>
