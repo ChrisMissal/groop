@@ -130,6 +130,11 @@ namespace CRIneta.Website.Controllers
             return View();
         }
 
+        public ActionResult ProcessLogin(string username, string password, bool? rememberMe)
+        {
+            return RedirectToAction("Login");
+        }
+
         public ActionResult Logout()
         {
             FormsAuth.SignOut();

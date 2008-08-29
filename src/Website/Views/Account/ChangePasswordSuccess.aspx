@@ -1,6 +1,6 @@
-﻿<%@Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" CodeBehind="ChangePasswordSuccess.aspx.cs" Inherits="CRIneta.Website.Views.Account.ChangePasswordSuccess" %>
+﻿<%@Language="C#" MasterPageFile="~/Views/Layouts/TwoCol.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
-<asp:Content ID="changePasswordSuccessContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="changePasswordSuccessContent" ContentPlaceHolderID="mainContent" runat="server">
     <h2>Change Password</h2>
     <p>
         Your password has been changed successfully.

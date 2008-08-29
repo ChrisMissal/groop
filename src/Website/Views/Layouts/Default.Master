@@ -4,7 +4,7 @@
 <%@ Import Namespace="MvcContrib.UI.Html"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+    <head runat="server">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title><%= ViewData.GetOrDefault("PageTitle","Cedar Rapids .NET User Group")%></title>
         <meta name="keywords" content="" />
@@ -28,29 +28,9 @@
         </div>
         <!-- start page -->
         <div id="page">
-	        <!-- start content -->
 	        
-	        
-	        <div id="content">
-		        <!-- start main-col -->
-		        <div id="main-col" class="post">
-		        
-		            <asp:ContentPlaceHolder ID="mainContent" runat="server">
-		                <%= Html.RenderUserControl("~/views/shared/controls/mainExample.ascx") %>
-		            </asp:ContentPlaceHolder>
-			        
-		        </div>
-		        <!-- end main-col -->
-		        
-		        <!-- start right-col -->
-		        <div id="right-col">
-			        <asp:ContentPlaceHolder ID="rightColumnContent" runat="server">
-			           <%= Html.RenderUserControl("~/views/shared/controls/rightExample.ascx") %>
-			        </asp:ContentPlaceHolder>
-		        </div>
-		        <!-- end right-col -->
-	        </div>
-	        <!-- end content -->
+	        <asp:ContentPlaceHolder ID="mainContent" runat="server" />
+	            
 	        
 	        <!-- footer bar -->
 	        <div id="sidebar">
@@ -59,7 +39,7 @@
 		        </asp:ContentPlaceHolder>
 		        <div style="clear: both;">&nbsp;</div>
 	        </div>
-	        <!-- end footer bar -->
+	        <!-- end footer bar -->	        
         </div>
         <!-- end page -->
         <div id="footer">

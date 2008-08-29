@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="CRIneta.Website.Views.Account.ChangePassword" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/TwoCol.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
-<asp:Content ID="changePasswordContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="changePasswordContent" ContentPlaceHolderID="mainContent" runat="server">
     <h2>Change Password</h2>
     <p>
         Use the form below to change your password. 

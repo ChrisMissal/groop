@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CRIneta.Website.Views.Account.Register" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
-<asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="registerContent" ContentPlaceHolderID="mainContent" runat="server">
     <h2>Account Creation</h2>
     <p>
         Use the form below to create a new account. 

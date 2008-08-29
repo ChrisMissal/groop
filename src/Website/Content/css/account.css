@@ -1,0 +1,39 @@
+form#loginActionForm label {
+	padding-top: 3px;
+	display: block;
+	font-weight:bold;
+	font-size:1.1em;
+}
+
+form#loginActionForm .input {
+	width: 100%;
+	font-size: 1.5em;
+	display:block;
+}
+
+form#loginActionForm .submit {
+	border: solid 1px black;
+	margin-top: .5em;
+}
+
+form#loginActionForm
+{
+	border: double 2px #999;
+	padding: 1em;
+	margin-bottom: 100px;
+}
+
+.centered
+{
+	margin: 1em auto;
+}
+
+#loginContainer{
+	width: 300px;
+}
+
+#loginContainer h1
+{
+	margin: 0;
+}
+

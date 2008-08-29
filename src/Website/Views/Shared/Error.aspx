@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage`1[[System.Web.Mvc.HandleErrorInfo, System.Web.Mvc]]" %>
 <%@ Import namespace="MvcContrib"%>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="mainContent" runat="server">
     <h2>
         Sorry, an error occurred while processing your request.
     </h2>
