@@ -155,6 +155,7 @@
     <Content Include="Content\images\spacer.gif" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Home\Contact.aspx" />
     <Content Include="Views\Meeting\Index.aspx" />
     <Content Include="Views\Meeting\List.aspx" />
     <Content Include="Views\Meeting\Show.aspx" />

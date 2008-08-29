@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" Inherits="CRIneta.Website.Views.Shared.Error" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Puzzled.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import namespace="MvcContrib"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
         Sorry, an error occurred while processing your request.
