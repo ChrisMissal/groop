@@ -53,6 +53,7 @@
     <Compile Include="Migrations\002_AddPeople.cs" />
     <Compile Include="Migrations\003_AddFacilities.cs" />
     <Compile Include="Migrations\004_AddMeetings.cs" />
+    <Compile Include="Migrations\005_AddNews.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

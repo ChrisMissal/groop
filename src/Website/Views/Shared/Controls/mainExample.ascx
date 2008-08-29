@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-    <h1 class="title">Welcome to Our Website!</h1>
-    <p class="meta"><small>Posted by Admin on August 3, 2007<br />
-        Filed under <a href="#">Uncategorized</a> | <a href="#">Comments (12)</a></small></p>
+    <h1 class="title">Welcome to the Cedar Radpids .NET User Group!</h1>
+    <p class="meta"><small>Posted by Admin on September 1, 2008<br />
+        Filed under <a href="#">Uncategorized</a> | <a href="#">Comments (0)</a></small></p>
     <div class="entry">
         <p>This is <strong>Puzzled</strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attributions 2.5</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. The photo used is from <a href="http://www.pdphoto.org/">PDPhoto.org</a>. Aside from that, have fun with it :)</p>
         <p>This template is also available as a <a href="http://www.freewpthemes.net/preview/Puzzled/">WordPress theme</a> at <a href="http://www.freewpthemes.net/">Free WordPress Themes</a>.</p>
