@@ -1,17 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration xmlns="MyWindsorSchema">
     <facilities>
+        <!--
         <facility id="logging"
             type="Castle.Facilities.Logging.LoggingFacility, Castle.Facilities.Logging"
             loggingApi="log4net"
-            configFile="log4net.config" />
+            configFile="log4net.config" />-->
     </facilities>
     <properties>
         <Smtp.Host>192.168.223.2</Smtp.Host>
         <Smtp.Port>25</Smtp.Port>
-        <Smtp.From>webmaster@jpcycles.com</Smtp.From>
+        <Smtp.From>webmaster@crineta.org</Smtp.From>
     </properties>
     <components>
+        
+        <component id="ICryptographer"
+				   service="CRIneta.Model.Security.Cryptography.ICryptographer, CRIneta.Model"
+				   type="CRIneta.Website.Impl.Security.Cryptography.Cryptographer, CRIneta.Website" />
+
+        <component id="IHttpContextProvider"
+				   service="CRIneta.Model.IHttpContextProvider, CRIneta.Model"
+				   type="CRIneta.Website.Impl.HttpContextProvider, CRIneta.Website" />
+
+        <component id="ISessionBuilder"
+				       service="CRIneta.DataAccess.ISessionBuilder, CRIneta.DataAccess"
+				       type="CRIneta.DataAccess.HybridSessionBuilder, CRIneta.DataAccess"
+				       lifestyle="singleton" />
+
+        <component id="IFormsAuthenticationGateway"
+				   service="CRIneta.Model.Security.IFormsAuthenticationGateway, CRIneta.Model"
+				   type="CRIneta.Website.Impl.FormsAuthenticationGateway, CRIneta.Website" />
+
+        <!-- Service Layer -->
+        <component id="IUserSession"
+				 service="CRIneta.Model.IUserSession, CRIneta.Model"
+				 type="CRIneta.Website.Impl.Security.UserSession, CRIneta.Website"
+				 lifestyle="transient" />
+
+        <component id="IAuthenticator"
+				   service="CRIneta.Model.Security.IAuthenticator, CRIneta.Model"
+				   type="CRIneta.Website.Impl.Security.Authenticator, CRIneta.Website"
+				   lifestyle="transient" />
+        
         <!-- General -->
 
         <component id="IEmailService"
@@ -24,5 +54,13 @@
             </parameters>
         </component>
 
+        <!-- Data Repositories -->
+
+        <component id="IMemberRepository"
+                   service="CRIneta.DataAccess.IMemberRepository, CRIneta.DataAccess"
+                   type="CRIneta.Website.Impl.Data.FakeMemberRepository, CRIneta.Website">
+        </component>
+        
+        <!-- End Data Repositories -->
     </components>
 </configuration>

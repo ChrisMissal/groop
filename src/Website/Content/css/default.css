@@ -132,7 +132,7 @@ img.right {
 	height: 209px;
 	background: url(../images/img05.jpg) no-repeat left top;
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 /* Logo */
@@ -180,7 +180,7 @@ img.right {
 
 #menu {
 	float: right;
-	margin-top: 21px;
+	margin-top: 19px;
 }
 
 #menu ul {
@@ -359,4 +359,19 @@ img.right {
 
 #links {
 	float: right;
+}
+
+#header #signedIn
+{
+	color: #fff;	
+	margin: 0px;
+	margin-top: 2px;
+	margin-right: 5px;
+	margin-bottom: -25px;
+	text-align: right;
+}
+
+#header #signedIn a
+{
+	color: #fff;
 }

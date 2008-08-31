@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
+﻿<%@ Import Namespace="CRIneta.Website.Controllers"%>
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
 <%@ Import Namespace="CRIneta.Website.Helpers"%>
 <%@ Import namespace="MvcContrib"%>
 <%@ Import Namespace="MvcContrib.UI.Html"%>
@@ -18,8 +19,12 @@
         
     </head>
     <body>
+        
+        
         <!-- start header -->
-        <div id="header">
+        <div id="header">    
+            <%= Html.RenderUserControl("~/views/shared/controls/userStatus.ascx") %>
+            
 	        <%= Html.RenderUserControl("~/views/shared/controls/header.ascx") %>
         </div>
         <!-- end header -->
@@ -29,8 +34,9 @@
         <!-- start page -->
         <div id="page">
 	        
+	        <% Html.RenderAction<FlashMessageComponentController>(c => c.GetMessages()); %>
+	        
 	        <asp:ContentPlaceHolder ID="mainContent" runat="server" />
-	            
 	        
 	        <!-- footer bar -->
 	        <div id="sidebar">
