@@ -7,8 +7,8 @@
     <head runat="server">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title><%= ViewData.GetOrDefault("PageTitle","Cedar Rapids .NET User Group")%></title>
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
+        <meta name="keywords" content="<%= ViewData.GetOrDefault("PageKeywords", "Cedar Rapids INETA Users Group") %>" />
+        <meta name="description" content="<%= ViewData.GetOrDefault("PageDescription", "INETA group for .NET developers in Eastern Iowa") %>" />
         
         <link rel="stylesheet" href="<%= AppHelper.CssUrl("default.css") %>" />
         
