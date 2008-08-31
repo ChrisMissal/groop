@@ -26,5 +26,19 @@ namespace CRIneta.UnitTests.Model.Domain
 
             Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
         }
+
+        [Test]
+        public void Meeting_does_not_allow_attendee_to_be_added_twice()
+        {
+            var meeting = new Meeting();
+
+            var stubAttendee = new Attendee("Chris", "Missal");
+
+            meeting.AddAttendee(stubAttendee);
+            Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
+
+            meeting.AddAttendee(stubAttendee);
+            Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
+        }
     }
 }
