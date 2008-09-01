@@ -10,17 +10,18 @@
 <asp:Content ContentPlaceHolderID="mainContent" runat="server">
     <div id="loginContainer" class="centered">
         <h1>Login</h1>
-        <form name="loginActionForm" method="post" action="<%= Html.BuildUrlFromExpression<AccountController>(c=>c.ProcessLogin(null,null,null)) %>" id="loginActionForm">
-        
-            <label for="email"><span class="sectionHeader"> Login ID: </span></label>            
-            <input type="textbox" id="lusername" name="username" maxlength="100" value="" class="input required" />
+        <form method="post" action="<%= Html.BuildUrlFromExpression<AccountController>(c=>c.ProcessLogin(null,null,null)) %>" id="loginActionForm">
+           <fieldset>
+            <label for="lusername"><span class="sectionHeader"> Login ID: </span></label>            
+            <input type="text" id="lusername" name="username" maxlength="100" value="" class="input required" />
             
-            <label for="password">Password:</la bel>
+            <label for="lpassword">Password:</label>
             <input type="password" id="lpassword" name="password" maxlength="256" class="input required" />
             
             <div style="text-align:right">
                 <input type="submit" class="submit" value="Login" />
             </div>
+           </fieldset>
         </form>
     </div>
     

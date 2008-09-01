@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-    <h1 class="title">Welcome to the Cedar Radpids .NET User Group!</h1>
+    <h1 class="title">Welcome to the Cedar Rapids .NET User Group!</h1>
     <p class="meta"><small>Posted by Admin on September 1, 2008<br />
         Filed under <a href="#">Uncategorized</a> | <a href="#">Comments (0)</a></small></p>
     <div class="entry">
