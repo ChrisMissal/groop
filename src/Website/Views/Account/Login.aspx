@@ -8,6 +8,11 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="mainContent" runat="server">
+    <script type="text/javascript">
+        $(function(){
+            ($("#lusername").val() == "") ? $("#lusername").focus() : $("#lpassword").focus().select();
+        });
+    </script>
     <div id="loginContainer" class="centered">
         <h1>Login</h1>
         <form method="post" action="<%= Html.BuildUrlFromExpression<AccountController>(c=>c.ProcessLogin(null,null,null)) %>" id="loginActionForm">
