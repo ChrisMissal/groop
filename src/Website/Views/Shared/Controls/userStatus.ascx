@@ -21,7 +21,7 @@
             You are <strong>not signed in</strong> (
             <%= Html.ActionLink<AccountController>(x => x.Login(),"Sign In") %>
             or
-            <%=Html.ActionLink("Register", "Register", "Login") %>
+            <%=Html.ActionLink<AccountController>(x => x.Register(), "Register") %>
             )
         </p>
 <!-- end p signedIn -->
