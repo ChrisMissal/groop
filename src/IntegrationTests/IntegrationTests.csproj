@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</ProjectGuid>
+    <ProjectGuid>{C88E35F3-D955-4101-BC1A-4EF44714DAF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRIneta.DataAccess</RootNamespace>
-    <AssemblyName>CRIneta.DataAccess</AssemblyName>
+    <RootNamespace>IntegrationTests</RootNamespace>
+    <AssemblyName>IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,22 +31,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nhibernate\2.0\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microdesk.Utility.UnitTest, Version=1.0.3105.19700, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\UnitTestUtility\Microdesk.Utility.UnitTest.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate, Version=2.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\nhibernate\2.0\NHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="SubSonic, Version=2.1.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+    <Reference Include="nunit.framework, Version=2.4.3.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\subsonic\2.1\SubSonic.dll</HintPath>
+      <HintPath>..\..\lib\nunit\2.4\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\system.web.mvc\System.Web.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -58,39 +61,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HybridSessionBuilder.cs" />
-    <Compile Include="IMeetingRepository.cs" />
-    <Compile Include="Impl\MeetingRepository.cs" />
-    <Compile Include="IRepository.cs" />
-    <Compile Include="ISessionBuilder.cs" />
-    <Compile Include="IMemberRepository.cs" />
-    <Compile Include="Migrations\001_AddSponsors.cs" />
-    <Compile Include="Migrations\002_AddPeople.cs" />
-    <Compile Include="Migrations\003_AddFacilities.cs" />
-    <Compile Include="Migrations\004_AddMeetings.cs" />
-    <Compile Include="Migrations\005_AddNews.cs" />
+    <Compile Include="TestData\Database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\MeetingRepostoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryBase.cs" />
-    <Compile Include="Impl\MemberRepository.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Migrate_up.cmd" />
+    <None Include="TestData\Database.xsc">
+      <DependentUpon>Database.xsd</DependentUpon>
+    </None>
+    <None Include="TestData\Database.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TestData\Database.xss">
+      <DependentUpon>Database.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\hibernate.cfg.xml">
+      <Link>hibernate.cfg.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\TestData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
       <Name>Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Mappings\Meeting.hbm.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Mappings\Facility.hbm.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class name="CRIneta.Model.Domain.Facility, CRIneta.Model" table="Facilities">
+        <id name="FacilityId" column="Id" type="Int32" unsaved-value="0">
+            <generator class="native" /> <!-- Database will generate the key when it is needed-->
+        </id>
+        <property name="Name" column="Name" length="255" not-null="true" />
+        <property name="ImageUrl" column="ImageUrl" length="255" not-null="true" />
+        <property name="Description" column="Description" type="StringClob" not-null="true" />
+
+        <component name="Address" class="CRIneta.Model.Domain.Address, CRIneta.Model">
+            <property name="Street" column="Address" length="255" not-null="false" />
+            <property name="City" column="City" length="255" not-null="false" />
+            <property name="Region" column="Region" length="255" not-null="false" />
+            <property name="ZipCode" column="PostalCode" length="255" not-null="false" />
+        </component>
+    </class>
+</hibernate-mapping>

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace CRIneta.Model.Domain
@@ -15,6 +16,13 @@ namespace CRIneta.Model.Domain
         {
             get { return attendees.Count; }
         }
+
+        public virtual int MeetingId { get; set; }
+        public virtual string Title { get; set; }
+        public virtual DateTime StartTime { get; set; }
+        public virtual DateTime EndTime { get; set; }
+        public virtual string Description { get; set; }
+        public virtual Facility Facility { get; set; }
 
         public virtual void AddAttendee(Attendee attendee)
         {

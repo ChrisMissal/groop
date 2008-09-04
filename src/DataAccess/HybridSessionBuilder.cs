@@ -9,7 +9,6 @@ namespace CRIneta.DataAccess
     {
         private static ISessionFactory sessionFactory;
         private static ISession currentSession;
-        private static IHttpContextProvider httpContextProvider;
 
         public ISession GetSession()
         {
@@ -39,7 +38,7 @@ namespace CRIneta.DataAccess
 
         private ISession getExistingOrNewSession(ISessionFactory factory)
         {
-            if (httpContextProvider.GetCurrentHttpContext() != null)
+            if (HttpContext.Current != null)
             {
                 ISession session = GetExistingWebSession();
                 if (session == null)

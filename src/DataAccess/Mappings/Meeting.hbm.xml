@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class name="CRIneta.Model.Domain.Meeting, CRIneta.Model" table="Meetings">
+        <id name="MeetingId" column="Id" type="Int32" unsaved-value="0">
+            <generator class="native" /> <!-- Database will generate the key when it is needed-->
+        </id>
+        <property name="Title" column="Title" length="255" not-null="true" />
+        <property name="StartTime" column="StartsAt" type="DateTime" not-null="true" /> <!-- when "not-null" is false, this indicates "nullable" -->
+        <property name="EndTime" column="EndsAt" type="DateTime" not-null="true" />
+        <property name="Description" column="Description" type="StringClob" not-null="true" />
+
+        <many-to-one name="Facility" column="FacilityId" not-null="true" class="CRIneta.Model.Domain.Facility, CRIneta.Model" />
+        
+    </class>
+</hibernate-mapping>

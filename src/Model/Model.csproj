@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\Attendee.cs" />
+    <Compile Include="Domain\Facility.cs" />
     <Compile Include="Domain\Meeting.cs" />
     <Compile Include="Domain\Member.cs" />
     <Compile Include="FlashMessage.cs" />
