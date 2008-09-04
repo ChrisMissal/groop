@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\account.css" />
+    <Content Include="Content\images\bg_journey.JPG" />
     <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\jquery.validate.js" />
     <Content Include="Views\Account\Index.aspx" />
