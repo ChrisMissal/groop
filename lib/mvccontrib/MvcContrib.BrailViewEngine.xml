@@ -21,17 +21,7 @@
             This is used to add a reference to the common scripts for each compiled scripts
             </summary>
         </member>
-        <member name="M:MvcContrib.BrailViewEngine.BooViewEngine.RenderStaticWithinLayout(System.String,System.String,System.Web.Mvc.ControllerContext)">
-            <summary>
-            Wraps the specified content in the layout using the
-            context to output the result.
-            </summary>
-            <param name="contents"></param>
-            <param name="context"></param>
-            <param name="controller"></param>
-            <param name="controllerContext"></param>
-        </member>
-        <member name="M:MvcContrib.BrailViewEngine.BooViewEngine.GetCompiledScriptInstance(System.String,System.IO.TextWriter)">
+        <member name="M:MvcContrib.BrailViewEngine.BooViewEngine.GetCompiledScriptInstance(System.String)">
             <summary>
             This takes a filename and return an instance of the view ready to be used.
             If the file does not exist, an exception is raised
@@ -88,15 +78,12 @@
             used to hold the ComponentParams from the view, so their views/sections could access them
             </summary>
         </member>
-        <member name="M:MvcContrib.BrailViewEngine.BrailBase.#ctor(MvcContrib.BrailViewEngine.BooViewEngine,System.IO.TextWriter)">
+        <member name="M:MvcContrib.BrailViewEngine.BrailBase.#ctor(MvcContrib.BrailViewEngine.BooViewEngine)">
             <summary>
             Initializes a new instance of the <see cref="T:MvcContrib.BrailViewEngine.BrailBase"/> class.
             </summary>
             <param name="viewEngine">The view engine.</param>
             <param name="output">The output.</param>
-            <param name="context">The context.</param>
-            <param name="__controller">The controller.</param>
-            <param name="__controllerContext">The __controller context.</param>
         </member>
         <member name="M:MvcContrib.BrailViewEngine.BrailBase.Run">
             <summary>

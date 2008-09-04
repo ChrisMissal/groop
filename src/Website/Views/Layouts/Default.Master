@@ -23,9 +23,9 @@
         
         <!-- start header -->
         <div id="header">    
-            <%= Html.RenderUserControl("~/views/shared/controls/userStatus.ascx") %>
+            <% Html.RenderPartial("~/views/shared/controls/userStatus.ascx"); %>
             
-	        <%= Html.RenderUserControl("~/views/shared/controls/header.ascx") %>
+	        <% Html.RenderPartial("~/views/shared/controls/header.ascx"); %>
         </div>
         <!-- end header -->
         <div id="headerbg"><p class="text1">&#8220;In posuere eleifend odio quisque <br />
@@ -41,7 +41,7 @@
 	        <!-- footer bar -->
 	        <div id="sidebar">
 		        <asp:ContentPlaceHolder ID="footerContent" runat="server">
-		           <%= Html.RenderUserControl("~/views/shared/controls/footerExample.ascx") %>
+		           <% Html.RenderPartial("~/views/shared/controls/footerExample.ascx"); %>
 		        </asp:ContentPlaceHolder>
 		        <div style="clear: both;">&nbsp;</div>
 	        </div>

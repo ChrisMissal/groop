@@ -26,13 +26,14 @@
             Creates a new CastleBind attribute. The name of the parameter will be used as the request prefix.
             </summary>
         </member>
-        <member name="M:MvcContrib.Castle.CastleBindAttribute.Bind(System.Type,System.String,System.Web.Mvc.ControllerContext)">
+        <member name="M:MvcContrib.Castle.CastleBindAttribute.GetValue(System.Web.Mvc.ControllerContext,System.String,System.Type,System.Web.Mvc.ModelStateDictionary)">
             <summary>
             Performs the binding.
             </summary>
-            <param name="targetType"></param>
-            <param name="paramName"></param>
-            <param name="context"></param>
+            <param name="controllerContext"></param>
+            <param name="modelName"></param>
+            <param name="modelType"></param>
+            <param name="modelState"></param>
             <returns></returns>
         </member>
         <member name="M:MvcContrib.Castle.CastleBindAttribute.LocateBinder(System.Web.Mvc.ControllerContext)">
@@ -52,29 +53,28 @@
             Properties to exclude from binding
             </summary>
         </member>
-        <member name="P:MvcContrib.Castle.CastleBindAttribute.Prefix">
-            <summary>
-            Prefix. If null, will use the paramter name as the prefix.
-            </summary>
-        </member>
-        <member name="T:MvcContrib.Castle.CastleControllerDescriptor">
-            <summary>
-             Controller Descriptor that uses the CastleSimpleBinder for default binding.
-            </summary>
-        </member>
         <member name="T:MvcContrib.Castle.CastleSimpleBinder">
             <summary>
             Simple IParameterBinder implementation that uses Castle's DefaultConverter.
             </summary>
         </member>
-        <member name="M:MvcContrib.Castle.CastleSimpleBinder.Bind(System.Type,System.String,System.Web.Mvc.ControllerContext)">
+        <member name="M:MvcContrib.Castle.CastleSimpleBinder.GetValue(System.Web.Mvc.ControllerContext,System.String,System.Type,System.Web.Mvc.ModelStateDictionary)">
             <summary>
             Looks for a parameter with the specified name in the Request and the RouteData and converts it to the specified type.
             </summary>
-            <param name="targetType">Type to which the value should be converted.</param>
-            <param name="paramName">Name of the parameter to search for</param>
-            <param name="context">Controller Context</param>
+            <param name="modelType">Type to which the value should be converted.</param>
+            <param name="modelName">Name of the parameter to search for</param>
+            <param name="controllerContext">Controller Context</param>
+            <param name="modelState"></param>
             <returns>The converted object, or the default value for the type.</returns>
+        </member>
+        <member name="M:MvcContrib.Castle.HtmlExtensionDuck.AddExtension(System.Type)">
+            <summary>
+             Registers an extension type for evaluation later during duck typing interrogation.
+             
+             Add your own extensions here in Application_Start for use in NVelocity views.
+            </summary>
+            <param name="type"></param>
         </member>
         <member name="T:MvcContrib.Castle.ICastleBindingContainer">
             <summary>

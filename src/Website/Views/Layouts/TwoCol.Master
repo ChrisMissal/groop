@@ -10,7 +10,7 @@
         <div id="main-col" class="post">
         
             <asp:ContentPlaceHolder ID="mainContent" runat="server">
-                <%= Html.RenderUserControl("~/views/shared/controls/mainExample.ascx") %>
+                <% Html.RenderPartial("~/views/shared/controls/mainExample.ascx"); %>
             </asp:ContentPlaceHolder>
 	        
         </div>
@@ -19,7 +19,7 @@
         <!-- start right-col -->
         <div id="right-col">
 	        <asp:ContentPlaceHolder ID="rightColumnContent" runat="server">
-	           <%= Html.RenderUserControl("~/views/shared/controls/rightExample.ascx") %>
+	           <% Html.RenderPartial("~/views/shared/controls/rightExample.ascx"); %>
 	        </asp:ContentPlaceHolder>
         </div>
         <!-- end right-col -->
