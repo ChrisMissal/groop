@@ -190,6 +190,19 @@
   <ItemGroup>
     <Content Include="Content\css\account.css" />
     <Content Include="Content\images\bg_journey.JPG" />
+    <Content Include="Content\images\sponsors\apress.gif" />
+    <Content Include="Content\images\sponsors\awlogo.gif" />
+    <Content Include="Content\images\sponsors\c1logo.gif" />
+    <Content Include="Content\images\sponsors\DDJ.gif" />
+    <Content Include="Content\images\sponsors\godaddy_logo.jpg" />
+    <Content Include="Content\images\sponsors\ineta_box.gif" />
+    <Content Include="Content\images\sponsors\infralogo.gif" />
+    <Content Include="Content\images\sponsors\logo_jetbrains_small.gif" />
+    <Content Include="Content\images\sponsors\microsoft.gif" />
+    <Content Include="Content\images\sponsors\oreilly.gif" />
+    <Content Include="Content\images\sponsors\redgate.gif" />
+    <Content Include="Content\images\sponsors\rht_logo2.gif" />
+    <Content Include="Content\images\sponsors\sams.gif" />
     <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\jquery.validate.js" />
     <Content Include="Views\Account\Index.aspx" />
@@ -206,9 +219,6 @@
       <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
       <Name>Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\images\sponsors\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
