@@ -8,7 +8,7 @@
     <ul><!--class="current_page_item"-->
         <li><%=Html.ActionLink("Home", "index", "home") %></li>
         <li><%=Html.ActionLink("Meetings", "show", "meeting") %></li>
-        <li><%=Html.ActionLink("Sponsors", "index", "sponsor") %></li>
+        <li><%=Html.ActionLink("Sponsors", "index`", "sponsor") %></li>
         <li><%=Html.ActionLink("About", "about", "home") %></li>
         <li><%=Html.ActionLink("Contact", "contact", "home") %></li>
     </ul>
