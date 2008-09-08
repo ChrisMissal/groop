@@ -201,7 +201,7 @@
     <Content Include="Content\images\sponsors\microsoft.gif" />
     <Content Include="Content\images\sponsors\oreilly.gif" />
     <Content Include="Content\images\sponsors\redgate.gif" />
-    <Content Include="Content\images\sponsors\rht_logo2.gif" />
+    <Content Include="Content\images\sponsors\rht_logo.gif" />
     <Content Include="Content\images\sponsors\sams.gif" />
     <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\jquery.validate.js" />
