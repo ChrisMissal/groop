@@ -60,6 +60,12 @@
                    service="CRIneta.DataAccess.IMemberRepository, CRIneta.DataAccess"
                    type="CRIneta.Website.Impl.Data.FakeMemberRepository, CRIneta.Website">
         </component>
+
+      <component id="IMeetingRepository"
+                 service="CRIneta.DataAccess.IMeetingRepository, CRIneta.DataAccess"
+                 type="CRIneta.DataAccess.Impl.MeetingRepository, CRIneta.DataAccess">
+        
+      </component>
         
         <!-- End Data Repositories -->
     </components>

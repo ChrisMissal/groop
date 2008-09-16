@@ -7,7 +7,7 @@ namespace CRIneta.Website.Controllers
 {
     public abstract class Controller : System.Web.Mvc.Controller
     {
-        private readonly IUserSession userSession;
+        protected readonly IUserSession userSession;
         private bool hasLoaded;
 
         public Controller(IUserSession userSession)
