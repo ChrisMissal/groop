@@ -1,22 +1,26 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using CRIneta.Model;
+using CRIneta.DataAccess;
 
 namespace CRIneta.Website.Controllers
 {
     [HandleError]
     public class HomeController : Controller
     {
-        public HomeController(IUserSession userSession) : base(userSession)
+        private IMeetingRepository meetingRepository;
+
+        public HomeController(IUserSession userSession, IMeetingRepository meetingRepository) : base(userSession)
         {
-            
+            this.meetingRepository = meetingRepository;
         }
 
         public ActionResult Index()
         {
-            ViewData["Title"] = "Home Page";
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
+            var upcomingMeetings = meetingRepository.GetUpcomingMeetings(DateTime.Now, 0);
+            ViewData["upcomingMeetings"] = upcomingMeetings;
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult About()

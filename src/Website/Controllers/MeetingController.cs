@@ -21,7 +21,10 @@ namespace CRIneta.Website.Controllers
 
         public ActionResult List()
         {
-            return View();
+            var allMeetings = meetingRepository.GetUpcomingMeetings(DateTime.Now, 10);
+            ViewData["allMeetings"] = allMeetings;
+
+            return View("List");
         }
 
         public ActionResult Show()
