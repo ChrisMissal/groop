@@ -9,6 +9,11 @@ namespace CRIneta.Model.Domain
         private string last;
         private string email;
 
+        protected Member()
+        {
+            
+        }
+
         public Member(string username, string first, string last, string email)
         {
             this.username = username;
@@ -21,7 +26,7 @@ namespace CRIneta.Model.Domain
         /// Gets the identifier for this user.
         /// </summary>
         /// <value>The id.</value>
-        public virtual int UserId { get; set; }
+        public virtual int MemberId { get; set; }
 
         /// <summary>
         /// Gets or sets the username.
@@ -84,7 +89,7 @@ namespace CRIneta.Model.Domain
         /// Gets the full name of the user.
         /// </summary>
         /// <returns></returns>
-        public string GetName()
+        public virtual string GetName()
         {
             return string.Format("{0} {1}", First, Last);
         }

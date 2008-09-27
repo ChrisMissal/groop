@@ -3,6 +3,18 @@
 
 
 <asp:Content runat="server" ContentPlaceHolderID="mainContent">
+     <dl id="sponsors">
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/apress.gif") %>" alt="Apress" /></dt>
+        <dd>Apress writes lots of neat books</dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" alt="Addison Wesley" /></dt>
+        <dd>Addison Wesley has books too, a lot of math books.</dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/c1logo.gif") %>" alt="Component One" /></dt>
+        <dd>The component before component two</dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/ddj.gif") %>" alt="Apress" /></dt>
+        <dd>Doctor Dobb's Journal has lots of journal like stuff</dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" alt="Apress" /></dt>
+        <dd>Apress writes lots of neat books</dd>
+    </dl>
     <ul>
         <li><h3>Robert Half</h3><img src="<%= AppHelper.ImageUrl("sponsors/rht_logo.gif") %>" /></li>
         <li><h3>Red Gate</h3><img src="<%= AppHelper.ImageUrl("sponsors/redgate.gif") %>" alt="Red Gate" /></li>

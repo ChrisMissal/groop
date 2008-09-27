@@ -7,6 +7,7 @@ using Castle.Components.Validator;
 using CRIneta.DataAccess;
 using CRIneta.Model;
 using CRIneta.Model.Domain;
+using CRIneta.Model.Presentation;
 using CRIneta.Model.Security;
 using CRIneta.Model.Security.Cryptography;
 using CRIneta.Website.Impl.UserInput;
@@ -26,7 +27,6 @@ namespace CRIneta.Website.Controllers
         private readonly ICryptographer cryptographer;
         private readonly IEmailService emailService;
         private readonly IMemberRepository memberRepository;
-        private readonly IUserSession userSession;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountController"/> class.
@@ -38,7 +38,6 @@ namespace CRIneta.Website.Controllers
         /// <param name="emailService"></param>
         public AccountController (IUserSession userSession, IMemberRepository memberRepository, IAuthenticator authenticator, ICryptographer cryptographer, IEmailService emailService) : base(userSession)
         {
-            this.userSession = userSession;
             this.memberRepository = memberRepository;
             this.authenticator = authenticator;
             this.cryptographer = cryptographer;
@@ -47,7 +46,7 @@ namespace CRIneta.Website.Controllers
 
         #region Index Actions
 
-        [Authorize(Roles="Users")]
+        [Authorize()]
         public ActionResult Index()
         {
             ViewData["Title"] = "My Account";
@@ -143,13 +142,47 @@ namespace CRIneta.Website.Controllers
             return View();
         }
 
-        public ActionResult ProcessRegister(string username, string email, string password, string confirmPassword)
+        [PostOnly]
+        public ActionResult ProcessRegistration(string first, string last, string username, string email, string password, string passwordConfirm)
         {
-            ViewData["Title"] = "Register";
-            
-            return View();
+            var registrationData = new RegistrationData(first, last, username, email, password, passwordConfirm);
+
+            var validationRunner = new ValidatorRunner(new CachedValidationRegistry());
+
+            if (!validationRunner.IsValid(registrationData))
+            {
+                // there were errors, report them back to the user
+                PushErrorMessages(validationRunner.GetErrorSummary(registrationData).ErrorMessages, userSession);
+                return RedirectToAction("Register");
+            }
+
+            Member member = memberRepository.GetByUsername(username);
+
+            if (member != null)
+            {
+                userSession.PushUserMessage(FlashMessage.MessageType.Error, "A user with that username already exists, please try again");
+                return View("Register");
+            }
+
+            member = new Member(username, first, last, email);
+
+            member.PasswordSalt = cryptographer.CreateSalt();
+            member.Password = cryptographer.Hash(password, member.PasswordSalt);
+
+            memberRepository.AddMember(member);
+            authenticator.SignIn(member);
+
+            return RedirectToAction("Index", "Account");
         }
 
         #endregion
+
+        private void PushErrorMessages(IEnumerable<string> messages, IUserSession session)
+        {
+            foreach (string s in messages)
+            {
+                session.PushUserMessage(FlashMessage.MessageType.Error, s);
+            }
+        }
     }
 }

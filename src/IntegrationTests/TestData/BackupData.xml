@@ -1,22 +1,2 @@
 <?xml version="1.0" standalone="yes"?>
-<Database xmlns="http://tempuri.org/Database.xsd">
-  <Facilities>
-    <Id>1</Id>
-    <Name>Baymont Inn</Name>
-    <Address>1220 Park Place NE</Address>
-    <City>Cedar Rapids</City>
-    <Region>Iowa</Region>
-    <PostalCode>52402</PostalCode>
-    <ImageUrl>http://www.baymontinns.com/Baymont/Booking/branded/BU/images/17783_f1.jpg</ImageUrl>
-    <Description>Baymont is a great location</Description>
-  </Facilities>
-  <Meetings>
-    <Id>1</Id>
-    <Title>Test Meeting</Title>
-    <StartsAt>2008-09-03T08:00:00-05:00</StartsAt>
-    <EndsAt>2008-09-03T09:00:00-05:00</EndsAt>
-    <ImageUrl />
-    <Description>This is the description</Description>
-    <FacilityId>1</FacilityId>
-  </Meetings>
-</Database>
+<Database xmlns="http://tempuri.org/Database.xsd" />

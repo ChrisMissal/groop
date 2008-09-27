@@ -20,12 +20,21 @@
             <%
         }
          %>
-    <form method="post" action="<%= Html.AttributeEncode(Url.Action("Register")) %>">
+    <form method="post" action="<%= Html.AttributeEncode(Url.Action("ProcessRegistration")) %>">
         <div>
             <table>
+                
                 <tr>
                     <td>Username:</td>
                     <td><%= Html.TextBox("username") %></td>
+                </tr>
+                <tr>
+                    <td>First:</td>
+                    <td><%= Html.TextBox("first") %></td>
+                </tr>
+                <tr>
+                    <td>Last:</td>
+                    <td><%= Html.TextBox("last") %></td>
                 </tr>
                 <tr>
                     <td>Email:</td>
@@ -37,7 +46,7 @@
                 </tr>
                 <tr>
                     <td>Confirm password:</td>
-                    <td><%= Html.Password("confirmPassword") %></td>
+                    <td><%= Html.Password("passwordConfirm") %></td>
                 </tr>
                 <tr>
                     <td></td>

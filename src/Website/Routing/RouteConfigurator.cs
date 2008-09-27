@@ -10,6 +10,7 @@ namespace CRIneta.Website.Routing
             var routes = RouteTable.Routes;
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //routes.IgnoreRoute("favicon.ico");
 
             routes.MapRoute(
                 "Default",                                              // Route name

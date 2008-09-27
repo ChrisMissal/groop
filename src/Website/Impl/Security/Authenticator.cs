@@ -29,7 +29,7 @@ namespace CRIneta.Website.Impl.Security
 
             DateTime issued = DateTime.Now;
             DateTime expires = issued.AddMinutes(30);
-            string roles = member.IsAdministrator ? "Administrator" : "User";
+            string roles = member.IsAdministrator ? "Administrator" : "Users";
 
             var ticket = new FormsAuthenticationTicket(1, member.Username, issued, expires, false, roles);
             string encryptedTicket = formsAuthenticationGateway.Encrypt(ticket);

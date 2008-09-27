@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class name="CRIneta.Model.Domain.Member, CRIneta.Model" table="Members">
+        <id name="MemberId" column="MemberId" type="Int32" unsaved-value="0">
+            <generator class="native" />
+            <!-- Database will generate the key when it is needed-->
+        </id>
+        <property name="Username" column="Username" length="50" not-null="true" />
+        <property name="Password" column="Password" length="255" not-null="true" />
+        <property name="PasswordSalt" column="PasswordSalt" length="255" not-null="true" />
+        <property name="First" column="First" length="50" not-null="true" />
+        <property name="Last" column="Last" length="50" not-null="true" />
+        <property name="Email" column="EmailAddress" length="100" not-null="true" />
+    </class>
+</hibernate-mapping>

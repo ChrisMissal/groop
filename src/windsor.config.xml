@@ -58,7 +58,7 @@
 
         <component id="IMemberRepository"
                    service="CRIneta.DataAccess.IMemberRepository, CRIneta.DataAccess"
-                   type="CRIneta.Website.Impl.Data.FakeMemberRepository, CRIneta.Website">
+                   type="CRIneta.DataAccess.Impl.MemberRepository, CRIneta.DataAccess">
         </component>
 
       <component id="IMeetingRepository"

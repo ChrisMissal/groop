@@ -2,7 +2,7 @@ using System;
 using CRIneta.Model.Domain;
 using NHibernate;
 
-namespace CRIneta.DataAccess
+namespace CRIneta.DataAccess.Impl
 {
     public class MemberRepository : RepositoryBase, IMemberRepository
     {
@@ -23,7 +23,13 @@ namespace CRIneta.DataAccess
 
         public Member GetByUsername(string username)
         {
-            throw new System.NotImplementedException();
+            using (ISession session = getSession())
+            {
+                return session.CreateQuery("from Member m where lower(m.Username) like :username")
+                    .SetString("username", username.ToLower())
+                    .SetMaxResults(1)
+                    .UniqueResult<Member>();
+            }
         }
 
         //public Member GetByEmail(string email)

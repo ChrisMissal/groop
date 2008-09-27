@@ -8,7 +8,7 @@ namespace CRIneta.Website.Controllers
     [HandleError]
     public class HomeController : Controller
     {
-        private IMeetingRepository meetingRepository;
+        private readonly IMeetingRepository meetingRepository;
 
         public HomeController(IUserSession userSession, IMeetingRepository meetingRepository) : base(userSession)
         {
