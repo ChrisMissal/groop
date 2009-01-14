@@ -68,7 +68,28 @@ blockquote {
 	color: #3D3D3D;
 }
 
-ul {
+dl {
+	margin: 0 15px 10px;
+	background-color: #fff;
+	color: #000;
+	overflow: auto;
+}
+dl dt, dl dd {
+	float: left;
+	padding: 1ex;
+	border-top: 1px solid #ccd;
+	height: 90px;
+}
+dl dt {
+	width: 33%;
+	clear: left;
+	font-size: 120%;
+	text-align: center;
+}
+dl dd {
+	padding-top: 1.5em;
+	width: 50%;
+	font-size: 125%;
 }
 
 ol {

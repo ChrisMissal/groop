@@ -1,4 +1,5 @@
-﻿<%@ Import Namespace="CRIneta.Website.Controllers"%>
+﻿<%@ Import Namespace="System.Web.Mvc.Html"%>
+<%@ Import Namespace="CRIneta.Website.Controllers"%>
 <%@ Import Namespace="CRIneta.Model"%>
 <%@ Import Namespace="MvcContrib" %>
 
@@ -19,9 +20,9 @@
 %>
         <p id="signedIn">
             You are <strong>not signed in</strong> (
-            <%= Html.ActionLink<AccountController>(x => x.Login(),"Sign In") %>
+            <%= Html.ActionLink("Sign In", "Login", "Account") %>
             or
-            <%=Html.ActionLink<AccountController>(x => x.Register(), "Register") %>
+            <%= Html.ActionLink("Register", "Register", "Account") %>
             )
         </p>
 <!-- end p signedIn -->

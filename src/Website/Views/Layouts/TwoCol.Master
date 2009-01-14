@@ -1,3 +1,4 @@
+<%@ Import Namespace="System.Web.Mvc.Html"%>
 <%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewMasterPage" %>
 <%@ Import Namespace="CRIneta.Website.Helpers"%>
 <%@ Import namespace="MvcContrib"%>

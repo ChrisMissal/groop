@@ -14,25 +14,30 @@
         <dd>Doctor Dobb's Journal has lots of journal like stuff</dd>
         <dt><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" alt="Apress" /></dt>
         <dd>Apress writes lots of neat books</dd>
+        
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/rht_logo.gif") %>" alt="Robert Half" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/redgate.gif") %>" alt="Red Gate" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="" alt="Jet Brains" /></dt>
+        <dd><em>... we need some text here & we need an image here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/oreilly.gif") %>" alt="O'Reilly" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/microsoft.gif") %>" alt="Microsoft" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/godaddy_logo.jpg") %>" alt="Go Daddy" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" alt="Addison Wesley" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/c1logo.gif") %>" alt="ComponentOne" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/ddj.gif") %>" alt="Dr. Dobb's" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/ineta_box.gif") %>" alt="Ineta" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/infralogo.gif") %>" alt="Infragistics" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
+        <dt><img src="<%= AppHelper.ImageUrl("sponsors/sams.gif") %>" alt="Sams" /></dt>
+        <dd><em>... we need some text here ...</em></dd>
     </dl>
-    <ul>
-        <li><h3>Robert Half</h3><img src="<%= AppHelper.ImageUrl("sponsors/rht_logo.gif") %>" /></li>
-        <li><h3>Red Gate</h3><img src="<%= AppHelper.ImageUrl("sponsors/redgate.gif") %>" alt="Red Gate" /></li>
-        <li><h3>Jet Brains</h3><img src="" alt="Jet Brains" /></li>
-        <li><h3>O'Reilly</h3><img src="<%= AppHelper.ImageUrl("sponsors/oreilly.gif") %>" /></li>
-        <li><h3>Microsoft</h3><img src="<%= AppHelper.ImageUrl("sponsors/microsoft.gif") %>" /></li>
-        <li><h3>Go Daddy</h3><img src="<%= AppHelper.ImageUrl("sponsors/godaddy_logo.jpg") %>" /></li>
-        <li><h3>Apress</h3><img src="<%= AppHelper.ImageUrl("sponsors/apress.gif") %>" /></li>
-        <li><h3>Addison Wesley</h3><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" /></li>
-        <li><h3>ComponentOne</h3><img src="<%= AppHelper.ImageUrl("sponsors/c1logo.gif") %>" /></li>
-        <li><h3>Dr. Dobb's</h3><img src="<%= AppHelper.ImageUrl("sponsors/ddj.gif") %>" /></li>
-        
-        <li><h3>Ineta</h3><img src="<%= AppHelper.ImageUrl("sponsors/ineta_box.gif") %>" /></li>
-        <li><h3>Infragistics</h3><img src="<%= AppHelper.ImageUrl("sponsors/infralogo.gif") %>" /></li>
-        
-        
-        
-        
-        <li><h3>Sams</h3><img src="<%= AppHelper.ImageUrl("sponsors/sams.gif") %>" /></li>
-    </ul>
 </asp:Content>

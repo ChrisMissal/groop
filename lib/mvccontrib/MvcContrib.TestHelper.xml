@@ -290,12 +290,6 @@
             <typeparam name="T">The type of controller to create</typeparam>
             <returns>A new controller of the specified type</returns>
         </member>
-        <member name="P:MvcContrib.TestHelper.TestControllerBuilder.IControllerFactory">
-            <summary>
-            Gets the IControllerFactory that will be used to create controllers with CreateController, by default IoCControllerFactory
-            </summary>
-            <value>The IControllerFactory</value>
-        </member>
         <member name="P:MvcContrib.TestHelper.TestControllerBuilder.HttpContext">
             <summary>
             Gets the HttpContext that built controllers will have set internally when created with InitializeController
@@ -349,6 +343,12 @@
             Gets or sets the PathInfo string that built controllers will have set internally when created with InitializeController
             </summary>
             <value>The PathInfo string</value>
+        </member>
+        <member name="P:MvcContrib.TestHelper.TestControllerBuilder.RawUrl">
+            <summary>
+            Gets or sets the RawUrl string that built controllers will have set internally when created with InitializeController
+            </summary>
+            <value>The RawUrl string</value>
         </member>
     </members>
 </doc>

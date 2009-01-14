@@ -1,4 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Import Namespace="System.Web.Mvc.Html"%>
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <div id="logo">
     <h1><a href="#">&nbsp;</a></h1>

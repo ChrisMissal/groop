@@ -26,15 +26,12 @@
             Creates a new CastleBind attribute. The name of the parameter will be used as the request prefix.
             </summary>
         </member>
-        <member name="M:MvcContrib.Castle.CastleBindAttribute.GetValue(System.Web.Mvc.ControllerContext,System.String,System.Type,System.Web.Mvc.ModelStateDictionary)">
+        <member name="M:MvcContrib.Castle.CastleBindAttribute.BindModel(System.Web.Mvc.ModelBindingContext)">
             <summary>
-            Performs the binding.
+            Binds the model object using a castle IDataBinder
             </summary>
-            <param name="controllerContext"></param>
-            <param name="modelName"></param>
-            <param name="modelType"></param>
-            <param name="modelState"></param>
-            <returns></returns>
+            <param name="bindingContext">The current binding context</param>
+            <returns>A ModelBinderResult containing the bound object</returns>
         </member>
         <member name="M:MvcContrib.Castle.CastleBindAttribute.LocateBinder(System.Web.Mvc.ControllerContext)">
             <summary>
@@ -58,14 +55,10 @@
             Simple IParameterBinder implementation that uses Castle's DefaultConverter.
             </summary>
         </member>
-        <member name="M:MvcContrib.Castle.CastleSimpleBinder.GetValue(System.Web.Mvc.ControllerContext,System.String,System.Type,System.Web.Mvc.ModelStateDictionary)">
+        <member name="M:MvcContrib.Castle.CastleSimpleBinder.BindModel(System.Web.Mvc.ModelBindingContext)">
             <summary>
             Looks for a parameter with the specified name in the Request and the RouteData and converts it to the specified type.
             </summary>
-            <param name="modelType">Type to which the value should be converted.</param>
-            <param name="modelName">Name of the parameter to search for</param>
-            <param name="controllerContext">Controller Context</param>
-            <param name="modelState"></param>
             <returns>The converted object, or the default value for the type.</returns>
         </member>
         <member name="M:MvcContrib.Castle.HtmlExtensionDuck.AddExtension(System.Type)">
