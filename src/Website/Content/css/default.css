@@ -30,17 +30,17 @@ input, textarea, select {
 }
 
 
-h1, h2, h3 {
+h1, h2 {
 	font-weight: normal;
 	color: #212121;
 }
 
-h1 {
+h1, h2 {
 	letter-spacing: -1px;
 	font-size: 2.2em;
 }
 
-h2 {
+#right-col h2 {
 	font-size: 1.4em;
 }
 
@@ -69,26 +69,42 @@ blockquote {
 }
 
 dl {
-	margin: 0 15px 10px;
-	background-color: #fff;
-	color: #000;
 	overflow: auto;
 }
+
 dl dt, dl dd {
+	margin: 0;
+	padding: 0 1em;
+}
+
+dl dt {
 	float: left;
+	clear: left;
+	font-weight: bold;
+}
+
+dl dd {
+	margin-right: auto;
+}
+
+dl.fullpage {
+	width: 870px;
+	margin: 0 auto;
+	background-color: #fff;
+	color: #000;
+}
+dl.fullpage dt, dl.fullpage dd {
 	padding: 1ex;
 	border-top: 1px solid #ccd;
 	height: 90px;
 }
-dl dt {
-	width: 33%;
-	clear: left;
+dl.fullpage dt {
+	width: 300px;
 	font-size: 120%;
 	text-align: center;
 }
-dl dd {
-	padding-top: 1.5em;
-	width: 50%;
+dl.fullpage dd {
+	padding-top: 1ex;
 	font-size: 125%;
 }
 
@@ -140,11 +156,10 @@ img.right {
 #header {
 	width: 900px;
 	margin: 0 auto;
-	height: 71px;
+	height: 80px;
 	letter-spacing: -1px;
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 
 #headerbg {
 	clear: both;
@@ -160,7 +175,7 @@ img.right {
 
 #logo {
 	float: left;
-	margin-top: 30px;
+	margin-top: 34px;
 }
 
 #logo h1, #logo h2, #logo p {

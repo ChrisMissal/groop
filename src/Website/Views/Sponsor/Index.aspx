@@ -3,7 +3,7 @@
 
 
 <asp:Content runat="server" ContentPlaceHolderID="mainContent">
-     <dl id="sponsors">
+     <dl id="sponsors" class="fullpage">
         <dt><img src="<%= AppHelper.ImageUrl("sponsors/apress.gif") %>" alt="Apress" /></dt>
         <dd>Apress writes lots of neat books</dd>
         <dt><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" alt="Addison Wesley" /></dt>
@@ -20,7 +20,7 @@
         <dt><img src="<%= AppHelper.ImageUrl("sponsors/redgate.gif") %>" alt="Red Gate" /></dt>
         <dd><em>... we need some text here ...</em></dd>
         <dt><img src="" alt="Jet Brains" /></dt>
-        <dd><em>... we need some text here & we need an image here ...</em></dd>
+        <dd><em>... we need some text here &amp; we need an image here ...</em></dd>
         <dt><img src="<%= AppHelper.ImageUrl("sponsors/oreilly.gif") %>" alt="O'Reilly" /></dt>
         <dd><em>... we need some text here ...</em></dd>
         <dt><img src="<%= AppHelper.ImageUrl("sponsors/microsoft.gif") %>" alt="Microsoft" /></dt>
