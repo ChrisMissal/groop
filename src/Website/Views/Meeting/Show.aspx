@@ -21,7 +21,7 @@
 
 <asp:Content ID="sideContent" ContentPlaceHolderID="rightColumnContent" runat="server">
 <%  IList<Meeting> meetings = (IList<Meeting>)ViewData["upcomingMeetings"];
-    if (meetings.Count > 0)
+    if (meetings != null && meetings.Count > 0)
     {
         foreach (var meeting in meetings)
         { %>

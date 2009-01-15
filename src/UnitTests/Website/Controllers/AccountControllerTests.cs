@@ -74,7 +74,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    mockery.ReplayAll();
 
         //    var result =
-        //        controller.ProcessRegistration("Joe", "User", "joeuser", email, "password", "password") as
+        //        controller.Register("Joe", "User", "joeuser", email, "password", "password") as
         //        RedirectToRouteResult;
 
         //    Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
@@ -88,7 +88,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //{
         //    AccountController controller = GetController();
 
-        //    var result = controller.ProcessRegistration(null, null, null, null, null, null) as RedirectToRouteResult;
+        //    var result = controller.Register(null, null, null, null, null, null) as RedirectToRouteResult;
 
         //    Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
         //    Assert.That(result.Values["action"], NUnit.Framework.SyntaxHelpers.Is.EqualTo("Register"));
@@ -99,7 +99,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //{
         //    //AccountController controller = GetController();
 
-        //    //controller.ProcessRegistration("FirstName", "LastName", "UserName", "Email@Address.com", "", "");
+        //    //controller.Register("FirstName", "LastName", "UserName", "Email@Address.com", "", "");
 
         //    //Expect.Call(mockMemberRepository.AddUser(null));
         //}
@@ -131,7 +131,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             mockery.ReplayAll();
 
-            controller.ProcessLogin(email, password, null);
+            controller.Login(email, password, null);
 
             // assert
             mockery.VerifyAll();
@@ -164,7 +164,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             mockery.ReplayAll();
 
-            var result = controller.ProcessLogin(email, password, null) as RedirectToRouteResult;
+            var result = controller.Login(email, password, null) as RedirectToRouteResult;
 
             Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
             Assert.That(result.Values["action"], NUnit.Framework.SyntaxHelpers.Is.EqualTo("Login"));
@@ -417,7 +417,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             mockery.ReplayAll();
 
-            var result = controller.ProcessLogin(email, password, null) as RedirectToRouteResult;
+            var result = controller.Login(email, password, null) as RedirectToRouteResult;
 
             Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
             Assert.That(result.Values["action"], NUnit.Framework.SyntaxHelpers.Is.EqualTo("Index"));
@@ -439,7 +439,7 @@ namespace CRIneta.UnitTests.Website.Controllers
             mockery.ReplayAll();
 
             string redirectUrl = "http://www.google.com";
-            var result = controller.ProcessLogin(email, password, redirectUrl) as RedirectResult;
+            var result = controller.Login(email, password, redirectUrl) as RedirectResult;
 
             Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
             Assert.That(result.Url, NUnit.Framework.SyntaxHelpers.Is.EqualTo(redirectUrl));
@@ -468,7 +468,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    mockery.ReplayAll();
 
         //    var result =
-        //        controller.ProcessRegistration("Joe", "User", "joeuser", email, "password", "password") as ViewResult;
+        //        controller.Register("Joe", "User", "joeuser", email, "password", "password") as ViewResult;
 
         //    Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
         //    Assert.That(result.ViewName, NUnit.Framework.SyntaxHelpers.Is.EqualTo("Register"));
@@ -483,7 +483,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             mockery.ReplayAll();
 
-            controller.ProcessLogin("", "", null);
+            controller.Login("", "", null);
 
             mockery.VerifyAll();
         }
@@ -503,7 +503,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    mockery.ReplayAll();
 
         //    var result =
-        //        controller.ProcessRegistration(stubUser.First, stubUser.Last, stubUser.Username, stubUser.Email, "one",
+        //        controller.Register(stubUser.First, stubUser.Last, stubUser.Username, stubUser.Email, "one",
         //                                       "two") as ViewResult;
 
         //    mockery.VerifyAll();

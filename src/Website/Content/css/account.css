@@ -1,22 +1,22 @@
-form#loginActionForm label {
+#loginContainer form label {
 	padding-top: 3px;
 	display: block;
 	font-weight:bold;
 	font-size:1.1em;
 }
 
-form#loginActionForm .input {
+#loginContainer form .input {
 	width: 100%;
 	font-size: 1.5em;
 	display:block;
 }
 
-form#loginActionForm .submit {
+#loginContainer form .submit {
 	border: solid 1px black;
 	margin-top: .5em;
 }
 
-form#loginActionForm
+#loginContainer form
 {
 	border: double 2px #999;
 	padding: 1em;

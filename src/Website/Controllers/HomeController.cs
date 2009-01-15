@@ -17,7 +17,7 @@ namespace CRIneta.Website.Controllers
 
         public ActionResult Index()
         {
-            var upcomingMeetings = meetingRepository.GetUpcomingMeetings(DateTime.Now, 0);
+            var upcomingMeetings = meetingRepository.GetUpcomingMeetings(DateTime.Now, 5);
             ViewData["upcomingMeetings"] = upcomingMeetings;
 
             return View("Index");

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CRIneta.DataAccess;
 using CRIneta.DataAccess.Impl;
@@ -51,10 +52,13 @@ namespace IntegrationTests.DataAccess
         [Test]
         public void Can_get_meeting_by_Id()
         {
+            // Arrange
             var meetingRepository = new MeetingRepository(sessionBuilder);
 
+            // Act
             var meeting = meetingRepository.GetById(1);
 
+            // Assert
             Assert.That(meeting.MeetingId, Is.EqualTo(1));
             Assert.That(meeting.Facility.Name, Is.EqualTo("Baymont Inn"));
         }
@@ -62,11 +66,29 @@ namespace IntegrationTests.DataAccess
         [Test]
         public void Can_load_all_meetings()
         {
+            // Arrange
             var meetingRepository = new MeetingRepository(sessionBuilder);
 
+            // Assert
             IList<Meeting> meetings = meetingRepository.GetAllMeetings();
 
+            // Act
             Assert.That(meetings.Count, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void GetMeetingsBetween_returns_one_meeting()
+        {
+            // Arrange
+            var meetingRepository = new MeetingRepository(sessionBuilder);
+            var startDate = DateTime.Parse("1/1/2008");
+            var endDate = DateTime.Parse("1/1/2009");
+
+            // Act
+            IList<Meeting> meetings = meetingRepository.GetMeetingsBetween(startDate, endDate);
+
+            // Assert
+            Assert.That(meetings.Count, Is.EqualTo(2));
         }
     }
 }

@@ -7,7 +7,7 @@ namespace CRIneta.Website.Controllers
 {
     public class MeetingController : Controller
     {
-        private IMeetingRepository meetingRepository;
+        private readonly IMeetingRepository meetingRepository;
 
         public MeetingController(IUserSession userSession, IMeetingRepository meetingRepository) : base(userSession)
         {
@@ -32,9 +32,12 @@ namespace CRIneta.Website.Controllers
             var nextMeeting = meetingRepository.GetNextMeeting(DateTime.Now);
             ViewData["nextMeeting"] = nextMeeting;
 
-            var upcomingMeetings = meetingRepository.GetUpcomingMeetings(nextMeeting.EndTime, 3);
-            ViewData["upcomingMeetings"] = upcomingMeetings;
-
+            if (nextMeeting != null)
+            {
+                var upcomingMeetings = meetingRepository.GetUpcomingMeetings(nextMeeting.EndTime, 3);
+                ViewData["upcomingMeetings"] = upcomingMeetings;    
+            }
+            
             return View("Show");
         }
     }

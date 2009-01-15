@@ -8,5 +8,7 @@ namespace CRIneta.DataAccess
     {
         Meeting GetNextMeeting(DateTime time);
         IList<Meeting> GetUpcomingMeetings(DateTime time, int maxNumberMeetings);
+        IList<Meeting> GetAllMeetings();
+        IList<Meeting> GetMeetingsBetween(DateTime beginDate, DateTime endDate);
     }
 }

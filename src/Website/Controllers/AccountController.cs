@@ -84,6 +84,7 @@ namespace CRIneta.Website.Controllers
 
         #region Login Actions
 
+        [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult Login()
         {
             ViewData["Title"] = "Login";
@@ -91,7 +92,8 @@ namespace CRIneta.Website.Controllers
             return View("Login");
         }
 
-        public ActionResult ProcessLogin(string username, string password, string redirectUrl)
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Login(string username, string password, string redirectUrl)
         {
             var loginData = new LoginData(username, password);
 
@@ -124,6 +126,7 @@ namespace CRIneta.Website.Controllers
 
         #region LogOut Actions
 
+        
         public ActionResult LogOut()
         {
             authenticator.SignOut();
@@ -135,6 +138,7 @@ namespace CRIneta.Website.Controllers
 
         #region Register Actions
 
+        [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult Register()
         {
             ViewData["Title"] = "Register";
@@ -142,8 +146,8 @@ namespace CRIneta.Website.Controllers
             return View();
         }
 
-        [PostOnly]
-        public ActionResult ProcessRegistration(string first, string last, string username, string email, string password, string passwordConfirm)
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Register(string first, string last, string username, string email, string password, string passwordConfirm)
         {
             var registrationData = new RegistrationData(first, last, username, email, password, passwordConfirm);
 

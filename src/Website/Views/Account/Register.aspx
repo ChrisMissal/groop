@@ -8,45 +8,35 @@
     <p>
         Passwords are required to be a minimum of <%=Html.Encode(ViewData["PasswordLength"])%> characters in length.
     </p>
-    <%
-        IList<string> errors = ViewData["errors"] as IList<string>;
-        if (errors != null) {
-            %>
-                <ul class="error">
-                <% foreach (string error in errors) { %>
-                    <li><%= Html.Encode(error) %></li>
-                <% } %>
-                </ul>
-            <%
-        }
-         %>
-    <form method="post" action="<%= Html.AttributeEncode(Url.Action("ProcessRegistration")) %>">
+    
+    <%= Html.ValidationSummary() %>
+         
+    <% using (Html.BeginForm()) { %>
         <div>
             <table>
-                
                 <tr>
                     <td>Username:</td>
-                    <td><%= Html.TextBox("username") %></td>
+                    <td><%= Html.TextBox("username")%><%= Html.ValidationMessage("username") %></td>
                 </tr>
                 <tr>
                     <td>First:</td>
-                    <td><%= Html.TextBox("first") %></td>
+                    <td><%= Html.TextBox("First")%><%= Html.ValidationMessage("First") %></td>
                 </tr>
                 <tr>
                     <td>Last:</td>
-                    <td><%= Html.TextBox("last") %></td>
+                    <td><%= Html.TextBox("Last")%><%= Html.ValidationMessage("Last") %></td>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td><%= Html.TextBox("email") %></td>
+                    <td><%= Html.TextBox("Email")%><%= Html.ValidationMessage("Email") %></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><%= Html.Password("password") %></td>
+                    <td><%= Html.Password("Password")%><%= Html.ValidationMessage("Password")%></td>
                 </tr>
                 <tr>
                     <td>Confirm password:</td>
-                    <td><%= Html.Password("passwordConfirm") %></td>
+                    <td><%= Html.Password("PasswordConfirm")%><%= Html.ValidationMessage("PasswordConfirm") %></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -54,5 +44,5 @@
                 </tr>
             </table>
         </div>
-    </form>
+    <% } %>
 </asp:Content>
