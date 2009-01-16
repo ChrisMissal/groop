@@ -1,6 +1,6 @@
 using System.Web.Security;
 
-namespace CRIneta.Model.Security
+namespace CRIneta.Web.Core.Security
 {
     public interface IFormsAuthenticationGateway
     {

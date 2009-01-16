@@ -1,4 +1,4 @@
-namespace CRIneta.Model.Domain
+namespace CRIneta.Web.Core.Domain
 {
     public class Attendee
     {

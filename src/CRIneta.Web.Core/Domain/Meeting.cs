@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-namespace CRIneta.Model.Domain
+namespace CRIneta.Web.Core.Domain
 {
     public class Meeting
     {
-        private IList<Attendee> attendees;
+        private readonly IList<Attendee> attendees;
 
         public Meeting()
         {
@@ -41,7 +41,7 @@ namespace CRIneta.Model.Domain
         /// <returns></returns>
         private bool AlreadyAttending(Attendee attendee)
         {
-            foreach (var a in attendees)
+            foreach (Attendee a in attendees)
             {
                 if (attendee == a)
                     return true;

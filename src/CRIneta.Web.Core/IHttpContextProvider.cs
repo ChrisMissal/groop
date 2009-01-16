@@ -1,6 +1,6 @@
 using System.Web;
 
-namespace CRIneta.Model
+namespace CRIneta.Web.Core
 {
     public interface IHttpContextProvider
     {

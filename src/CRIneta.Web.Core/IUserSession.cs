@@ -1,6 +1,6 @@
-using CRIneta.Model.Domain;
+using CRIneta.Web.Core.Domain;
 
-namespace CRIneta.Model
+namespace CRIneta.Web.Core
 {
     public interface IUserSession
     {

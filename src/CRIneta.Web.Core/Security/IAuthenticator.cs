@@ -1,7 +1,7 @@
 ﻿using System.Security.Principal;
-using CRIneta.Model.Domain;
+using CRIneta.Web.Core.Domain;
 
-namespace CRIneta.Model.Security
+namespace CRIneta.Web.Core.Security
 {
     public interface IAuthenticator
     {

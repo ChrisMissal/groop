@@ -1,4 +1,4 @@
-namespace CRIneta.Model
+namespace CRIneta.Web.Core
 {
     public class FlashMessage
     {

@@ -1,17 +1,14 @@
-using System;
-
-namespace CRIneta.Model.Domain
+namespace CRIneta.Web.Core.Domain
 {
     public class Member
     {
-        private string username;
+        private string email;
         private string first;
         private string last;
-        private string email;
+        private string username;
 
         protected Member()
         {
-            
         }
 
         public Member(string username, string first, string last, string email)
@@ -80,10 +77,7 @@ namespace CRIneta.Model.Domain
         /// <value>The password salt.</value>
         public virtual string PasswordSalt { get; set; }
 
-        public virtual bool IsAdministrator
-        {
-            get; set;
-        }
+        public virtual bool IsAdministrator { get; set; }
 
         /// <summary>
         /// Gets the full name of the user.
