@@ -193,13 +193,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CRIneta.Web.Core\CRIneta.Web.Core.csproj">
+      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
+      <Name>CRIneta.Web.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
       <Name>DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
-      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

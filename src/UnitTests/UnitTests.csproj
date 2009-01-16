@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2B93AFC7-578C-4705-83BF-F094F2129F58}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -90,13 +90,13 @@
     <Compile Include="WindsorTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CRIneta.Web.Core\CRIneta.Web.Core.csproj">
+      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
+      <Name>CRIneta.Web.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
       <Name>DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
-      <Name>Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\Website\Website.csproj">
       <Project>{AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F}</Project>
