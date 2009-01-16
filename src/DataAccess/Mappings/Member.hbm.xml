@@ -7,9 +7,19 @@
         </id>
         <property name="Username" column="Username" length="50" not-null="true" />
         <property name="Password" column="Password" length="255" not-null="true" />
-        <property name="PasswordSalt" column="PasswordSalt" length="255" not-null="true" />
-        <property name="First" column="First" length="50" not-null="true" />
-        <property name="Last" column="Last" length="50" not-null="true" />
+        <property name="PasswordSalt" column="PasswordSalt" length="255" not-null="true"  />
+                  
+        <component name="Name">
+            <property name="First" column="First" length="50" not-null="true" />
+            <property name="Last" column="Last" length="50" not-null="true" />
+        </component>
+
         <property name="Email" column="EmailAddress" length="100" not-null="true" />
+
+        <set name="Roles" table="UserRoles" lazy="true" cascade="save-update">
+            <key column="MemberId" foreign-key="FK_Users_Roles"/>
+            <many-to-many class="Role" column="RoleId"/>
+        </set>
+
     </class>
 </hibernate-mapping>

@@ -41,7 +41,6 @@
     </Compile>
     <Compile Include="Helpers\AppHelper.cs" />
     <Compile Include="Helpers\IoC.cs" />
-    <Compile Include="Impl\Data\FakeMemberRepository.cs" />
     <Compile Include="Impl\HttpContextProvider.cs" />
     <Compile Include="Impl\FormsAuthenticationGateway.cs" />
     <Compile Include="Impl\Security\Authenticator.cs" />
@@ -202,6 +201,9 @@
       <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Impl\Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />

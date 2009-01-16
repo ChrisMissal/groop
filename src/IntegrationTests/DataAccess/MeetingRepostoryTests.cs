@@ -72,7 +72,7 @@ namespace IntegrationTests.DataAccess
             IList<Meeting> meetings = meetingRepository.GetAllMeetings();
 
             // Act
-            Assert.That(meetings.Count, Is.EqualTo(1));
+            Assert.That(meetings.Count, Is.EqualTo(5));
         }
 
         [Test]

@@ -1,22 +1,13 @@
+using System.Collections.Generic;
+using Iesi.Collections.Generic;
+
 namespace CRIneta.Web.Core.Domain
 {
     public class Member
     {
-        private string email;
-        private string first;
-        private string last;
-        private string username;
-
-        protected Member()
+        public Member()
         {
-        }
-
-        public Member(string username, string first, string last, string email)
-        {
-            this.username = username;
-            this.first = first;
-            this.last = last;
-            this.email = email;
+            Name = new Name();
         }
 
         /// <summary>
@@ -29,41 +20,19 @@ namespace CRIneta.Web.Core.Domain
         /// Gets or sets the username.
         /// </summary>
         /// <value>The username.</value>
-        public virtual string Username
-        {
-            get { return username; }
-            set { username = value; }
-        }
+        public virtual string Username { get; set; }
 
         /// <summary>
-        /// Gets the first.
+        /// Gets or sets the name.
         /// </summary>
-        /// <value>The first.</value>
-        public virtual string First
-        {
-            get { return first; }
-            set { first = value; }
-        }
-
-        /// <summary>
-        /// Gets the last.
-        /// </summary>
-        /// <value>The last.</value>
-        public virtual string Last
-        {
-            get { return last; }
-            set { last = value; }
-        }
+        /// <value>The name.</value>
+        public virtual Name Name { get; set; }
 
         /// <summary>
         /// Gets the email.
         /// </summary>
         /// <value>The email.</value>
-        public virtual string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
+        public virtual string Email { get; set; }
 
         /// <summary>
         /// Gets or sets the password.
@@ -77,6 +46,18 @@ namespace CRIneta.Web.Core.Domain
         /// <value>The password salt.</value>
         public virtual string PasswordSalt { get; set; }
 
+        /// <summary>
+        /// Gets or sets the roles.
+        /// </summary>
+        /// <value>The roles.</value>
+        public virtual ISet<Role> Roles { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance is administrator.
+        /// </summary>
+        /// <value>
+        /// 	<c>true</c> if this instance is administrator; otherwise, <c>false</c>.
+        /// </value>
         public virtual bool IsAdministrator { get; set; }
 
         /// <summary>
@@ -85,7 +66,7 @@ namespace CRIneta.Web.Core.Domain
         /// <returns></returns>
         public virtual string GetName()
         {
-            return string.Format("{0} {1}", First, Last);
+            return Name.ToString();
         }
     }
 }

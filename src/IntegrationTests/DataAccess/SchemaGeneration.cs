@@ -52,7 +52,7 @@ namespace IntegrationTests.DataAccess
 
             string schema = sw.ToString();
 
-            Assert.That(schema.Contains("create table Users"), Is.True);
+            Assert.That(schema.Contains("create table Members"), Is.True);
         }
     }
 }

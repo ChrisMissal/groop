@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using CRIneta.Web.Core.Domain;
 
 namespace CRIneta.Web.Core.Data
@@ -9,5 +10,6 @@ namespace CRIneta.Web.Core.Data
         int AddMember(Member member);
         void RemoveMember(Member member);
         void UpdateMember(Member member);
+        IList<Member> GetAllMembers();
     }
 }

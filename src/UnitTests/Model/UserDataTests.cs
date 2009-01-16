@@ -18,7 +18,16 @@ namespace CRIneta.UnitTests.Model
         [Test]
         public void Ensure_good_Member_passed_to_UserData_is_authenticated()
         {
-            var member = new Member("cmissal", "Chris", "Missal", "chris.missal@gmail.com");
+            var member = new Member
+                             {
+                                 Username = "cmissal",
+                                 Email = "chris.missal@gmail.com",
+                                 Name = new Name
+                                            {
+                                                First = "Chris",
+                                                Last = "Missal",   
+                                            }
+                             };
 
             var userData = new UserData(member);
 

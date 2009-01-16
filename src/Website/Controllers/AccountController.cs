@@ -168,9 +168,18 @@ namespace CRIneta.Website.Controllers
                 return View("Register");
             }
 
-            member = new Member(username, first, last, email);
+            member = new Member
+                         {
+                             Username = username,
+                             Email = email,
+                             PasswordSalt = cryptographer.CreateSalt(),
+                             Name = new Name
+                                        {
+                                            First = first,
+                                            Last = last
+                                        }
+                         };
 
-            member.PasswordSalt = cryptographer.CreateSalt();
             member.Password = cryptographer.Hash(password, member.PasswordSalt);
 
             memberRepository.AddMember(member);

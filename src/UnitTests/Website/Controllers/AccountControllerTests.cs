@@ -10,8 +10,8 @@ using CRIneta.Website.Services.Email;
 using NUnit.Framework;
 using NUnit.Framework.SyntaxHelpers;
 using Rhino.Mocks;
-using Is=Rhino.Mocks.Constraints.Is;
-using Text=Rhino.Mocks.Constraints.Text;
+using Is = Rhino.Mocks.Constraints.Is;
+using Text = Rhino.Mocks.Constraints.Text;
 
 namespace CRIneta.UnitTests.Website.Controllers
 {
@@ -48,7 +48,7 @@ namespace CRIneta.UnitTests.Website.Controllers
             return controller;
         }
 
-        
+
         [Test]
         public void Check_that_the_Index_method_returns_title_of_Login()
         {
@@ -62,7 +62,7 @@ namespace CRIneta.UnitTests.Website.Controllers
             Assert.AreEqual("Login", viewData["Title"]);
         }
 
-        
+
         //[Test]
         //public void A_newly_registered_user_should_be_redirected_to_the_account_home_page()
         //{
@@ -122,7 +122,16 @@ namespace CRIneta.UnitTests.Website.Controllers
             string email = "something@something.com";
             string password = "password";
 
-            var stubUser = new Member("joeuser", "Joe", "User", "joeuser@gmail.com");
+            var stubUser = new Member
+                               {
+                                   Username = "joeuser",
+                                   Email = "joeuser@gmail.com",
+                                   Name = new Name
+                                   {
+                                       First = "Joe",
+                                       Last = "User",
+                                   }
+                               };
 
             SetupResult.For(mockMemberRepository.GetByUsername(email)).Return(stubUser);
 
@@ -410,7 +419,17 @@ namespace CRIneta.UnitTests.Website.Controllers
             string email = "joeuser@gmail.com";
             string password = "password";
 
-            var stubUser = new Member("joeuser", "Joe", "User", "joeuser@gmail.com");
+            var stubUser = new Member
+                               {
+                                   Username = "joeuser",
+                                   Email = "joeuser@gmail.com",
+                                   Name = new Name
+                                   {
+                                       First = "Joe",
+                                       Last = "User",
+                                   }
+                               };
+
 
             SetupResult.For(mockMemberRepository.GetByUsername(email)).Return(stubUser);
             SetupResult.For(mockAuthenticator.VerifyAccount(null, null)).IgnoreArguments().Return(true);
@@ -431,7 +450,16 @@ namespace CRIneta.UnitTests.Website.Controllers
             string email = "joeuser@gmail.com";
             string password = "password";
 
-            var stubUser = new Member("joeuser", "Joe", "User", "joeuser@gmail.com");
+            var stubUser = new Member
+                               {
+                                   Username = "joeuser",
+                                   Email = "joeuser@gmail.com",
+                                   Name = new Name
+                                   {
+                                       First = "Joe",
+                                       Last = "User",
+                                   }
+                               };
 
             SetupResult.For(mockMemberRepository.GetByUsername(email)).Return(stubUser);
             SetupResult.For(mockAuthenticator.VerifyAccount(null, null)).IgnoreArguments().Return(true);

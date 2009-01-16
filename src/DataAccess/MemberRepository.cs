@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using CRIneta.Web.Core.Data;
 using CRIneta.Web.Core.Domain;
 using NHibernate;
@@ -16,21 +17,19 @@ namespace CRIneta.DataAccess
             if (key <= 0)
                 return null;
 
-            using (var session = getSession())
-            {
-                return session.Get<Member>(key);
-            }
+            var session = getSession();
+            
+            return session.Get<Member>(key);
         }
 
         public Member GetByUsername(string username)
         {
-            using (ISession session = getSession())
-            {
-                return session.CreateQuery("from Member m where lower(m.Username) like :username")
+            var session = getSession();
+            
+            return session.CreateQuery("from Member m where lower(m.Username) like :username")
                     .SetString("username", username.ToLower())
                     .SetMaxResults(1)
                     .UniqueResult<Member>();
-            }
         }
 
         //public Member GetByEmail(string email)
@@ -130,6 +129,28 @@ namespace CRIneta.DataAccess
                         tx.Rollback();
                         throw;
                     }
+                }
+            }
+        }
+
+        public IList<Member> GetAllMembers()
+        {
+            var session = getSession();
+
+            using (ITransaction tx = session.BeginTransaction())
+            {
+                try
+                {
+                    var members = session.CreateQuery("from Member")
+                        .List<Member>();
+
+                    tx.Commit();
+                    return members;
+                }
+                catch (NHibernate.HibernateException)
+                {
+                    tx.Rollback();
+                    throw;
                 }
             }
         }
