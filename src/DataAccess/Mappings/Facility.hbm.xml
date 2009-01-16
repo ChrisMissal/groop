@@ -8,7 +8,7 @@
         <property name="ImageUrl" column="ImageUrl" length="255" not-null="true" />
         <property name="Description" column="Description" type="StringClob" not-null="true" />
 
-        <component name="Address" class="CRIneta.Model.Domain.Address, CRIneta.Model">
+        <component name="Address" class="Address">
             <property name="Street" column="Address" length="255" not-null="false" />
             <property name="City" column="City" length="255" not-null="false" />
             <property name="Region" column="Region" length="255" not-null="false" />

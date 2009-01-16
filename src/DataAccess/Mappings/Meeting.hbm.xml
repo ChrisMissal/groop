@@ -9,7 +9,7 @@
         <property name="EndTime" column="EndsAt" type="DateTime" not-null="true" />
         <property name="Description" column="Description" type="StringClob" not-null="true" />
 
-        <many-to-one name="Facility" column="FacilityId" not-null="true" class="CRIneta.Model.Domain.Facility, CRIneta.Model" />
+        <many-to-one name="Facility" column="FacilityId" not-null="true" class="Facility" />
         
     </class>
 </hibernate-mapping>

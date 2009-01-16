@@ -2,11 +2,11 @@ namespace CRIneta.Web.Core.Domain
 {
     public class Role : Entity<int>
     {
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
     }
 
     public class Entity<T>
     {
-        public T Id { get; set;}
+        public virtual T Id { get; set;}
     }
 }
