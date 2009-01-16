@@ -1,17 +1,18 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="registerContent" ContentPlaceHolderID="mainContent" runat="server">
-    <h2>Account Creation</h2>
-    <p>
-        Use the form below to create a new account. 
-    </p>
-    <p>
-        Passwords are required to be a minimum of <%=Html.Encode(ViewData["PasswordLength"])%> characters in length.
-    </p>
-    
+
+	<div style="margin-bottom: 10px;"><img src="/Content/images/supliment-typewriter.jpg" alt="" /></div>
+	<div class="post">
+		<h1 class="title">Account Creation</h1>
+		<div class="entry">
+            <p>Use the form below to create a new account. Passwords are required to be a minimum of <%=Html.Encode(ViewData["PasswordLength"])%> characters in length.</p>
+		</div>
+		<div class="entry">
     <%= Html.ValidationSummary() %>
          
     <% using (Html.BeginForm()) { %>
+        <fieldset>
         <div>
             <table>
                 <tr>
@@ -44,5 +45,8 @@
                 </tr>
             </table>
         </div>
+        </fieldset>
     <% } %>
+    </div>
+</div>
 </asp:Content>

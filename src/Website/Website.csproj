@@ -112,6 +112,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\css\account.css" />
+    <Content Include="Content\css\style.css" />
     <Content Include="Content\images\bg_journey.JPG" />
     <Content Include="Content\images\sponsors\apress.gif" />
     <Content Include="Content\images\sponsors\awlogo.gif" />

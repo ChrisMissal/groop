@@ -22,6 +22,7 @@ namespace CRIneta.Web.Core.Domain
         public virtual DateTime StartTime { get; set; }
         public virtual DateTime EndTime { get; set; }
         public virtual string Description { get; set; }
+        public virtual string Presenter { get; set; }
         public virtual Facility Facility { get; set; }
 
         public virtual void AddAttendee(Attendee attendee)

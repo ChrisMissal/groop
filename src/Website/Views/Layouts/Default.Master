@@ -1,58 +1,91 @@
-﻿<%@ Import Namespace="System.Web.Mvc.Html"%>
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
+<%@ Import Namespace="System.Web.Mvc.Html"%>
 <%@ Import Namespace="CRIneta.Website.Controllers"%>
-<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
 <%@ Import Namespace="CRIneta.Website.Helpers"%>
 <%@ Import namespace="MvcContrib"%>
 <%@ Import Namespace="MvcContrib.UI.Html"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
+    <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title><%= ViewData.GetOrDefault("PageTitle","Cedar Rapids .NET User Group")%></title>
         <meta name="keywords" content="<%= ViewData.GetOrDefault("PageKeywords", "Cedar Rapids INETA Users Group") %>" />
         <meta name="description" content="<%= ViewData.GetOrDefault("PageDescription", "INETA group for .NET developers in Eastern Iowa") %>" />
-        
-        <link rel="stylesheet" href="<%= AppHelper.CssUrl("default.css") %>" />
-        
+        <link rel="stylesheet" href="/Content/css/style.css" media="screen" />
         <script src='<%= AppHelper.JsUrl("jquery.js") %>' type="text/javascript"></script>
-
         <asp:ContentPlaceHolder ID="headerContent" runat="server" />
-        
     </head>
     <body>
-        
-        
-        <!-- start header -->
-        <div id="header">    
-            <% Html.RenderPartial("~/views/shared/controls/userStatus.ascx"); %>
-            
-	        <% Html.RenderPartial("~/views/shared/controls/header.ascx"); %>
-        </div>
-        <!-- end header -->
-        <div id="headerbg"><p class="text1">&#8220;In posuere eleifend odio quisque <br />
-	        semper augue mattis&#8221;</p>
-        </div>
-        <!-- start page -->
-        <div id="page">
-	        
-	        <%-- Html.RenderAction<FlashMessageComponentController>(c => c.GetMessages()); --%>
-	        
-	        <asp:ContentPlaceHolder ID="mainContent" runat="server" />
-	        
-	        <!-- footer bar -->
-	        <div id="sidebar">
-		        <asp:ContentPlaceHolder ID="footerContent" runat="server">
-		           <% Html.RenderPartial("~/views/shared/controls/footerExample.ascx"); %>
-		        </asp:ContentPlaceHolder>
-		        <div style="clear: both;">&nbsp;</div>
-	        </div>
-	        <!-- end footer bar -->	        
-        </div>
-        <!-- end page -->
-        <div id="footer">
-	        <p id="legal">Copyright &copy;<%= DateTime.Now.Year %>  Cedar Rapids INETA. All Rights Reserved.  Template adapted from <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
-	        <!-- <p id="links"><a href="#">Privacy</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; <a href="#">Terms</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a></p>-->
-        </div>
-    </body>
+<div id="wrapper">
+
+<% Html.RenderPartial("~/views/shared/controls/header.ascx"); %>
+<%-- Html.RenderAction<FlashMessageComponentController>(c => c.GetMessages()); --%>
+		
+<div id="page">
+	<div id="content">
+	
+	    <asp:ContentPlaceHolder ID="mainContent" runat="server" />
+	    
+	</div>
+	<div id="sidebar">
+		<div id="sidebar-bgtop"></div>
+		<div id="sidebar-content">
+		
+		    <asp:ContentPlaceHolder ID="sideContent" runat="server">
+
+			<div id="sidebar-bgbtm">
+			<ul>
+				<li id="signin">
+				
+					<% Html.RenderPartial("~/views/shared/controls/userStatus.ascx"); %>
+					
+				</li>
+                <li>
+        <%  var meetings = (IList<Meeting>)ViewData["upcomingMeetings"];
+            if (meetings != null && meetings.Count > 0)
+            {   %>  
+                    <h2>Upcoming Meetings</h2>
+            <%  foreach (var meeting in meetings)
+                { %>
+                    <p><strong><%=meeting.Title%></strong><br /><small>
+                        <strong>Location:&nbsp;</strong><%=meeting.Facility.Name%><br />
+                        <strong>Time:&nbsp;</strong><%=meeting.StartTime.ToString("h:mm tt")%> - <%=meeting.EndTime.ToString("MMM, d yyyy h:mm tt")%>
+                    </small></p>
+                    <div class="entry">
+                        <p><%=meeting.Description%></p>
+                        <p><a href="/meeting/<%=meeting.MeetingId %>" class="more">Read More</a></p>
+                    </div>
+            <% }
+            }
+            else
+            { %>
+                    <h2>No Upcoming Meetings</h2>
+                    <p>There are no meetings currently scheduled in advance. Try back later to check for any updates.</p>
+            <% }%>
+                </li>
+				<li>
+					<h2>Unscheduled Topics</h2>
+					<p>If you are interested in speaking on any of these topics, or other .NET topics, please <%= Html.ActionLink("contact us", "contact", "home") %>.</p>
+					<ul>
+						<li>.NET Performance</li>
+						<li>ASP.NET Webparts</li>
+						<li>.NET Diagnostics</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		    </asp:ContentPlaceHolder>
+		    
+		</div>
+	</div>
+	<div style="clear:both; margin:0;"></div>
+</div>
+</div>
+<div id="footer">
+	<p>&copy; 2008. All Rights Reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+</body>
 </html>
 

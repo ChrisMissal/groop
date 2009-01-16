@@ -8,6 +8,7 @@
         <property name="StartTime" column="StartsAt" type="DateTime" not-null="true" /> <!-- when "not-null" is false, this indicates "nullable" -->
         <property name="EndTime" column="EndsAt" type="DateTime" not-null="true" />
         <property name="Description" column="Description" type="StringClob" not-null="true" />
+      <property name="Presenter" column="Presenter" length="255" not-null="true" />
 
         <many-to-one name="Facility" column="FacilityId" not-null="true" class="Facility" />
         

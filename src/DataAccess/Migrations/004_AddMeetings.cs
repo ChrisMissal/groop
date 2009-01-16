@@ -16,6 +16,7 @@ namespace CRIneta.DataAccess.Migrations
             meetings.AddColumn("EndsAt", DbType.DateTime, 0, false);
             meetings.AddColumn("ImageUrl", DbType.String, 255, false, "''");
             meetings.AddLongText("Description", false, "''");
+            meetings.AddColumn("Presenter", DbType.String, 255, false);
             meetings.AddColumn("FacilityId", DbType.Int32, 0, true);
 
             //add a relationship between Meetings and Facilities

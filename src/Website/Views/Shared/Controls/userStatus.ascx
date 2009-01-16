@@ -10,23 +10,28 @@
 <% if (userData.IsAuthenticated)
    {
 %>
-        <p id="signedIn">
-            Signed in as <strong><%= userData.Username %></strong>&nbsp;(<%=Html.ActionLink("My Account", "Index", "Account") %> / <%=Html.ActionLink("Sign Out", "Logout", "Account") %>)
-        </p>
-        <!-- end p signedIn -->
+    <h2>Welcome <%= userData.Username %>!</h2>
+        <ul>
+            <li><%=Html.ActionLink("My Account", "Index", "Account") %></li>
+            <li><%=Html.ActionLink("Sign Out", "Logout", "Account") %></li>
+        </ul>
+        <p>[[RSVP thingy]]</p>
 <%
     }
    else
    {
 %>
-        <p id="signedIn">
-            You are <strong>not signed in</strong> (
-            <%= Html.ActionLink("Sign In", "Login", "Account") %>
-            or
-            <%= Html.ActionLink("Register", "Register", "Account") %>
-            )
+<h2>Sign In / Register</h2>
+<form method="post" action="/Account/Login">
+	<fieldset>
+	    <p><label for="Login-Username">Username:</label><input type="text" id="Login-Username" name="Username" value="" class="field" /></p>
+	    <p><label for="Login-Password">Password:</label><input type="password" id="Login-Password" name="Password" value="" class="field" />
+	        <input type="submit" id="Login-Login" value="Login" /></p>
+        <p style="text-align:right;">
+        Don't have an Account? <%= Html.ActionLink("Register", "Register", "Account") %> for free!
         </p>
-<!-- end p signedIn -->
+	</fieldset>
+</form>
 <%
     }
 %>
