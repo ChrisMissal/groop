@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "CRIneta.Web.Core\CRIneta.Web.Core.csproj", "{6C050A4D-D368-45C1-82D7-9B62413E8556}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRIneta.Web.Core", "CRIneta.Web.Core\CRIneta.Web.Core.csproj", "{6C050A4D-D368-45C1-82D7-9B62413E8556}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{2B93AFC7-578C-4705-83BF-F094F2129F58}"
 EndProject
