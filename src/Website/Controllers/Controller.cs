@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
-using CRIneta.Model;
-using CRIneta.Model.Domain;
+using CRIneta.Web.Core;
+using CRIneta.Web.Core.Domain;
 using MvcContrib;
 
 namespace CRIneta.Website.Controllers

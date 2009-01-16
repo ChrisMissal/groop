@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
-using CRIneta.Model.Domain;
+using CRIneta.Web.Core.Data;
+using CRIneta.Web.Core.Domain;
 using NHibernate;
 
-namespace CRIneta.DataAccess.Impl
+namespace CRIneta.DataAccess
 {
     public class MeetingRepository : RepositoryBase, IMeetingRepository
     {

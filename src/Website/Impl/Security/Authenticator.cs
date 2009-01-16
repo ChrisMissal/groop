@@ -2,10 +2,10 @@ using System;
 using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
-using CRIneta.Model;
-using CRIneta.Model.Domain;
-using CRIneta.Model.Security;
-using CRIneta.Model.Security.Cryptography;
+using CRIneta.Web.Core;
+using CRIneta.Web.Core.Domain;
+using CRIneta.Web.Core.Security;
+using CRIneta.Web.Core.Security.Cryptography;
 using CRIneta.Website.Impl.Security.Principal;
 
 namespace CRIneta.Website.Impl.Security

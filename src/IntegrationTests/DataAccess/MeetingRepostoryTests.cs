@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CRIneta.DataAccess;
-using CRIneta.DataAccess.Impl;
-using CRIneta.Model.Domain;
+using CRIneta.Web.Core.Domain;
 using Microdesk.Utility.UnitTest;
 using NHibernate;
 using NUnit.Framework;

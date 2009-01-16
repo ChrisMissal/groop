@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/TwoCol.Master" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Model.Domain" %>
+<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
+
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainContent" runat="server">
     <% var meeting = (Meeting)ViewData["nextMeeting"];

@@ -1,6 +1,7 @@
-﻿<%@ Import Namespace="System.Web.Mvc.Html"%>
+﻿<%@ Import Namespace="CRIneta.Web.Core"%>
+<%@ Import Namespace="System.Web.Mvc.Html"%>
 <%@ Import Namespace="CRIneta.Website.Controllers"%>
-<%@ Import Namespace="CRIneta.Model"%>
+
 <%@ Import Namespace="MvcContrib" %>
 
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using CRIneta.Model;
 using CRIneta.UnitTests;
+using CRIneta.Web.Core;
 using CRIneta.Website.Controllers;
 using MvcContrib;
 using NUnit.Framework;

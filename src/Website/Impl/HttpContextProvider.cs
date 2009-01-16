@@ -1,5 +1,5 @@
 ﻿using System.Web;
-using CRIneta.Model;
+using CRIneta.Web.Core;
 
 namespace CRIneta.Website.Impl
 {

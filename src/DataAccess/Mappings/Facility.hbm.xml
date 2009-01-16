@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
-    <class name="CRIneta.Model.Domain.Facility, CRIneta.Model" table="Facilities">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CRIneta.Web.Core" namespace="CRIneta.Web.Core.Domain">
+    <class name="Facility" table="Facilities">
         <id name="FacilityId" column="Id" type="Int32" unsaved-value="0">
             <generator class="native" /> <!-- Database will generate the key when it is needed-->
         </id>

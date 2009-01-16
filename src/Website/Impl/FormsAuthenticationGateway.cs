@@ -1,5 +1,5 @@
 using System.Web.Security;
-using CRIneta.Model.Security;
+using CRIneta.Web.Core.Security;
 
 namespace CRIneta.Website.Impl
 {

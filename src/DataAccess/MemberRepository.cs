@@ -1,8 +1,9 @@
 using System;
-using CRIneta.Model.Domain;
+using CRIneta.Web.Core.Data;
+using CRIneta.Web.Core.Domain;
 using NHibernate;
 
-namespace CRIneta.DataAccess.Impl
+namespace CRIneta.DataAccess
 {
     public class MemberRepository : RepositoryBase, IMemberRepository
     {

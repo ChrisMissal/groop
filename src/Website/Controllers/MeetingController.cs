@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
-using CRIneta.Model;
-using CRIneta.DataAccess;
+using CRIneta.Web.Core;
+using CRIneta.Web.Core.Data;
 
 namespace CRIneta.Website.Controllers
 {

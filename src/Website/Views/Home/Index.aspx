@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/TwoCol.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Model.Domain" %>
+<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
+
 
 <asp:Content runat="server" ContentPlaceHolderID="mainContent">
 <h2>Welcome to the Cedar Rapids .NET User Group!</h2>

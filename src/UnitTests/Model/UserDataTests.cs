@@ -1,5 +1,5 @@
-﻿using CRIneta.Model;
-using CRIneta.Model.Domain;
+﻿using CRIneta.Web.Core;
+using CRIneta.Web.Core.Domain;
 using NUnit.Framework;
 using NUnit.Framework.SyntaxHelpers;
 

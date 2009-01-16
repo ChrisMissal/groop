@@ -1,5 +1,5 @@
 using System.Web.Mvc;
-using CRIneta.Model;
+using CRIneta.Web.Core;
 
 namespace CRIneta.Website.Controllers
 {

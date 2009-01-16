@@ -59,20 +59,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HybridSessionBuilder.cs" />
-    <Compile Include="IMeetingRepository.cs" />
-    <Compile Include="Impl\MeetingRepository.cs" />
-    <Compile Include="IRepository.cs" />
+    <Compile Include="MeetingRepository.cs" />
     <Compile Include="ISessionBuilder.cs" />
-    <Compile Include="IMemberRepository.cs" />
     <Compile Include="Migrations\001_AddSponsors.cs" />
     <Compile Include="Migrations\002_AddPeople.cs" />
     <Compile Include="Migrations\003_AddFacilities.cs" />
     <Compile Include="Migrations\004_AddMeetings.cs" />
     <Compile Include="Migrations\005_AddNews.cs" />
     <Compile Include="Migrations\006_AddMembers.cs" />
+    <Compile Include="Migrations\007_AddRoles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryBase.cs" />
-    <Compile Include="Impl\MemberRepository.cs" />
+    <Compile Include="MemberRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -92,6 +90,9 @@
       <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
       <Name>CRIneta.Web.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Role.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />

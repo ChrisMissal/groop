@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using CRIneta.DataAccess;
-using CRIneta.Model.Domain;
-using CRIneta.Model.Security.Cryptography;
+using CRIneta.Web.Core.Data;
+using CRIneta.Web.Core.Domain;
+using CRIneta.Web.Core.Security.Cryptography;
 
 namespace CRIneta.Website.Impl.Data
 {

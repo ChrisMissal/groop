@@ -15,11 +15,11 @@
     <components>
         
         <component id="ICryptographer"
-				   service="CRIneta.Model.Security.Cryptography.ICryptographer, CRIneta.Model"
+				   service="CRIneta.Web.Core.Security.Cryptography.ICryptographer, CRIneta.Web.Core"
 				   type="CRIneta.Website.Impl.Security.Cryptography.Cryptographer, CRIneta.Website" />
 
         <component id="IHttpContextProvider"
-				   service="CRIneta.Model.IHttpContextProvider, CRIneta.Model"
+				   service="CRIneta.Web.Core.IHttpContextProvider, CRIneta.Web.Core"
 				   type="CRIneta.Website.Impl.HttpContextProvider, CRIneta.Website" />
 
         <component id="ISessionBuilder"
@@ -28,17 +28,17 @@
 				       lifestyle="singleton" />
 
         <component id="IFormsAuthenticationGateway"
-				   service="CRIneta.Model.Security.IFormsAuthenticationGateway, CRIneta.Model"
+				   service="CRIneta.Web.Core.Security.IFormsAuthenticationGateway, CRIneta.Web.Core"
 				   type="CRIneta.Website.Impl.FormsAuthenticationGateway, CRIneta.Website" />
 
         <!-- Service Layer -->
         <component id="IUserSession"
-				 service="CRIneta.Model.IUserSession, CRIneta.Model"
+				 service="CRIneta.Web.Core.IUserSession, CRIneta.Web.Core"
 				 type="CRIneta.Website.Impl.Security.UserSession, CRIneta.Website"
 				 lifestyle="transient" />
 
         <component id="IAuthenticator"
-				   service="CRIneta.Model.Security.IAuthenticator, CRIneta.Model"
+				   service="CRIneta.Web.Core.Security.IAuthenticator, CRIneta.Web.Core"
 				   type="CRIneta.Website.Impl.Security.Authenticator, CRIneta.Website"
 				   lifestyle="transient" />
         
@@ -57,13 +57,13 @@
         <!-- Data Repositories -->
 
         <component id="IMemberRepository"
-                   service="CRIneta.DataAccess.IMemberRepository, CRIneta.DataAccess"
-                   type="CRIneta.DataAccess.Impl.MemberRepository, CRIneta.DataAccess">
+                   service="CRIneta.Web.Core.Data.IMemberRepository, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.MemberRepository, CRIneta.DataAccess">
         </component>
 
       <component id="IMeetingRepository"
-                 service="CRIneta.DataAccess.IMeetingRepository, CRIneta.DataAccess"
-                 type="CRIneta.DataAccess.Impl.MeetingRepository, CRIneta.DataAccess">
+                 service="CRIneta.Web.Core.Data.IMeetingRepository, CRIneta.Web.Core"
+                 type="CRIneta.DataAccess.MeetingRepository, CRIneta.DataAccess">
         
       </component>
         

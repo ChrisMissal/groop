@@ -1,4 +1,4 @@
-using CRIneta.Model.Domain;
+using CRIneta.Web.Core.Domain;
 using NUnit.Framework;
 using NUnit.Framework.SyntaxHelpers;
 

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/TwoCol.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
 
-<%@ Import Namespace="CRIneta.Model.Domain" %>
+
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainContent" runat="server">
     <% var allMeetings = (IList<Meeting>)ViewData["allMeetings"];

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Web.Mvc;
-using CRIneta.DataAccess;
-using CRIneta.Model;
-using CRIneta.Model.Domain;
-using CRIneta.Model.Security;
-using CRIneta.Model.Security.Cryptography;
+using CRIneta.Web.Core;
+using CRIneta.Web.Core.Data;
+using CRIneta.Web.Core.Domain;
+using CRIneta.Web.Core.Security;
+using CRIneta.Web.Core.Security.Cryptography;
 using CRIneta.Website.Controllers;
 using CRIneta.Website.Services.Email;
 using NUnit.Framework;
