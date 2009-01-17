@@ -173,6 +173,19 @@ padding-left:20px;
 margin:0;
 padding-left:20px;
 }
+.jq-featuredfade {
+padding:0;
+margin-top:-170px;
+height:75px;
+margin-bottom:105px;
+}
+.jq-featuredfade p {
+margin:0;
+padding:0 1em;
+font-size:200%;
+font-weight:bold;
+font-style:oblique;
+}
 #sidebar {
 float:right;
 width:300px;

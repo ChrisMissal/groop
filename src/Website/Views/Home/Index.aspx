@@ -1,13 +1,30 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
 <%@ Import Namespace="CRIneta.Web.Core.Domain"%>
 
+<asp:Content ContentPlaceHolderID="headerContent" runat="server">
+<script type="text/javascript">
+    $(document).ready(function() {
+        var $div = $("#content div:first");
+        $div.append(
+            $("<div />").addClass("jq-featuredfade").append(
+                $("<p>" + $("#featuredtopic h1").text() + "</p>").hide().fadeIn(1500, function() {
+                    $div.find("div").append(
+                        $("<p>" + $("#featuredtopic .entry .jq-presenter").text().replace(/Featured Topic: /, '') + "</p>")
+                        .css("font-size", "150%").css("text-align","right")
+                        .hide().fadeIn(1000)
+                    );
+                })
+            ));
+        });
+</script>
+</asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="mainContent">
 	<div style="margin-bottom: 10px;"><img src="/Content/images/supliment-clouds.jpg" alt="" /></div>
-	<div class="post">
+	<div id="featuredtopic" class="post">
 		<h1 class="title">Writing Your First Azure Service</h1>
 		<div class="entry">
-			<p><strong>Featured Topic: Presented By Greg Sohl </strong></p>
+			<p class="jq-presenter"><strong>Featured Topic: Presented By Greg Sohl </strong></p>
 			<p>Greg Sohl will be presenting on Windows Azure, Microsoft's new services platform. He'll show us the new bits and how to write our first Azure service.</p>
 		</div>
 		<div class="meta">
