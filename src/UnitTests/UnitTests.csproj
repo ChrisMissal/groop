@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Components.Validator, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.Components.Validator.dll</HintPath>
+    </Reference>
     <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\castle\Castle.Core.dll</HintPath>
@@ -67,6 +71,11 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\system.web.mvc\System.Web.Mvc.dll</HintPath>
@@ -85,6 +94,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Presentation\ContactMessageDataTests.cs" />
     <Compile Include="Model\UserDataTests.cs" />
     <Compile Include="Model\Domain\MeetingTests.cs" />
     <Compile Include="NHibernatInitializationTests.cs" />
@@ -92,6 +102,7 @@
     <Compile Include="Website\Controllers\FlashMessageComponentControllerTester.cs" />
     <Compile Include="Website\Controllers\AccountControllerTests.cs" />
     <Compile Include="MockingBase.cs" />
+    <Compile Include="Website\Controllers\ContactControllerTests.cs" />
     <Compile Include="WindsorTests.cs" />
   </ItemGroup>
   <ItemGroup>

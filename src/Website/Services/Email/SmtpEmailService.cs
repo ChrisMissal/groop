@@ -1,17 +1,29 @@
 using System.Net.Mail;
+using CRIneta.Web.Core.Domain;
+using CRIneta.Web.Core.Services;
 
 namespace CRIneta.Website.Services.Email
 {
+    public class FakeEmailService : IEmailService
+    {
+        public void Send(IContactMessage contactMessage)
+        {
+            return;
+        }
+    }
+
     public class SmtpEmailService : IEmailService
     {
         private readonly string host;
         private readonly int port;
         private string defaultFrom;
         private SmtpClient smtpClient;
+        private readonly string defaultTo;
 
-        public SmtpEmailService(string host, int port, string defaultFrom)
+        public SmtpEmailService(string host, int port, string defaultFrom, string defaultTo)
         {
             this.host = host;
+            this.defaultTo = defaultTo;
             this.port = port;
             this.defaultFrom = defaultFrom;
         }
@@ -65,12 +77,10 @@ namespace CRIneta.Website.Services.Email
         /// <summary>
         /// Composes and sends and email with the properties specified using the default "from"
         /// </summary>
-        /// <param name="to">To.</param>
-        /// <param name="subject">The subject.</param>
-        /// <param name="body">The body.</param>
-        public virtual void Send(string to, string subject, string body)
+        /// <param name="message">The message.</param>
+        public virtual void Send(IContactMessage message)
         {
-            Send(to, defaultFrom, subject, body);
+            Send(defaultTo, message.Email, message.Subject, message.Message);
         }
     }
 }

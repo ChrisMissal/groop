@@ -8,8 +8,8 @@
     <ProjectGuid>{6C050A4D-D368-45C1-82D7-9B62413E8556}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRIneta.Web.Core</RootNamespace>
-    <AssemblyName>CRIneta.Web.Core</AssemblyName>
+    <RootNamespace>CRIneta.Model</RootNamespace>
+    <AssemblyName>CRIneta.Model</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -35,10 +35,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\castle\Castle.Components.Validator.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\nhibernate\2.0\Iesi.Collections.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -58,31 +54,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\IMeetingRepository.cs" />
-    <Compile Include="Data\IMemberRepository.cs" />
-    <Compile Include="Data\IRepository.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\Attendee.cs" />
-    <Compile Include="Domain\ContactMessage.cs" />
     <Compile Include="Domain\Facility.cs" />
-    <Compile Include="Domain\IContactMessage.cs" />
     <Compile Include="Domain\Meeting.cs" />
     <Compile Include="Domain\Member.cs" />
-    <Compile Include="Domain\Name.cs" />
-    <Compile Include="Domain\Role.cs" />
     <Compile Include="FlashMessage.cs" />
     <Compile Include="IHttpContextProvider.cs" />
     <Compile Include="IUserSession.cs" />
-    <Compile Include="Presentation\ContactMessageData.cs" />
     <Compile Include="Presentation\RegistrationData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Cryptography\ICryptographer.cs" />
     <Compile Include="Security\IAuthenticator.cs" />
     <Compile Include="Security\IFormsAuthenticationGateway.cs" />
-    <Compile Include="Services\IEmailService.cs" />
     <Compile Include="UserData.cs" />
-    <Compile Include="Validation\IValidator.cs" />
-    <Compile Include="Validation\PresentationValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

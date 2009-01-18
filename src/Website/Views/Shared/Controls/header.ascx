@@ -11,7 +11,7 @@
             <li><%=Html.ActionLink("Meetings", "show", "meeting") %></li>
             <li><%=Html.ActionLink("Sponsors", "index", "sponsor") %></li>
             <li><%=Html.ActionLink("About", "about", "home") %></li>
-            <li><%=Html.ActionLink("Contact", "contact", "home") %></li>
+            <li><%=Html.ActionLink("Contact", "index", "contact") %></li>
         </ul>
 	</div>
 </div>

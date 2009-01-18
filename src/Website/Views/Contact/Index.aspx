@@ -2,7 +2,7 @@
 
 <asp:Content ContentPlaceHolderID="headerContent" runat="server">
 <style type="text/css">
-#Contact-Submit { margin-left: 80px; }
+#Submit { margin-left: 80px; }
 </style>
 </asp:Content>
 
@@ -14,18 +14,18 @@
             <p>Have a question or comment regarding CRINETA?  Please fill out the form below and then click the "Send" button.  Please note that ALL fields are required.</p>
 		</div>
 		<div class="entry">
-		    <form method="post" action="">
+		    <% using(Html.BeginForm()) { %>
 		        <fieldset>
-		            <p><label for="Contact-Email">Your Email:</label><input type="text" class="field" name="Email" id="Contact-Email" /></p>
-		            <p><label for="Contact-Name">Your Name:</label><input type="text" class="field" name="Email" id="Contact-Name" /></p>
-		            <p><label for="Contact-Subject">Subject:</label><input type="text" class="field" name="Email" id="Contact-Subject" /></p>
+		            <p><label for="Email">Your Email:</label><%= Html.TextBox("Email", "", new { Class = "field" })%></p>
+		            <p><label for="Name">Your Name:</label><%= Html.TextBox("Name", "", new { Class = "field" })%></p>
+		            <p><label for="Subject">Subject:</label><%= Html.TextBox("Subject", "", new { Class = "field" })%></p>
 		            <p>
 		                <label for="Contact-Message">Message:</label>
-		                <textarea rows="6" cols="40" name="Message" id="Contact-Message"></textarea><br />
-		                <input type="submit" value="Send Message" id="Contact-Submit" />
+		                <textarea rows="6" cols="40" name="Message" id="Message"></textarea><br />
+		                <input type="submit" value="Send Message" id="Submit" />
 		            </p>
 		        </fieldset>
-		    </form>
+		    <% } %>
 		</div>
     </div>
 </asp:Content>

@@ -1,17 +1,13 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using CRIneta.Web.Core;
 using CRIneta.Web.Core.Data;
 using CRIneta.Web.Core.Domain;
 using CRIneta.Web.Core.Security;
 using CRIneta.Web.Core.Security.Cryptography;
+using CRIneta.Web.Core.Services;
 using CRIneta.Website.Controllers;
-using CRIneta.Website.Services.Email;
 using NUnit.Framework;
-using NUnit.Framework.SyntaxHelpers;
 using Rhino.Mocks;
-using Is = Rhino.Mocks.Constraints.Is;
-using Text = Rhino.Mocks.Constraints.Text;
 
 namespace CRIneta.UnitTests.Website.Controllers
 {

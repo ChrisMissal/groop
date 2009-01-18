@@ -8,9 +8,10 @@
             configFile="log4net.config" />-->
     </facilities>
     <properties>
-        <Smtp.Host>192.168.223.2</Smtp.Host>
-        <Smtp.Port>25</Smtp.Port>
-        <Smtp.From>webmaster@crineta.org</Smtp.From>
+      <Smtp.Host>127.0.0.1</Smtp.Host>
+      <Smtp.Port>25</Smtp.Port>
+      <Smtp.From>webmaster@crineta.org</Smtp.From>
+      <Smtp.To>webmaster@crineta.org</Smtp.To>
     </properties>
     <components>
         
@@ -43,14 +44,20 @@
 				   lifestyle="transient" />
         
         <!-- General -->
+      <component id="IValidator"
+                 service="CRIneta.Web.Core.Validation.IValidator, CRIneta.Web.Core"
+                 type="CRIneta.Web.Core.Validation.PresentationValidator, CRIneta.Web.Core" />
+      
+      <!-- Services -->
 
         <component id="IEmailService"
-                       service="CRIneta.Website.Services.Email.IEmailService,  CRIneta.Website"
-                       type=" CRIneta.Website.Services.Email.SmtpEmailService, CRIneta.Website">
+                       service="CRIneta.Web.Core.Services.IEmailService,  CRIneta.Web.Core"
+                       type=" CRIneta.Website.Services.Email.FakeEmailService, CRIneta.Website">
             <parameters>
-                <host>#{Smtp.Host}</host>
-                <port>#{Smtp.Port}</port>
-                <defaultFrom>#{Smtp.From}</defaultFrom>
+              <host>#{Smtp.Host}</host>
+              <port>#{Smtp.Port}</port>
+              <defaultFrom>#{Smtp.From}</defaultFrom>
+              <defaultTo>#{Smtp.To}</defaultTo>
             </parameters>
         </component>
 

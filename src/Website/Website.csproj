@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\FlashMessageComponentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -52,7 +53,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\IRouteConfigurator.cs" />
     <Compile Include="Routing\RouteConfigurator.cs" />
-    <Compile Include="Services\Email\IEmailService.cs" />
     <Compile Include="Services\Email\SmtpEmailService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,7 +91,7 @@
     <Content Include="Content\images\spacer.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Contact.aspx" />
+    <Content Include="Views\Contact\Index.aspx" />
     <Content Include="Views\Meeting\Index.aspx" />
     <Content Include="Views\Meeting\List.aspx" />
     <Content Include="Views\Meeting\Show.aspx" />
@@ -129,6 +129,7 @@
     <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\jquery.validate.js" />
     <Content Include="Views\Account\Index.aspx" />
+    <Content Include="Views\Contact\Sent.aspx" />
     <Content Include="Views\Layouts\TwoCol.Master" />
     <Content Include="Views\Shared\Controls\userStatus.ascx" />
     <Content Include="Views\Shared\FlashMessageList.ascx" />

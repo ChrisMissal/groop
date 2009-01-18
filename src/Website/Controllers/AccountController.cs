@@ -10,8 +10,8 @@ using CRIneta.Web.Core.Domain;
 using CRIneta.Web.Core.Presentation;
 using CRIneta.Web.Core.Security;
 using CRIneta.Web.Core.Security.Cryptography;
+using CRIneta.Web.Core.Services;
 using CRIneta.Website.Impl.UserInput;
-using CRIneta.Website.Services.Email;
 using MvcContrib.Filters;
 
 namespace CRIneta.Website.Controllers

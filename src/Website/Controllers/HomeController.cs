@@ -29,10 +29,5 @@ namespace CRIneta.Website.Controllers
 
             return View();
         }
-
-        public ActionResult Contact()
-        {
-            return View();
-        }
     }
 }

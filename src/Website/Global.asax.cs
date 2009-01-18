@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Routing;
 using Castle.Core;
 using CRIneta.Website.Helpers;
 using CRIneta.Website.Routing;
@@ -12,7 +9,7 @@ using MvcContrib.Castle;
 
 namespace CRIneta.Website
 {
-    public class GlobalApplication : System.Web.HttpApplication
+    public class GlobalApplication : HttpApplication
     {
         protected void Application_Start()
         {
