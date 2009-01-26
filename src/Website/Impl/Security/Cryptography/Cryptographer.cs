@@ -33,6 +33,15 @@ namespace CRIneta.Website.Impl.Security.Cryptography
             return Convert.ToBase64String(buff);
         }
 
+        public void Test()
+        {
+            Cryptographer cryptographer = new Cryptographer();
+            var salt = cryptographer.CreateSalt();
+            var password = cryptographer.Hash("password", salt);
+            Console.WriteLine(salt);
+            Console.WriteLine(password);
+        }
+
         /// <summary>
         /// Create a password hash based on a password and salt.  
         /// Adapted from: http://davidhayden.com/blog/dave/archive/2004/02/16/157.aspx

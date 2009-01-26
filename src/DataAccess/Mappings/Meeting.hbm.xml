@@ -10,7 +10,7 @@
         <property name="Description" column="Description" type="StringClob" not-null="true" />
         <property name="Presenter" column="Presenter" length="255" not-null="true" />
 
-        <many-to-one name="Facility" column="FacilityId" not-null="true" class="Facility" />
+        <many-to-one name="Facility" column="FacilityId" not-null="true" class="Facility" foreign-key="FK_Meetings_Facilities" />
         
     </class>
 </hibernate-mapping>

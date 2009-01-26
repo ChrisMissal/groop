@@ -76,8 +76,8 @@
   <Members>
     <MemberId>1</MemberId>
     <Username>TimBarcz</Username>
-    <Password>password</Password>
-    <PasswordSalt>passwordSalt</PasswordSalt>
+    <Password>AM0F6ydug8UYiUqE53q8Fs12Z/c=</Password>
+    <PasswordSalt>GPlUv1jOd8sNygwnGxsTeVyDB7N4E/8Wwybs9Oeatmqjy1AInK0LdlnS/TW7tiI1PzQSSyxvlxVYuCZv9YW57g==</PasswordSalt>
     <First>Tim</First>
     <Last>Barcz</Last>
     <EmailAddress>timbarcz@gmail.com</EmailAddress>
@@ -85,8 +85,8 @@
   <Members>
     <MemberId>2</MemberId>
     <Username>ChrisMissal</Username>
-    <Password>password</Password>
-    <PasswordSalt>passwordSalt</PasswordSalt>
+    <Password>WFyuAtPc8YNBi8+gdt7eUqjYb8o=</Password>
+    <PasswordSalt>F46draJEOW1EquVFYm/ktrQaea7zQ33Z+3sMvacUizmTn7pkRrBofHrC9myhPNdpD+gZvG9hz7896XPSI0o0rg==</PasswordSalt>
     <First>Chris</First>
     <Last>Missal</Last>
     <EmailAddress>chrismissal@gmail.com</EmailAddress>

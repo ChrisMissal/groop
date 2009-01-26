@@ -79,6 +79,10 @@
     <Compile Include="Security\Cryptography\ICryptographer.cs" />
     <Compile Include="Security\IAuthenticator.cs" />
     <Compile Include="Security\IFormsAuthenticationGateway.cs" />
+    <Compile Include="Security\UserPrincipal.cs" />
+
+    <Compile Include="Services\IAuthenticationService.cs" />
+    <Compile Include="Security\IUserIdentity.cs" />
     <Compile Include="Services\IEmailService.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="Validation\IValidator.cs" />

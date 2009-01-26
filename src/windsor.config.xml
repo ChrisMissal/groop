@@ -42,6 +42,10 @@
 				   service="CRIneta.Web.Core.Security.IAuthenticator, CRIneta.Web.Core"
 				   type="CRIneta.Website.Impl.Security.Authenticator, CRIneta.Website"
 				   lifestyle="transient" />
+
+        <component id="IAuthenticationService"
+				   service="CRIneta.Web.Core.Services.IAuthenticationService, CRIneta.Web.Core"
+				   type="CRIneta.Web.Core.Services.AuthenticationService, CRIneta.Web.Core" />
         
         <!-- General -->
       <component id="IValidator"

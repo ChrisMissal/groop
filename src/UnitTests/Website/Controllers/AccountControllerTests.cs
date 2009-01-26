@@ -8,6 +8,7 @@ using CRIneta.Web.Core.Services;
 using CRIneta.Website.Controllers;
 using NUnit.Framework;
 using Rhino.Mocks;
+using MvcContrib.TestHelper;
 
 namespace CRIneta.UnitTests.Website.Controllers
 {
@@ -28,7 +29,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         private IMemberRepository mockMemberRepository;
         private IAuthenticator mockAuthenticator;
         private ICryptographer mockCryptographer;
-        private IEmailService mockEmailService;
+        private IAuthenticationService mockAuthenticationService;
 
         private AccountController GetController()
         {
@@ -36,10 +37,10 @@ namespace CRIneta.UnitTests.Website.Controllers
             mockMemberRepository = mockery.DynamicMock<IMemberRepository>();
             mockAuthenticator = mockery.DynamicMock<IAuthenticator>();
             mockCryptographer = mockery.DynamicMock<ICryptographer>();
-            mockEmailService = mockery.DynamicMock<IEmailService>();
+            mockery.DynamicMock<IEmailService>();
+            mockAuthenticationService = mockery.DynamicMock<IAuthenticationService>();
 
-            var controller = new AccountController(mockUserSession, mockMemberRepository, mockAuthenticator,
-                                                   mockCryptographer, mockEmailService);
+            var controller = new AccountController(mockUserSession, mockMemberRepository, mockAuthenticator, mockCryptographer, mockAuthenticationService);
 
             return controller;
         }
@@ -116,27 +117,15 @@ namespace CRIneta.UnitTests.Website.Controllers
             AccountController controller = GetController();
 
             string email = "something@something.com";
+            string username = "joeuser";
             string password = "password";
 
-            var stubUser = new Member
-                               {
-                                   Username = "joeuser",
-                                   Email = "joeuser@gmail.com",
-                                   Name = new Name
-                                   {
-                                       First = "Joe",
-                                       Last = "User",
-                                   }
-                               };
-
-            SetupResult.For(mockMemberRepository.GetByUsername(email)).Return(stubUser);
-
             // expecatations
-            Expect.Call(mockAuthenticator.VerifyAccount(stubUser, password)).Return(true);
+            Expect.Call(mockAuthenticationService.SignIn(username, password)).Return(true);
 
             mockery.ReplayAll();
 
-            controller.Login(email, password, null);
+            controller.Login(username, password, null);
 
             // assert
             mockery.VerifyAll();
@@ -148,7 +137,7 @@ namespace CRIneta.UnitTests.Website.Controllers
             AccountController controller = GetController();
 
             // expectations
-            mockAuthenticator.SignOut();
+            mockAuthenticationService.SignOut();
 
             mockery.ReplayAll();
 
@@ -412,61 +401,30 @@ namespace CRIneta.UnitTests.Website.Controllers
         public void Should_be_redirected_to_account_index_action_if_login_succeeds()
         {
             AccountController controller = GetController();
-            string email = "joeuser@gmail.com";
+            string username = "joeuser@gmail.com";
             string password = "password";
 
-            var stubUser = new Member
-                               {
-                                   Username = "joeuser",
-                                   Email = "joeuser@gmail.com",
-                                   Name = new Name
-                                   {
-                                       First = "Joe",
-                                       Last = "User",
-                                   }
-                               };
-
-
-            SetupResult.For(mockMemberRepository.GetByUsername(email)).Return(stubUser);
-            SetupResult.For(mockAuthenticator.VerifyAccount(null, null)).IgnoreArguments().Return(true);
+            SetupResult.For(mockAuthenticationService.SignIn(username, password)).Return(true);
 
             mockery.ReplayAll();
 
-            var result = controller.Login(email, password, null) as RedirectToRouteResult;
-
-            Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
-            Assert.That(result.Values["action"], NUnit.Framework.SyntaxHelpers.Is.EqualTo("Index"));
-            Assert.That(result.Values["controller"], NUnit.Framework.SyntaxHelpers.Is.EqualTo("Account"));
+            controller.Login(username, password, null).AssertActionRedirect().ToController("Account").ToAction("Index");
         }
 
         [Test]
         public void Should_be_redirected_to_specified_Url_if_one_is_present_and_authentication_is_succesfull()
         {
             AccountController controller = GetController();
-            string email = "joeuser@gmail.com";
+            string username = "joeuser@gmail.com";
             string password = "password";
 
-            var stubUser = new Member
-                               {
-                                   Username = "joeuser",
-                                   Email = "joeuser@gmail.com",
-                                   Name = new Name
-                                   {
-                                       First = "Joe",
-                                       Last = "User",
-                                   }
-                               };
-
-            SetupResult.For(mockMemberRepository.GetByUsername(email)).Return(stubUser);
-            SetupResult.For(mockAuthenticator.VerifyAccount(null, null)).IgnoreArguments().Return(true);
+            SetupResult.For(mockAuthenticationService.SignIn(username, password)).Return(true);
 
             mockery.ReplayAll();
 
-            string redirectUrl = "http://www.google.com";
-            var result = controller.Login(email, password, redirectUrl) as RedirectResult;
+            var redirectUrl = "http://www.google.com";
 
-            Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
-            Assert.That(result.Url, NUnit.Framework.SyntaxHelpers.Is.EqualTo(redirectUrl));
+            controller.Login(username, password, redirectUrl).AssertHttpRedirect().ToUrl(redirectUrl);
         }
 
         //[Test]

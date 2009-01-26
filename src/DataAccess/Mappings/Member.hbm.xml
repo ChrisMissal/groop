@@ -5,7 +5,7 @@
             <generator class="native" />
             <!-- Database will generate the key when it is needed-->
         </id>
-        <property name="Username" column="Username" length="50" not-null="true" />
+        <property name="Username" column="Username" length="50" not-null="true" index="IX_Username" unique="true" />
         <property name="Password" column="Password" length="255" not-null="true" />
         <property name="PasswordSalt" column="PasswordSalt" length="255" not-null="true"  />
                   
@@ -17,8 +17,8 @@
         <property name="Email" column="EmailAddress" length="100" not-null="true" />
 
         <set name="Roles" table="UserRoles" lazy="true" cascade="save-update">
-            <key column="MemberId" foreign-key="FK_Users_Roles"/>
-            <many-to-many class="Role" column="RoleId"/>
+            <key column="MemberId" foreign-key="FK_UserRoles_Members" />
+            <many-to-many class="Role" column="RoleId" foreign-key="FK_UsersRoles_Roles" />
         </set>
 
     </class>

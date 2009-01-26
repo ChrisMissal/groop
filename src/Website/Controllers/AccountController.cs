@@ -22,10 +22,9 @@ namespace CRIneta.Website.Controllers
     [HandleError]
     public class AccountController : Controller
     {
-        private const string salt = "#rstpsswrd$";
         private readonly IAuthenticator authenticator;
         private readonly ICryptographer cryptographer;
-        private readonly IEmailService emailService;
+        private readonly IAuthenticationService authenticationService;
         private readonly IMemberRepository memberRepository;
 
         /// <summary>
@@ -35,13 +34,13 @@ namespace CRIneta.Website.Controllers
         /// <param name="memberRepository">The user repository.</param>
         /// <param name="authenticator">The authenticator.</param>
         /// <param name="cryptographer">The cryptographer.</param>
-        /// <param name="emailService"></param>
-        public AccountController (IUserSession userSession, IMemberRepository memberRepository, IAuthenticator authenticator, ICryptographer cryptographer, IEmailService emailService) : base(userSession)
+        /// <param name="authenticationService"></param>
+        public AccountController (IUserSession userSession, IMemberRepository memberRepository, IAuthenticator authenticator, ICryptographer cryptographer, IAuthenticationService authenticationService) : base(userSession)
         {
             this.memberRepository = memberRepository;
             this.authenticator = authenticator;
             this.cryptographer = cryptographer;
-            this.emailService = emailService;
+            this.authenticationService = authenticationService;
         }
 
         #region Index Actions
@@ -101,25 +100,20 @@ namespace CRIneta.Website.Controllers
 
             if (!validationRunner.IsValid(loginData))
             {
-                base.AddErrorMessages(validationRunner.GetErrorSummary(loginData).ErrorMessages);
+                AddErrorMessages(validationRunner.GetErrorSummary(loginData).ErrorMessages);
                 return RedirectToAction("Login");
             }
 
-            Member user = memberRepository.GetByUsername(username);
-
-            if (user != null && authenticator.VerifyAccount(user, password))
+            if (!authenticationService.SignIn(username, password))
             {
-                authenticator.SignIn(user);
-
-                if (redirectUrl != null)
-                    return Redirect(redirectUrl);
-
-                return RedirectToAction("Index", "Account");
+                AddErrorMessage("Invalid Login");
+                return RedirectToAction("Login");
             }
+            
+            if (redirectUrl != null)
+                return Redirect(redirectUrl);
 
-            //login failed
-            base.AddErrorMessage("Invalid Login");
-            return RedirectToAction("Login");
+            return RedirectToAction("Index", "Account");
         }
 
         #endregion
@@ -129,7 +123,7 @@ namespace CRIneta.Website.Controllers
         
         public ActionResult LogOut()
         {
-            authenticator.SignOut();
+            authenticationService.SignOut();
             userSession.PushUserMessage(FlashMessage.MessageType.Message, "You've been sucessfully logged out.");
             return RedirectToAction("Index", "Home");
         }
@@ -160,6 +154,8 @@ namespace CRIneta.Website.Controllers
                 return RedirectToAction("Register");
             }
 
+            
+
             Member member = memberRepository.GetByUsername(username);
 
             if (member != null)
@@ -183,6 +179,7 @@ namespace CRIneta.Website.Controllers
             member.Password = cryptographer.Hash(password, member.PasswordSalt);
 
             memberRepository.AddMember(member);
+            
             authenticator.SignIn(member);
 
             return RedirectToAction("Index", "Account");
