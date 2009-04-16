@@ -6,6 +6,7 @@ using CRIneta.Web.Core;
 using CRIneta.Web.Core.Domain;
 using CRIneta.Web.Core.Security;
 using CRIneta.Web.Core.Security.Cryptography;
+using CRIneta.Framework;
 using CRIneta.Website.Impl.Security.Principal;
 
 namespace CRIneta.Website.Impl.Security
@@ -41,7 +42,7 @@ namespace CRIneta.Website.Impl.Security
         public IIdentity GetActiveIdentity()
         {
             IIdentity identity = httpContextProvider.GetCurrentHttpContext().User.Identity;
-            if (identity.Name == "")
+            if (identity.Name.IsNullOrEmpty())
             {
                 string name = Guid.NewGuid().ToString();
 

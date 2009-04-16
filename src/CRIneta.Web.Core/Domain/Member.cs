@@ -1,13 +1,14 @@
-using System.Collections.Generic;
 using Iesi.Collections.Generic;
 
 namespace CRIneta.Web.Core.Domain
 {
     public class Member
     {
+        private Name name;
+
         public Member()
         {
-            Name = new Name();
+            name = new Name();
         }
 
         /// <summary>
@@ -26,7 +27,11 @@ namespace CRIneta.Web.Core.Domain
         /// Gets or sets the name.
         /// </summary>
         /// <value>The name.</value>
-        public virtual Name Name { get; set; }
+        public virtual Name Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
         /// <summary>
         /// Gets the email.

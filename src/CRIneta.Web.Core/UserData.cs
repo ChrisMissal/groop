@@ -1,12 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using CRIneta.Web.Core.Domain;
 
 namespace CRIneta.Web.Core
 {
     public class UserData
     {
-        private bool isAuthenticated;
-        private string username;
-        private string name;
+        private readonly bool isAuthenticated;
+        private readonly Member member;
 
         public UserData(Member member)
         {
@@ -14,8 +16,7 @@ namespace CRIneta.Web.Core
             if (member == null) return;
 
             isAuthenticated = true;
-            username = member.Username;
-            name = member.GetName();
+            this.member = member;
         }
 
         public bool IsAuthenticated
@@ -25,12 +26,17 @@ namespace CRIneta.Web.Core
 
         public string Username
         {
-            get { return username; }
+            get { return member.Username; }
         }
 
         public string Name
         {
-            get { return name; }
+            get { return member.GetName(); }
+        }
+
+        public bool IsInRole(Func<Role, bool> func)
+        {
+            return member.Roles.Any(func);
         }
     }
 }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2B93AFC7-578C-4705-83BF-F094F2129F58}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -103,6 +103,8 @@
     <Compile Include="Model\Domain\MeetingTests.cs" />
     <Compile Include="NHibernatInitializationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Website\Controllers\AdminControllerMeetingTests.cs" />
+    <Compile Include="Website\Controllers\AdminControllerTestBase.cs" />
     <Compile Include="Website\Controllers\FlashMessageComponentControllerTester.cs" />
     <Compile Include="Website\Controllers\AccountControllerTests.cs" />
     <Compile Include="MockingBase.cs" />

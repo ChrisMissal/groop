@@ -9,7 +9,6 @@ namespace CRIneta.Web.Core.Security
     public interface IUserIdentity : IIdentity
     {
         int MemberId { get; set; }
-        string Username { get; set; }
         string First { get; set; }
         string Last { get; set; }
         IList<string> Roles { get; }
@@ -24,10 +23,6 @@ namespace CRIneta.Web.Core.Security
         {
             roles = new List<string>();
         }
-        public string Name
-        {
-            get { return First + " " + Last; }
-        }
 
         public string AuthenticationType
         {
@@ -41,7 +36,7 @@ namespace CRIneta.Web.Core.Security
 
         public int MemberId { get; set; }
 
-        public string Username { get; set; }
+        public string Name { get; set; }
 
         public string Email { get; set; }
 
@@ -58,7 +53,7 @@ namespace CRIneta.Web.Core.Security
         public UserIdentity From(Member member)
         {
             MemberId = member.MemberId;
-            Username = member.Username;
+            Name = member.Username;
             Email = member.Email;
             First = member.Name.First;
             Last = member.Name.Last;
@@ -75,7 +70,7 @@ namespace CRIneta.Web.Core.Security
                 rolesString.Append(role).Append(":");
             }
 
-            return string.Format("{0}|{1}|{2}|{3}|{4}|{5}", MemberId, Username, Email, First, Last, rolesString);
+            return string.Format("{0}|{1}|{2}|{3}|{4}|{5}", MemberId, Name, Email, First, Last, rolesString);
         }
 
         public UserIdentity Deserialize(string data)
@@ -83,7 +78,7 @@ namespace CRIneta.Web.Core.Security
             var dataValues = data.Split("|".ToCharArray());
 
             MemberId = Convert.ToInt32(dataValues[0]);
-            Username = dataValues[1];
+            Name = dataValues[1];
             Email = dataValues[2];
             First = dataValues[3];
             Last = dataValues[4];

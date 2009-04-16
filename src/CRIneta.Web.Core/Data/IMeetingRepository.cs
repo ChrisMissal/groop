@@ -6,6 +6,7 @@ namespace CRIneta.Web.Core.Data
 {
     public interface IMeetingRepository : IRepository<Meeting, int>
     {
+        Meeting SaveOrUpdateMeeting(Meeting meeting);
         Meeting GetNextMeeting(DateTime time);
         IList<Meeting> GetUpcomingMeetings(DateTime time, int maxNumberMeetings);
         IList<Meeting> GetAllMeetings();

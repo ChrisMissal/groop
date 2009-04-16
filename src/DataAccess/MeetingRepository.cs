@@ -30,6 +30,31 @@ namespace CRIneta.DataAccess
                 .List<Meeting>();
         }
 
+        /// <summary>
+        /// Saves or updates the meeting.
+        /// </summary>
+        /// <param name="meeting">The meeting.</param>
+        /// <returns></returns>
+        public Meeting SaveOrUpdateMeeting(Meeting meeting)
+        {
+            using(var session = getSession())
+            {
+                using(var txn = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.SaveOrUpdate(meeting);
+                        return meeting;
+                    }
+                    catch (HibernateException)
+                    {
+                        txn.Rollback();
+                        throw;
+                    }
+                }
+            }
+        }
+
         public Meeting GetNextMeeting(DateTime time)
         {
             IList<Meeting> meetings = GetUpcomingMeetings(time, 1);

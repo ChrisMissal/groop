@@ -11,7 +11,9 @@
    {
 %>
     <h2>Welcome <%= userData.Username %>!</h2>
-        <ul>
+        <ul><% if(userData.IsInRole(role => role.Name == "Administrators")) { %>
+            <li><%=Html.ActionLink("Admin", "Index", "Admin") %></li>
+            <% } %>
             <li><%=Html.ActionLink("My Account", "Index", "Account") %></li>
             <li><%=Html.ActionLink("Sign Out", "Logout", "Account") %></li>
         </ul>

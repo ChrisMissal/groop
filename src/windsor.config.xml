@@ -75,7 +75,11 @@
       <component id="IMeetingRepository"
                  service="CRIneta.Web.Core.Data.IMeetingRepository, CRIneta.Web.Core"
                  type="CRIneta.DataAccess.MeetingRepository, CRIneta.DataAccess">
-        
+      </component>
+
+      <component id="IFacilityRepository"
+                 service="CRIneta.Web.Core.Data.IFacilityRepository, CRIneta.Web.Core"
+                 type="CRIneta.DataAccess.FacilityRepository, CRIneta.DataAccess">
       </component>
         
         <!-- End Data Repositories -->

@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using CRIneta.Web.Core;
 using CRIneta.Web.Core.Data;
+using CRIneta.Web.Core.Domain;
 
 namespace CRIneta.Website.Controllers
 {
@@ -38,6 +39,20 @@ namespace CRIneta.Website.Controllers
                 ViewData["upcomingMeetings"] = upcomingMeetings;    
             }
             
+            return View("Show");
+        }
+
+        public ActionResult RSVP(int id)
+        {
+            var meeting = meetingRepository.GetById(id);
+            if (meeting == null)
+                return RedirectToAction("Index");
+
+            var user = userSession.GetLoggedInUser();
+            var attendee = new Attendee(user.Name.First, user.Name.Last);
+            meeting.AddAttendee(attendee);
+
+            ViewData.Model = meeting;
             return View("Show");
         }
     }

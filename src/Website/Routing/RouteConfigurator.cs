@@ -17,6 +17,10 @@ namespace CRIneta.Website.Routing
                 "{controller}/{action}/{id}",                           // URL with parameters
                 new { controller = "Home", action = "Index", id = "" }  // Parameter defaults
             );
+
+            routes.MapRoute("AdminViewMeetings", "{controller}/{action}/{id}",
+                            new { controller = "Admin", action = "EditMeeting", id = "" });
+
         }
     }
 }
