@@ -160,8 +160,8 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             var result = controller.Login(email, password, null) as RedirectToRouteResult;
 
-            Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
-            Assert.That(result.Values["action"], NUnit.Framework.SyntaxHelpers.Is.EqualTo("Login"));
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Values["action"], Is.EqualTo("Login"));
         }
 
         [Test]
@@ -173,7 +173,7 @@ namespace CRIneta.UnitTests.Website.Controllers
             var result = controller.Login() as ViewResult;
 
             // Verify
-            Assert.That(result.ViewName, NUnit.Framework.SyntaxHelpers.Is.EqualTo("Login"));
+            Assert.That(result.ViewName, Is.EqualTo("Login"));
         }
 
         [Test]
@@ -185,9 +185,9 @@ namespace CRIneta.UnitTests.Website.Controllers
             var result = controller.LogOut() as RedirectToRouteResult;
 
             // Verify
-            Assert.That(result, NUnit.Framework.SyntaxHelpers.Is.Not.Null);
-            Assert.That(result.Values["action"], NUnit.Framework.SyntaxHelpers.Is.EqualTo("Index"));
-            Assert.That(result.Values["controller"], NUnit.Framework.SyntaxHelpers.Is.EqualTo("Home"));
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Values["action"], Is.EqualTo("Index"));
+            Assert.That(result.Values["controller"], Is.EqualTo("Home"));
         }
 
         //[Test]

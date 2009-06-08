@@ -6,7 +6,7 @@ using CRIneta.Web.Core;
 using CRIneta.Website.Controllers;
 using MvcContrib;
 using NUnit.Framework;
-using NUnit.Framework.SyntaxHelpers;
+
 using Rhino.Mocks;
 
 namespace CRIneta.UnitTests.Website.Controllers

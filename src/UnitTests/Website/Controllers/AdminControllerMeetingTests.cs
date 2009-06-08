@@ -1,6 +1,6 @@
 using CRIneta.Web.Core;
 using NUnit.Framework;
-using NUnit.Framework.SyntaxHelpers;
+
 using Rhino.Mocks;
 using System.Web.Mvc;
 

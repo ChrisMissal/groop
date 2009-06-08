@@ -1,7 +1,7 @@
 ﻿using CRIneta.Web.Core;
 using CRIneta.Web.Core.Domain;
 using NUnit.Framework;
-using NUnit.Framework.SyntaxHelpers;
+
 
 namespace CRIneta.UnitTests.Model
 {
