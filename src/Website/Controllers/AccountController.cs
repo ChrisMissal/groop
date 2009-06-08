@@ -12,6 +12,7 @@ using CRIneta.Web.Core.Security;
 using CRIneta.Web.Core.Security.Cryptography;
 using CRIneta.Web.Core.Services;
 using CRIneta.Website.Impl.UserInput;
+using MvcContrib.Attributes;
 using MvcContrib.Filters;
 
 namespace CRIneta.Website.Controllers
@@ -71,7 +72,7 @@ namespace CRIneta.Website.Controllers
             return View();
         }
         
-        [PostOnly]
+        [AcceptPost]
         public ActionResult ProcessChangePassword(string currentPassword, string newPassword, string confirmPassword)
         {
             ViewData["Title"] = "Change Password";
