@@ -6,7 +6,7 @@
 
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<% var userData = ViewData.Get<UserData>();  %>
+<% var userData = (UserData)ViewData.Get("UserData");  %>
 <% if (userData.IsAuthenticated)
    {
 %>

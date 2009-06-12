@@ -49,7 +49,7 @@ namespace CRIneta.Website.Controllers
 
                 UserData userData = new UserData(user);
 
-                ViewData.Add(userData);
+                ViewData.Add("UserData", userData);
 
                 hasLoaded = true;
             }

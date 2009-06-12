@@ -9,9 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title><%= ViewData.GetOrDefault("PageTitle","Cedar Rapids .NET User Group")%></title>
-        <meta name="keywords" content="<%= ViewData.GetOrDefault("PageKeywords", "Cedar Rapids INETA Users Group") %>" />
-        <meta name="description" content="<%= ViewData.GetOrDefault("PageDescription", "INETA group for .NET developers in Eastern Iowa") %>" />
+        
         <link rel="stylesheet" href="/Content/css/style.css" media="screen" />
         <script src='<%= AppHelper.JsUrl("jquery-1.3.2.min.js") %>' type="text/javascript"></script>
         <asp:ContentPlaceHolder ID="headerContent" runat="server" />
@@ -38,7 +36,7 @@
 			<ul>
 				<li id="signin">
 				
-					<% Html.RenderPartial("~/views/shared/controls/userStatus.ascx"); %>
+					<% Html.RenderPartial("~/views/shared/controls/userStatus.ascx", ViewData); %>
 					
 				</li>
                 <li>
