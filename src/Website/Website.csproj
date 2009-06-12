@@ -172,10 +172,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\log4net\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\system.web.mvc\Microsoft.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="MvcContrib, Version=0.0.1.174, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\mvccontrib\MvcContrib.dll</HintPath>

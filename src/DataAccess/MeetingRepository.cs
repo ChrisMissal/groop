@@ -88,7 +88,7 @@ namespace CRIneta.DataAccess
                     tx.Commit();
                     return meetings;
                 }
-                catch(HibernateException ex)
+                catch(HibernateException)
                 {
                     tx.Rollback();
                     throw;

@@ -116,7 +116,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         {
             AccountController controller = GetController();
 
-            string email = "something@something.com";
+            //string email = "something@something.com";
             string username = "joeuser";
             string password = "password";
 
@@ -161,7 +161,7 @@ namespace CRIneta.UnitTests.Website.Controllers
             var result = controller.Login(email, password, null) as RedirectToRouteResult;
 
             Assert.That(result, Is.Not.Null);
-            Assert.That(result.Values["action"], Is.EqualTo("Login"));
+            Assert.That(result.RouteValues["action"], Is.EqualTo("Login"));
         }
 
         [Test]
@@ -186,8 +186,8 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             // Verify
             Assert.That(result, Is.Not.Null);
-            Assert.That(result.Values["action"], Is.EqualTo("Index"));
-            Assert.That(result.Values["controller"], Is.EqualTo("Home"));
+            Assert.That(result.RouteValues["action"], Is.EqualTo("Index"));
+            Assert.That(result.RouteValues["controller"], Is.EqualTo("Home"));
         }
 
         //[Test]
