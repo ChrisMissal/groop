@@ -1,20 +1,20 @@
-USE [JPCyclesWeb]
+USE [CRIneta]
 go
 /****** Drop User From Database******/
-IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'jpwebuser')
-    DROP USER [jpwebuser]
+IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'CRInetaUser')
+    DROP USER [CRInetaUser]
 GO
 USE [Master]
 Go
 
-IF NOT EXISTS (SELECT * FROM sys.server_principals WHERE name = N'jpwebuser')
-    CREATE LOGIN [jpwebuser] WITH PASSWORD=N'p@ssw0rd', DEFAULT_DATABASE=[JPCyclesWeb], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+IF NOT EXISTS (SELECT * FROM sys.server_principals WHERE name = N'CRInetaUser')
+    CREATE LOGIN [CRInetaUser] WITH PASSWORD=N'p@ssw0rd', DEFAULT_DATABASE=[CRIneta], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
 GO
-USE [JPCyclesWeb]
+USE [CRIneta]
 GO
-CREATE USER [jpwebuser] FOR LOGIN [jpwebuser]
+CREATE USER [CRInetaUser] FOR LOGIN [CRInetaUser]
 GO
-USE [JPCyclesWeb]
+USE [CRIneta]
 GO
-EXEC sp_addrolemember N'db_owner', N'jpwebuser'
+EXEC sp_addrolemember N'db_owner', N'CRInetaUser'
 GO
