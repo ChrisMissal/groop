@@ -5,7 +5,7 @@ using CRIneta.Web.Core.Domain;
 using Microdesk.Utility.UnitTest;
 using NHibernate;
 using NUnit.Framework;
-using NUnit.Framework.SyntaxHelpers;
+
 
 namespace IntegrationTests.DataAccess
 {
