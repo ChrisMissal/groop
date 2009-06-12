@@ -71,14 +71,14 @@
   <ItemGroup>
     <Compile Include="DataAccess\DataHelper.cs" />
     <Compile Include="DataAccess\FacilityRepositoryTests.cs" />
-    <Compile Include="DataAccess\MemberRepostoryTests.cs" />
+    <Compile Include="DataAccess\MeetingRepositoryTests.cs" />
+    <Compile Include="DataAccess\MemberRepositoryTests.cs" />
     <Compile Include="DataAccess\SchemaGeneration.cs" />
     <Compile Include="TestData\Database.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Database.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\MeetingRepostoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
