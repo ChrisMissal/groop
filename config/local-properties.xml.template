@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="CRIneta" xmlns="http://nant.sf.net/schemas/nant.xsd">
+
+    <!-- copy this file to local-properties.xml and change the settings to match your machine's settings -->
+    <echo message="Loading machine specific settings from config\local-properties.xml" />
+
+    <!-- database settings -->
+    <property name="database.server" value="localhost"/>
+	<property name="database.name" value="${project::get-name()}"/>
+	
+	<!-- logging/debug settings -->
+	<property name="debug.show_sql" value="false" />
+	
+</project>
