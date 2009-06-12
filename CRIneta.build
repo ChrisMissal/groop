@@ -14,7 +14,7 @@
     <!-- Version Settings -->
     <property name="version.major"              value="1"/>
     <property name="version.minor"              value="0"/>
-    <property name="version.build"              value="${string::pad-left(datetime::get-day-of-year(datetime::now()),3,'0')}${string::substring(datetime::get-year(datetime::now()), 2, 2)}"/>
+    <property name="version.build"              value="${string::pad-left(datetime::get-day-of-year(datetime::now()),3,'0')}${string::substring(datetime::get-year(datetime::now()), 2, 2 )}"/>
     <property name="version.revision"           value="${string::pad-left(datetime::get-hour(datetime::now()),2,'0')}${string::pad-left(datetime::get-minute(datetime::now()),2,'0')}"/>
     <property name="project.fullversion"        value="${version.major}.${version.minor}.${version.build}.${version.revision}" dynamic="true" />
 
