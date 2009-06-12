@@ -31,7 +31,7 @@ namespace CRIneta.Website
                 var userIdentity = new UserIdentity().Deserialize(ticket.UserData);
 
                 principal.With(userIdentity);
-                
+
             }
 
             Context.User = principal;

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using System.Web.Security;
 using Castle.Components.Validator;
 using CRIneta.Web.Core;
 using CRIneta.Web.Core.Data;
@@ -12,8 +9,6 @@ using CRIneta.Web.Core.Security;
 using CRIneta.Web.Core.Security.Cryptography;
 using CRIneta.Web.Core.Services;
 using CRIneta.Website.Impl.UserInput;
-using MvcContrib.Attributes;
-using MvcContrib.Filters;
 
 namespace CRIneta.Website.Controllers
 {
@@ -23,9 +18,9 @@ namespace CRIneta.Website.Controllers
     [HandleError]
     public class AccountController : Controller
     {
+        private readonly IAuthenticationService authenticationService;
         private readonly IAuthenticator authenticator;
         private readonly ICryptographer cryptographer;
-        private readonly IAuthenticationService authenticationService;
         private readonly IMemberRepository memberRepository;
 
         /// <summary>
@@ -36,7 +31,7 @@ namespace CRIneta.Website.Controllers
         /// <param name="authenticator">The authenticator.</param>
         /// <param name="cryptographer">The cryptographer.</param>
         /// <param name="authenticationService"></param>
-        public AccountController (IUserSession userSession, IMemberRepository memberRepository, IAuthenticator authenticator, ICryptographer cryptographer, IAuthenticationService authenticationService) : base(userSession)
+        public AccountController(IUserSession userSession, IMemberRepository memberRepository, IAuthenticator authenticator, ICryptographer cryptographer, IAuthenticationService authenticationService) : base(userSession)
         {
             this.memberRepository = memberRepository;
             this.authenticator = authenticator;
@@ -50,7 +45,7 @@ namespace CRIneta.Website.Controllers
         public ActionResult Index()
         {
             ViewData["Title"] = "My Account";
-            return View();    
+            return View();
         }
 
         #endregion
@@ -71,12 +66,12 @@ namespace CRIneta.Website.Controllers
 
             return View();
         }
-        
-        [AcceptPost]
+
+        [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult ProcessChangePassword(string currentPassword, string newPassword, string confirmPassword)
         {
             ViewData["Title"] = "Change Password";
-    
+
             return View();
         }
 
@@ -110,7 +105,7 @@ namespace CRIneta.Website.Controllers
                 AddErrorMessage("Invalid Login");
                 return RedirectToAction("Login");
             }
-            
+
             if (redirectUrl != null)
                 return Redirect(redirectUrl);
 
@@ -121,7 +116,6 @@ namespace CRIneta.Website.Controllers
 
         #region LogOut Actions
 
-        
         public ActionResult LogOut()
         {
             authenticationService.SignOut();
@@ -155,7 +149,6 @@ namespace CRIneta.Website.Controllers
                 return RedirectToAction("Register");
             }
 
-            
 
             Member member = memberRepository.GetByUsername(username);
 
@@ -180,7 +173,7 @@ namespace CRIneta.Website.Controllers
             member.Password = cryptographer.Hash(password, member.PasswordSalt);
 
             memberRepository.AddMember(member);
-            
+
             authenticator.SignIn(member);
 
             return RedirectToAction("Index", "Account");
