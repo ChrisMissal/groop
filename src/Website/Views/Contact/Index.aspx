@@ -11,7 +11,7 @@
 	<div class="post">
 		<h1 class="title">Contact Us</h1>
 		<div class="entry">
-            <p>Have a question or comment regarding CRINETA?  Please fill out the form below and then click the "Send" button.  Please note that ALL fields are required.</p>
+            <p>Have a question or comment regarding CRineta?  Please fill out the form below and then click the "Send" button.  Please note that ALL fields are required.</p>
 		</div>
 		<div class="entry">
 		    <% using(Html.BeginForm()) { %>
