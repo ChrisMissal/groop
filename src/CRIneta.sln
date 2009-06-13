@@ -13,6 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "Integra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRIneta.Framework", "CRIneta.Framework\CRIneta.Framework.csproj", "{837960F7-C0F2-441C-87DD-3AA3AFE199EC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{274B5E99-7C5C-4E35-8266-CD369B864745}"
+	ProjectSection(SolutionItems) = preProject
+		..\build.bat = ..\build.bat
+		..\builddatabase.bat = ..\builddatabase.bat
+		..\clean.bat = ..\clean.bat
+		..\CRIneta.build = ..\CRIneta.build
+		..\go.bat = ..\go.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AutomatedDebug|Any CPU = AutomatedDebug|Any CPU
