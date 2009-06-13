@@ -83,7 +83,7 @@
                 <!--<attribute type="ComVisibleAttribute" value="false" />-->
                 <attribute type="AssemblyVersionAttribute" value="${project.fullversion}" />
                 <attribute type="AssemblyFileVersionAttribute" value="${project.fullversion}" />
-                <attribute type="AssemblyCopyrightAttribute" value="Copyright © ${company.name} 1979-${datetime::get-year(datetime::now())}" />
+                <attribute type="AssemblyCopyrightAttribute" value="Copyright © 2003-${datetime::get-year(datetime::now())} ${company.name}" />
                 <attribute type="AssemblyProductAttribute" value="${project::get-name()}" />
                 <attribute type="AssemblyCompanyAttribute" value="${company.name}" />
                 <attribute type="AssemblyConfigurationAttribute" value="" />
