@@ -1,20 +1,20 @@
-USE [CRIneta]
+USE [CRineta]
 go
 /****** Drop User From Database******/
-IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'CRInetaUser')
-    DROP USER [CRInetaUser]
+IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'CRinetaUser')
+    DROP USER [CRinetaUser]
 GO
 USE [Master]
 Go
 
-IF NOT EXISTS (SELECT * FROM sys.server_principals WHERE name = N'CRInetaUser')
-    CREATE LOGIN [CRInetaUser] WITH PASSWORD=N'p@ssw0rd', DEFAULT_DATABASE=[CRIneta], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+IF NOT EXISTS (SELECT * FROM sys.server_principals WHERE name = N'CRinetaUser')
+    CREATE LOGIN [CRinetaUser] WITH PASSWORD=N'p@ssw0rd', DEFAULT_DATABASE=[CRineta], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
 GO
-USE [CRIneta]
+USE [CRineta]
 GO
-CREATE USER [CRInetaUser] FOR LOGIN [CRInetaUser]
+CREATE USER [CRinetaUser] FOR LOGIN [CRinetaUser]
 GO
-USE [CRIneta]
+USE [CRineta]
 GO
-EXEC sp_addrolemember N'db_owner', N'CRInetaUser'
+EXEC sp_addrolemember N'db_owner', N'CRinetaUser'
 GO

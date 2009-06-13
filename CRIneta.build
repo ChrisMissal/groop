@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<project name="CRIneta" default="build" xmlns="http://nant.sf.net/release/0.85/nant.xsd"> 
-    <property name="company.name"               value="CRIneta"/>
+<project name="CRineta" default="build" xmlns="http://nant.sf.net/release/0.85/nant.xsd"> 
+    <property name="company.name"               value="CRineta"/>
     <property name="base.dir" 	                value="." />
-    <property name="solution.name"              value="CRIneta.sln" />
+    <property name="solution.name"              value="CRineta.sln" />
     <property name="solution.dir" 	            value="src" />
     <property name="solution.file"              value="${solution.dir}/${solution.name}"/>
     <property name="solution.configuration"     value="AutomatedDebug" />
@@ -26,7 +26,7 @@
     <property name="database.integratedAuthentication" value="true" overwrite="false" />
     <property name="database.creation.username" value="" overwrite="false" />
     <property name="database.creation.password" value=""  overwrite="false" />
-    <property name="database.application.username" value="CRInetaUser" overwrite="false" />
+    <property name="database.application.username" value="CRinetaUser" overwrite="false" />
     <property name="database.application.password" value="p@ssw0rd" overwrite="false" />
     <property name="database.debug.show_sql" value="false" />
     
