@@ -6,6 +6,7 @@
                 <h2>Administration Links</h2>
                 <ul>
                     <li><a href="/Admin/ViewMeetings">View/Edit Meetings</a></li>
+                    <li><a href="/Admin/AddMeeting">Add Meeting</a></li>
                 </ul>
             </li>
         </ul>

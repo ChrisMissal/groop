@@ -32,6 +32,52 @@
 		</div>
 	</div>
 	<div class="post">
+	    <h2 class="title">Sign Up for Email Reminders</h2>
+	    <div class="entry">
+
+            <!--[if IE]>
+            <style>
+            #mc_embed_signup fieldset {
+            position: relative;
+            }
+            #mc_embed_signup legend {
+            position: absolute;
+            top: -1em;
+            left: .2em;
+            }
+            </style>
+            <![endif]--> 
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="http://crineta.us1.list-manage.com/subscribe/post?u=a437e7f1b6d67e2ef2bfbe64e&amp;id=ffb1af7554" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+	            <fieldset>
+	            <legend>join our mailing list</legend>
+            <div class="indicate-required">* indicates required field</div>
+            <div class="mc-field-group">
+            <label for="mce-EMAIL">Email Address:<strong class="note-required">*</strong>
+            </label>
+            <input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+            <div class="mc-field-group">
+            <label for="mce-FNAME">First Name:</label>
+            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+            </div>
+            <div class="mc-field-group">
+            <label for="mce-LNAME">Last Name:</label>
+            <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+            </div>
+		            <div id="mce-responses">
+			            <div class="response" id="mce-error-response" style="display:none"></div>
+			            <div class="response" id="mce-success-response" style="display:none"></div>
+		            </div>
+		            <div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+	            </fieldset>	
+            </form>
+            </div><!--mc_embed_signup-->
+
+	    </div>
+	</div>
+	<div class="post">
 		<h2 class="title">Meeting Agenda</h2>
 		<div class="entry">
             <dl>
@@ -53,4 +99,11 @@
 <!--			<p class="links"><a href="#" class="comments">Comments (32)</a> &nbsp;&bull;&nbsp;&nbsp; <a href="#" class="more">Read full post &raquo;</a></p>-->
 		</div>
 	</div>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="pageBottom" runat="server">
+<script type="text/javascript" src="http://crineta.us1.list-manage.com/js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="http://crineta.us1.list-manage.com/js/jquery.validate.js"></script>
+<script type="text/javascript" src="http://crineta.us1.list-manage.com/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://crineta.us1.list-manage.com/subscribe/xs-js?u=a437e7f1b6d67e2ef2bfbe64e&amp;id=ffb1af7554"></script>
 </asp:Content>

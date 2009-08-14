@@ -276,3 +276,31 @@ text-align:center;
 #footer a {
 color:#FFFFFF;
 }
+#mc_embed_signup form 
+{
+	text-transform: capitalize;
+}
+#mc_embed_signup form legend
+{
+	font-size: 1.33em;
+	font-weight: bold;
+}
+#mc_embed_signup form fieldset
+{
+	margin-top: 1em;
+	padding: 1em;
+}
+#mc_embed_signup form label
+{
+	width: 150px;
+	float: left;
+	clear: left;
+}
+#mc_embed_signup form .mc-field-group
+{
+	padding: 1ex 0;
+}
+#mc_embed_signup form .indicate-required
+{
+	float: right; text-align: right;
+}

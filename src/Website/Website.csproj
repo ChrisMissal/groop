@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F}</ProjectGuid>
     <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -128,7 +128,43 @@
     </Content>
     <Content Include="Content\css\account.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\css\ui-darkness\jquery-ui-1.7.2.custom.css" />
     <Content Include="Content\images\bg_journey.JPG" />
+    <Content Include="Content\images\busipeople.jpg" />
+    <Content Include="Content\images\clouds.jpg" />
+    <Content Include="Content\images\cri-1-large.png" />
+    <Content Include="Content\images\cri-1-medium.png" />
+    <Content Include="Content\images\cri-1-small.png" />
+    <Content Include="Content\images\cri-2-large.png" />
+    <Content Include="Content\images\cri-2-medium.png" />
+    <Content Include="Content\images\cri-2-small.png" />
+    <Content Include="Content\images\cri-3-large.png" />
+    <Content Include="Content\images\cri-3-medium.png" />
+    <Content Include="Content\images\cri-3-small.png" />
+    <Content Include="Content\images\cri-4-large.png" />
+    <Content Include="Content\images\cri-4-medium.png" />
+    <Content Include="Content\images\cri-4-small.png" />
+    <Content Include="Content\images\img07.jpg" />
+    <Content Include="Content\images\img08.gif" />
+    <Content Include="Content\images\img09.jpg" />
+    <Content Include="Content\images\img10.gif" />
+    <Content Include="Content\images\img11.gif" />
+    <Content Include="Content\images\logos.html" />
+    <Content Include="Content\images\openroad.jpg" />
     <Content Include="Content\images\sponsors\apress.gif" />
     <Content Include="Content\images\sponsors\awlogo.gif" />
     <Content Include="Content\images\sponsors\c1logo.gif" />
@@ -142,10 +178,19 @@
     <Content Include="Content\images\sponsors\redgate.gif" />
     <Content Include="Content\images\sponsors\rht_logo.gif" />
     <Content Include="Content\images\sponsors\sams.gif" />
+    <Content Include="Content\images\supliment-busipeople.jpg" />
+    <Content Include="Content\images\supliment-clouds.jpg" />
+    <Content Include="Content\images\supliment-openroad.jpg" />
+    <Content Include="Content\images\supliment-twophones.jpg" />
+    <Content Include="Content\images\supliment-typewriter.jpg" />
+    <Content Include="Content\images\twophones.jpg" />
+    <Content Include="Content\images\typewriter.jpg" />
+    <Content Include="Content\js\crineta.datepicker.js" />
     <Content Include="Content\js\jquery-1.3.2.min.js" />
     <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\jquery.validate.js" />
     <Content Include="Views\Account\Index.aspx" />
+    <Content Include="Views\Admin\AddMeeting.aspx" />
     <Content Include="Views\Admin\ViewMeetings.aspx" />
     <Content Include="Views\Admin\EditMeeting.aspx" />
     <Content Include="Views\Contact\Sent.aspx" />
@@ -259,9 +304,6 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

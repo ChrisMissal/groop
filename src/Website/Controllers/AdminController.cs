@@ -32,7 +32,7 @@ namespace CRIneta.Website.Controllers
         public ActionResult ViewMeetings()
         {
             var meetings = meetingRepository.GetAllMeetings();
-            if (meetings == null)
+            if (meetings == null || meetings.Count <= 0)
             {
                 AddErrorMessage("No meetings found.");
                 return View("Index");
@@ -68,21 +68,29 @@ namespace CRIneta.Website.Controllers
         /// </summary>
         /// <param name="meetingData">The meeting data.</param>
         /// <returns></returns>
+        [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult SaveMeeting([Bind(Prefix = "")] MeetingData meetingData)
         {
             var meeting = meetingRepository.GetById(meetingData.MeetingId) ?? new Meeting();
+            meeting.Facility = facilityRepository.GetById(meetingData.FacilityId);
+
+            if(meeting.Facility == null)
+            {
+                AddErrorMessage("You must pick a facility from the list. Try Again.");
+                return RedirectToAction("ViewMeetings");
+            }
 
             meeting.Title = meetingData.Title;
             meeting.Presenter = meetingData.Presenter;
             meeting.Description = meetingData.Description;
             meeting.StartTime = meetingData.StartTime;
             meeting.EndTime = meetingData.EndTime;
-            meeting.Facility = facilityRepository.GetById(meetingData.FacilityId);
 
             meetingRepository.SaveOrUpdateMeeting(meeting);
 
             AddInformationalMessage(string.Format("Meeting {0} successfully updated.", meetingData.MeetingId));
-            return View("ViewMeetings");
+
+            return RedirectToAction("ViewMeetings");
         }
 
         /// <summary>
@@ -92,7 +100,16 @@ namespace CRIneta.Website.Controllers
         /// <returns></returns>
         public ActionResult AddMeeting([Bind(Prefix = "")] MeetingData meetingData)
         {
-            return RedirectToAction("ViewMeetings");
+            var facilities = facilityRepository.GetFacilities();
+            var selectListItems = new List<SelectListItem>();
+            selectListItems.Add(new SelectListItem {Selected = true});
+            foreach (var facility in facilities)
+            {
+                selectListItems.Add(new SelectListItem {Text = facility.Name, Value = facility.FacilityId.ToString()});
+            }
+            ViewData.Add("facilities", selectListItems);
+
+            return View("AddMeeting");
         }
     }
 }

@@ -9,14 +9,13 @@ namespace CRIneta.Website.Routing
         {
             var routes = RouteTable.Routes;
 
+            routes.Clear();
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            //routes.IgnoreRoute("favicon.ico");
+            routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" });
 
-            routes.MapRoute(
-                "Default",                                              // Route name
-                "{controller}/{action}/{id}",                           // URL with parameters
-                new { controller = "Home", action = "Index", id = "" }  // Parameter defaults
-            );
+            // Default/fallback route
+            routes.MapRoute("Default", "{controller}/{action}/{id}",
+                            new { controller = "Home", action = "Index", id = "" });
 
             routes.MapRoute("AdminViewMeetings", "{controller}/{action}/{id}",
                             new { controller = "Admin", action = "EditMeeting", id = "" });

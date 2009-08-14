@@ -4,18 +4,10 @@
 <asp:Content ContentPlaceHolderID="headerContent" runat="server">
     <link rel="stylesheet" href="<%= AppHelper.CssUrl("smoothness/jquery-ui-1.7.1.custom.css") %>" />
     <script src='<%= AppHelper.JsUrl("jquery-ui-1.7.1.custom.min.js") %>' type="text/javascript"></script>
-    <script type="text/javascript">
-	$(function() {
-		$(".datepicker").datepicker({
-		    onSelect: function(dateText) {
-		        $(this).val($(this).val() + ' ' + $(this).attr("rel"));
-		    }
-		});
-	});
-    </script>
+    <script src='<%= AppHelper.JsUrl("crineta.datepicker.js") %>' type="text/javascript"></script>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="mainContent" runat="server">
-<%  var meeting = ViewData.Model as Meeting; %>
+<%  var meeting = ViewData.Model; %>
 <fieldset>
     <legend>Edit Meeting [ID: <%= meeting.MeetingId %>]</legend>
 <% using(Html.BeginForm("SaveMeeting", "Admin")) { %>

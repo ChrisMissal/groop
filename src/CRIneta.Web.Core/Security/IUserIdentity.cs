@@ -17,12 +17,7 @@ namespace CRIneta.Web.Core.Security
 
     public class UserIdentity : IUserIdentity
     {
-        private List<string> roles;
-
-        public UserIdentity()
-        {
-            roles = new List<string>();
-        }
+        private readonly List<string> roles = new List<string>();
 
         public string AuthenticationType
         {

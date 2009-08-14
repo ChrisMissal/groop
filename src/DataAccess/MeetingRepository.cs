@@ -16,18 +16,40 @@ namespace CRIneta.DataAccess
         {
             if (key <= 0) return null;
 
-            var session = getSession();
-            
-            return session.Get<Meeting>(key);
+            using(var session = getSession())
+            using(var txn = session.BeginTransaction())
+            {
+                try
+                {
+                    var meeting = session.Get<Meeting>(key);
+                    txn.Commit();
+                    return meeting;
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
+                }
+            }
         }
 
         public IList<Meeting> GetAllMeetings()
         {
-            ISession session = getSession();
-
-            return session
-                .CreateQuery("from Meeting")
-                .List<Meeting>();
+            using(var session = getSession())
+            using(var txn = session.BeginTransaction())
+            {
+                try
+                {
+                    var meeting = session.CreateQuery("from Meeting").List<Meeting>();
+                    txn.Commit();
+                    return meeting;
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
+                }
+            }
         }
 
         /// <summary>
@@ -63,18 +85,31 @@ namespace CRIneta.DataAccess
 
         public IList<Meeting> GetUpcomingMeetings(DateTime time, int maxNumberMeetings)
         {
-            ISession session = getSession();
+            using(var session = getSession())
+            using(var txn = session.BeginTransaction())
+            {
+                try
+                {
+                    var meetings = session
+                            .CreateQuery("from Meeting m where m.StartTime > :time order by m.StartTime asc")
+                            .SetParameter("time", time)
+                            .SetMaxResults(maxNumberMeetings)
+                            .List<Meeting>();
 
-            return session
-                .CreateQuery("from Meeting m where m.StartTime > :time order by m.StartTime asc")
-                .SetParameter("time", time)
-                .SetMaxResults(maxNumberMeetings)
-                .List<Meeting>();
+                    txn.Commit();
+                    return meetings;
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
+                }
+            }
         }
 
         public IList<Meeting> GetMeetingsBetween(DateTime beginDate, DateTime endDate)
         {
-            ISession session = getSession();
+            using(var session = getSession())
             using (var tx = session.BeginTransaction())
             {
                 try
@@ -93,7 +128,6 @@ namespace CRIneta.DataAccess
                     tx.Rollback();
                     throw;
                 }
-                
             }
         }
     }

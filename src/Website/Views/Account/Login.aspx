@@ -14,6 +14,7 @@
     </script>
     <div id="loginContainer" class="centered">
         <h1>Login</h1>
+        <% Html.RenderAction<FlashMessageComponentController>(x => x.GetMessages()); %>
         <% using (Html.BeginForm()) { %>
             <fieldset>
                 <label for="lusername"><span class="sectionHeader"> Login ID: </span></label>            
