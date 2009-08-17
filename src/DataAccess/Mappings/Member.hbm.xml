@@ -16,7 +16,7 @@
 
         <property name="Email" column="EmailAddress" length="100" not-null="true" />
 
-        <set name="Roles" table="UserRoles" lazy="true" cascade="save-update">
+        <set name="Roles" table="UserRoles" lazy="false" cascade="save-update">
             <key column="MemberId" foreign-key="FK_UserRoles_Members" />
             <many-to-many class="Role" column="RoleId" foreign-key="FK_UsersRoles_Roles" />
         </set>

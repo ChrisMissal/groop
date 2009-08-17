@@ -17,34 +17,43 @@ namespace CRIneta.DataAccess
             if (key <= 0)
                 return null;
 
-            var session = getSession();
-            
-            return session.Get<Member>(key);
+            using(var session = getSession())
+            using(var txn = session.BeginTransaction())
+            {
+                try
+                {
+                    var member = session.Get<Member>(key);
+                    txn.Commit();
+                    return member;
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
+                }
+            }
         }
 
         public Member GetByUsername(string username)
         {
-            var session = getSession();
-            
-            return session.CreateQuery("from Member m where lower(m.Username) like :username")
-                    .SetString("username", username.ToLower())
-                    .SetMaxResults(1)
-                    .UniqueResult<Member>();
+            using(var session = getSession())
+            using(var txn = session.BeginTransaction())
+            {
+                try
+                {
+                    var member = session.CreateQuery("from Member m where lower(m.Username) like :username")
+                            .SetString("username", username.ToLower())
+                            .UniqueResult<Member>();
+                    txn.Commit();
+                    return member;
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
+                }
+            }
         }
-
-        //public Member GetByEmail(string email)
-        //{
-        //    if (string.IsNullOrEmpty(email))
-        //        return null;
-
-        //    using (ISession session = getSession())
-        //    {
-        //        IQuery query = session.CreateQuery("from Member m where lower(m.Email) like :email");
-        //        query.SetString("email", email.ToLower());
-        //        query.SetMaxResults(1);
-        //        return query.UniqueResult<Member>();
-        //    }
-        //}
 
         /// <summary>
         /// Adds the member.
@@ -56,25 +65,22 @@ namespace CRIneta.DataAccess
             if (member == null)
                 throw new ArgumentException("Member must not be null.");
 
-            object id;
-            using (ISession session = getSession())
+            using (var session = getSession())
+            using (var txn = session.BeginTransaction())
             {
-                using (ITransaction tx = session.BeginTransaction())
+                try
                 {
-                    try
-                    {
-                        id = session.Save(member);
-                        tx.Commit();
-                    }
-                    catch (NHibernate.HibernateException)
-                    {
-                        tx.Rollback();
-                        throw;
-                    }
+                    session.Save(member);
+                    txn.Commit();
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
                 }
             }
 
-            return Convert.ToInt32(id);
+            return Convert.ToInt32(member.MemberId);
         }
 
         /// <summary>
@@ -86,21 +92,18 @@ namespace CRIneta.DataAccess
             if (member == null)
                 throw new ArgumentException("Member must not be null.");
 
-            using (ISession session = getSession())
+            using (var session = getSession())
+            using (var txn = session.BeginTransaction())
             {
-                using (ITransaction tx = session.BeginTransaction())
+                try
                 {
-                    try
-                    {
-                        session.Delete(member);
-                        session.Flush();
-                        tx.Commit();
-                    }
-                    catch (NHibernate.HibernateException)
-                    {
-                        tx.Rollback();
-                        throw;
-                    }
+                    session.Delete(member);
+                    txn.Commit();
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
                 }
             }
         }
@@ -114,42 +117,36 @@ namespace CRIneta.DataAccess
             if (member == null)
                 throw new ArgumentException("Member must not be null.");
 
-            using (ISession session = getSession())
+            using (var session = getSession())
+            using (var txn = session.BeginTransaction())
             {
-                using (ITransaction tx = session.BeginTransaction())
+                try
                 {
-                    try
-                    {
-                        session.Update(member);
-                        session.Flush();
-                        tx.Commit();
-                    }
-                    catch (NHibernate.HibernateException)
-                    {
-                        tx.Rollback();
-                        throw;
-                    }
+                    session.Update(member);
+                    txn.Commit();
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
                 }
             }
         }
 
         public IList<Member> GetAllMembers()
         {
-            var session = getSession();
-
-            using (ITransaction tx = session.BeginTransaction())
+            using(var session = getSession())
+            using (var txn = session.BeginTransaction())
             {
                 try
                 {
-                    var members = session.CreateQuery("from Member")
-                        .List<Member>();
-
-                    tx.Commit();
+                    var members = session.CreateQuery("from Member").List<Member>();
+                    txn.Commit();
                     return members;
                 }
-                catch (NHibernate.HibernateException)
+                catch (HibernateException)
                 {
-                    tx.Rollback();
+                    txn.Rollback();
                     throw;
                 }
             }

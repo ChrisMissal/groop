@@ -11,12 +11,12 @@ namespace CRIneta.Website.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         public ActionResult List()
         {
-            return View();
+            return View("List");
         }
     }
 }

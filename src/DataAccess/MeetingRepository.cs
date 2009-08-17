@@ -59,20 +59,19 @@ namespace CRIneta.DataAccess
         /// <returns></returns>
         public Meeting SaveOrUpdateMeeting(Meeting meeting)
         {
-            using(var session = getSession())
+            using (var session = getSession())
+            using (var txn = session.BeginTransaction())
             {
-                using(var txn = session.BeginTransaction())
+                try
                 {
-                    try
-                    {
-                        session.SaveOrUpdate(meeting);
-                        return meeting;
-                    }
-                    catch (HibernateException)
-                    {
-                        txn.Rollback();
-                        throw;
-                    }
+                    session.SaveOrUpdate(meeting);
+                    txn.Commit();
+                    return meeting;
+                }
+                catch (HibernateException)
+                {
+                    txn.Rollback();
+                    throw;
                 }
             }
         }

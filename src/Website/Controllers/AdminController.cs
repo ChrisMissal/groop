@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
-using Castle.MicroKernel;
 using CRIneta.Web.Core;
 using CRIneta.Web.Core.Data;
 using CRIneta.Web.Core.Domain;
@@ -55,10 +54,9 @@ namespace CRIneta.Website.Controllers
                 return View("ViewMeetings");
             }
 
-            ViewData.Model = meeting;
+            ViewData.Model = meeting.ToMeetingData();
 
-            var facilities = facilityRepository.GetFacilities();
-            ViewData.Add("facilities", facilities);
+            AddFacilitiesToViewData("facilities");
 
             return View("EditMeeting");
         }
@@ -100,16 +98,20 @@ namespace CRIneta.Website.Controllers
         /// <returns></returns>
         public ActionResult AddMeeting([Bind(Prefix = "")] MeetingData meetingData)
         {
+            AddFacilitiesToViewData("facilities");
+            return View("AddMeeting");
+        }
+
+        private void AddFacilitiesToViewData(string viewDataKey)
+        {
             var facilities = facilityRepository.GetFacilities();
             var selectListItems = new List<SelectListItem>();
-            selectListItems.Add(new SelectListItem {Selected = true});
+            selectListItems.Add(new SelectListItem { Selected = true });
             foreach (var facility in facilities)
             {
-                selectListItems.Add(new SelectListItem {Text = facility.Name, Value = facility.FacilityId.ToString()});
+                selectListItems.Add(new SelectListItem { Text = facility.Name, Value = facility.FacilityId.ToString() });
             }
-            ViewData.Add("facilities", selectListItems);
-
-            return View("AddMeeting");
+            ViewData.Add(viewDataKey, selectListItems);
         }
     }
 }

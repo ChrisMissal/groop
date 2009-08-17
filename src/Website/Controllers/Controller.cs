@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using CRIneta.Web.Core;
-using CRIneta.Web.Core.Domain;
 using MvcContrib;
 
 namespace CRIneta.Website.Controllers
@@ -10,7 +9,7 @@ namespace CRIneta.Website.Controllers
         protected readonly IUserSession userSession;
         private bool hasLoaded;
 
-        public Controller(IUserSession userSession)
+        protected Controller(IUserSession userSession)
         {
             this.userSession = userSession;
         }
@@ -43,23 +42,19 @@ namespace CRIneta.Website.Controllers
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            if (!hasLoaded)
-            {
-                Member user = userSession.GetLoggedInUser();
+            if (hasLoaded)
+                return;
 
-                UserData userData = new UserData(user);
+            var user = userSession.GetLoggedInUser();
+            var userData = new UserData(user);
 
-                ViewData.Add(userData);
+            ViewData.Add(userData);
 
-                hasLoaded = true;
-            }
-
+            hasLoaded = true;
         }
 
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
         }
-
-        
     }
 }

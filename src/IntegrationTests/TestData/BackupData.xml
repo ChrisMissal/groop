@@ -1,2 +1,48 @@
 <?xml version="1.0" standalone="yes"?>
-<Database xmlns="http://tempuri.org/Database.xsd" />
+<Database xmlns="http://tempuri.org/Database.xsd">
+  <UserRoles>
+    <MemberId>1</MemberId>
+    <RoleId>1</RoleId>
+  </UserRoles>
+  <Meetings>
+    <Id>11</Id>
+    <Title>ASP.NET Meeting</Title>
+    <StartsAt>2009-09-14T17:30:00-05:00</StartsAt>
+    <EndsAt>2009-09-14T19:30:00-05:00</EndsAt>
+    <Description>d</Description>
+    <Presenter>Chris Missal</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Meetings>
+    <Id>12</Id>
+    <Title>ASP.NET Meeting</Title>
+    <StartsAt>2009-09-14T17:30:00-05:00</StartsAt>
+    <EndsAt>2009-09-14T19:30:00-05:00</EndsAt>
+    <Description>d</Description>
+    <Presenter>Chris Missal</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Members>
+    <MemberId>1</MemberId>
+    <Username>chrismissal</Username>
+    <Password>f8G4C6/bdC9/WUbO3f4JsG08FcA=</Password>
+    <PasswordSalt>rCmr3NawgN82q5+93+1FgaSo1WiemzIjD5GdMiL4s4VNGxRltz93icPamxGyjlT++BAJXzVYbWSYLSopSbdfUg==</PasswordSalt>
+    <First>Chris</First>
+    <Last>Missal</Last>
+    <EmailAddress>chris.missal@gmail.com</EmailAddress>
+  </Members>
+  <Roles>
+    <RoleId>1</RoleId>
+    <Name>Administrators</Name>
+  </Roles>
+  <Facilities>
+    <Id>1</Id>
+    <Name>Kirkwood Community College</Name>
+    <ImageUrl>http://www.collegecentral.com/kirkwood/KCCLogo.gif</ImageUrl>
+    <Description>Kirkwood Community College in Cedar Rapids, Iowa</Description>
+    <Address>6301 Kirkwood Blvd SW</Address>
+    <City>Cedar Rapids</City>
+    <Region>Iowa</Region>
+    <PostalCode>52404</PostalCode>
+  </Facilities>
+</Database>
