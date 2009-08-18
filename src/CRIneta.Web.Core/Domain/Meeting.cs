@@ -27,12 +27,8 @@ namespace CRIneta.Web.Core.Domain
 
         public virtual void AddAttendee(Attendee attendee)
         {
-            if (AlreadyAttending(attendee))
-            {
-                return; // do nothing
-            }
-
-            attendees.Add(attendee);
+            if (!AlreadyAttending(attendee))
+                attendees.Add(attendee);
         }
 
         /// <summary>
@@ -42,13 +38,7 @@ namespace CRIneta.Web.Core.Domain
         /// <returns></returns>
         private bool AlreadyAttending(Attendee attendee)
         {
-            foreach (Attendee a in attendees)
-            {
-                if (attendee == a)
-                    return true;
-            }
-
-            return false;
+            return attendees.Contains(attendee);
         }
     }
 }

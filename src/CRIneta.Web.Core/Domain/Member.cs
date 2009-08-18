@@ -4,11 +4,8 @@ namespace CRIneta.Web.Core.Domain
 {
     public class Member
     {
-        private Name name;
-
         public Member()
         {
-            name = new Name();
         }
 
         /// <summary>
@@ -24,14 +21,16 @@ namespace CRIneta.Web.Core.Domain
         public virtual string Username { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets or sets the first name.
         /// </summary>
         /// <value>The name.</value>
-        public virtual Name Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        public virtual string FirstName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last name.
+        /// </summary>
+        /// <value>The name.</value>
+        public virtual string LastName { get; set; }
 
         /// <summary>
         /// Gets the email.
@@ -64,14 +63,5 @@ namespace CRIneta.Web.Core.Domain
         /// 	<c>true</c> if this instance is administrator; otherwise, <c>false</c>.
         /// </value>
         public virtual bool IsAdministrator { get; set; }
-
-        /// <summary>
-        /// Gets the full name of the user.
-        /// </summary>
-        /// <returns></returns>
-        public virtual string GetName()
-        {
-            return Name.ToString();
-        }
     }
 }

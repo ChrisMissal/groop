@@ -50,8 +50,8 @@ namespace CRIneta.Web.Core.Security
             MemberId = member.MemberId;
             Name = member.Username;
             Email = member.Email;
-            First = member.Name.First;
-            Last = member.Name.Last;
+            First = member.FirstName;
+            Last = member.LastName;
             roles.AddRange(GetRoleNames(member.Roles));
 
             return this;

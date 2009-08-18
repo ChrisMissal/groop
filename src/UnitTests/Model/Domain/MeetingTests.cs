@@ -1,7 +1,6 @@
 using CRIneta.Web.Core.Domain;
 using NUnit.Framework;
 
-
 namespace CRIneta.UnitTests.Model.Domain
 {
     [TestFixture]
@@ -20,7 +19,7 @@ namespace CRIneta.UnitTests.Model.Domain
         {
             var meeting = new Meeting();
 
-            var stubAttendee = new Attendee("Tim", "Barcz");
+            var stubAttendee = new Attendee("TimBarcz@BarczMail.com");
 
             meeting.AddAttendee(stubAttendee);
 
@@ -28,16 +27,28 @@ namespace CRIneta.UnitTests.Model.Domain
         }
 
         [Test]
-        public void Meeting_does_not_allow_attendee_to_be_added_twice()
+        public void Meeting_does_not_allow_attendee_to_be_added_twice_with_same_object()
         {
             var meeting = new Meeting();
 
-            var stubAttendee = new Attendee("Chris", "Missal");
+            var stubAttendee = new Attendee("Chris.Missal@AwesomeMail.com");
 
             meeting.AddAttendee(stubAttendee);
             Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
 
             meeting.AddAttendee(stubAttendee);
+            Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void Meeting_does_not_allow_attendee_to_be_added_twice_with_equal_objects()
+        {
+            var meeting = new Meeting();
+
+            meeting.AddAttendee(new Attendee("Chris.Missal@AwesomeMail.com"));
+            Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
+
+            meeting.AddAttendee(new Attendee("Chris.Missal@AwesomeMail.com"));
             Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
         }
     }

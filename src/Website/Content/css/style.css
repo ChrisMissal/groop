@@ -194,6 +194,9 @@ width:300px;
 }
 #sidebar-bgbtm {
 }
+#sidebar-bgbtm p {
+margin-bottom: 1em;
+}
 #sidebar-content {
 }
 #sidebar ul {

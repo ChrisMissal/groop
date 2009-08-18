@@ -9,16 +9,16 @@
     <Title>ASP.NET Meeting</Title>
     <StartsAt>2009-09-14T17:30:00-05:00</StartsAt>
     <EndsAt>2009-09-14T19:30:00-05:00</EndsAt>
-    <Description>d</Description>
+    <Description>The authors are raging alcoholic who regularly beats up kindergarten kids who walk on their lawn. They enjoy hosting dinner parties where they serve oil pan marinated skunk and other assorted hors d'oeuvres sourced from road kill.</Description>
     <Presenter>Chris Missal</Presenter>
     <FacilityId>1</FacilityId>
   </Meetings>
   <Meetings>
     <Id>12</Id>
-    <Title>ASP.NET Meeting</Title>
-    <StartsAt>2009-09-14T17:30:00-05:00</StartsAt>
-    <EndsAt>2009-09-14T19:30:00-05:00</EndsAt>
-    <Description>d</Description>
+    <Title>C# Meeting</Title>
+    <StartsAt>2009-10-05T17:30:00-05:00</StartsAt>
+    <EndsAt>2009-10-05T19:30:00-05:00</EndsAt>
+    <Description>Should be fine - if you start with a stock "new ASP.NET MVC project" and convert the views to spark it has the same type of url in the login page and works fine.</Description>
     <Presenter>Chris Missal</Presenter>
     <FacilityId>1</FacilityId>
   </Meetings>

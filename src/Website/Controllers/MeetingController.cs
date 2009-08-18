@@ -49,8 +49,9 @@ namespace CRIneta.Website.Controllers
                 return RedirectToAction("Index");
 
             var user = userSession.GetLoggedInUser();
-            var attendee = new Attendee(user.Name.First, user.Name.Last);
+            var attendee = new Attendee(user.Email);
             meeting.AddAttendee(attendee);
+            meetingRepository.SaveOrUpdateMeeting(meeting);
 
             ViewData.Model = meeting;
             return View("Show");

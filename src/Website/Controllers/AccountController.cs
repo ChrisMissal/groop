@@ -163,11 +163,8 @@ namespace CRIneta.Website.Controllers
                              Username = username,
                              Email = email,
                              PasswordSalt = cryptographer.CreateSalt(),
-                             Name = new Name
-                                        {
-                                            First = first,
-                                            Last = last
-                                        }
+                             FirstName = first,
+                             LastName = last
                          };
 
             member.Password = cryptographer.Hash(password, member.PasswordSalt);

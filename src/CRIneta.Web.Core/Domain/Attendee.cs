@@ -2,13 +2,20 @@ namespace CRIneta.Web.Core.Domain
 {
     public class Attendee
     {
-        private readonly string first;
-        private readonly string last;
+        private readonly string email;
 
-        public Attendee(string first, string last)
+        public Attendee(string email)
         {
-            this.first = first;
-            this.last = last;
+            this.email = email;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as Attendee;
+            if(other == default(Attendee))
+                return false;
+
+            return (email == other.email);
         }
     }
 }

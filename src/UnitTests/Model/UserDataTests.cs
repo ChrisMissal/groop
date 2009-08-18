@@ -22,11 +22,8 @@ namespace CRIneta.UnitTests.Model
                              {
                                  Username = "cmissal",
                                  Email = "chris.missal@gmail.com",
-                                 Name = new Name
-                                            {
-                                                First = "Chris",
-                                                Last = "Missal",   
-                                            }
+                                 FirstName = "Chris", 
+                                 LastName = "Missal"
                              };
 
             var userData = new UserData(member);

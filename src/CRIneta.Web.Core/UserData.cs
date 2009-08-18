@@ -29,11 +29,6 @@ namespace CRIneta.Web.Core
             get { return member.Username; }
         }
 
-        public string Name
-        {
-            get { return member.GetName(); }
-        }
-
         public bool IsInRole(Func<Role, bool> func)
         {
             return member.Roles.Any(func);

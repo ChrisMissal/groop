@@ -55,7 +55,7 @@ namespace CRIneta.UnitTests.Website.Controllers
             var fakeMeetingRepository = MockRepository.GenerateMock<IMeetingRepository>();
             fakeMeetingRepository.Stub(x => x.GetById(0)).Return(fakeMeeting);
 
-            var fakeUser = new Member { Name = new Name { First = "Chris", Last = "Missal" } };
+            var fakeUser = new Member { FirstName = "Chris", LastName = "Missal" };
             var fakeUserSession = MockRepository.GenerateMock<IUserSession>();
             fakeUserSession.Stub(x => x.GetLoggedInUser()).Return(fakeUser);
 

@@ -53,8 +53,8 @@ namespace IntegrationTests.DataAccess
 
             // Assert
             Assert.That(member.MemberId, Is.EqualTo(1));
-            Assert.That(member.Name.First, Is.EqualTo("Tim"));
-            Assert.That(member.Name.Last, Is.EqualTo("Barcz"));
+            Assert.That(member.FirstName, Is.EqualTo("Tim"));
+            Assert.That(member.LastName, Is.EqualTo("Barcz"));
             Assert.That(member.Roles.Count, Is.EqualTo(4));
         }
 

@@ -80,7 +80,6 @@
     <Compile Include="Domain\IContactMessage.cs" />
     <Compile Include="Domain\Meeting.cs" />
     <Compile Include="Domain\Member.cs" />
-    <Compile Include="Domain\Name.cs" />
     <Compile Include="Domain\Role.cs" />
     <Compile Include="FlashMessage.cs" />
     <Compile Include="IHttpContextProvider.cs" />
