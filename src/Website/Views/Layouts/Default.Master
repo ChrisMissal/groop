@@ -20,7 +20,6 @@
 <div id="wrapper">
 
 <% Html.RenderPartial("~/views/shared/controls/header.ascx"); %>
-<%-- Html.RenderAction<FlashMessageComponentController>(c => c.GetMessages()); --%>
 		
 <div id="page">
 	<div id="content">

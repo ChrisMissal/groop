@@ -11,6 +11,8 @@
             <dd>Addison Wesley has books too, a lot of math books.</dd>
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/c1logo.gif") %>" alt="Component One" /></dt>
             <dd>The component before component two</dd>
+            <dt><img src="<%= AppHelper.ImageUrl("sponsors/scootersoftware.png") %>" alt="Scooter Software" /></dt>
+            <dd>Makers of Beyond Compare! w00t!</dd>
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/ddj.gif") %>" alt="Apress" /></dt>
             <dd>Doctor Dobb's Journal has lots of journal like stuff</dd>
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" alt="Apress" /></dt>

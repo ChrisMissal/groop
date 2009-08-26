@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import Namespace="CRIneta.Website.Controllers"%>
 
 <asp:Content ContentPlaceHolderID="headerContent" runat="server">
 <style type="text/css">
@@ -14,6 +15,7 @@
             <p>Have a question or comment regarding CRineta?  Please fill out the form below and then click the "Send" button.  Please note that ALL fields are required.</p>
 		</div>
 		<div class="entry">
+            <div style="color:#c00;background-color:inherit;"><% Html.RenderAction<FlashMessageComponentController>(c => c.GetMessages()); %></div>
 		    <% using(Html.BeginForm()) { %>
 		        <fieldset>
 		            <p><label for="Email">Your Email:</label><%= Html.TextBox("Email", "", new { Class = "field" })%></p>

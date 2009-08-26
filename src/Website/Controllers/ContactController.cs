@@ -26,31 +26,29 @@ namespace CRIneta.Website.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Index([Bind(Prefix = "")] ContactMessageData contactMessageData)
+        public ActionResult Index(ContactMessageData contactMessageData)
         {
             if (contactMessageData == null)
                 return View();
 
-            var valid = validator.IsValid(contactMessageData);
-
-            if (valid)
+            if (!validator.IsValid(contactMessageData))
             {
-                var contactMessage = new ContactMessage(contactMessageData.Email, contactMessageData.Name, contactMessageData.Subject,
-                                                        contactMessageData.Message);
-                try
-                {
-                    emailService.Send(contactMessage);
-                    TempData["ContactMessage"] = contactMessage;
-                }
-                catch (Exception ex)
-                {
-                    AddErrorMessage(ex.Message);
-                    throw;
-                }
-
-                return RedirectToAction("Sent");
+                AddErrorMessage("Please fill in all fields correctly, thanks!");
+                return View();
             }
-            return View();
+
+            var contactMessage = new ContactMessage(contactMessageData.Email, contactMessageData.Name, contactMessageData.Subject, contactMessageData.Message);
+            try
+            {
+                emailService.Send(contactMessage);
+                TempData["ContactMessage"] = contactMessage;
+            }
+            catch (Exception ex)
+            {
+                AddErrorMessage(ex.Message);
+            }
+
+            return RedirectToAction("Sent");
         }
 
         public ActionResult Sent()

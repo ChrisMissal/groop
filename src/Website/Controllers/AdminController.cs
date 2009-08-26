@@ -67,7 +67,7 @@ namespace CRIneta.Website.Controllers
         /// <param name="meetingData">The meeting data.</param>
         /// <returns></returns>
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult SaveMeeting([Bind(Prefix = "")] MeetingData meetingData)
+        public ActionResult SaveMeeting(MeetingData meetingData)
         {
             var meeting = meetingRepository.GetById(meetingData.MeetingId) ?? new Meeting();
             meeting.Facility = facilityRepository.GetById(meetingData.FacilityId);
@@ -96,7 +96,7 @@ namespace CRIneta.Website.Controllers
         /// </summary>
         /// <param name="meetingData">The meeting data.</param>
         /// <returns></returns>
-        public ActionResult AddMeeting([Bind(Prefix = "")] MeetingData meetingData)
+        public ActionResult AddMeeting(MeetingData meetingData)
         {
             AddFacilitiesToViewData("facilities");
             return View("AddMeeting");
