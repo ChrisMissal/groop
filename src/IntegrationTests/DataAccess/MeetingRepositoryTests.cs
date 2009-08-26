@@ -2,10 +2,9 @@ using System;
 using System.Collections.Generic;
 using CRIneta.DataAccess;
 using CRIneta.Web.Core.Domain;
+using HibernatingRhinos.NHibernate.Profiler.Appender;
 using Microdesk.Utility.UnitTest;
-using NHibernate;
 using NUnit.Framework;
-
 
 namespace IntegrationTests.DataAccess
 {
@@ -88,6 +87,34 @@ namespace IntegrationTests.DataAccess
 
             // Assert
             Assert.That(meetings.Count, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void MeetingRepository_can_save_Attendees()
+        {
+            NHibernateProfiler.Initialize();
+
+            // Arrange
+            var meetingRepository = new MeetingRepository(sessionBuilder);
+            var meeting = new Meeting
+                          {
+                                  Title = "a", 
+                                  Description = "b", 
+                                  EndTime = DateTime.Now.AddDays(1),
+                                  Facility = new Facility{FacilityId = 1}, 
+                                  Presenter = "c", 
+                                  StartTime = DateTime.Now.AddDays(-1)
+                          };
+
+            meetingRepository.SaveOrUpdateMeeting(meeting);
+            meeting.AddAttendee(new Attendee("chris@github.com", meeting));
+            meeting.AddAttendee(new Attendee("missal@github.com", meeting));
+            
+            // Act
+            meetingRepository.SaveOrUpdateMeeting(meeting);
+
+            // Assert
+            Assert.That(meeting.AttendeeCount, Is.EqualTo(2));
         }
     }
 }

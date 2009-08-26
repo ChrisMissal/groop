@@ -7,11 +7,20 @@ alter table UserRoles  drop constraint FK_UsersRoles_Roles
 if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK_UserRoles_Members]') AND parent_object_id = OBJECT_ID('UserRoles'))
 alter table UserRoles  drop constraint FK_UserRoles_Members
 
-if exists (select * from dbo.sysobjects where id = object_id(N'Meetings') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Meetings
+if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKD42E632FED2CAB7]') AND parent_object_id = OBJECT_ID('Attendees'))
+alter table Attendees  drop constraint FKD42E632FED2CAB7
+
 if exists (select * from dbo.sysobjects where id = object_id(N'Roles') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Roles
+if exists (select * from dbo.sysobjects where id = object_id(N'Meetings') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Meetings
+if exists (select * from dbo.sysobjects where id = object_id(N'Facilities') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Facilities
 if exists (select * from dbo.sysobjects where id = object_id(N'Members') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Members
 if exists (select * from dbo.sysobjects where id = object_id(N'UserRoles') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table UserRoles
-if exists (select * from dbo.sysobjects where id = object_id(N'Facilities') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Facilities
+if exists (select * from dbo.sysobjects where id = object_id(N'Attendees') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Attendees
+create table Roles (
+  RoleId INT IDENTITY NOT NULL,
+   Name NVARCHAR(255) not null,
+   primary key (RoleId)
+)
 create table Meetings (
   Id INT IDENTITY NOT NULL,
    Title NVARCHAR(255) not null,
@@ -22,10 +31,16 @@ create table Meetings (
    FacilityId INT not null,
    primary key (Id)
 )
-create table Roles (
-  RoleId INT IDENTITY NOT NULL,
+create table Facilities (
+  Id INT IDENTITY NOT NULL,
    Name NVARCHAR(255) not null,
-   primary key (RoleId)
+   ImageUrl NVARCHAR(255) not null,
+   Description NVARCHAR(255) not null,
+   Address NVARCHAR(255) null,
+   City NVARCHAR(255) null,
+   Region NVARCHAR(255) null,
+   PostalCode NVARCHAR(255) null,
+   primary key (Id)
 )
 create table Members (
   MemberId INT IDENTITY NOT NULL,
@@ -42,18 +57,14 @@ create table UserRoles (
    RoleId INT not null,
    primary key (MemberId, RoleId)
 )
-create table Facilities (
+create table Attendees (
   Id INT IDENTITY NOT NULL,
-   Name NVARCHAR(255) not null,
-   ImageUrl NVARCHAR(255) not null,
-   Description NVARCHAR(255) not null,
-   Address NVARCHAR(255) null,
-   City NVARCHAR(255) null,
-   Region NVARCHAR(255) null,
-   PostalCode NVARCHAR(255) null,
+   MeetingId INT not null,
+   Email NVARCHAR(100) not null,
    primary key (Id)
 )
 alter table Meetings add constraint FK_Meetings_Facilities foreign key (FacilityId) references Facilities
 create index IX_Username on Members (Username)
 alter table UserRoles add constraint FK_UsersRoles_Roles foreign key (RoleId) references Roles
 alter table UserRoles add constraint FK_UserRoles_Members foreign key (MemberId) references Members
+alter table Attendees add constraint FKD42E632FED2CAB7 foreign key (MeetingId) references Meetings

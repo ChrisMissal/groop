@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CRIneta.Web.Core" namespace="CRIneta.Web.Core.Domain">
-    <class name="Meeting" table="Meetings">
-        <id name="MeetingId" column="Id" type="Int32" unsaved-value="0">
-            <generator class="native" /> <!-- Database will generate the key when it is needed-->
-        </id>
-        <property name="Title" column="Title" length="255" not-null="true" />
-        <property name="StartTime" column="StartsAt" type="DateTime" not-null="true" /> <!-- when "not-null" is false, this indicates "nullable" -->
-        <property name="EndTime" column="EndsAt" type="DateTime" not-null="true" />
-        <property name="Description" column="Description" type="StringClob" not-null="true" />
-        <property name="Presenter" column="Presenter" length="255" not-null="true" />
+<class name="Meeting" table="Meetings">
+    <id name="MeetingId" column="Id" type="Int32" unsaved-value="0">
+        <generator class="native" />
+    </id>
+    <property name="Title" column="Title" length="255" not-null="true" />
+    <property name="StartTime" column="StartsAt" type="DateTime" not-null="true" />
+    <property name="EndTime" column="EndsAt" type="DateTime" not-null="true" />
+    <property name="Description" column="Description" type="StringClob" not-null="true" />
+    <property name="Presenter" column="Presenter" length="255" not-null="true" />
 
-        <many-to-one name="Facility" column="FacilityId" not-null="true" lazy="false" class="Facility" foreign-key="FK_Meetings_Facilities" />
-        
-    </class>
+    <many-to-one name="Facility" column="FacilityId" not-null="true" lazy="false" class="Facility" foreign-key="FK_Meetings_Facilities" />
+
+  <bag name="Attendees" access="nosetter.camelcase" cascade="all-delete-orphan" lazy="false" inverse="true">
+    <key column="MeetingId" />
+    <one-to-many class="Attendee" />
+  </bag>
+
+</class>
 </hibernate-mapping>

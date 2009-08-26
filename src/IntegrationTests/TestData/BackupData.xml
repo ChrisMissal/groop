@@ -1,40 +1,5 @@
 <?xml version="1.0" standalone="yes"?>
 <Database xmlns="http://tempuri.org/Database.xsd">
-  <UserRoles>
-    <MemberId>1</MemberId>
-    <RoleId>1</RoleId>
-  </UserRoles>
-  <Meetings>
-    <Id>11</Id>
-    <Title>ASP.NET Meeting</Title>
-    <StartsAt>2009-09-14T17:30:00-05:00</StartsAt>
-    <EndsAt>2009-09-14T19:30:00-05:00</EndsAt>
-    <Description>The authors are raging alcoholic who regularly beats up kindergarten kids who walk on their lawn. They enjoy hosting dinner parties where they serve oil pan marinated skunk and other assorted hors d'oeuvres sourced from road kill.</Description>
-    <Presenter>Chris Missal</Presenter>
-    <FacilityId>1</FacilityId>
-  </Meetings>
-  <Meetings>
-    <Id>12</Id>
-    <Title>C# Meeting</Title>
-    <StartsAt>2009-10-05T17:30:00-05:00</StartsAt>
-    <EndsAt>2009-10-05T19:30:00-05:00</EndsAt>
-    <Description>Should be fine - if you start with a stock "new ASP.NET MVC project" and convert the views to spark it has the same type of url in the login page and works fine.</Description>
-    <Presenter>Chris Missal</Presenter>
-    <FacilityId>1</FacilityId>
-  </Meetings>
-  <Members>
-    <MemberId>1</MemberId>
-    <Username>chrismissal</Username>
-    <Password>f8G4C6/bdC9/WUbO3f4JsG08FcA=</Password>
-    <PasswordSalt>rCmr3NawgN82q5+93+1FgaSo1WiemzIjD5GdMiL4s4VNGxRltz93icPamxGyjlT++BAJXzVYbWSYLSopSbdfUg==</PasswordSalt>
-    <First>Chris</First>
-    <Last>Missal</Last>
-    <EmailAddress>chris.missal@gmail.com</EmailAddress>
-  </Members>
-  <Roles>
-    <RoleId>1</RoleId>
-    <Name>Administrators</Name>
-  </Roles>
   <Facilities>
     <Id>1</Id>
     <Name>Kirkwood Community College</Name>
@@ -45,4 +10,8 @@
     <Region>Iowa</Region>
     <PostalCode>52404</PostalCode>
   </Facilities>
+  <Roles>
+    <RoleId>1</RoleId>
+    <Name>Administrators</Name>
+  </Roles>
 </Database>

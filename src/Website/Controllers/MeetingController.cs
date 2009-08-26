@@ -49,7 +49,7 @@ namespace CRIneta.Website.Controllers
                 return RedirectToAction("Index");
 
             var user = userSession.GetLoggedInUser();
-            var attendee = new Attendee(user.Email);
+            var attendee = new Attendee(user.Email, meeting);
             meeting.AddAttendee(attendee);
             meetingRepository.SaveOrUpdateMeeting(meeting);
 

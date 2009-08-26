@@ -19,7 +19,7 @@ namespace CRIneta.UnitTests.Model.Domain
         {
             var meeting = new Meeting();
 
-            var stubAttendee = new Attendee("TimBarcz@BarczMail.com");
+            var stubAttendee = new Attendee("TimBarcz@BarczMail.com", meeting);
 
             meeting.AddAttendee(stubAttendee);
 
@@ -31,7 +31,7 @@ namespace CRIneta.UnitTests.Model.Domain
         {
             var meeting = new Meeting();
 
-            var stubAttendee = new Attendee("Chris.Missal@AwesomeMail.com");
+            var stubAttendee = new Attendee("Chris.Missal@AwesomeMail.com", meeting);
 
             meeting.AddAttendee(stubAttendee);
             Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
@@ -45,10 +45,10 @@ namespace CRIneta.UnitTests.Model.Domain
         {
             var meeting = new Meeting();
 
-            meeting.AddAttendee(new Attendee("Chris.Missal@AwesomeMail.com"));
+            meeting.AddAttendee(new Attendee("Chris.Missal@AwesomeMail.com", meeting));
             Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
 
-            meeting.AddAttendee(new Attendee("Chris.Missal@AwesomeMail.com"));
+            meeting.AddAttendee(new Attendee("Chris.Missal@AwesomeMail.com", meeting));
             Assert.That(meeting.AttendeeCount, Is.EqualTo(1));
         }
     }
