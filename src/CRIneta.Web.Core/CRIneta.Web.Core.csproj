@@ -98,6 +98,7 @@
     <Compile Include="Security\Cryptography\ICryptographer.cs" />
     <Compile Include="Security\IAuthenticator.cs" />
     <Compile Include="Security\IFormsAuthenticationGateway.cs" />
+    <Compile Include="Security\UserIdentity.cs" />
     <Compile Include="Security\UserPrincipal.cs" />
     <Compile Include="Services\IAuthenticationService.cs" />
     <Compile Include="Security\IUserIdentity.cs" />
@@ -105,6 +106,12 @@
     <Compile Include="UserData.cs" />
     <Compile Include="Validation\IValidator.cs" />
     <Compile Include="Validation\PresentationValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRIneta.Framework\CRIneta.Framework.csproj">
+      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
+      <Name>CRIneta.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Website\Controllers\" />
