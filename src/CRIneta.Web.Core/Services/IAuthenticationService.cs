@@ -59,10 +59,13 @@ namespace CRIneta.Web.Core.Services
 
         public void SetActiveIdentity(IUserIdentity identity)
         {
+            if(!identity.IsAuthenticated)
+                return;
+
             var issued = DateTime.Now;
             var expires = issued.AddMinutes(30);
             
-            var ticket = new FormsAuthenticationTicket(1, identity.MemberId.ToString(), issued, expires, false,identity.Serialize());
+            var ticket = new FormsAuthenticationTicket(1, identity.MemberId.ToString(), issued, expires, false, identity.Serialize());
             string encryptedTicket = FormsAuthentication.Encrypt(ticket);
             var authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket)
                                  {

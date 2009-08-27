@@ -130,8 +130,6 @@ namespace CRIneta.Website.Controllers
         [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult Register()
         {
-            ViewData["Title"] = "Register";
-
             return View();
         }
 

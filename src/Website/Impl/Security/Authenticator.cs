@@ -30,10 +30,10 @@ namespace CRIneta.Website.Impl.Security
 
             DateTime issued = DateTime.Now;
             DateTime expires = issued.AddMinutes(30);
-            string roles = member.IsAdministrator ? "Administrator" : "Users";
+            var userData = new UserIdentity().From(member).Serialize();
 
-            var ticket = new FormsAuthenticationTicket(1, member.Username, issued, expires, false, roles);
-            string encryptedTicket = formsAuthenticationGateway.Encrypt(ticket);
+            var ticket = new FormsAuthenticationTicket(1, member.Username, issued, expires, false, userData);
+            var encryptedTicket = formsAuthenticationGateway.Encrypt(ticket);
             var authCookie = new HttpCookie(formsAuthenticationGateway.FormsCookieName, encryptedTicket) { Expires = ticket.Expiration };
 
             httpContextProvider.GetCurrentHttpContext().Response.Cookies.Add(authCookie);

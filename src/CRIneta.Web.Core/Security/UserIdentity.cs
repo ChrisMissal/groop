@@ -35,11 +35,6 @@ namespace CRIneta.Web.Core.Security
             get { return roles; }
         }
 
-        public static UserIdentity Guest
-        {
-            get { return new UserIdentity(); }
-        }
-
 
         public UserIdentity From(Member member)
         {

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Iesi.Collections.Generic;
 
 namespace CRIneta.Web.Core.Domain
@@ -50,11 +51,17 @@ namespace CRIneta.Web.Core.Domain
         /// <value>The password salt.</value>
         public virtual string PasswordSalt { get; set; }
 
+        protected ISet<Role> roles;
+
         /// <summary>
         /// Gets or sets the roles.
         /// </summary>
         /// <value>The roles.</value>
-        public virtual ISet<Role> Roles { get; set; }
+        public virtual ISet<Role> Roles
+        {
+            get { return roles ?? new SortedSet<Role>(); }
+            set { roles = value; }
+        }
 
         /// <summary>
         /// Gets or sets a value indicating whether this instance is administrator.
