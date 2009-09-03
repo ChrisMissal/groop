@@ -17,9 +17,12 @@
             <li><%=Html.ActionLink("My Account", "Index", "Account") %></li>
             <li><%=Html.ActionLink("Sign Out", "Logout", "Account") %></li>
         </ul>
-    <% Html.RenderAction<MeetingController>(x => x.RSVP()); %>
-    <% } else { %>
-        
+        <p>[[RSVP thingy]]</p>
+<%
+    }
+   else
+   {
+%>
 <h2>Sign In / Register</h2>
 <form method="post" action="/Account/Login">
 	<fieldset>

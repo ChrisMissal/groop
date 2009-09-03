@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using CRIneta.Web.Core;
 using CRIneta.Web.Core.Data;
 using CRIneta.Web.Core.Domain;
+using CRIneta.Website.Models;
 
 namespace CRIneta.Website.Controllers
 {
@@ -42,6 +43,21 @@ namespace CRIneta.Website.Controllers
             return View("Show");
         }
 
+        [Authorize(Roles = "Users")]
+        [AcceptVerbs(HttpVerbs.Get)]
+        public ActionResult RSVP()
+        {
+            var nextMeeting = meetingRepository.GetNextMeeting(DateTime.Now);
+            if (nextMeeting == null)
+                return new EmptyResult();
+
+            var email = userSession.GetLoggedInUser().Email;
+            var hasRsvpd = nextMeeting.ContainsAttendee(email);
+            var model = new RsvpData(hasRsvpd, nextMeeting.MeetingId);
+            return View("RSVP", model);
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult RSVP(int id)
         {
             var meeting = meetingRepository.GetById(id);

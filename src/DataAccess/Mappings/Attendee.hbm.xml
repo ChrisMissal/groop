@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CRIneta.Web.Core" namespace="CRIneta.Web.Core.Domain">
+<class name="Attendee" table="Attendees">
+  <id name="attendeeId" column="Id" type="Int32" unsaved-value="0" access="field">
+    <generator class="native" />
+  </id>
+  <many-to-one name="Meeting" column="MeetingId" class="Meeting" not-null="true" access="nosetter.camelcase" />
+  <property name="email" column="Email" length="100" not-null="true" access="field" />
+</class>
+</hibernate-mapping>

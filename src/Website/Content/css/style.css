@@ -307,3 +307,21 @@ color:#FFFFFF;
 {
 	float: right; text-align: right;
 }
+#rsvp + form + p
+{
+	font-size: 85%;
+	font-style: oblique;
+}
+#rsvp + form input
+{
+	border-width: 1px;
+	font-weight: bold;
+	color: #666;
+	background-color: #eee;
+}
+#rsvp + form input:hover
+{
+	color: #FFA711;
+	background-color: inherit;
+	cursor: pointer;
+}

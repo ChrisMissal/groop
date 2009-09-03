@@ -46,5 +46,10 @@ public class Meeting
     {
         return attendees.Contains(attendee);
     }
+
+    public virtual bool ContainsAttendee(string email)
+    {
+        return attendees.Any(x => x.Email == email);
+    }
 }
 }
