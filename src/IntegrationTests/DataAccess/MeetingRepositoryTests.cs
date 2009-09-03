@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using CRIneta.DataAccess;
 using CRIneta.Web.Core.Domain;
-using HibernatingRhinos.NHibernate.Profiler.Appender;
 using Microdesk.Utility.UnitTest;
 using NUnit.Framework;
 
@@ -92,8 +91,6 @@ namespace IntegrationTests.DataAccess
         [Test]
         public void MeetingRepository_can_save_Attendees()
         {
-            NHibernateProfiler.Initialize();
-
             // Arrange
             var meetingRepository = new MeetingRepository(sessionBuilder);
             var meeting = new Meeting
