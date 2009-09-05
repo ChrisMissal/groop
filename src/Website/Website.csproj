@@ -170,6 +170,7 @@
     <Content Include="Content\images\sponsors\awlogo.gif" />
     <Content Include="Content\images\sponsors\c1logo.gif" />
     <Content Include="Content\images\sponsors\DDJ.gif" />
+    <Content Include="Content\images\sponsors\devexpress_logo.jpg" />
     <Content Include="Content\images\sponsors\godaddy_logo.jpg" />
     <Content Include="Content\images\sponsors\ineta_box.gif" />
     <Content Include="Content\images\sponsors\infralogo.gif" />
@@ -179,6 +180,10 @@
     <Content Include="Content\images\sponsors\redgate.gif" />
     <Content Include="Content\images\sponsors\rht_logo.gif" />
     <Content Include="Content\images\sponsors\sams.gif" />
+    <Content Include="Content\images\sponsors\scootersoftware.png" />
+    <Content Include="Content\images\sponsors\syncfusion_logo.jpg" />
+    <Content Include="Content\images\sponsors\teksystems_logo.gif" />
+    <Content Include="Content\images\sponsors\tlc_logo.jpg" />
     <Content Include="Content\images\supliment-busipeople.jpg" />
     <Content Include="Content\images\supliment-clouds.jpg" />
     <Content Include="Content\images\supliment-openroad.jpg" />
