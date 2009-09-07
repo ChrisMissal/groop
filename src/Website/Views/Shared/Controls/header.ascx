@@ -1,5 +1,6 @@
 ﻿<%@ Import Namespace="System.Web.Mvc.Html"%>
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Import Namespace="CRIneta.Website.Controllers"%>
 <div id="header">
 	<div id="logo">
 		<h1><%=Html.ActionLink("Cedar Rapids .NET User Group", "index", "home")%></h1>
@@ -7,11 +8,11 @@
 	</div>
 	<div id="menu">
         <ul>
-            <li><%=Html.ActionLink("Home", "Index", "Home") %></li>
-            <li><%=Html.ActionLink("Meetings", "Show", "Meeting") %></li>
-            <li><%=Html.ActionLink("Sponsors", "Index", "Sponsor") %></li>
-            <li><%=Html.ActionLink("About", "About", "Home") %></li>
-            <li><%=Html.ActionLink("Contact", "Index", "Contact") %></li>
+            <li><%= Html.ActionLink<HomeController>(x=>x.Index(),"Home") %></li>
+            <li><%= Html.ActionLink<MeetingController>(x => x.Show(), "Meetings")%></li>
+            <li><%= Html.ActionLink<SponsorController>(x => x.Index(), "Sponsors")%></li>
+            <li><%= Html.ActionLink<HomeController>(x => x.About(), "About")%></li>
+            <li><%= Html.ActionLink<ContactController>(x=>x.Index(),"Contact") %></li>
         </ul>
 	</div>
 </div>
