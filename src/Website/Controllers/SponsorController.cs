@@ -13,10 +13,5 @@ namespace CRIneta.Website.Controllers
         {
             return View("Index");
         }
-
-        public ActionResult List()
-        {
-            return View("List");
-        }
     }
 }

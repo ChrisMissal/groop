@@ -19,16 +19,5 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             Assert.That(result.ViewName, Is.EqualTo("Index"));
         }
-
-        [Test]
-        public void SponsorController_should_return_List()
-        {
-            var fakeUserSession = MockRepository.GenerateStub<IUserSession>();
-            var controller = new SponsorController(fakeUserSession);
-
-            var result = controller.List() as ViewResult;
-
-            Assert.That(result.ViewName, Is.EqualTo("List"));
-        }
     }
 }
