@@ -12,7 +12,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         [Test]
         public void SponsorController_should_return_Index()
         {
-            var fakeUserSession = MockRepository.GenerateMock<IUserSession>();
+            var fakeUserSession = MockRepository.GenerateStub<IUserSession>();
             var controller = new SponsorController(fakeUserSession);
 
             var result = controller.Index() as ViewResult;
@@ -23,7 +23,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         [Test]
         public void SponsorController_should_return_List()
         {
-            var fakeUserSession = MockRepository.GenerateMock<IUserSession>();
+            var fakeUserSession = MockRepository.GenerateStub<IUserSession>();
             var controller = new SponsorController(fakeUserSession);
 
             var result = controller.List() as ViewResult;
