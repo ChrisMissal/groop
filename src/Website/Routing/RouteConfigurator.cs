@@ -17,6 +17,8 @@ namespace CRIneta.Website.Routing
             routes.MapRoute("Default", "{controller}/{action}/{id}",
                             new { controller = "Home", action = "Index", id = "" });
 
+            // please not that this route will never actually get hit...the route above will ALWAYS
+            // match before this one is hit...TB
             routes.MapRoute("AdminViewMeetings", "{controller}/{action}/{id}",
                             new { controller = "Admin", action = "EditMeeting", id = "" });
 

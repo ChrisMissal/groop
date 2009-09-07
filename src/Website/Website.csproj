@@ -70,6 +70,8 @@
     <Compile Include="NHibernateSessionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\IRouteConfigurator.cs" />
+    <Compile Include="Routing\LowercaseRoute.cs" />
+    <Compile Include="Routing\RouteCollectionExtensions.cs" />
     <Compile Include="Routing\RouteConfigurator.cs" />
     <Compile Include="Services\Email\SmtpEmailService.cs" />
   </ItemGroup>

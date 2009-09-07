@@ -7,11 +7,11 @@
 	</div>
 	<div id="menu">
         <ul>
-            <li><%=Html.ActionLink("Home", "index", "home") %></li>
-            <li><%=Html.ActionLink("Meetings", "show", "meeting") %></li>
-            <li><%=Html.ActionLink("Sponsors", "index", "sponsor") %></li>
-            <li><%=Html.ActionLink("About", "about", "home") %></li>
-            <li><%=Html.ActionLink("Contact", "index", "contact") %></li>
+            <li><%=Html.ActionLink("Home", "Index", "Home") %></li>
+            <li><%=Html.ActionLink("Meetings", "Show", "Meeting") %></li>
+            <li><%=Html.ActionLink("Sponsors", "Index", "Sponsor") %></li>
+            <li><%=Html.ActionLink("About", "About", "Home") %></li>
+            <li><%=Html.ActionLink("Contact", "Index", "Contact") %></li>
         </ul>
 	</div>
 </div>
