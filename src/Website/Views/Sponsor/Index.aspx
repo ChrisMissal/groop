@@ -7,7 +7,7 @@
          <dl id="sponsors" class="fullpage">
          
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/tlc_logo.jpg") %>" alt="Thomas L Cardella" /></dt>
-            <dd>Thomas L Cardella.</dd>
+            <dd>We offer clients a unique combination of talent, experience, and expertise in the sales and service environment, including inbound, outbound, email and web chat capabilities.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/devexpress_logo.jpg") %>" alt="Developer Express" /></dt>
             <dd>Developer Express.</dd>
