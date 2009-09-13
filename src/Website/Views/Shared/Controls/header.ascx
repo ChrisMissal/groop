@@ -3,7 +3,7 @@
 <%@ Import Namespace="CRIneta.Website.Controllers"%>
 <div id="header">
 	<div id="logo">
-		<h1><%=Html.ActionLink("Cedar Rapids .NET User Group", "index", "home")%></h1>
+		<h1><%=Html.ActionLink<HomeController>(x=>x.Index(),"Cedar Rapids .NET User Group")%></h1>
 		<p>Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
 	</div>
 	<div id="menu">
