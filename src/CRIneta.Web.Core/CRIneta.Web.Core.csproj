@@ -86,9 +86,12 @@
     <Compile Include="Domain\ContactMessage.cs" />
     <Compile Include="Domain\DuplicateRegistrationException.cs" />
     <Compile Include="Domain\Facility.cs" />
+    <Compile Include="Domain\GuestAttendee.cs" />
     <Compile Include="Domain\IContactMessage.cs" />
     <Compile Include="Domain\Meeting.cs" />
     <Compile Include="Domain\Member.cs" />
+    <Compile Include="Domain\MemberAttendee.cs" />
+    <Compile Include="Domain\PromotedAttendee.cs" />
     <Compile Include="Domain\Role.cs" />
     <Compile Include="Domain\UserType.cs" />
     <Compile Include="FlashMessage.cs" />
