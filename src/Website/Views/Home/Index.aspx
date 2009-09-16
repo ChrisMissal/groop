@@ -31,6 +31,7 @@
 <!--			<p class="links"><a href="#" class="comments">Comments (32)</a> &nbsp;&bull;&nbsp;&nbsp; <a href="#" class="more">Read full post &raquo;</a></p>-->
 		</div>
 	</div>
+	<%--
 	<div class="post">
 	    <h2 class="title">Sign Up for Email Reminders</h2>
 	    <div class="entry">
@@ -77,6 +78,7 @@
 
 	    </div>
 	</div>
+	--%>
 	<div class="post">
 		<h2 class="title">Meeting Agenda</h2>
 		<div class="entry">
@@ -87,10 +89,10 @@
                 <dt>5:45 - 6:00</dt>
                 <dd>Announcements, Member .NET Issues and Open .NET Discussion</dd>
                 
-                <dt>6:00 - 7:15</dt>
+                <dt>6:00 - 7:45</dt>
                 <dd>Topic Presentation/Discussion</dd>
                 
-                <dt>7:15 - 7:30</dt>
+                <dt>7:45 - 8:00</dt>
                 <dd>Door Prizes, Wrap Up</dd>
             </dl>
 		</div>
