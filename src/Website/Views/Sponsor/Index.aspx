@@ -13,49 +13,43 @@
             <dd>Developer Express.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/scootersoftware.png") %>" alt="Scooter Software" /></dt>
-            <dd>Scooter Software, the makers of Beyond Compare, are allowing us to give away one license per meeting.</dd>
+            <dd>Scooter Software, the makers of Beyond Compare.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/redgate.gif") %>" alt="Red Gate" /></dt>
-            <dd>... we need some text here ...</dd>
+            <dd>Red Gate Software produces ingeniously simple tools for over 500,000 Microsoft technology professionals worldwide. We currently specialize in MS SQL Server, .NET and email archiving tools.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/logo_jetbrains_small.gif") %>" alt="Jet Brains" /></dt>
-            <dd>Jet Brains makes a variety of excellent products and gives one license away to our attendees each month.</dd>
+            <dd>At JetBrains, we have a passion for making people more productive through smart software solutions that help them focus more on what they really want to accomplish, and less on mundane, repetitive "computer busy work".</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/oreilly.gif") %>" alt="O'Reilly" /></dt>
-            <dd>O'Reilly provides us with books to give our attendees at our monthly meetings.</dd>
+            <dd>O’Reilly Media spreads the knowledge of innovators through its books, online services, magazines, research, and conferences.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/infralogo.gif") %>" alt="Infragistics" /></dt>
-            <dd>... we need some text here ...</dd>
+            <dd>We understand that it is not enough to make great products. For that reason, we supply a wide range of value-added services that help developers build high-quality applications including user interface testing tools, support, training and consulting services.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/rht_logo.gif") %>" alt="Robert Half" /></dt>
-            <dd>... we need some text here ...</dd>
+            <dd>Founded in 1948, Robert Half International Inc. (NYSE symbol: RHI), the world's first and largest specialized staffing firm, is a member of the S&P 500 index and the Forbes Global 2000.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/microsoft.gif") %>" alt="Microsoft" /></dt>
-            <dd>... we need some text here ...</dd>
+            <dd>Do you really not know what Microsoft does?</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/godaddy_logo.jpg") %>" alt="Go Daddy" /></dt>
-            <dd>... we need some text here ...</dd>
+            <dd>GoDaddy.com is the world's No. 1 ICANN-accredited domain name registrar for .COM, .NET, .ORG, .INFO, .BIZ and .US domain extensions.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/ineta_box.gif") %>" alt="Ineta" /></dt>
-            <dd>Our Ineta partnership gives us two Ineta speakers each year to present at our group meetings.</dd>
-            
-            <dt>Inactive sponsors below</dt>
-            <dd>These should be put on the back burner</dd>
+            <dd>Provides structured, peer-based organizational, educational, and promotional support to the growing worldwide community of Microsoft .NET user groups.</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/c1logo.gif") %>" alt="Component One" /></dt>
-            <dd>The component before component two</dd>
+            <dd>Offering the industry's most complete suite of dev tools for Windows, Web and Mobile: Studio Enterprise.</dd>
             
-            <dt><img src="<%= AppHelper.ImageUrl("sponsors/ddj.gif") %>" alt="Doctor Dobb's Journal" /></dt>
-            <dd>Doctor Dobb's Journal has lots of journal like stuff</dd>
-            
-            <dt><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" alt="Addison Wesley" /></dt>
-            <dd>Addison Wesley has books too, a lot of math books.</dd>
+            <!--<dt><img src="<%= AppHelper.ImageUrl("sponsors/awlogo.gif") %>" alt="Addison Wesley" /></dt>
+            <dd>... we need some text here ...</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/sams.gif") %>" alt="Sams" /></dt>
             <dd>... we need some text here ...</dd>
             
             <dt><img src="<%= AppHelper.ImageUrl("sponsors/apress.gif") %>" alt="Apress" /></dt>
-            <dd>Apress writes lots of neat books</dd>
+            <dd>... we need some text here ...</dd>-->
         </dl>
     </div>
 </asp:Content>
