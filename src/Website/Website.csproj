@@ -76,7 +76,6 @@
     <Compile Include="Services\Email\SmtpEmailService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Views\Account\ChangePassword.aspx" />
