@@ -55,7 +55,6 @@ namespace IntegrationTests.DataAccess
             Assert.That(member.MemberId, Is.EqualTo(1));
             Assert.That(member.FirstName, Is.EqualTo("Tim"));
             Assert.That(member.LastName, Is.EqualTo("Barcz"));
-            Assert.That(member.Roles.Count, Is.EqualTo(4));
         }
 
         [Test]
@@ -69,6 +68,31 @@ namespace IntegrationTests.DataAccess
 
             // Assert
             Assert.That(members.Count, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void AddMember_can_successfully_save_a_Member()
+        {
+            // Arrange
+            var memberRepository = new MemberRepository(sessionBuilder);
+
+            
+            var member = new Member()
+                             {
+                                 Email = "email@domain.com",
+                                 FirstName = "Tim",
+                                 LastName = "Barcz",
+                                 Username = "timbarcz1",
+                                 Password = "somepassword",
+                                 PasswordSalt = "sodium chloride"
+                             };
+            // Act
+            var returnedMemberId = memberRepository.AddMember(member);
+
+            // Assert
+            Assert.That(member.MemberId, Is.GreaterThan(0));
+            Assert.That(member.MemberId, Is.EqualTo(returnedMemberId));
+            
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CRIneta.DataAccess;
 using CRIneta.Web.Core.Domain;
 using Microdesk.Utility.UnitTest;
@@ -58,6 +59,10 @@ namespace IntegrationTests.DataAccess
             // Assert
             Assert.That(meeting.MeetingId, Is.EqualTo(1));
             Assert.That(meeting.Facility.Name, Is.EqualTo("Baymont Inn"));
+            Assert.That(meeting.AttendeeCount, Is.EqualTo(3));
+            Assert.That(meeting.Attendees.OfType<GuestAttendee>().Count(), Is.EqualTo(1));
+            Assert.That(meeting.Attendees.Count(x=>x.GetType() == typeof(MemberAttendee)), Is.EqualTo(1));
+            Assert.That(meeting.Attendees.OfType<PromotedAttendee>().Count(), Is.EqualTo(1));
         }
 
         [Test]
@@ -93,19 +98,9 @@ namespace IntegrationTests.DataAccess
         {
             // Arrange
             var meetingRepository = new MeetingRepository(sessionBuilder);
-            var meeting = new Meeting
-                          {
-                                  Title = "a", 
-                                  Description = "b", 
-                                  EndTime = DateTime.Now.AddDays(1),
-                                  Facility = new Facility{FacilityId = 1}, 
-                                  Presenter = "c", 
-                                  StartTime = DateTime.Now.AddDays(-1)
-                          };
-
-            meetingRepository.SaveOrUpdateMeeting(meeting);
-            meeting.AddAttendee(new Attendee("chris@github.com", meeting));
-            meeting.AddAttendee(new Attendee("missal@github.com", meeting));
+            var meeting = meetingRepository.GetById(2);
+            meeting.AddGuestAttendee("chris@github.com", "Chris", "Missal");
+            meeting.AddGuestAttendee("missal@github.com", "Chris", "Missal");
             
             // Act
             meetingRepository.SaveOrUpdateMeeting(meeting);

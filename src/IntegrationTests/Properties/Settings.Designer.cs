@@ -53,5 +53,15 @@ namespace CRIneta.IntegrationTests.Properties {
                 return ((string)(this["CRinetaConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=CRineta;Integrated Security=True")]
+        public string CRinetaConnectionString3 {
+            get {
+                return ((string)(this["CRinetaConnectionString3"]));
+            }
+        }
     }
 }

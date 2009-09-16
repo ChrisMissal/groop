@@ -55,6 +55,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\castle\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nhibernate\2.0\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="MvcContrib, Version=0.0.1.123, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\mvccontrib\MvcContrib.dll</HintPath>
@@ -108,6 +112,8 @@
   <ItemGroup>
     <Compile Include="Core\Presentation\ContactMessageDataTests.cs" />
     <Compile Include="Core\Security\UserIdentityTests.cs" />
+    <Compile Include="Core\Services\MemberCreationService.cs" />
+    <Compile Include="Model\Domain\MemberTests.cs" />
     <Compile Include="Model\UserDataTests.cs" />
     <Compile Include="Model\Domain\MeetingTests.cs" />
     <Compile Include="NHibernatInitializationTests.cs" />

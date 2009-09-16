@@ -166,7 +166,7 @@ namespace CRIneta.Website.Controllers
                          };
 
             member.Password = cryptographer.Hash(password, member.PasswordSalt);
-
+            
             memberRepository.AddMember(member);
 
             authenticator.SignIn(member);

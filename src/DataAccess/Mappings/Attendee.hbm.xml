@@ -1,10 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CRIneta.Web.Core" namespace="CRIneta.Web.Core.Domain">
-<class name="Attendee" table="Attendees">
-  <id name="attendeeId" column="Id" type="Int32" unsaved-value="0" access="field">
-    <generator class="native" />
-  </id>
-  <many-to-one name="Meeting" column="MeetingId" class="Meeting" not-null="true" access="nosetter.camelcase" />
-  <property name="email" column="Email" length="100" not-null="true" access="field" />
-</class>
+    <class name="Attendee" table="Attendees" lazy="true">
+        <id name="attendeeId" column="Id" type="Int32" unsaved-value="0" access="field">
+            <generator class="native" />
+            <!-- Database will generate the key when it is needed-->
+        </id>
+
+        <discriminator>
+            <column name="AttendeeType" not-null="true" sql-type="varchar(25)" />
+        </discriminator>
+        
+        <many-to-one name="Meeting" column="MeetingId" class="Meeting" access="nosetter.camelcase" not-null="true" />
+        <property name="DateRegistered" column="DateRegistered" type="DateTime" access="nosetter.camelcase" not-null="true" />
+        <property name="Email" column="Email" type="string" access="nosetter.camelcase" not-null="true" length="256" />
+        
+        <subclass name="GuestAttendee" discriminator-value="GuestAttendee">
+            <property name="FirstName" column="FirstName" type="string" access="nosetter.camelcase" length="50" />
+            <property name="LastName" column="LastName" type="string" access="nosetter.camelcase" length="50"  />
+        </subclass>
+
+        <subclass name="MemberAttendee" discriminator-value="MemberAttendee">
+            <many-to-one name="Member" class="Member" column="MemberId"  access="nosetter.camelcase" />
+        </subclass>
+
+        <subclass name="PromotedAttendee" discriminator-value="PromotedAttendee">
+            <many-to-one name="Member" class="Member" column="MemberId" access="nosetter.camelcase" />
+            <property name="DatePromoted" column="DatePromoted" type="DateTime" access="nosetter.camelcase" />
+        </subclass>
+        
+    </class>
 </hibernate-mapping>

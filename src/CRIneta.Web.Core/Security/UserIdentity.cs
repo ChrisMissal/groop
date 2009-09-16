@@ -43,7 +43,6 @@ namespace CRIneta.Web.Core.Security
             Email = member.Email;
             First = member.FirstName;
             Last = member.LastName;
-            roles.AddRange(GetRoleNames(member.Roles));
 
             return this;
         }

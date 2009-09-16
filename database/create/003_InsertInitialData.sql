@@ -1,10 +1,4 @@
-INSERT INTO [CRineta].[dbo].[Roles]
-           ([Name])
-     VALUES
-           ('Administrators')
-		   
-		   
-INSERT INTO [CRineta].[dbo].[Facilities]
+INSERT INTO [Facilities]
            ([Name]
            ,[ImageUrl]
            ,[Description]

@@ -12,7 +12,7 @@
 
     <many-to-one name="Facility" column="FacilityId" not-null="true" lazy="false" class="Facility" foreign-key="FK_Meetings_Facilities" />
 
-  <bag name="Attendees" access="nosetter.camelcase" cascade="all-delete-orphan" lazy="false" inverse="true">
+  <bag name="attendees" access="field" cascade="all-delete-orphan" lazy="false" inverse="true">
     <key column="MeetingId" />
     <one-to-many class="Attendee" />
   </bag>

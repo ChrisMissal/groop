@@ -1,13 +1,8 @@
-using System.Collections.Generic;
-using Iesi.Collections.Generic;
-
 namespace CRIneta.Web.Core.Domain
 {
     public class Member
     {
-        public Member()
-        {
-        }
+        private UserType userType = UserType.Member;
 
         /// <summary>
         /// Gets the identifier for this user.
@@ -51,24 +46,25 @@ namespace CRIneta.Web.Core.Domain
         /// <value>The password salt.</value>
         public virtual string PasswordSalt { get; set; }
 
-        protected ISet<Role> roles;
-
-        /// <summary>
-        /// Gets or sets the roles.
-        /// </summary>
-        /// <value>The roles.</value>
-        public virtual ISet<Role> Roles
-        {
-            get { return roles ?? new SortedSet<Role>(); }
-            set { roles = value; }
-        }
-
         /// <summary>
         /// Gets or sets a value indicating whether this instance is administrator.
         /// </summary>
         /// <value>
         /// 	<c>true</c> if this instance is administrator; otherwise, <c>false</c>.
         /// </value>
-        public virtual bool IsAdministrator { get; set; }
+        public virtual bool IsAdministrator
+        {
+            get { return UserType == UserType.Administrator; }
+        }
+
+        /// <summary>
+        /// Gets or sets the type of the user.
+        /// </summary>
+        /// <value>The type of the user.</value>
+        public virtual UserType UserType
+        {
+            get { return userType; }
+            set { userType = value; }
+        }
     }
 }

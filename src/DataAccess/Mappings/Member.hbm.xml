@@ -10,12 +10,14 @@
         <property name="PasswordSalt" column="PasswordSalt" length="255" not-null="true"  />
         <property name="FirstName" column="First" length="50" not-null="true" />
         <property name="LastName" column="Last" length="50" not-null="true" />
-        <property name="Email" column="EmailAddress" length="100" not-null="true" />
+        <property name="Email" column="EmailAddress" length="100" not-null="true" index="IX_Email" />
 
+        <!--
         <set name="Roles" table="UserRoles" lazy="false" cascade="save-update">
             <key column="MemberId" foreign-key="FK_UserRoles_Members" />
             <many-to-many class="Role" column="RoleId" foreign-key="FK_UsersRoles_Roles" />
         </set>
+        -->
 
     </class>
 </hibernate-mapping>

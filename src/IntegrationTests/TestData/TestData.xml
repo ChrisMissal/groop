@@ -1,121 +1,102 @@
 <?xml version="1.0" standalone="yes"?>
 <Database xmlns="http://tempuri.org/Database.xsd">
-    <UserRoles>
-        <MemberId>1</MemberId>
-        <RoleId>1</RoleId>
-    </UserRoles>
-    <UserRoles>
-        <MemberId>1</MemberId>
-        <RoleId>2</RoleId>
-    </UserRoles>
-    <UserRoles>
-        <MemberId>1</MemberId>
-        <RoleId>3</RoleId>
-    </UserRoles>
-    <UserRoles>
-        <MemberId>1</MemberId>
-        <RoleId>4</RoleId>
-    </UserRoles>
-    <UserRoles>
-        <MemberId>2</MemberId>
-        <RoleId>1</RoleId>
-    </UserRoles>
-    <UserRoles>
-        <MemberId>2</MemberId>
-        <RoleId>2</RoleId>
-    </UserRoles>
-    <UserRoles>
-        <MemberId>2</MemberId>
-        <RoleId>3</RoleId>
-    </UserRoles>
-    <Meetings>
-        <Id>1</Id>
-        <Title>Test Meeting</Title>
-        <StartsAt>2008-09-03T08:00:00-05:00</StartsAt>
-        <EndsAt>2008-09-03T09:00:00-05:00</EndsAt>
-        <Description>This is the description</Description>
-        <Presenter>Tim Barcz</Presenter>
-        <FacilityId>1</FacilityId>
-    </Meetings>
-    <Meetings>
-        <Id>2</Id>
-        <Title>Test Meeting #2</Title>
-        <StartsAt>2007-09-03T08:00:00-05:00</StartsAt>
-        <EndsAt>2007-09-03T09:00:00-05:00</EndsAt>
-        <Description>This is the description</Description>
-        <Presenter>Chris Missal</Presenter>
-        <FacilityId>1</FacilityId>
-    </Meetings>
-    <Meetings>
-        <Id>3</Id>
-        <Title>Test Meeting #3</Title>
-        <StartsAt>2008-07-03T08:00:00-05:00</StartsAt>
-        <EndsAt>2008-07-03T09:00:00-05:00</EndsAt>
-        <Description>This is the description</Description>
-        <Presenter>Billy Mays</Presenter>
-        <FacilityId>1</FacilityId>
-    </Meetings>
-    <Meetings>
-        <Id>4</Id>
-        <Title>Test Meeting #4</Title>
-        <StartsAt>2009-03-02T08:00:00-05:00</StartsAt>
-        <EndsAt>2009-03-02T09:00:00-05:00</EndsAt>
-        <Description>This is the description</Description>
-        <Presenter>Shamwow Guy</Presenter>
-        <FacilityId>1</FacilityId>
-    </Meetings>
-
-    <Meetings>
-        <Id>5</Id>
-        <Title>Test Meeting #5</Title>
-        <StartsAt>2009-04-06T08:00:00-05:00</StartsAt>
-        <EndsAt>2009-04-06T09:00:00-05:00</EndsAt>
-        <Description>This is the description</Description>
-        <Presenter>Ron Popeil</Presenter>
-        <FacilityId>1</FacilityId>
-    </Meetings>
-    <Members>
-        <MemberId>1</MemberId>
-        <Username>TimBarcz</Username>
-        <Password>AM0F6ydug8UYiUqE53q8Fs12Z/c=</Password>
-        <PasswordSalt>GPlUv1jOd8sNygwnGxsTeVyDB7N4E/8Wwybs9Oeatmqjy1AInK0LdlnS/TW7tiI1PzQSSyxvlxVYuCZv9YW57g==</PasswordSalt>
-        <First>Tim</First>
-        <Last>Barcz</Last>
-        <EmailAddress>timbarcz@gmail.com</EmailAddress>
-    </Members>
-    <Members>
-        <MemberId>2</MemberId>
-        <Username>ChrisMissal</Username>
-        <Password>WFyuAtPc8YNBi8+gdt7eUqjYb8o=</Password>
-        <PasswordSalt>F46draJEOW1EquVFYm/ktrQaea7zQ33Z+3sMvacUizmTn7pkRrBofHrC9myhPNdpD+gZvG9hz7896XPSI0o0rg==</PasswordSalt>
-        <First>Chris</First>
-        <Last>Missal</Last>
-        <EmailAddress>chrismissal@gmail.com</EmailAddress>
-    </Members>
-    <Roles>
-        <RoleId>1</RoleId>
-        <Name>Member</Name>
-    </Roles>
-    <Roles>
-        <RoleId>2</RoleId>
-        <Name>Administrator</Name>
-    </Roles>
-    <Roles>
-        <RoleId>3</RoleId>
-        <Name>Leader</Name>
-    </Roles>
-    <Roles>
-        <RoleId>4</RoleId>
-        <Name>Speaker</Name>
-    </Roles>
-    <Facilities>
-        <Id>1</Id>
-        <Name>Baymont Inn</Name>
-        <ImageUrl>http://www.baymontinns.com/Baymont/Booking/branded/BU/images/17783_f1.jpg</ImageUrl>
-        <Description>Baymont is a great location</Description>
-        <Address>1220 Park Place NE</Address>
-        <City>Cedar Rapids</City>
-        <Region>Iowa</Region>
-        <PostalCode>52402</PostalCode>
-    </Facilities>
+  <Attendees>
+    <Id>3</Id>
+    <AttendeeType>GuestAttendee</AttendeeType>
+    <MeetingId>1</MeetingId>
+    <DateRegistered>2009-09-16T00:00:00-05:00</DateRegistered>
+    <Email>tim@github.com</Email>
+    <FirstName>Tim</FirstName>
+    <LastName>Barcz</LastName>
+  </Attendees>
+  <Attendees>
+    <Id>7</Id>
+    <AttendeeType>MemberAttendee</AttendeeType>
+    <MeetingId>1</MeetingId>
+    <DateRegistered>2009-09-15T00:00:00-05:00</DateRegistered>
+    <Email>chris.missal@gmail.com</Email>
+    <MemberId>2</MemberId>
+  </Attendees>
+  <Attendees>
+    <Id>8</Id>
+    <AttendeeType>PromotedAttendee</AttendeeType>
+    <MeetingId>1</MeetingId>
+    <DateRegistered>2009-09-14T00:00:00-05:00</DateRegistered>
+    <Email>timbarcz@gmail.com</Email>
+    <MemberId>2</MemberId>
+    <DatePromoted>2009-09-15T00:00:00-05:00</DatePromoted>
+  </Attendees>
+  <Members>
+    <MemberId>1</MemberId>
+    <Username>TimBarcz</Username>
+    <Password>AM0F6ydug8UYiUqE53q8Fs12Z/c=</Password>
+    <PasswordSalt>GPlUv1jOd8sNygwnGxsTeVyDB7N4E/8Wwybs9Oeatmqjy1AInK0LdlnS/TW7tiI1PzQSSyxvlxVYuCZv9YW57g==</PasswordSalt>
+    <First>Tim</First>
+    <Last>Barcz</Last>
+    <EmailAddress>timbarcz@gmail.com</EmailAddress>
+  </Members>
+  <Members>
+    <MemberId>2</MemberId>
+    <Username>ChrisMissal</Username>
+    <Password>WFyuAtPc8YNBi8+gdt7eUqjYb8o=</Password>
+    <PasswordSalt>F46draJEOW1EquVFYm/ktrQaea7zQ33Z+3sMvacUizmTn7pkRrBofHrC9myhPNdpD+gZvG9hz7896XPSI0o0rg==</PasswordSalt>
+    <First>Chris</First>
+    <Last>Missal</Last>
+    <EmailAddress>chrismissal@gmail.com</EmailAddress>
+  </Members>
+  <Facilities>
+    <Id>1</Id>
+    <Name>Baymont Inn</Name>
+    <ImageUrl>http://www.baymontinns.com/Baymont/Booking/branded/BU/images/17783_f1.jpg</ImageUrl>
+    <Description>Baymont is a great location</Description>
+    <Address>1220 Park Place NE</Address>
+    <City>Cedar Rapids</City>
+    <Region>Iowa</Region>
+    <PostalCode>52402</PostalCode>
+  </Facilities>
+  <Meetings>
+    <Id>1</Id>
+    <Title>Test Meeting</Title>
+    <StartsAt>2008-09-03T08:00:00-05:00</StartsAt>
+    <EndsAt>2008-09-03T09:00:00-05:00</EndsAt>
+    <Description>This is the description</Description>
+    <Presenter>Tim Barcz</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Meetings>
+    <Id>2</Id>
+    <Title>Test Meeting #2</Title>
+    <StartsAt>2007-09-03T08:00:00-05:00</StartsAt>
+    <EndsAt>2007-09-03T09:00:00-05:00</EndsAt>
+    <Description>This is the description</Description>
+    <Presenter>Chris Missal</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Meetings>
+    <Id>3</Id>
+    <Title>Test Meeting #3</Title>
+    <StartsAt>2008-07-03T08:00:00-05:00</StartsAt>
+    <EndsAt>2008-07-03T09:00:00-05:00</EndsAt>
+    <Description>This is the description</Description>
+    <Presenter>Billy Mays</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Meetings>
+    <Id>4</Id>
+    <Title>Test Meeting #4</Title>
+    <StartsAt>2009-03-02T07:00:00-06:00</StartsAt>
+    <EndsAt>2009-03-02T08:00:00-06:00</EndsAt>
+    <Description>This is the description</Description>
+    <Presenter>Shamwow Guy</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Meetings>
+    <Id>5</Id>
+    <Title>Test Meeting #5</Title>
+    <StartsAt>2009-04-06T08:00:00-05:00</StartsAt>
+    <EndsAt>2009-04-06T09:00:00-05:00</EndsAt>
+    <Description>This is the description</Description>
+    <Presenter>Ron Popeil</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
 </Database>

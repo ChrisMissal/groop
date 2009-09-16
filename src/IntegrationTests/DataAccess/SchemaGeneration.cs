@@ -26,14 +26,13 @@ namespace IntegrationTests.DataAccess
         /// with In-Proc instead.
         /// </remarks>
         /// <seealso cref="http://markmail.org/message/njtwa5huhdlfq3h7" />
-        [Test]
         public void Create_Database()
         {
             Configuration config = sessionBuilder.GetConfiguration();
 
             var exporter = new SchemaExport(config);
 
-            exporter.SetOutputFile(@"C:\temp\users.ddl");
+            exporter.SetOutputFile(@"C:\temp\CRinetaSchema.ddl");
             exporter.Create(true, false);
         }
 
