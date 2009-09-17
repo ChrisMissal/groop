@@ -33,6 +33,12 @@
     <!-- Framework Settings -->
     <property name="nant.settings.currentframework" value="net-3.5" />
     
+    <!-- allow machine-specific settings to be overridden -->
+	<if test="${file::exists('config\local-properties.xml')}">
+		<echo message="Loading config\local-properties.xml" />
+		<include buildfile="config\local-properties.xml" verbose="true" />
+	</if>
+    
 <!-- ======================================================================================================================================================-->
 <!-- Tasks -->
 <!-- ======================================================================================================================================================-->    
