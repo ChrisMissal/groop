@@ -69,6 +69,7 @@
     <Compile Include="Models\RsvpData.cs" />
     <Compile Include="NHibernateSessionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RebindTempDataAttribute.cs" />
     <Compile Include="Routing\IRouteConfigurator.cs" />
     <Compile Include="Routing\LowercaseRoute.cs" />
     <Compile Include="Routing\RouteCollectionExtensions.cs" />

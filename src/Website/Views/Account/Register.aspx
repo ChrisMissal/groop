@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Website.Controllers"%>
 
 <asp:Content ID="registerContent" ContentPlaceHolderID="mainContent" runat="server">
 
@@ -15,33 +14,35 @@
     <% Html.RenderAction<FlashMessageComponentController>(x => x.GetMessages()); %>
     <%= Html.ValidationSummary() %>
          
-    <% using (Html.BeginForm()) { %>
+    <%  var registrationData = ViewData.Model as RegistrationData;
+        using (Html.BeginForm())
+        { %>
         <fieldset>
         <div>
             <table>
                 <tr>
                     <td>Username:</td>
-                    <td><%= Html.TextBox("username")%><%= Html.ValidationMessage("username") %></td>
+                    <td><%= Html.TextBox("UserName", registrationData.UserName)%></td>
                 </tr>
                 <tr>
                     <td>First:</td>
-                    <td><%= Html.TextBox("First")%><%= Html.ValidationMessage("First") %></td>
+                    <td><%= Html.TextBox("FirstName", registrationData.FirstName)%></td>
                 </tr>
                 <tr>
                     <td>Last:</td>
-                    <td><%= Html.TextBox("Last")%><%= Html.ValidationMessage("Last") %></td>
+                    <td><%= Html.TextBox("LastName", registrationData.LastName)%></td>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td><%= Html.TextBox("Email")%><%= Html.ValidationMessage("Email") %></td>
+                    <td><%= Html.TextBox("Email", registrationData.Email)%></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><%= Html.Password("Password")%><%= Html.ValidationMessage("Password")%></td>
+                    <td><%= Html.Password("Password")%></td>
                 </tr>
                 <tr>
                     <td>Confirm password:</td>
-                    <td><%= Html.Password("PasswordConfirm")%><%= Html.ValidationMessage("PasswordConfirm") %></td>
+                    <td><%= Html.Password("PasswordConfirm")%></td>
                 </tr>
                 <tr>
                     <td></td>

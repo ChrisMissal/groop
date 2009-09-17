@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Castle.Components.Validator;
 using CRIneta.Web.Core;
 using CRIneta.Web.Core.Data;
@@ -9,6 +8,7 @@ using CRIneta.Web.Core.Security;
 using CRIneta.Web.Core.Security.Cryptography;
 using CRIneta.Web.Core.Services;
 using CRIneta.Website.Impl.UserInput;
+using MvcContrib;
 
 namespace CRIneta.Website.Controllers
 {
@@ -127,45 +127,48 @@ namespace CRIneta.Website.Controllers
 
         #region Register Actions
 
-        [AcceptVerbs(HttpVerbs.Get)]
+        [AcceptVerbs(HttpVerbs.Get), RebindTempData(typeof(RegistrationData))]
         public ActionResult Register()
         {
-            return View();
+            var model = ViewData.Model as RegistrationData ?? new RegistrationData();
+
+            return View(model);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Register(string first, string last, string username, string email, string password, string passwordConfirm)
+        public ActionResult Register(RegistrationData registrationData)
         {
-            var registrationData = new RegistrationData(first, last, username, email, password, passwordConfirm);
-
             var validationRunner = new ValidatorRunner(new CachedValidationRegistry());
 
             if (!validationRunner.IsValid(registrationData))
             {
                 // there were errors, report them back to the user
-                PushErrorMessages(validationRunner.GetErrorSummary(registrationData).ErrorMessages, userSession);
+                foreach (var errorMessage in validationRunner.GetErrorSummary(registrationData).ErrorMessages)
+                    AddErrorMessage(errorMessage);
+
+                TempData.Add(registrationData);
                 return RedirectToAction("Register");
             }
 
-
-            Member member = memberRepository.GetByUsername(username);
+            Member member = memberRepository.GetByUsername(registrationData.UserName);
 
             if (member != null)
             {
                 userSession.PushUserMessage(FlashMessage.MessageType.Error, "A user with that username already exists, please try again");
-                return View("Register");
+                TempData.Add(registrationData);
+                return RedirectToAction("Register");
             }
 
             member = new Member
                          {
-                             Username = username,
-                             Email = email,
+                             Username = registrationData.UserName,
+                             Email = registrationData.Email,
                              PasswordSalt = cryptographer.CreateSalt(),
-                             FirstName = first,
-                             LastName = last
+                             FirstName = registrationData.FirstName,
+                             LastName = registrationData.LastName
                          };
 
-            member.Password = cryptographer.Hash(password, member.PasswordSalt);
+            member.Password = cryptographer.Hash(registrationData.Password, member.PasswordSalt);
             
             memberRepository.AddMember(member);
 
@@ -175,13 +178,5 @@ namespace CRIneta.Website.Controllers
         }
 
         #endregion
-
-        private void PushErrorMessages(IEnumerable<string> messages, IUserSession session)
-        {
-            foreach (string s in messages)
-            {
-                session.PushUserMessage(FlashMessage.MessageType.Error, s);
-            }
-        }
     }
 }
