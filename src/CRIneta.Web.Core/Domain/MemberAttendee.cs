@@ -9,7 +9,7 @@ namespace CRIneta.Web.Core.Domain
             
         }
 
-        public MemberAttendee(Member member, Meeting meeting) : base(meeting)
+        public MemberAttendee(Member member, Meeting meeting) : base(member.Email, meeting)
         {
             this.member = member;
         }
