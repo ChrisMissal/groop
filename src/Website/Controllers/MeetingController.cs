@@ -32,15 +32,8 @@ namespace CRIneta.Website.Controllers
         public ActionResult Show()
         {
             var nextMeeting = meetingRepository.GetNextMeeting(DateTime.Now);
-            ViewData["nextMeeting"] = nextMeeting;
-
-            if (nextMeeting != null)
-            {
-                var upcomingMeetings = meetingRepository.GetUpcomingMeetings(nextMeeting.EndTime, 3);
-                ViewData["upcomingMeetings"] = upcomingMeetings;    
-            }
             
-            return View("Show");
+            return View("Show", nextMeeting);
         }
 
         [Authorize(Roles = "Users")]

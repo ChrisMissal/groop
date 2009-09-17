@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Website.Helpers"%>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="mainContent">
 	<div class="post">

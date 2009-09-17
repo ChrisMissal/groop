@@ -1,16 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
-
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainContent" runat="server">
 	<div style="margin-bottom: 10px;"><img src="/Content/images/supliment-busipeople.jpg" alt="" /></div>
-    <% var meeting = (Meeting)ViewData["nextMeeting"];
+    <% var meeting = ViewData.Model as Meeting;
        if (meeting == null)
        { %>
 	<div class="post">
 		<h1 class="title">No Meeting Scheduled at This Time</h1>
 		<div class="entry">
-			<p>There are no meetings currently scheduled in advance. Try back later to check for any updates. In the meantime, <a href="../Account/Register.aspx">register for an account</a> so you're up to date when new meetings are added.</p>
+			<p>There are no meetings currently scheduled in advance. Try back later to check for any updates. In the meantime, <%= Html.ActionLink<AccountController>(x => x.Register(), "register for an account") %> so you're up to date when new meetings are added.</p>
 		</div>
 	</div>
        <% }

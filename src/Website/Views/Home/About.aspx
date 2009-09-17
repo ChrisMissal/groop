@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ContentPlaceHolderID="mainContent" runat="server">
 	<div style="margin-bottom: 10px;"><img src="/Content/images/supliment-openroad.jpg" alt="" /></div>
@@ -13,7 +13,7 @@
     <div class="post">
         <h1 class="title">Want to learn more about the group?</h1>
         <ul>
-            <li>For information about our meetings, visit our <a href="../Meeting/Index.aspx">Meetings & Events</a> section.</li>
+            <li>For information about our meetings, visit our <%= Html.ActionLink<HomeController>(x => x.About(), "Meetings & Events") %> section.</li>
             <li>For information about the group's leadership, visit the Officers page.</li>
             <li>Interested in sponsoring CRineta?  Visit the Sponsorhip Information page.</li>
             <li>To interact with other CRineta members, visit our Discussion Forums.</li>
