@@ -89,6 +89,8 @@
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\Attendee.cs" />
     <Compile Include="Domain\ContactMessage.cs" />
+    <Compile Include="Domain\MeetingSponsor.cs" />
+    <Compile Include="Domain\Sponsor.cs" />
     <Compile Include="Domain\SponsorType.cs" />
     <Compile Include="Domain\DuplicateRegistrationException.cs" />
     <Compile Include="Domain\Facility.cs" />

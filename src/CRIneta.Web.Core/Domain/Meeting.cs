@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NUnit.Framework;
 
 namespace CRIneta.Web.Core.Domain
 {
@@ -101,50 +100,6 @@ namespace CRIneta.Web.Core.Domain
 
             sponsors.Add(meetingSponsor);
             return meetingSponsor;
-        }
-    }
-
-    public class MeetingSponsor
-    {
-        protected int meetingSponsorId;
-        private Sponsor sponsor;
-        private Meeting meeting;
-
-        protected MeetingSponsor()
-        {
-            // For NH
-        }
-
-        public MeetingSponsor(Sponsor sponsor, Meeting meeting)
-        {
-            this.sponsor = sponsor;
-            this.meeting = meeting;
-        }
-
-        public virtual Meeting Meeting { get { return meeting; } }
-        public virtual Sponsor Sponsor { get { return sponsor; } }
-        public virtual SponsorType Type { get; set; }
-    }
-
-    /// <summary>
-    /// Represents an entity which helps covering costs
-    /// </summary>
-    public class Sponsor
-    {
-        private IList<MeetingSponsor> sponsoredMeetings;
-
-        public Sponsor()
-        {
-            sponsoredMeetings = new List<MeetingSponsor>();
-        }
-        public virtual int SponsorId { get; set; }
-        public virtual string Name { get; set; }
-        public virtual string Url { get; set; }
-        public virtual string Description { get; set; }
-
-        public virtual IList<MeetingSponsor> SponsoredMeetings
-        {
-            get { return sponsoredMeetings; }
         }
     }
 }
