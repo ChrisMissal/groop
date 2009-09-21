@@ -5,28 +5,13 @@ using NHibernate;
 
 namespace CRIneta.DataAccess
 {
-    public class FacilityRepository : RepositoryBase, IFacilityRepository
+    public class FacilityRepository : RepositoryBase<Facility>, IFacilityRepository
     {
         public FacilityRepository(ISessionBuilder sessionFactory) : base(sessionFactory)
         {
         }
 
         #region IFacilityRepository Members
-
-        public Facility GetById(int key)
-        {
-            using (var session = getSession())
-            using (var txn = session.BeginTransaction())
-                try
-                {
-                    return session.Get<Facility>(key);
-                }
-                catch (HibernateException)
-                {
-                    txn.Rollback();
-                    throw;
-                }
-        }
 
         public IEnumerable<Facility> GetFacilities()
         {

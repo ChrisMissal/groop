@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CRIneta.Web.Core" namespace="CRIneta.Web.Core.Domain">
+    <class name="MeetingSponsor" table="MeetingSponsors" lazy="true">
+        <id name="meetingSponsorId" column="Id" type="Int32" unsaved-value="0" access="field">
+            <generator class="native" />
+            <!-- Database will generate the key when it is needed-->
+        </id>
+
+        <many-to-one name="Meeting" column="MeetingId" class="Meeting" access="nosetter.camelcase" not-null="true" />
+        <many-to-one name="Sponsor" column="SponsorId" class="Sponsor" access="nosetter.camelcase" not-null="true" />        
+    </class>
+</hibernate-mapping>

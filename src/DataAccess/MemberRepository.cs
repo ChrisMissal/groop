@@ -6,32 +6,10 @@ using NHibernate;
 
 namespace CRIneta.DataAccess
 {
-    public class MemberRepository : RepositoryBase, IMemberRepository
+    public class MemberRepository : RepositoryBase<Member>, IMemberRepository
     {
         public MemberRepository(ISessionBuilder sessionFactory) : base(sessionFactory)
         {
-        }
-
-        public Member GetById(int key)
-        {
-            if (key <= 0)
-                return null;
-
-            using(var session = getSession())
-            using(var txn = session.BeginTransaction())
-            {
-                try
-                {
-                    var member = session.Get<Member>(key);
-                    txn.Commit();
-                    return member;
-                }
-                catch (HibernateException)
-                {
-                    txn.Rollback();
-                    throw;
-                }
-            }
         }
 
         public Member GetByUsername(string username)

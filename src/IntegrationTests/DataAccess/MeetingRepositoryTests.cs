@@ -3,45 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using CRIneta.DataAccess;
 using CRIneta.Web.Core.Domain;
-using Microdesk.Utility.UnitTest;
 using NUnit.Framework;
 
 namespace IntegrationTests.DataAccess
 {
     [TestFixture]
-    public class MeetingRepostoryTests : DatabaseUnitTestBase
+    public class MeetingRepostoryTests : RepositoryTestBase
     {
-        private HybridSessionBuilder sessionBuilder;
-
-        #region Setup
-
-        [TestFixtureSetUp]
-        public void FixtureSetup()
-        {
-            DatabaseFixtureSetUp();
-            sessionBuilder = new HybridSessionBuilder();
-        }
-
-        [TestFixtureTearDown]
-        public void FixtureTearDown()
-        {
-            DatabaseFixtureTearDown();
-        }
-
-        [SetUp]
-        public void Setup()
-        {
-            DatabaseSetUp();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            DatabaseTearDown();
-        }
-
-        #endregion
-
         public void GetMyTestDataXmlFile()
         {
             SaveTestDatabase();
@@ -103,7 +71,7 @@ namespace IntegrationTests.DataAccess
             meeting.AddGuestAttendee("missal@github.com", "Chris", "Missal");
             
             // Act
-            meetingRepository.SaveOrUpdateMeeting(meeting);
+            meetingRepository.Save(meeting);
 
             // Assert
             Assert.That(meeting.AttendeeCount, Is.EqualTo(2));

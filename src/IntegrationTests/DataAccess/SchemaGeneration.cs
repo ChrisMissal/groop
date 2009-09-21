@@ -26,6 +26,7 @@ namespace IntegrationTests.DataAccess
         /// with In-Proc instead.
         /// </remarks>
         /// <seealso cref="http://markmail.org/message/njtwa5huhdlfq3h7" />
+        [Test]
         public void Create_Database()
         {
             Configuration config = sessionBuilder.GetConfiguration();

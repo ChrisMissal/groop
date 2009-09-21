@@ -8,13 +8,13 @@
             configFile="log4net.config" />-->
     </facilities>
     <properties>
-      <Smtp.Host>127.0.0.1</Smtp.Host>
-      <Smtp.Port>25</Smtp.Port>
-      <Smtp.From>webmaster@crineta.org</Smtp.From>
-      <Smtp.To>webmaster@crineta.org</Smtp.To>
+        <Smtp.Host>127.0.0.1</Smtp.Host>
+        <Smtp.Port>25</Smtp.Port>
+        <Smtp.From>webmaster@crineta.org</Smtp.From>
+        <Smtp.To>webmaster@crineta.org</Smtp.To>
     </properties>
     <components>
-        
+
         <component id="ICryptographer"
 				   service="CRIneta.Web.Core.Security.Cryptography.ICryptographer, CRIneta.Web.Core"
 				   type="CRIneta.Website.Impl.Security.Cryptography.Cryptographer, CRIneta.Website" />
@@ -46,22 +46,22 @@
         <component id="IAuthenticationService"
 				   service="CRIneta.Web.Core.Services.IAuthenticationService, CRIneta.Web.Core"
 				   type="CRIneta.Web.Core.Services.AuthenticationService, CRIneta.Web.Core" />
-        
+
         <!-- General -->
-      <component id="IValidator"
-                 service="CRIneta.Web.Core.Validation.IValidator, CRIneta.Web.Core"
-                 type="CRIneta.Web.Core.Validation.PresentationValidator, CRIneta.Web.Core" />
-      
-      <!-- Services -->
+        <component id="IValidator"
+                   service="CRIneta.Web.Core.Validation.IValidator, CRIneta.Web.Core"
+                   type="CRIneta.Web.Core.Validation.PresentationValidator, CRIneta.Web.Core" />
+
+        <!-- Services -->
 
         <component id="IEmailService"
                        service="CRIneta.Web.Core.Services.IEmailService,  CRIneta.Web.Core"
                        type=" CRIneta.Website.Services.Email.FakeEmailService, CRIneta.Website">
             <parameters>
-              <host>#{Smtp.Host}</host>
-              <port>#{Smtp.Port}</port>
-              <defaultFrom>#{Smtp.From}</defaultFrom>
-              <defaultTo>#{Smtp.To}</defaultTo>
+                <host>#{Smtp.Host}</host>
+                <port>#{Smtp.Port}</port>
+                <defaultFrom>#{Smtp.From}</defaultFrom>
+                <defaultTo>#{Smtp.To}</defaultTo>
             </parameters>
         </component>
 
@@ -72,16 +72,34 @@
                    type="CRIneta.DataAccess.MemberRepository, CRIneta.DataAccess">
         </component>
 
-      <component id="IMeetingRepository"
-                 service="CRIneta.Web.Core.Data.IMeetingRepository, CRIneta.Web.Core"
-                 type="CRIneta.DataAccess.MeetingRepository, CRIneta.DataAccess">
-      </component>
+        <component id="IMeetingRepository"
+                   service="CRIneta.Web.Core.Data.IMeetingRepository, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.MeetingRepository, CRIneta.DataAccess">
+        </component>
 
-      <component id="IFacilityRepository"
-                 service="CRIneta.Web.Core.Data.IFacilityRepository, CRIneta.Web.Core"
-                 type="CRIneta.DataAccess.FacilityRepository, CRIneta.DataAccess">
-      </component>
+        <component id="IFacilityRepository"
+                   service="CRIneta.Web.Core.Data.IFacilityRepository, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.FacilityRepository, CRIneta.DataAccess">
+        </component>
+
+        <component id="ISessionFactory"
+                   service="CRIneta.DataAccess.ISessionFactory, CRIneta.DataAccess"
+                   type="CRIneta.DataAccess.SessionFactory, CRIneta.DataAccess"
+                   lifestyle="singleton">
+        </component>
+
+        <component id="IActiveSessionManager"
+                   service="CRIneta.DataAccess.IActiveSessionManager, CRIneta.DataAccess"
+                   type="CRIneta.DataAccess.ActiveSessionManager, CRIneta.DataAccess"
+                   lifestyle="singleton">
+        </component>
         
+        <component id="IUnitOfWork"
+                   service="CRIneta.Web.Core.Data.IUnitOfWork, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.UnitOfWork, CRIneta.DataAccess"
+                   lifestyle="transient">
+        </component>
+
         <!-- End Data Repositories -->
     </components>
 </configuration>

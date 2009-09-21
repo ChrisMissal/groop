@@ -18,6 +18,5 @@
             <many-to-many class="Role" column="RoleId" foreign-key="FK_UsersRoles_Roles" />
         </set>
         -->
-
     </class>
 </hibernate-mapping>

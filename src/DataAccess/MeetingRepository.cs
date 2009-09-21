@@ -6,31 +6,10 @@ using NHibernate;
 
 namespace CRIneta.DataAccess
 {
-    public class MeetingRepository : RepositoryBase, IMeetingRepository
+    public class MeetingRepository : RepositoryBase<Meeting>, IMeetingRepository
     {
         public MeetingRepository(ISessionBuilder sessionFactory) : base(sessionFactory)
         {
-        }
-
-        public Meeting GetById(int key)
-        {
-            if (key <= 0) return null;
-
-            using(var session = getSession())
-            using(var txn = session.BeginTransaction())
-            {
-                try
-                {
-                    var meeting = session.Get<Meeting>(key);
-                    txn.Commit();
-                    return meeting;
-                }
-                catch (HibernateException)
-                {
-                    txn.Rollback();
-                    throw;
-                }
-            }
         }
 
         public IList<Meeting> GetAllMeetings()
@@ -40,7 +19,9 @@ namespace CRIneta.DataAccess
             {
                 try
                 {
-                    var meeting = session.CreateQuery("from Meeting").List<Meeting>();
+                    var meeting = session.CreateQuery("from Meeting")
+                        .List<Meeting>();
+                        
                     txn.Commit();
                     return meeting;
                 }
@@ -52,28 +33,9 @@ namespace CRIneta.DataAccess
             }
         }
 
-        /// <summary>
-        /// Saves or updates the meeting.
-        /// </summary>
-        /// <param name="meeting">The meeting.</param>
-        /// <returns></returns>
         public Meeting SaveOrUpdateMeeting(Meeting meeting)
         {
-            using (var session = getSession())
-            using (var txn = session.BeginTransaction())
-            {
-                try
-                {
-                    session.SaveOrUpdate(meeting);
-                    txn.Commit();
-                    return meeting;
-                }
-                catch (HibernateException)
-                {
-                    txn.Rollback();
-                    throw;
-                }
-            }
+            throw new NotImplementedException();
         }
 
         public Meeting GetNextMeeting(DateTime time)

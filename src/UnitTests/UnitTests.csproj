@@ -113,6 +113,7 @@
     <Compile Include="Core\Presentation\ContactMessageDataTests.cs" />
     <Compile Include="Core\Security\UserIdentityTests.cs" />
     <Compile Include="Model\Domain\MemberTests.cs" />
+    <Compile Include="Model\Domain\SponsorTests.cs" />
     <Compile Include="Model\UserDataTests.cs" />
     <Compile Include="Model\Domain\MeetingTests.cs" />
     <Compile Include="NHibernatInitializationTests.cs" />

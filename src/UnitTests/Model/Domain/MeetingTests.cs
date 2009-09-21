@@ -167,5 +167,57 @@ namespace CRIneta.UnitTests.Model.Domain
             // Assert
             Assert.That(secondAttendee.DateRegistered, Is.EqualTo(firstAttendee.DateRegistered));
         }
+
+        [Test]
+        public void Sponsors_should_be_empty_when_a_meeing_is_created()
+        { 
+            // Arrange
+            
+            // Act
+            var meeting = new Meeting();
+
+            // Assert
+            Assert.That(meeting.Sponsors.Count, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void AddSponsor_should_increment_the_sponsor_quantity()
+        { 
+            // Arrange
+            var meeting = new Meeting();
+
+            // Act
+            meeting.AddSponsor(new Sponsor());
+
+            // Assert
+            Assert.That(meeting.Sponsors.Count, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void AddSponsor_should_return_a_MeetingSponsor_typed_Object()
+        { 
+            // Arrange
+            var meeting = new Meeting();
+
+            // Act
+            var returnMeetingSponsor = meeting.AddSponsor(new Sponsor());
+
+            // Assert
+            Assert.That(returnMeetingSponsor, Is.TypeOf(typeof(MeetingSponsor)));
+        }
+
+        [Test]
+        public void AddSponsor_should_allow_a_type_of_sponsor_to_be_added()
+        {
+            // Arrange
+            var meeting = new Meeting();
+
+            // Act
+            var returnMeetingSponsor = meeting.AddSponsor(new Sponsor(), SponsorType.Food);
+
+            // Assert
+            Assert.That(returnMeetingSponsor, Is.TypeOf(typeof(MeetingSponsor)));
+            Assert.That(returnMeetingSponsor.Type, Is.EqualTo(SponsorType.Food));
+        }
     }
 }

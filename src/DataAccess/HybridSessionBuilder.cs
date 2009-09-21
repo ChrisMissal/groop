@@ -6,18 +6,18 @@ namespace CRIneta.DataAccess
 {
     public class HybridSessionBuilder : ISessionBuilder
     {
-        private static ISessionFactory sessionFactory;
+        private static NHibernate.ISessionFactory sessionFactory;
         private static ISession currentSession;
 
         public ISession GetSession()
         {
-            ISessionFactory factory = getSessionFactory();
+            NHibernate.ISessionFactory factory = getSessionFactory();
             ISession session = getExistingOrNewSession(factory);
             //Log.Debug(this, "Using ISession " + session.GetHashCode());
             return session;
         }
 
-        private ISessionFactory getSessionFactory()
+        private NHibernate.ISessionFactory getSessionFactory()
         {
             if (sessionFactory == null)
             {
@@ -35,7 +35,7 @@ namespace CRIneta.DataAccess
             return configuration;
         }
 
-        private ISession getExistingOrNewSession(ISessionFactory factory)
+        private ISession getExistingOrNewSession(NHibernate.ISessionFactory factory)
         {
             if (HttpContext.Current != null)
             {
@@ -69,7 +69,7 @@ namespace CRIneta.DataAccess
             return HttpContext.Current.Items[GetType().FullName] as ISession;
         }
 
-        private ISession openSessionAndAddToContext(ISessionFactory factory)
+        private ISession openSessionAndAddToContext(NHibernate.ISessionFactory factory)
         {
             ISession session = factory.OpenSession();
             HttpContext.Current.Items.Remove(GetType().FullName);

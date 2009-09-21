@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CRIneta.Web.Core" namespace="CRIneta.Web.Core.Domain">
+    <class name="Sponsor" table="Sponsors">
+        <id name="SponsorId" column="Id" type="Int32" unsaved-value="0">
+            <generator class="native" /> <!-- Database will generate the key when it is needed-->
+        </id>
+        <property name="Name" column="Name" length="255" not-null="true" />
+        <property name="Url" column="Url" length="255" />
+        <property name="Description" column="Description" type="StringClob" />
+
+        <bag name="SponsoredMeetings" table="MeetingSponsors" access="nosetter.camelcase" cascade="all-delete-orphan" lazy="false">
+            <key column="SponsorId" />
+            <many-to-many class="MeetingSponsor" column="MeetingId" />
+        </bag>
+    </class>
+</hibernate-mapping>
