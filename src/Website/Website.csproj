@@ -165,6 +165,17 @@
     <Content Include="Content\images\img10.gif" />
     <Content Include="Content\images\img11.gif" />
     <Content Include="Content\images\logos.html" />
+    <Content Include="Content\images\officers\BillKVS.jpg" />
+    <Content Include="Content\images\officers\ChrisMissal.jpg" />
+    <Content Include="Content\images\officers\dpVS.jpg" />
+    <Content Include="Content\images\officers\eric.jpg" />
+    <Content Include="Content\images\officers\GregSVS.jpg" />
+    <Content Include="Content\images\officers\jbrunken.jpg" />
+    <Content Include="Content\images\officers\Mike002.jpg" />
+    <Content Include="Content\images\officers\no-photo.gif" />
+    <Content Include="Content\images\officers\TimBVS.jpg" />
+    <Content Include="Content\images\officers\Travis2.JPG" />
+    <Content Include="Content\images\officers\ZacHVS.jpg" />
     <Content Include="Content\images\openroad.jpg" />
     <Content Include="Content\images\sponsors\apress.gif" />
     <Content Include="Content\images\sponsors\awlogo.gif" />
@@ -201,6 +212,7 @@
     <Content Include="Views\Admin\EditMeeting.aspx" />
     <Content Include="Views\Contact\Sent.aspx" />
     <Content Include="Views\Admin\Index.aspx" />
+    <Content Include="Views\Home\Officers.aspx" />
     <Content Include="Views\Layouts\TwoCol.Master" />
     <Content Include="Views\Shared\Controls\admin\links.ascx" />
     <Content Include="Views\Shared\Controls\rsvp.ascx" />

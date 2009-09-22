@@ -23,6 +23,11 @@ namespace CRIneta.Website.Controllers
             return View("Index");
         }
 
+        public ActionResult Officers()
+        {
+            return View("Officers");
+        }
+
         public ActionResult About()
         {
             ViewData["Title"] = "About Page";
