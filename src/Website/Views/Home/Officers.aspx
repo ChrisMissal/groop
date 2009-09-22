@@ -15,6 +15,7 @@
 	margin: 1.5em 0 1ex;
 	border-bottom: 1px solid #666;
 	overflow: hidden;
+	float: left;
 	clear: both;
 }
 .officers dt > strong
@@ -25,6 +26,7 @@
 .officers dd
 {
 	overflow: hidden;
+	clear: both;
 }
 .officers dd > p
 {
