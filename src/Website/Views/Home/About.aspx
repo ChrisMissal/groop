@@ -13,7 +13,7 @@
     <div class="post">
         <h1 class="title">Want to learn more about the group?</h1>
         <ul>
-            <li>For information about our meetings, visit our <%= Html.ActionLink<HomeController>(x => x.About(), "Meetings & Events") %> section.</li>
+            <li>For information about our meetings, visit our <%= Html.ActionLink<MeetingController>(x => x.Show(), "Meetings & Events") %> section.</li>
             <li>For information about the group's leadership, visit the Officers page.</li>
             <li>Interested in sponsoring CRineta?  Visit the Sponsorhip Information page.</li>
             <li>To interact with other CRineta members, visit our Discussion Forums.</li>

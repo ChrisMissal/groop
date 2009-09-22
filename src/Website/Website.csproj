@@ -111,8 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Contact\Index.aspx" />
-    <Content Include="Views\Meeting\Index.aspx" />
-    <Content Include="Views\Meeting\List.aspx" />
     <Content Include="Views\Meeting\Show.aspx" />
     <Content Include="Views\Shared\Controls\footerExample.ascx" />
     <Content Include="Views\Shared\Controls\rightExample.ascx" />
@@ -213,7 +211,6 @@
     <Content Include="Views\Contact\Sent.aspx" />
     <Content Include="Views\Admin\Index.aspx" />
     <Content Include="Views\Home\Officers.aspx" />
-    <Content Include="Views\Layouts\TwoCol.Master" />
     <Content Include="Views\Shared\Controls\admin\links.ascx" />
     <Content Include="Views\Shared\Controls\rsvp.ascx" />
     <Content Include="Views\Shared\Controls\userStatus.ascx" />

@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using CRIneta.Web.Core;
 using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
 using CRIneta.Website.Models;
 
 namespace CRIneta.Website.Controllers
@@ -14,11 +13,6 @@ namespace CRIneta.Website.Controllers
         public MeetingController(IUserSession userSession, IMeetingRepository meetingRepository) : base(userSession)
         {
             this.meetingRepository = meetingRepository;
-        }
-
-        public ActionResult Index()
-        {
-            return View();
         }
 
         public ActionResult List()
