@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
 using CRIneta.Web.Core;
-using CRIneta.Web.Core.Data;
 using CRIneta.Web.Core.Services;
 
 namespace CRIneta.Website.Controllers
@@ -10,12 +9,10 @@ namespace CRIneta.Website.Controllers
     public class HomeController : Controller
     {
         private readonly IMeetingService meetingService;
-        private readonly IMeetingRepository meetingRepository;
 
-        public HomeController(IUserSession userSession, IMeetingService meetingService, IMeetingRepository meetingRepository) : base(userSession)
+        public HomeController(IUserSession userSession, IMeetingService meetingService) : base(userSession)
         {
             this.meetingService = meetingService;
-            this.meetingRepository = meetingRepository;
         }
 
         public ActionResult Index()
