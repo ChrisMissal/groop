@@ -76,7 +76,7 @@ namespace CRIneta.Web.Core.Domain
             set { userType = value; }
         }
 
-        public IList<Meeting> AttendedMeetings
+        public virtual IList<Meeting> AttendedMeetings
         {
             get { return attendedMeetings; }
         }
