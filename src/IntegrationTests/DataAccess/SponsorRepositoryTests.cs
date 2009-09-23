@@ -9,23 +9,6 @@ namespace IntegrationTests.DataAccess
     [TestFixture]
     public class SponsorRepositoryTests : RepositoryTestBase
     {
-        private IActiveSessionManager activeSessionManager;
-        private ISessionFactory sessionFactory;
-        
-        [SetUp]
-        protected void Setup()
-        {
-            sessionFactory = new SessionFactory();
-            activeSessionManager = new ActiveSessionManager();
-            activeSessionManager.SetActiveSession(sessionFactory.Create());
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            activeSessionManager.ClearActiveSession();
-        }
-
         [Test]
         public void AddSponsor_saves_sponsor_to_database()
         {

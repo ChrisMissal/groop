@@ -1,15 +1,19 @@
 using System;
 using System.Collections.Generic;
-using CRIneta.DataAccess;
 using CRIneta.Framework;
 using NHibernate;
 using NHibernate.Criterion;
 
-namespace IntegrationTests.DataAccess
+namespace CRIneta.DataAccess
 {
     public abstract class RepositoryBaseUoW<TEntity,TKey>
     {
         private readonly IActiveSessionManager activeSessionManager;
+
+        protected abstract Func<TEntity, TKey> GetKey
+        {
+            get;
+        }
 
         protected RepositoryBaseUoW(IActiveSessionManager activeSessionManager)
         {
@@ -24,6 +28,18 @@ namespace IntegrationTests.DataAccess
         public TEntity GetById(TKey id)
         {
             return Session.Get<TEntity>(id);
+        }
+
+        public TKey Add(TEntity entity)
+        {
+            Session.Save(entity);
+
+            return GetKey(entity);
+        }
+
+        public void Update(TEntity entity)
+        {
+            Session.Update(entity);
         }
 
         public void SaveOrUpdate(TEntity entity)

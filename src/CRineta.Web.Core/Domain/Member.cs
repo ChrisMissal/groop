@@ -1,8 +1,17 @@
+using System;
+using System.Collections.Generic;
+
 namespace CRIneta.Web.Core.Domain
 {
     public class Member
     {
         private UserType userType = UserType.Member;
+        private IList<Meeting> attendedMeetings;
+
+        public Member()
+        {
+            attendedMeetings = new List<Meeting>();
+        }
 
         /// <summary>
         /// Gets the identifier for this user.
@@ -65,6 +74,11 @@ namespace CRIneta.Web.Core.Domain
         {
             get { return userType; }
             set { userType = value; }
+        }
+
+        public IList<Meeting> AttendedMeetings
+        {
+            get { return attendedMeetings; }
         }
     }
 }

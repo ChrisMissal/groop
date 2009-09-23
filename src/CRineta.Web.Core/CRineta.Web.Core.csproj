@@ -82,6 +82,7 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Data\IFacilityRepository.cs" />
+    <Compile Include="Data\IIntermediateRepository.cs" />
     <Compile Include="Data\IMeetingRepository.cs" />
     <Compile Include="Data\IMemberRepository.cs" />
     <Compile Include="Data\IRepository.cs" />

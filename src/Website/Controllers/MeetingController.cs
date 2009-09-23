@@ -53,7 +53,7 @@ namespace CRIneta.Website.Controllers
 
             var user = userSession.GetLoggedInUser();
             meeting.AddAttendee(user);
-            meetingRepository.SaveOrUpdateMeeting(meeting);
+            meetingRepository.Update(meeting);
 
             ViewData.Model = meeting;
             return View("Show");

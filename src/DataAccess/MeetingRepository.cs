@@ -3,39 +3,25 @@ using System.Collections.Generic;
 using CRIneta.Web.Core.Data;
 using CRIneta.Web.Core.Domain;
 using NHibernate;
+using NHibernate.Criterion;
 
 namespace CRIneta.DataAccess
 {
-    public class MeetingRepository : RepositoryBase<Meeting>, IMeetingRepository
+    public class MeetingRepository : RepositoryBaseUoW<Meeting,int>, IMeetingRepository
     {
-        public MeetingRepository(ISessionBuilder sessionFactory) : base(sessionFactory)
+        public MeetingRepository(IActiveSessionManager activeSessionManager) : base(activeSessionManager)
         {
+        }
+
+        protected override Func<Meeting, int> GetKey
+        {
+            get { return meeting => meeting.MeetingId; }
         }
 
         public IList<Meeting> GetAllMeetings()
         {
-            using(var session = getSession())
-            using(var txn = session.BeginTransaction())
-            {
-                try
-                {
-                    var meeting = session.CreateQuery("from Meeting")
-                        .List<Meeting>();
-                        
-                    txn.Commit();
-                    return meeting;
-                }
-                catch (HibernateException)
-                {
-                    txn.Rollback();
-                    throw;
-                }
-            }
-        }
-
-        public Meeting SaveOrUpdateMeeting(Meeting meeting)
-        {
-            throw new NotImplementedException();
+            var criteria = DetachedCriteria.For<Meeting>();
+            return new List<Meeting>(FindAll(criteria));
         }
 
         public Meeting GetNextMeeting(DateTime time)
@@ -46,50 +32,21 @@ namespace CRIneta.DataAccess
 
         public IList<Meeting> GetUpcomingMeetings(DateTime time, int maxNumberMeetings)
         {
-            using(var session = getSession())
-            using(var txn = session.BeginTransaction())
-            {
-                try
-                {
-                    var meetings = session
-                            .CreateQuery("from Meeting m where m.StartTime > :time order by m.StartTime asc")
-                            .SetParameter("time", time)
-                            .SetMaxResults(maxNumberMeetings)
-                            .List<Meeting>();
-
-                    txn.Commit();
-                    return meetings;
-                }
-                catch (HibernateException)
-                {
-                    txn.Rollback();
-                    throw;
-                }
-            }
+            var criteria = DetachedCriteria.For<Meeting>()
+                .Add(Restrictions.Gt("StartTime", time))
+                .AddOrder(Order.Asc("StartTime"))
+                .SetMaxResults(maxNumberMeetings);
+            
+            return new List<Meeting>(FindAll(criteria));
         }
 
         public IList<Meeting> GetMeetingsBetween(DateTime beginDate, DateTime endDate)
         {
-            using(var session = getSession())
-            using (var tx = session.BeginTransaction())
-            {
-                try
-                {
-                    var meetings = session
-                        .CreateQuery("from Meeting m where m.StartTime >= :begin and m.StartTime < :end order by m.StartTime asc")
-                        .SetParameter("begin", beginDate)
-                        .SetParameter("end", endDate)
-                        .List<Meeting>();
+            var criteria = DetachedCriteria.For<Meeting>()
+                .Add(Restrictions.Between("StartTime", beginDate, endDate))
+                .AddOrder(Order.Asc("StartTime"));
 
-                    tx.Commit();
-                    return meetings;
-                }
-                catch(HibernateException)
-                {
-                    tx.Rollback();
-                    throw;
-                }
-            }
+            return new List<Meeting>(FindAll(criteria));
         }
     }
 }

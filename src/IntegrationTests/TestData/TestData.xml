@@ -10,6 +10,26 @@
         <Region>Iowa</Region>
         <PostalCode>52402</PostalCode>
     </Facilities>
+    <Facilities>
+        <Id>2</Id>
+        <Name>Sample Location</Name>
+        <ImageUrl>http://www.google.com</ImageUrl>
+        <Description>This is a sample location</Description>
+        <Address>123 Happy Street</Address>
+        <City>Gilmore</City>
+        <Region>Iowa</Region>
+        <PostalCode>52402</PostalCode>
+    </Facilities>
+    <Facilities>
+        <Id>3</Id>
+        <Name>Awesome Location</Name>
+        <ImageUrl>http://www.google.com</ImageUrl>
+        <Description>Another Sample location</Description>
+        <Address>123 Oak Street</Address>
+        <City>Marion</City>
+        <Region>Iowa</Region>
+        <PostalCode>52302</PostalCode>
+    </Facilities>
     <Sponsors>
         <Id>2</Id>
         <Name>TLCA</Name>

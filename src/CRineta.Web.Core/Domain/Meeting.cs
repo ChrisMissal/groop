@@ -79,6 +79,7 @@ namespace CRIneta.Web.Core.Domain
 
             var memberAttendee = new MemberAttendee(member, this);
             attendees.Add(memberAttendee);
+            member.AttendedMeetings.Add(this);
             return memberAttendee;
         }
 

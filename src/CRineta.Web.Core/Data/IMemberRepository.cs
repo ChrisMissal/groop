@@ -7,9 +7,8 @@ namespace CRIneta.Web.Core.Data
     {
         Member GetByUsername(string username);
         //Member GetByEmail(string email);
-        int AddMember(Member member);
-        void RemoveMember(Member member);
-        void UpdateMember(Member member);
-        IList<Member> GetAllMembers();
+        int Add(Member member);
+        void Update(Member member);
+        IList<Member> GetAll();
     }
 }

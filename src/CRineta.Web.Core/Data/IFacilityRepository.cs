@@ -5,6 +5,6 @@ namespace CRIneta.Web.Core.Data
 {
     public interface IFacilityRepository : IRepository<Facility, int>
     {
-        IEnumerable<Facility> GetFacilities();
+        IList<Facility> GetAll();
     }
 }

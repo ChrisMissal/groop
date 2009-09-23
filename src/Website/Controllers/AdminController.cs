@@ -84,7 +84,7 @@ namespace CRIneta.Website.Controllers
             meeting.StartTime = meetingData.StartTime;
             meeting.EndTime = meetingData.EndTime;
 
-            meetingRepository.SaveOrUpdateMeeting(meeting);
+            meetingRepository.Add(meeting);
 
             AddInformationalMessage(string.Format("Meeting {0} successfully updated.", meetingData.MeetingId));
 
@@ -104,7 +104,7 @@ namespace CRIneta.Website.Controllers
 
         private void AddFacilitiesToViewData(string viewDataKey)
         {
-            var facilities = facilityRepository.GetFacilities();
+            var facilities = facilityRepository.GetAll();
             var selectListItems = new List<SelectListItem>();
             selectListItems.Add(new SelectListItem { Selected = true });
             foreach (var facility in facilities)

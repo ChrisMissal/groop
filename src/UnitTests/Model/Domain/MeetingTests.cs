@@ -44,6 +44,21 @@ namespace CRIneta.UnitTests.Model.Domain
         }
 
         [Test]
+        public void AddAttendee_should_add_the_meeting_to_the_list_of_attended_meetings_for_the_member()
+        { 
+            // Arrange
+            var meeting = new Meeting();
+            var member = new Member();
+
+            // Act
+            meeting.AddAttendee(member);
+
+            // Assert
+            Assert.That(member.AttendedMeetings.Contains(meeting));
+            Assert.That(member.AttendedMeetings[0].Attendees.OfType<MemberAttendee>().Any(attendee=>attendee.Member == member));
+        }
+
+        [Test]
         [ExpectedException(typeof(DuplicateRegistrationException))]
         public void AddAttendee_should_not_allow_a_user_to_be_added_twice()
         { 

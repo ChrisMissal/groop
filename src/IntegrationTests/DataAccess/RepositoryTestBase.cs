@@ -7,15 +7,15 @@ namespace IntegrationTests.DataAccess
 {
     public class RepositoryTestBase : DatabaseUnitTestBase
     {
-        protected HybridSessionBuilder sessionBuilder;
-
+        protected IActiveSessionManager activeSessionManager;
+        protected ISessionFactory sessionFactory;
+        
         #region Setup
 
         [TestFixtureSetUp]
         public void FixtureSetup()
         {
             DatabaseFixtureSetUp();
-            sessionBuilder = new HybridSessionBuilder();
         }
 
         [TestFixtureTearDown]
@@ -27,6 +27,10 @@ namespace IntegrationTests.DataAccess
         [SetUp]
         public void Setup()
         {
+            sessionFactory = new SessionFactory();
+            activeSessionManager = new ActiveSessionManager();
+            activeSessionManager.SetActiveSession(sessionFactory.Create());
+
             DatabaseSetUp();
         }
 
@@ -34,6 +38,7 @@ namespace IntegrationTests.DataAccess
         public void TearDown()
         {
             DatabaseTearDown();
+            activeSessionManager.ClearActiveSession();
         }
 
         #endregion

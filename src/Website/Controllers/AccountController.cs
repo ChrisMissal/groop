@@ -170,7 +170,7 @@ namespace CRIneta.Website.Controllers
 
             member.Password = cryptographer.Hash(registrationData.Password, member.PasswordSalt);
             
-            memberRepository.AddMember(member);
+            memberRepository.Add(member);
 
             authenticator.SignIn(member);
 
