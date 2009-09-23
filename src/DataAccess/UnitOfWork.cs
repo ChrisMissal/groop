@@ -1,3 +1,4 @@
+using System;
 using System.Data;
 using CRIneta.Web.Core.Data;
 using NHibernate;
@@ -9,10 +10,10 @@ namespace CRIneta.DataAccess
         private readonly IActiveSessionManager activeSessionManager;
         private readonly ISession session;
 
-        public UnitOfWork(ISessionFactory sessionFactory, IActiveSessionManager activeSessionManager)
+        public UnitOfWork(ISession session, IActiveSessionManager activeSessionManager)
         {
             this.activeSessionManager = activeSessionManager;
-            session = sessionFactory.Create();
+            this.session = session;
             activeSessionManager.SetActiveSession(session);
         }
 
@@ -43,6 +44,23 @@ namespace CRIneta.DataAccess
         public ITransaction CreateTransaction(IsolationLevel isolationLevel)
         {
             return session.BeginTransaction(isolationLevel);
+        }
+    }
+
+    public class UnitOfWorkFactory : IUnitOfWorkFactory
+    {
+        private readonly ISessionFactory sessionFactory;
+        private readonly IActiveSessionManager activeSessionManager;
+
+        public UnitOfWorkFactory(ISessionFactory sessionFactory,IActiveSessionManager activeSessionManager)
+        {
+            this.sessionFactory = sessionFactory;
+            this.activeSessionManager = activeSessionManager;
+        }
+
+        public IUnitOfWork Create()
+        {
+            return new UnitOfWork(sessionFactory.Create(),activeSessionManager);
         }
     }
 }

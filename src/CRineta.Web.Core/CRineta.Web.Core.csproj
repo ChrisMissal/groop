@@ -87,6 +87,7 @@
     <Compile Include="Data\IMemberRepository.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\ISponsorRepository.cs" />
+    <Compile Include="Data\IUnitOfWorkFactory.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\Attendee.cs" />
     <Compile Include="Domain\ContactMessage.cs" />
@@ -118,6 +119,8 @@
     <Compile Include="Security\IUserIdentity.cs" />
     <Compile Include="Services\IEmailService.cs" />
     <Compile Include="Data\IUnitOfWork.cs" />
+    <Compile Include="Services\IMeetingService.cs" />
+    <Compile Include="Services\Impl\MeetingService.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="Validation\IValidator.cs" />
     <Compile Include="Validation\PresentationValidator.cs" />

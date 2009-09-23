@@ -112,6 +112,8 @@
   <ItemGroup>
     <Compile Include="Core\Presentation\ContactMessageDataTests.cs" />
     <Compile Include="Core\Security\UserIdentityTests.cs" />
+    <Compile Include="Core\Services\MeetingServiceTests.cs" />
+    <Compile Include="Data\UnitOfWorkFactoryTests.cs" />
     <Compile Include="Model\Domain\MemberTests.cs" />
     <Compile Include="Model\Domain\SponsorTests.cs" />
     <Compile Include="Model\UserDataTests.cs" />
@@ -130,6 +132,10 @@
     <Compile Include="WindsorTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CRineta.Framework\CRineta.Framework.csproj">
+      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
+      <Name>CRineta.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CRIneta.Web.Core\CRIneta.Web.Core.csproj">
       <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
       <Name>CRIneta.Web.Core</Name>
@@ -150,7 +156,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Services\" />
+    <Folder Include="Core\Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

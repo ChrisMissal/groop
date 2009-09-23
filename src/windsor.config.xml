@@ -48,6 +48,7 @@
 				   type="CRIneta.Web.Core.Services.AuthenticationService, CRIneta.Web.Core" />
 
         <!-- General -->
+        
         <component id="IValidator"
                    service="CRIneta.Web.Core.Validation.IValidator, CRIneta.Web.Core"
                    type="CRIneta.Web.Core.Validation.PresentationValidator, CRIneta.Web.Core" />
@@ -63,6 +64,12 @@
                 <defaultFrom>#{Smtp.From}</defaultFrom>
                 <defaultTo>#{Smtp.To}</defaultTo>
             </parameters>
+        </component>
+
+        <component id="IMeetingService"
+                   service="CRIneta.Web.Core.Services.IMeetingService,  CRIneta.Web.Core"
+                   type=" CRIneta.Web.Core.Services.Impl.MeetingService, CRIneta.Web.Core"
+                   lifestyle="singleton">
         </component>
 
         <!-- Data Repositories -->
@@ -93,13 +100,20 @@
                    type="CRIneta.DataAccess.ActiveSessionManager, CRIneta.DataAccess"
                    lifestyle="singleton">
         </component>
+
+        <component id="IUnitOfWorkFactory"
+                   service="CRIneta.Web.Core.Data.IUnitOfWorkFactory, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.UnitOfWorkFactory, CRIneta.DataAccess"
+                   lifestyle="singleton">
+        </component>
         
+        <!--
         <component id="IUnitOfWork"
                    service="CRIneta.Web.Core.Data.IUnitOfWork, CRIneta.Web.Core"
                    type="CRIneta.DataAccess.UnitOfWork, CRIneta.DataAccess"
                    lifestyle="transient">
         </component>
-
+        -->
         <!-- End Data Repositories -->
     </components>
 </configuration>
