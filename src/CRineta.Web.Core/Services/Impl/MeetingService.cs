@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CRIneta.Web.Core.Data;
 using CRIneta.Web.Core.Domain;
 
@@ -23,6 +24,11 @@ namespace CRIneta.Web.Core.Services.Impl
                 var meetings = meetingRepository.GetUpcomingMeetings(time, maxNumberMeetings);
                 return meetings;
             }
+        }
+
+        public Meeting GetNextMeeting(DateTime time)
+        {
+            return GetUpcomingMeetings(time, 1).FirstOrDefault();
         }
     }
 }

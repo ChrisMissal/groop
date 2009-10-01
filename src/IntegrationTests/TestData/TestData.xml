@@ -113,6 +113,33 @@
         <Presenter>Ron Popeil</Presenter>
         <FacilityId>1</FacilityId>
     </Meetings>
+    <Meetings>
+        <Id>6</Id>
+        <Title>Test Meeting #6</Title>
+        <StartsAt>2009-10-05T07:00:00-06:00</StartsAt>
+        <EndsAt>2009-10-05T08:00:00-06:00</EndsAt>
+        <Description>This is the description</Description>
+        <Presenter>Shamwow Guy</Presenter>
+        <FacilityId>1</FacilityId>
+    </Meetings>
+    <Meetings>
+        <Id>7</Id>
+        <Title>Test Meeting #7</Title>
+        <StartsAt>2009-11-04T07:00:00-06:00</StartsAt>
+        <EndsAt>2009-11-04T08:00:00-06:00</EndsAt>
+        <Description>This is the description</Description>
+        <Presenter>Shamwow Guy</Presenter>
+        <FacilityId>1</FacilityId>
+    </Meetings>
+    <Meetings>
+        <Id>8</Id>
+        <Title>Test Meeting #8</Title>
+        <StartsAt>2009-12-03T07:00:00-06:00</StartsAt>
+        <EndsAt>2009-12-03T08:00:00-06:00</EndsAt>
+        <Description>This is the description</Description>
+        <Presenter>Shamwow Guy</Presenter>
+        <FacilityId>1</FacilityId>
+    </Meetings>
     <MeetingSponsors>
         <Id>1</Id>
         <MeetingId>1</MeetingId>

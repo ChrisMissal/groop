@@ -2,22 +2,23 @@
 using System.Web.Mvc;
 using CRIneta.Web.Core;
 using CRIneta.Web.Core.Data;
+using CRIneta.Web.Core.Services;
 using CRIneta.Website.Models;
 
 namespace CRIneta.Website.Controllers
 {
     public class MeetingController : Controller
     {
-        private readonly IMeetingRepository meetingRepository;
+        private readonly IMeetingService meetingService;
 
-        public MeetingController(IUserSession userSession, IMeetingRepository meetingRepository) : base(userSession)
+        public MeetingController(IUserSession userSession, IMeetingService meetingService) : base(userSession)
         {
-            this.meetingRepository = meetingRepository;
+            this.meetingService = meetingService;
         }
 
         public ActionResult List()
         {
-            var allMeetings = meetingRepository.GetUpcomingMeetings(DateTime.Now, 10);
+            var allMeetings = meetingService.GetUpcomingMeetings(DateTime.Now, 10);
             ViewData["allMeetings"] = allMeetings;
 
             return View("List");
@@ -25,7 +26,7 @@ namespace CRIneta.Website.Controllers
 
         public ActionResult Show()
         {
-            var nextMeeting = meetingRepository.GetNextMeeting(DateTime.Now);
+            var nextMeeting = meetingService.GetNextMeeting(DateTime.Now);
             
             return View("Show", nextMeeting);
         }
@@ -34,7 +35,7 @@ namespace CRIneta.Website.Controllers
         [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult RSVP()
         {
-            var nextMeeting = meetingRepository.GetNextMeeting(DateTime.Now);
+            var nextMeeting = meetingService.GetNextMeeting(DateTime.Now);
             if (nextMeeting == null)
                 return new EmptyResult();
 
@@ -44,19 +45,25 @@ namespace CRIneta.Website.Controllers
             return View("RSVP", model);
         }
 
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult RSVP(int id)
+        //[AcceptVerbs(HttpVerbs.Post)]
+        //public ActionResult RSVP(int id)
+        //{
+        //    var meeting = meetingRepository.GetById(id);
+        //    if (meeting == null)
+        //        return RedirectToAction("Index");
+
+        //    var user = userSession.GetLoggedInUser();
+        //    meeting.AddAttendee(user);
+        //    meetingRepository.Update(meeting);
+
+        //    ViewData.Model = meeting;
+        //    return View("Show");
+        //}
+
+        public ActionResult UpcomingMeetings()
         {
-            var meeting = meetingRepository.GetById(id);
-            if (meeting == null)
-                return RedirectToAction("Index");
-
-            var user = userSession.GetLoggedInUser();
-            meeting.AddAttendee(user);
-            meetingRepository.Update(meeting);
-
-            ViewData.Model = meeting;
-            return View("Show");
+            var upcomingMeetings = meetingService.GetUpcomingMeetings(DateTime.Now, 5);
+            return View(upcomingMeetings);
         }
     }
 }

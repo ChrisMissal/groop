@@ -24,6 +24,8 @@ namespace CRIneta.DataAccess
                 session.Close();
                 session.Dispose();
             }
+
+            ClearReferences();
         }
 
         protected void ClearReferences()

@@ -5,8 +5,7 @@ namespace CRIneta.DataAccess
 {
     public class ActiveSessionManager : IActiveSessionManager
     {
-        [ThreadStatic]
-        private static ISession Current;
+        private ISession Current;
 
         public ISession GetActiveSession()
         {

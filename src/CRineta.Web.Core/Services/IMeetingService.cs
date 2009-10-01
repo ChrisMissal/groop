@@ -8,5 +8,6 @@ namespace CRIneta.Web.Core.Services
     public interface IMeetingService
     {
         IList<Meeting> GetUpcomingMeetings(DateTime time, int maxNumberMeetings);
+        Meeting GetNextMeeting(DateTime time);
     }
 }

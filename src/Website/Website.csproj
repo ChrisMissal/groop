@@ -212,6 +212,7 @@
     <Content Include="Views\Contact\Sent.aspx" />
     <Content Include="Views\Admin\Index.aspx" />
     <Content Include="Views\Home\Officers.aspx" />
+    <Content Include="Views\Meeting\UpcomingMeetings.aspx" />
     <Content Include="Views\Shared\Controls\admin\links.ascx" />
     <Content Include="Views\Shared\Controls\rsvp.ascx" />
     <Content Include="Views\Shared\Controls\userStatus.ascx" />
