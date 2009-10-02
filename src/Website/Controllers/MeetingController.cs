@@ -31,6 +31,14 @@ namespace CRIneta.Website.Controllers
             return View("Show", nextMeeting);
         }
 
+        public ContentResult Detail(int id)
+        {
+            return new ContentResult()
+                       {
+                           Content = id.ToString()
+                       };
+        }
+
         [Authorize(Roles = "Users")]
         [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult RSVP()
