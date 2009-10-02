@@ -120,7 +120,9 @@
     <Compile Include="Services\IEmailService.cs" />
     <Compile Include="Data\IUnitOfWork.cs" />
     <Compile Include="Services\IMeetingService.cs" />
+    <Compile Include="Services\IMemberService.cs" />
     <Compile Include="Services\Impl\MeetingService.cs" />
+    <Compile Include="Services\Impl\MemberService.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="Validation\IValidator.cs" />
     <Compile Include="Validation\PresentationValidator.cs" />

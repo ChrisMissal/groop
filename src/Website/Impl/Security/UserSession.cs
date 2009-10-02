@@ -13,11 +13,13 @@ namespace CRIneta.Website.Impl.Security
         private readonly IAuthenticator authenticator;
         private readonly IMemberRepository memberRepository;
         private readonly IHttpContextProvider httpContextProvider;
+        private readonly IUnitOfWorkFactory unitOfWorkFactory;
 
-        public UserSession(IAuthenticator authenticator, IMemberRepository memberRepository, IHttpContextProvider httpContextProvider)
+        public UserSession(IAuthenticator authenticator, IMemberRepository memberRepository, IHttpContextProvider httpContextProvider, IUnitOfWorkFactory unitOfWorkFactory)
         {
             this.authenticator = authenticator;
             this.httpContextProvider = httpContextProvider;
+            this.unitOfWorkFactory = unitOfWorkFactory;
             this.memberRepository = memberRepository;
         }
 
@@ -33,9 +35,10 @@ namespace CRIneta.Website.Impl.Security
                 return null;
             }
 
-            Member member = memberRepository.GetByUsername(identity.Name);
-
-            return member;
+            using (unitOfWorkFactory.Create())
+            {
+                return memberRepository.GetByUsername(identity.Name);    
+            }
         }
 
         /// <summary>

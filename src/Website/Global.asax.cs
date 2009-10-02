@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Castle.Core;
+using CRIneta.Framework;
 using CRIneta.Web.Core.Security;
 using CRIneta.Website.Helpers;
 using CRIneta.Website.Routing;
@@ -42,7 +44,6 @@ namespace CRIneta.Website
             RegisterRoutesAndControllers();
 
             ControllerBuilder.Current.SetControllerFactory(new WindsorControllerFactory(IoC.GetContainer()));
-            //ControllerBuilder.Current.DefaultNamespaces.Add("CRI");
 
             setupRoutes();
         }
@@ -51,25 +52,15 @@ namespace CRIneta.Website
         {
             IoC.Register<IRouteConfigurator, RouteConfigurator>("route-configurator");
 
-            //add all controllers
-            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
-            {
-                if (typeof(IController).IsAssignableFrom(type))
-                {
-                    IoC.Register(type.Name.ToLower(), type, LifestyleType.Transient);
-                }
-            }
+            Assembly.GetExecutingAssembly().GetTypes()
+                .Where(type => typeof (IController).IsAssignableFrom(type))
+                .ForEach(type => IoC.Register(type.Name.ToLower(), type, LifestyleType.Transient));
         }
 
         private static void setupRoutes()
         {
             var configurator = IoC.Resolve<IRouteConfigurator>();
             configurator.RegisterRoutes();
-        }
-
-        public void Session_Start()
-        {
-            Console.WriteLine("here");
         }
     }
 }

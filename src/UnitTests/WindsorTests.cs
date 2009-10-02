@@ -28,10 +28,8 @@ namespace CRIneta.UnitTests
         public void Can_initiate_Windsor()
         {
             IWindsorContainer container = GetContainer();
-            foreach (var handler in container.Kernel.GetAssignableHandlers(typeof(object)))
-            {
-                container.Resolve(handler.ComponentModel.Service);
-            }
+            container.Kernel.GetAssignableHandlers(typeof(object))
+                .ForEach(handler=>container.Resolve(handler.ComponentModel.Service));
         }
     }
 }

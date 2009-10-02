@@ -17,18 +17,19 @@ namespace CRIneta.Web.Core.Services
         bool VerifyAccount(Member member, string password);
         bool SignIn(string username, string password);
         void SignOut();
-        IUserIdentity GetActiveIdentity();
     }
 
     public class AuthenticationService : IAuthenticationService
     {
         private readonly ICryptographer cryptographer;
+        private readonly IUnitOfWorkFactory unitOfWorkFactory;
         private readonly IMemberRepository memberRepository;
 
-        public AuthenticationService(IMemberRepository memberRepository, ICryptographer cryptographer)
+        public AuthenticationService(IMemberRepository memberRepository, ICryptographer cryptographer, IUnitOfWorkFactory unitOfWorkFactory)
         {
             this.memberRepository = memberRepository;
             this.cryptographer = cryptographer;
+            this.unitOfWorkFactory = unitOfWorkFactory;
         }
 
         #region Implementation of IAuthenticationService
@@ -41,20 +42,23 @@ namespace CRIneta.Web.Core.Services
 
         public bool SignIn(string username, string password)
         {
-            var member = memberRepository.GetByUsername(username);
-
-            if (member == null || !VerifyAccount(member, password))
+            using(unitOfWorkFactory.Create())
             {
-                return false;
+                var member = memberRepository.GetByUsername(username);
+
+                if (member == null || !VerifyAccount(member, password))
+                {
+                    return false;
+                }
+
+                FormsAuthentication.SignOut();
+
+                var identity = new UserIdentity().From(member);
+
+                SetActiveIdentity(identity);
+
+                return true;
             }
-
-            FormsAuthentication.SignOut();
-
-            var identity = new UserIdentity().From(member);
-
-            SetActiveIdentity(identity);
-
-            return true;
         }
 
         public void SetActiveIdentity(IUserIdentity identity)
@@ -80,11 +84,6 @@ namespace CRIneta.Web.Core.Services
         public void SignOut()
         {
             FormsAuthentication.SignOut();
-        }
-
-        public IUserIdentity GetActiveIdentity()
-        {
-            return HttpContext.Current.User.Identity as IUserIdentity;
         }
 
         #endregion

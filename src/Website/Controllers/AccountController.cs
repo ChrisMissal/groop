@@ -21,19 +21,19 @@ namespace CRIneta.Website.Controllers
         private readonly IAuthenticationService authenticationService;
         private readonly IAuthenticator authenticator;
         private readonly ICryptographer cryptographer;
-        private readonly IMemberRepository memberRepository;
+        private readonly IMemberService memberService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountController"/> class.
         /// </summary>
         /// <param name="userSession">The user session.</param>
-        /// <param name="memberRepository">The user repository.</param>
+        /// <param name="memberService">The user repository.</param>
         /// <param name="authenticator">The authenticator.</param>
         /// <param name="cryptographer">The cryptographer.</param>
         /// <param name="authenticationService"></param>
-        public AccountController(IUserSession userSession, IMemberRepository memberRepository, IAuthenticator authenticator, ICryptographer cryptographer, IAuthenticationService authenticationService) : base(userSession)
+        public AccountController(IUserSession userSession, IMemberService memberService, IAuthenticator authenticator, ICryptographer cryptographer, IAuthenticationService authenticationService) : base(userSession)
         {
-            this.memberRepository = memberRepository;
+            this.memberService = memberService;
             this.authenticator = authenticator;
             this.cryptographer = cryptographer;
             this.authenticationService = authenticationService;
@@ -150,7 +150,7 @@ namespace CRIneta.Website.Controllers
                 return RedirectToAction("Register");
             }
 
-            Member member = memberRepository.GetByUsername(registrationData.UserName);
+            Member member = memberService.GetByUsername(registrationData.UserName);
 
             if (member != null)
             {
@@ -170,7 +170,7 @@ namespace CRIneta.Website.Controllers
 
             member.Password = cryptographer.Hash(registrationData.Password, member.PasswordSalt);
             
-            memberRepository.Add(member);
+            memberService.Add(member);
 
             authenticator.SignIn(member);
 

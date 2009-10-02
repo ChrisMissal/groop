@@ -26,7 +26,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         #endregion
 
         private IUserSession mockUserSession;
-        private IMemberRepository mockMemberRepository;
+        private IMemberService mockMemberService;
         private IAuthenticator mockAuthenticator;
         private ICryptographer mockCryptographer;
         private IAuthenticationService mockAuthenticationService;
@@ -34,13 +34,13 @@ namespace CRIneta.UnitTests.Website.Controllers
         private AccountController GetController()
         {
             mockUserSession = mockery.DynamicMock<IUserSession>();
-            mockMemberRepository = mockery.DynamicMock<IMemberRepository>();
+            mockMemberService = mockery.DynamicMock<IMemberService>();
             mockAuthenticator = mockery.DynamicMock<IAuthenticator>();
             mockCryptographer = mockery.DynamicMock<ICryptographer>();
             mockery.DynamicMock<IEmailService>();
             mockAuthenticationService = mockery.DynamicMock<IAuthenticationService>();
 
-            var controller = new AccountController(mockUserSession, mockMemberRepository, mockAuthenticator, mockCryptographer, mockAuthenticationService);
+            var controller = new AccountController(mockUserSession, mockMemberService, mockAuthenticator, mockCryptographer, mockAuthenticationService);
 
             return controller;
         }
@@ -66,7 +66,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    AccountController controller = GetController();
         //    string email = "joeuser@gmail.com";
         //    var stubUser = new Member("joeuser", "Joe", "User", "joeuser@gmail.com");
-        //    SetupResult.For(mockMemberRepository.GetByEmail(email)).Return(null);
+        //    SetupResult.For(mockMemberService.GetByEmail(email)).Return(null);
 
         //    mockery.ReplayAll();
 
@@ -98,7 +98,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
         //    //controller.Register("FirstName", "LastName", "UserName", "Email@Address.com", "", "");
 
-        //    //Expect.Call(mockMemberRepository.AddUser(null));
+        //    //Expect.Call(mockMemberService.AddUser(null));
         //}
 
         //[Test]
@@ -154,7 +154,7 @@ namespace CRIneta.UnitTests.Website.Controllers
             string email = "something@something.com";
             string password = "password";
 
-            SetupResult.For(mockMemberRepository.GetByUsername(email)).Return(null);
+            SetupResult.For(mockMemberService.GetByUsername(email)).Return(null);
 
             mockery.ReplayAll();
 
@@ -209,7 +209,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
         //    string email = "joeuser@gmail.com";
 
-        //    SetupResult.For(mockMemberRepository.GetByEmail(email)).Return(null);
+        //    SetupResult.For(mockMemberService.GetByEmail(email)).Return(null);
 
         //    mockery.ReplayAll();
 
@@ -233,7 +233,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
         //    SetupResult.For(mockedhttpContext.Request).Return(mockedHttpRequest);
         //    SetupResult.For(mockedHttpRequest.Url).Return(stubUri);
-        //    SetupResult.For(mockMemberRepository.GetByEmail(email)).Return(stubUser);
+        //    SetupResult.For(mockMemberService.GetByEmail(email)).Return(stubUser);
 
         //    controller.ControllerContext = new ControllerContext(mockedhttpContext, new RouteData(), controller);
 
@@ -258,7 +258,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    var stubUri = new Uri("http://www.jpcycles.com");
 
         //    SetupResult.For(mockedhttpContext.Request).Return(mockedHttpRequest);
-        //    SetupResult.For(mockMemberRepository.GetByEmail(email)).Return(stubUser);
+        //    SetupResult.For(mockMemberService.GetByEmail(email)).Return(stubUser);
         //    SetupResult.For(mockCryptographer.HashString(email, null)).IgnoreArguments().Return("joeuser@gmail.com");
         //    SetupResult.For(mockedHttpRequest.Url).Return(stubUri);
 
@@ -299,7 +299,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    string password = "password";
         //    string passwordConfirm = password;
 
-        //    SetupResult.For(mockMemberRepository.GetByEmail(email)).Return(null);
+        //    SetupResult.For(mockMemberService.GetByEmail(email)).Return(null);
 
         //    mockery.ReplayAll();
 
@@ -318,7 +318,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    string passwordConfirm = password;
 
         //    var stubUser = new Member("joeuser", "Joe", "User", "someemail@someaddress.com");
-        //    SetupResult.For(mockMemberRepository.GetByEmail(email)).Return(stubUser);
+        //    SetupResult.For(mockMemberService.GetByEmail(email)).Return(stubUser);
 
         //    mockery.ReplayAll();
 
@@ -338,11 +338,11 @@ namespace CRIneta.UnitTests.Website.Controllers
 
         //    var stubUser = mockery.Stub<IUser>();
 
-        //    SetupResult.For(mockMemberRepository.GetByEmail(email)).Return(stubUser);
+        //    SetupResult.For(mockMemberService.GetByEmail(email)).Return(stubUser);
         //    SetupResult.For(mockCryptographer.CreateSalt()).Return("salty");
         //    SetupResult.For(mockCryptographer.HashString(password, "salty")).Return("hashedpassword");
 
-        //    Expect.Call(() => mockMemberRepository.UpdateUser(stubUser));
+        //    Expect.Call(() => mockMemberService.UpdateUser(stubUser));
 
         //    mockery.ReplayAll();
 
@@ -445,7 +445,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    AccountController controller = GetController();
         //    string email = "joeuser@gmail.com";
         //    var stubUser = new Member("joeuser", "Joe", "User", "joeuser@gmail.com");
-        //    SetupResult.For(mockMemberRepository.GetByEmail(email)).Return(stubUser);
+        //    SetupResult.For(mockMemberService.GetByEmail(email)).Return(stubUser);
 
         //    mockery.ReplayAll();
 
@@ -461,7 +461,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         {
             AccountController controller = GetController();
 
-            Expect.Call(mockMemberRepository.GetByUsername("")).IgnoreArguments().Repeat.Never();
+            Expect.Call(mockMemberService.GetByUsername("")).IgnoreArguments().Repeat.Never();
 
             mockery.ReplayAll();
 
@@ -479,7 +479,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
         //    var stubUser = new Member("manbearpig", "will", "crosby", "crosby@server.net");
 
-        //    Expect.Call(mockMemberRepository.GetByEmail(null)).IgnoreArguments().Repeat.Never();
+        //    Expect.Call(mockMemberService.GetByEmail(null)).IgnoreArguments().Repeat.Never();
         //        // this should never be called (passwords don't match)
 
         //    mockery.ReplayAll();
@@ -497,7 +497,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    AccountController controller = GetController();
 
         //    var stubUser = new Member("joeuser", "Joe", "User", "someemail@someaddress.com");
-        //    SetupResult.For(mockMemberRepository.GetByEmail("someemail@someaddress.com")).Return(stubUser);
+        //    SetupResult.For(mockMemberService.GetByEmail("someemail@someaddress.com")).Return(stubUser);
 
         //    mockery.ReplayAll();
 
@@ -512,7 +512,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //{
         //    AccountController controller = GetController();
 
-        //    SetupResult.For(mockMemberRepository.GetByEmail("someemail@someaddress.com")).Return(null);
+        //    SetupResult.For(mockMemberService.GetByEmail("someemail@someaddress.com")).Return(null);
 
         //    mockery.ReplayAll();
 
@@ -568,7 +568,7 @@ namespace CRIneta.UnitTests.Website.Controllers
         //    AccountController controller = GetController();
 
         //    var stubUser = new Member("cmissal", "Chris", "Missal", "cmissal@jpcycles.com");
-        //    SetupResult.For(mockMemberRepository.GetByEmail("")).IgnoreArguments().Return(stubUser);
+        //    SetupResult.For(mockMemberService.GetByEmail("")).IgnoreArguments().Return(stubUser);
         //    mockery.ReplayAll();
 
         //    var result = controller.ForgotPassword("cmissal@jpcycles.com") as ViewResult;

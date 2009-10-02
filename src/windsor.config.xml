@@ -72,6 +72,12 @@
                    lifestyle="singleton">
         </component>
 
+        <component id="IMemberService"
+                   service="CRIneta.Web.Core.Services.IMemberService,  CRIneta.Web.Core"
+                   type=" CRIneta.Web.Core.Services.Impl.MemberService, CRIneta.Web.Core"
+                   lifestyle="singleton">
+        </component>
+
         <!-- Data Repositories -->
 
         <component id="IMemberRepository"
