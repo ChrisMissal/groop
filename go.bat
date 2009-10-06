@@ -1,1 +1,1 @@
-@tools\nant\NAnt.exe -buildfile:CRIneta.build %*
+@tools\nant\NAnt.exe -buildfile:groop.build %*
