@@ -94,16 +94,6 @@
     <EmbeddedResource Include="Mappings\Member.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CRIneta.Framework\CRIneta.Framework.csproj">
-      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
-      <Name>CRIneta.Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CRIneta.Web.Core\CRIneta.Web.Core.csproj">
-      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
-      <Name>CRIneta.Web.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Mappings\Attendee.hbm.xml" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,7 @@
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.IntegrationTests\hibernate.cfg.xml
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.IntegrationTests\CRIneta.IntegrationTests.dll.config
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.IntegrationTests\CRIneta.IntegrationTests.dll
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.IntegrationTests\CRIneta.IntegrationTests.pdb
+C:\dev\sandbox\Groop\src\IntegrationTests\obj\AutomatedDebug\ResolveAssemblyReference.cache
+C:\dev\sandbox\Groop\src\IntegrationTests\obj\AutomatedDebug\CRIneta.IntegrationTests.dll
+C:\dev\sandbox\Groop\src\IntegrationTests\obj\AutomatedDebug\CRIneta.IntegrationTests.pdb

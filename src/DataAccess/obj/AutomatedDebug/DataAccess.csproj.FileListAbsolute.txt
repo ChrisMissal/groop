@@ -1,0 +1,6 @@
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.DataAccess\CRIneta.DataAccess.dll.config
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.DataAccess\CRIneta.DataAccess.dll
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.DataAccess\CRIneta.DataAccess.pdb
+C:\dev\sandbox\Groop\src\DataAccess\obj\AutomatedDebug\ResolveAssemblyReference.cache
+C:\dev\sandbox\Groop\src\DataAccess\obj\AutomatedDebug\CRIneta.DataAccess.dll
+C:\dev\sandbox\Groop\src\DataAccess\obj\AutomatedDebug\CRIneta.DataAccess.pdb

@@ -1,0 +1,7 @@
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.UnitTests\windsor.config.xml
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.UnitTests\hibernate.cfg.xml
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.UnitTests\CRIneta.UnitTests.dll
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.UnitTests\CRIneta.UnitTests.pdb
+C:\dev\sandbox\Groop\src\UnitTests\obj\AutomatedDebug\ResolveAssemblyReference.cache
+C:\dev\sandbox\Groop\src\UnitTests\obj\AutomatedDebug\CRIneta.UnitTests.dll
+C:\dev\sandbox\Groop\src\UnitTests\obj\AutomatedDebug\CRIneta.UnitTests.pdb

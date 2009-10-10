@@ -128,12 +128,6 @@
     <Compile Include="Validation\PresentationValidator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CRIneta.Framework\CRIneta.Framework.csproj">
-      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
-      <Name>CRIneta.Framework</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Website\Controllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

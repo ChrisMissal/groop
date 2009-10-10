@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns="MyWindsorSchema">
+    <facilities>
+        <!--
+        <facility id="logging"
+            type="Castle.Facilities.Logging.LoggingFacility, Castle.Facilities.Logging"
+            loggingApi="log4net"
+            configFile="log4net.config" />-->
+    </facilities>
+    <properties>
+        <Smtp.Host>127.0.0.1</Smtp.Host>
+        <Smtp.Port>25</Smtp.Port>
+        <Smtp.From>webmaster@crineta.org</Smtp.From>
+        <Smtp.To>webmaster@crineta.org</Smtp.To>
+    </properties>
+    <components>
+
+        <component id="ICryptographer"
+				   service="CRIneta.Web.Core.Security.Cryptography.ICryptographer, CRIneta.Web.Core"
+				   type="CRIneta.Website.Impl.Security.Cryptography.Cryptographer, CRIneta.Website" />
+
+        <component id="IHttpContextProvider"
+				   service="CRIneta.Web.Core.IHttpContextProvider, CRIneta.Web.Core"
+				   type="CRIneta.Website.Impl.HttpContextProvider, CRIneta.Website" />
+
+        <component id="ISessionBuilder"
+				       service="CRIneta.DataAccess.ISessionBuilder, CRIneta.DataAccess"
+				       type="CRIneta.DataAccess.HybridSessionBuilder, CRIneta.DataAccess"
+				       lifestyle="singleton" />
+
+        <component id="IFormsAuthenticationGateway"
+				   service="CRIneta.Web.Core.Security.IFormsAuthenticationGateway, CRIneta.Web.Core"
+				   type="CRIneta.Website.Impl.FormsAuthenticationGateway, CRIneta.Website" />
+
+        <!-- Service Layer -->
+        <component id="IUserSession"
+				 service="CRIneta.Web.Core.IUserSession, CRIneta.Web.Core"
+				 type="CRIneta.Website.Impl.Security.UserSession, CRIneta.Website"
+				 lifestyle="transient" />
+
+        <component id="IAuthenticator"
+				   service="CRIneta.Web.Core.Security.IAuthenticator, CRIneta.Web.Core"
+				   type="CRIneta.Website.Impl.Security.Authenticator, CRIneta.Website"
+				   lifestyle="transient" />
+
+        <component id="IAuthenticationService"
+				   service="CRIneta.Web.Core.Services.IAuthenticationService, CRIneta.Web.Core"
+				   type="CRIneta.Web.Core.Services.AuthenticationService, CRIneta.Web.Core" />
+
+        <!-- General -->
+        
+        <component id="IValidator"
+                   service="CRIneta.Web.Core.Validation.IValidator, CRIneta.Web.Core"
+                   type="CRIneta.Web.Core.Validation.PresentationValidator, CRIneta.Web.Core" />
+
+        <!-- Services -->
+
+        <component id="IEmailService"
+                       service="CRIneta.Web.Core.Services.IEmailService,  CRIneta.Web.Core"
+                       type=" CRIneta.Website.Services.Email.FakeEmailService, CRIneta.Website">
+            <parameters>
+                <host>#{Smtp.Host}</host>
+                <port>#{Smtp.Port}</port>
+                <defaultFrom>#{Smtp.From}</defaultFrom>
+                <defaultTo>#{Smtp.To}</defaultTo>
+            </parameters>
+        </component>
+
+        <component id="IMeetingService"
+                   service="CRIneta.Web.Core.Services.IMeetingService,  CRIneta.Web.Core"
+                   type=" CRIneta.Web.Core.Services.Impl.MeetingService, CRIneta.Web.Core"
+                   lifestyle="singleton">
+        </component>
+
+        <component id="IMemberService"
+                   service="CRIneta.Web.Core.Services.IMemberService,  CRIneta.Web.Core"
+                   type=" CRIneta.Web.Core.Services.Impl.MemberService, CRIneta.Web.Core"
+                   lifestyle="singleton">
+        </component>
+
+        <!-- Data Repositories -->
+
+        <component id="IMemberRepository"
+                   service="CRIneta.Web.Core.Data.IMemberRepository, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.MemberRepository, CRIneta.DataAccess">
+        </component>
+
+        <component id="IMeetingRepository"
+                   service="CRIneta.Web.Core.Data.IMeetingRepository, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.MeetingRepository, CRIneta.DataAccess">
+        </component>
+
+        <component id="IFacilityRepository"
+                   service="CRIneta.Web.Core.Data.IFacilityRepository, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.FacilityRepository, CRIneta.DataAccess">
+        </component>
+
+        <component id="ISessionFactory"
+                   service="CRIneta.DataAccess.ISessionFactory, CRIneta.DataAccess"
+                   type="CRIneta.DataAccess.SessionFactory, CRIneta.DataAccess"
+                   lifestyle="singleton">
+        </component>
+
+        <component id="IActiveSessionManager"
+                   service="CRIneta.DataAccess.IActiveSessionManager, CRIneta.DataAccess"
+                   type="CRIneta.DataAccess.ActiveSessionManager, CRIneta.DataAccess"
+                   lifestyle="singleton">
+        </component>
+
+        <component id="IUnitOfWorkFactory"
+                   service="CRIneta.Web.Core.Data.IUnitOfWorkFactory, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.UnitOfWorkFactory, CRIneta.DataAccess"
+                   lifestyle="singleton">
+        </component>
+        
+        <!--
+        <component id="IUnitOfWork"
+                   service="CRIneta.Web.Core.Data.IUnitOfWork, CRIneta.Web.Core"
+                   type="CRIneta.DataAccess.UnitOfWork, CRIneta.DataAccess"
+                   lifestyle="transient">
+        </component>
+        -->
+        <!-- End Data Repositories -->
+    </components>
+</configuration>

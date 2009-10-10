@@ -1,0 +1,5 @@
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.Framework\CRIneta.Framework.dll
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.Framework\CRIneta.Framework.pdb
+C:\dev\sandbox\Groop\src\CRineta.Framework\obj\AutomatedDebug\ResolveAssemblyReference.cache
+C:\dev\sandbox\Groop\src\CRineta.Framework\obj\AutomatedDebug\CRIneta.Framework.dll
+C:\dev\sandbox\Groop\src\CRineta.Framework\obj\AutomatedDebug\CRIneta.Framework.pdb

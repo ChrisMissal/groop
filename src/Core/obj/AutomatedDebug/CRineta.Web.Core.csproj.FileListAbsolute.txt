@@ -1,0 +1,5 @@
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.Web.Core\CRIneta.Web.Core.dll
+C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.Web.Core\CRIneta.Web.Core.pdb
+C:\dev\sandbox\Groop\src\CRineta.Web.Core\obj\AutomatedDebug\ResolveAssemblyReference.cache
+C:\dev\sandbox\Groop\src\CRineta.Web.Core\obj\AutomatedDebug\CRIneta.Web.Core.dll
+C:\dev\sandbox\Groop\src\CRineta.Web.Core\obj\AutomatedDebug\CRIneta.Web.Core.pdb
