@@ -8,8 +8,8 @@
     <ProjectGuid>{2B93AFC7-578C-4705-83BF-F094F2129F58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRIneta.UnitTests</RootNamespace>
-    <AssemblyName>CRIneta.UnitTests</AssemblyName>
+    <RootNamespace>Groop.UnitTests</RootNamespace>
+    <AssemblyName>Groop.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -132,9 +132,17 @@
     <Compile Include="WindsorTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
       <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
+      <Name>Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\Website\Website.csproj">
       <Project>{AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F}</Project>

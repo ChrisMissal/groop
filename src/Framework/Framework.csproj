@@ -8,8 +8,8 @@
     <ProjectGuid>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRIneta.Framework</RootNamespace>
-    <AssemblyName>CRIneta.Framework</AssemblyName>
+    <RootNamespace>Groop.Framework</RootNamespace>
+    <AssemblyName>Groop.Framework</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

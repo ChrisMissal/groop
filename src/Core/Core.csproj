@@ -8,8 +8,8 @@
     <ProjectGuid>{6C050A4D-D368-45C1-82D7-9B62413E8556}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRIneta.Web.Core</RootNamespace>
-    <AssemblyName>CRIneta.Web.Core</AssemblyName>
+    <RootNamespace>Groop.Core</RootNamespace>
+    <AssemblyName>Groop.Core</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -126,6 +126,12 @@
     <Compile Include="UserData.cs" />
     <Compile Include="Validation\IValidator.cs" />
     <Compile Include="Validation\PresentationValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Website\Controllers\" />

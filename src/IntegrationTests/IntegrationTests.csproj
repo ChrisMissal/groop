@@ -8,8 +8,8 @@
     <ProjectGuid>{C88E35F3-D955-4101-BC1A-4EF44714DAF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRIneta.IntegrationTests</RootNamespace>
-    <AssemblyName>CRIneta.IntegrationTests</AssemblyName>
+    <RootNamespace>Groop.IntegrationTests</RootNamespace>
+    <AssemblyName>Groop.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -115,6 +115,10 @@
     <Content Include="TestData\TestData.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
       <Name>DataAccess</Name>

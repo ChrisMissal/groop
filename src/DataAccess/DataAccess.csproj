@@ -8,8 +8,8 @@
     <ProjectGuid>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRIneta.DataAccess</RootNamespace>
-    <AssemblyName>CRIneta.DataAccess</AssemblyName>
+    <RootNamespace>Groop.DataAccess</RootNamespace>
+    <AssemblyName>Groop.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -101,6 +101,16 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\MeetingSponsor.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
