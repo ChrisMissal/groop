@@ -1,4 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import Namespace="Groop.Website.Controllers"%>
+<%@ Import Namespace="Groop.Core.Presentation"%>
 
 <asp:Content ID="registerContent" ContentPlaceHolderID="mainContent" runat="server">
 

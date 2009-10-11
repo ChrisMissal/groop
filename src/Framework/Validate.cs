@@ -1,7 +1,7 @@
 using System;
 using System.Linq.Expressions;
 
-namespace CRIneta.Framework
+namespace Groop.Framework
 {
     /// <summary>
     /// Validates arguments for methods

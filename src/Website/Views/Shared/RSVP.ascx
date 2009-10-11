@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
-<%@ Import Namespace="CRIneta.Website.Models"%>
-<%@ Import Namespace="CRIneta.Website.Controllers"%>
+<%@ Import Namespace="Groop.Website.Models"%>
+<%@ Import Namespace="Groop.Website.Controllers"%>
 <h2 id="rsvp">Meeting RSVP Status</h2>
     <% var model = ViewData.Model as RsvpData; %>
     <% using(Html.BeginForm<MeetingController>(x => x.RSVP(0))) { %>

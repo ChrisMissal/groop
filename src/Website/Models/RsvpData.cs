@@ -1,4 +1,4 @@
-namespace CRIneta.Website.Models
+namespace Groop.Website.Models
 {
     public class RsvpData
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Domain;
 
-namespace CRIneta.Web.Core.Data
+namespace Groop.Core.Data
 {
     public interface IFacilityRepository : IRepository<Facility, int>
     {

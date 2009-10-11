@@ -1,7 +1,6 @@
 using System;
-using NUnit.Framework;
 
-namespace CRIneta.Web.Core.Domain
+namespace Groop.Core.Domain
 {
     public class Attendee
     {

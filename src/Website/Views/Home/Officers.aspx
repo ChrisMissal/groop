@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
+<%@ Import Namespace="Groop.Website.Helpers"%>
 
 <asp:Content runat="server" ContentPlaceHolderID="headerContent">
 <style type="text/css">

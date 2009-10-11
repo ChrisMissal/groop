@@ -1,12 +1,11 @@
 using System;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Services.Impl;
+using Groop.Core.Data;
+using Groop.Core.Services.Impl;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace CRIneta.UnitTests.Core.Services
+namespace Groop.UnitTests.Core.Services
 {
-
     [TestFixture]
     public class MeetingServiceTests
     {

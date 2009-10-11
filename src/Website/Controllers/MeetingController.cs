@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Web.Mvc;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Services;
-using CRIneta.Website.Models;
+using Groop.Core;
+using Groop.Core.Services;
+using Groop.Website.Models;
 
-namespace CRIneta.Website.Controllers
+namespace Groop.Website.Controllers
 {
     public class MeetingController : Controller
     {

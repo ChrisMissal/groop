@@ -1,10 +1,10 @@
 using System.Linq;
-using CRIneta.DataAccess;
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Domain;
+using Groop.DataAccess;
+using IntegrationTests.DataAccess;
 using NUnit.Framework;
-using ISessionFactory=CRIneta.DataAccess.ISessionFactory;
 
-namespace IntegrationTests.DataAccess
+namespace Groop.IntegrationTests.DataAccess
 {
     [TestFixture]
     public class SponsorRepositoryTests : RepositoryTestBase

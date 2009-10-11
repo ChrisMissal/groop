@@ -1,16 +1,14 @@
 ﻿using System.Web.Mvc;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Web.Core.Security;
-using CRIneta.Web.Core.Security.Cryptography;
-using CRIneta.Web.Core.Services;
-using CRIneta.Website.Controllers;
+using Groop.Core;
+using Groop.Core.Security;
+using Groop.Core.Security.Cryptography;
+using Groop.Core.Services;
+using Groop.Website.Controllers;
 using NUnit.Framework;
 using Rhino.Mocks;
 using MvcContrib.TestHelper;
 
-namespace CRIneta.UnitTests.Website.Controllers
+namespace Groop.UnitTests.Website.Controllers
 {
     [TestFixture]
     public class AccountControllerTests : MockingBase

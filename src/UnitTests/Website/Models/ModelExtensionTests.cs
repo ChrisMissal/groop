@@ -1,9 +1,9 @@
 using System;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Website.Models;
+using Groop.Core.Domain;
+using Groop.Website.Models;
 using NUnit.Framework;
 
-namespace CRIneta.UnitTests.Website.Models
+namespace Groop.UnitTests.Website.Models
 {
     [TestFixture]
     public class ModelExtensionTests
@@ -16,7 +16,7 @@ namespace CRIneta.UnitTests.Website.Models
         public void MeetingData_can_be_created_from_Meeting()
         {
             var meeting = new Meeting
-                          {
+                              {
                                   Description = "description",
                                   EndTime = endTime,
                                   Facility = facility,
@@ -24,7 +24,7 @@ namespace CRIneta.UnitTests.Website.Models
                                   Presenter = "presenter",
                                   StartTime = startTime,
                                   Title = "title"
-                          };
+                              };
 
             var meetingData = meeting.ToMeetingData();
 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Security.Principal;
 
-namespace CRIneta.Web.Core.Security
+namespace Groop.Core.Security
 {
     public interface IUserIdentity : IIdentity
     {

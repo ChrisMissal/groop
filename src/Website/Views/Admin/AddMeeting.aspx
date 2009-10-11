@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Website.Helpers"%>
-<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
+<%@ Import Namespace="Groop.Website.Helpers"%>
+<%@ Import Namespace="Groop.Core.Domain"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headerContent" runat="server">
     <link rel="stylesheet" href="<%= AppHelper.CssUrl("ui-darkness/jquery-ui-1.7.2.custom.css") %>" />

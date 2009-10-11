@@ -1,6 +1,6 @@
 using Microdesk.Utility.UnitTest;
 
-namespace IntegrationTests.DataAccess
+namespace Groop.IntegrationTests.DataAccess
 {
     public class DataHelper : DatabaseUnitTestBase
     {

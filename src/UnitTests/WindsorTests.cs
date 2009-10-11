@@ -2,13 +2,12 @@ using System;
 using System.Linq;
 using System.Web.Mvc;
 using Castle.Windsor;
-using CRIneta.Framework;
-using CRIneta.Website.Controllers;
+using Groop.Framework;
+using Groop.Website.Controllers;
 using NUnit.Framework;
 
-namespace CRIneta.UnitTests
+namespace Groop.UnitTests
 {
-
     [TestFixture]
     public class WindsorTests
     {

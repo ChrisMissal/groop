@@ -1,7 +1,7 @@
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Data;
+using Groop.Core.Domain;
 
-namespace CRIneta.Web.Core.Services.Impl
+namespace Groop.Core.Services.Impl
 {
     public class MemberService : IMemberService
     {

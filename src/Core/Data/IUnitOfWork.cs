@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using NHibernate;
 
-namespace CRIneta.Web.Core.Data
+namespace Groop.Core.Data
 {
     public interface IUnitOfWork : IDisposable
     {

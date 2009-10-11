@@ -1,14 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CRIneta.DataAccess;
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Domain;
+using Groop.DataAccess;
+using IntegrationTests.DataAccess;
 using Microdesk.Utility.UnitTest;
 using NHibernate;
 using NUnit.Framework;
-using ISessionFactory = CRIneta.DataAccess.ISessionFactory;
+using ISessionFactory = Groop.DataAccess.ISessionFactory;
 
-namespace IntegrationTests.DataAccess
+namespace Groop.IntegrationTests.DataAccess
 {
     [TestFixture]
     public class MemberRepostoryTests : RepositoryTestBase

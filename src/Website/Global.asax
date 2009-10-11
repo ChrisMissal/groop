@@ -1,2 +1,2 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="CRIneta.Website.GlobalApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Groop.Website.GlobalApplication" Language="C#" %>
 

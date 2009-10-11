@@ -1,9 +1,9 @@
 using System;
 using System.Data;
-using CRIneta.Web.Core.Data;
+using Groop.Core.Data;
 using NHibernate;
 
-namespace CRIneta.DataAccess
+namespace Groop.DataAccess
 {
     public class UnitOfWork : IUnitOfWork
     {

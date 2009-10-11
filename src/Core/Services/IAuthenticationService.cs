@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Security;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Web.Core.Security;
-using CRIneta.Web.Core.Security.Cryptography;
+using Groop.Core.Data;
+using Groop.Core.Domain;
+using Groop.Core.Security;
+using Groop.Core.Security.Cryptography;
 
-namespace CRIneta.Web.Core.Services
+namespace Groop.Core.Services
 {
     public interface IAuthenticationService
     {

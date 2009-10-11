@@ -1,6 +1,6 @@
 using System.Web.Mvc;
 
-namespace CRIneta.Website.Controllers
+namespace Groop.Website.Controllers
 {
     public class TestController : System.Web.Mvc.Controller
     {

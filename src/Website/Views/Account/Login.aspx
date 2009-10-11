@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Website.Controllers" %>
-<%@ Import Namespace="CRIneta.Website.Helpers" %>
+<%@ Import Namespace="Groop.Website.Helpers"%>
+<%@ Import Namespace="Groop.Website.Controllers"%>
 
 <asp:Content ContentPlaceHolderID="headerContent" runat="server">
     <link rel="stylesheet" href="<%= AppHelper.CssUrl("account.css") %>" />

@@ -1,9 +1,9 @@
-using CRIneta.Web.Core.Presentation;
-using CRIneta.Web.Core.Validation;
+using Groop.Core.Presentation;
+using Groop.Core.Validation;
 using NUnit.Framework;
 
 
-namespace CRIneta.UnitTests.Core.Presentation
+namespace Groop.UnitTests.Core.Presentation
 {
     [TestFixture]
     public class ContactMessageDataTests
@@ -28,12 +28,12 @@ namespace CRIneta.UnitTests.Core.Presentation
             // Arrange
             var validator = new PresentationValidator();
             var data = new ContactMessageData
-                       {
-                           Email = "chris.missal@gmail.com",
-                           Message = "I like your web site.",
-                           Name = "Hamburger Magic",
-                           Subject = "Hello"
-                       };
+                           {
+                               Email = "chris.missal@gmail.com",
+                               Message = "I like your web site.",
+                               Name = "Hamburger Magic",
+                               Subject = "Hello"
+                           };
 
             // Act
             var valid = validator.IsValid(data);

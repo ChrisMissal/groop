@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration xmlns="MyWindsorSchema">
+﻿<configuration xmlns="MyWindsorSchema">
     <facilities>
         <!--
         <facility id="logging"
@@ -10,54 +9,54 @@
     <properties>
         <Smtp.Host>127.0.0.1</Smtp.Host>
         <Smtp.Port>25</Smtp.Port>
-        <Smtp.From>webmaster@crineta.org</Smtp.From>
-        <Smtp.To>webmaster@crineta.org</Smtp.To>
+        <Smtp.From>webmaster@Groop.org</Smtp.From>
+        <Smtp.To>webmaster@Groop.org</Smtp.To>
     </properties>
     <components>
 
         <component id="ICryptographer"
-				   service="CRIneta.Web.Core.Security.Cryptography.ICryptographer, CRIneta.Web.Core"
-				   type="CRIneta.Website.Impl.Security.Cryptography.Cryptographer, CRIneta.Website" />
+				   service="Groop.Core.Security.Cryptography.ICryptographer, Groop.Core"
+				   type="Groop.Website.Impl.Security.Cryptography.Cryptographer, Groop.Website" />
 
         <component id="IHttpContextProvider"
-				   service="CRIneta.Web.Core.IHttpContextProvider, CRIneta.Web.Core"
-				   type="CRIneta.Website.Impl.HttpContextProvider, CRIneta.Website" />
+				   service="Groop.Core.IHttpContextProvider, Groop.Core"
+				   type="Groop.Website.Impl.HttpContextProvider, Groop.Website" />
 
         <component id="ISessionBuilder"
-				       service="CRIneta.DataAccess.ISessionBuilder, CRIneta.DataAccess"
-				       type="CRIneta.DataAccess.HybridSessionBuilder, CRIneta.DataAccess"
+				       service="Groop.DataAccess.ISessionBuilder, Groop.DataAccess"
+				       type="Groop.DataAccess.HybridSessionBuilder, Groop.DataAccess"
 				       lifestyle="singleton" />
 
         <component id="IFormsAuthenticationGateway"
-				   service="CRIneta.Web.Core.Security.IFormsAuthenticationGateway, CRIneta.Web.Core"
-				   type="CRIneta.Website.Impl.FormsAuthenticationGateway, CRIneta.Website" />
+				   service="Groop.Core.Security.IFormsAuthenticationGateway, Groop.Core"
+				   type="Groop.Website.Impl.FormsAuthenticationGateway, Groop.Website" />
 
         <!-- Service Layer -->
         <component id="IUserSession"
-				 service="CRIneta.Web.Core.IUserSession, CRIneta.Web.Core"
-				 type="CRIneta.Website.Impl.Security.UserSession, CRIneta.Website"
+				 service="Groop.Core.IUserSession, Groop.Core"
+				 type="Groop.Website.Impl.Security.UserSession, Groop.Website"
 				 lifestyle="transient" />
 
         <component id="IAuthenticator"
-				   service="CRIneta.Web.Core.Security.IAuthenticator, CRIneta.Web.Core"
-				   type="CRIneta.Website.Impl.Security.Authenticator, CRIneta.Website"
+				   service="Groop.Core.Security.IAuthenticator, Groop.Core"
+				   type="Groop.Website.Impl.Security.Authenticator, Groop.Website"
 				   lifestyle="transient" />
 
         <component id="IAuthenticationService"
-				   service="CRIneta.Web.Core.Services.IAuthenticationService, CRIneta.Web.Core"
-				   type="CRIneta.Web.Core.Services.AuthenticationService, CRIneta.Web.Core" />
+				   service="Groop.Core.Services.IAuthenticationService, Groop.Core"
+				   type="Groop.Core.Services.AuthenticationService, Groop.Core" />
 
         <!-- General -->
         
         <component id="IValidator"
-                   service="CRIneta.Web.Core.Validation.IValidator, CRIneta.Web.Core"
-                   type="CRIneta.Web.Core.Validation.PresentationValidator, CRIneta.Web.Core" />
+                   service="Groop.Core.Validation.IValidator, Groop.Core"
+                   type="Groop.Core.Validation.PresentationValidator, Groop.Core" />
 
         <!-- Services -->
 
         <component id="IEmailService"
-                       service="CRIneta.Web.Core.Services.IEmailService,  CRIneta.Web.Core"
-                       type=" CRIneta.Website.Services.Email.FakeEmailService, CRIneta.Website">
+                       service="Groop.Core.Services.IEmailService,  Groop.Core"
+                       type=" Groop.Website.Services.Email.FakeEmailService, Groop.Website">
             <parameters>
                 <host>#{Smtp.Host}</host>
                 <port>#{Smtp.Port}</port>
@@ -67,56 +66,56 @@
         </component>
 
         <component id="IMeetingService"
-                   service="CRIneta.Web.Core.Services.IMeetingService,  CRIneta.Web.Core"
-                   type=" CRIneta.Web.Core.Services.Impl.MeetingService, CRIneta.Web.Core"
+                   service="Groop.Core.Services.IMeetingService,  Groop.Core"
+                   type=" Groop.Core.Services.Impl.MeetingService, Groop.Core"
                    lifestyle="singleton">
         </component>
 
         <component id="IMemberService"
-                   service="CRIneta.Web.Core.Services.IMemberService,  CRIneta.Web.Core"
-                   type=" CRIneta.Web.Core.Services.Impl.MemberService, CRIneta.Web.Core"
+                   service="Groop.Core.Services.IMemberService,  Groop.Core"
+                   type=" Groop.Core.Services.Impl.MemberService, Groop.Core"
                    lifestyle="singleton">
         </component>
 
         <!-- Data Repositories -->
 
         <component id="IMemberRepository"
-                   service="CRIneta.Web.Core.Data.IMemberRepository, CRIneta.Web.Core"
-                   type="CRIneta.DataAccess.MemberRepository, CRIneta.DataAccess">
+                   service="Groop.Core.Data.IMemberRepository, Groop.Core"
+                   type="Groop.DataAccess.MemberRepository, Groop.DataAccess">
         </component>
 
         <component id="IMeetingRepository"
-                   service="CRIneta.Web.Core.Data.IMeetingRepository, CRIneta.Web.Core"
-                   type="CRIneta.DataAccess.MeetingRepository, CRIneta.DataAccess">
+                   service="Groop.Core.Data.IMeetingRepository, Groop.Core"
+                   type="Groop.DataAccess.MeetingRepository, Groop.DataAccess">
         </component>
 
         <component id="IFacilityRepository"
-                   service="CRIneta.Web.Core.Data.IFacilityRepository, CRIneta.Web.Core"
-                   type="CRIneta.DataAccess.FacilityRepository, CRIneta.DataAccess">
+                   service="Groop.Core.Data.IFacilityRepository, Groop.Core"
+                   type="Groop.DataAccess.FacilityRepository, Groop.DataAccess">
         </component>
 
         <component id="ISessionFactory"
-                   service="CRIneta.DataAccess.ISessionFactory, CRIneta.DataAccess"
-                   type="CRIneta.DataAccess.SessionFactory, CRIneta.DataAccess"
+                   service="Groop.DataAccess.ISessionFactory, Groop.DataAccess"
+                   type="Groop.DataAccess.SessionFactory, Groop.DataAccess"
                    lifestyle="singleton">
         </component>
 
         <component id="IActiveSessionManager"
-                   service="CRIneta.DataAccess.IActiveSessionManager, CRIneta.DataAccess"
-                   type="CRIneta.DataAccess.ActiveSessionManager, CRIneta.DataAccess"
+                   service="Groop.DataAccess.IActiveSessionManager, Groop.DataAccess"
+                   type="Groop.DataAccess.ActiveSessionManager, Groop.DataAccess"
                    lifestyle="singleton">
         </component>
 
         <component id="IUnitOfWorkFactory"
-                   service="CRIneta.Web.Core.Data.IUnitOfWorkFactory, CRIneta.Web.Core"
-                   type="CRIneta.DataAccess.UnitOfWorkFactory, CRIneta.DataAccess"
+                   service="Groop.Core.Data.IUnitOfWorkFactory, Groop.Core"
+                   type="Groop.DataAccess.UnitOfWorkFactory, Groop.DataAccess"
                    lifestyle="singleton">
         </component>
         
         <!--
         <component id="IUnitOfWork"
-                   service="CRIneta.Web.Core.Data.IUnitOfWork, CRIneta.Web.Core"
-                   type="CRIneta.DataAccess.UnitOfWork, CRIneta.DataAccess"
+                   service="Groop.Core.Data.IUnitOfWork, Groop.Core"
+                   type="Groop.DataAccess.UnitOfWork, Groop.DataAccess"
                    lifestyle="transient">
         </component>
         -->

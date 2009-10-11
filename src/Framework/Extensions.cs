@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace CRIneta.Framework
+namespace Groop.Framework
 {
     public static class Extensions
     {

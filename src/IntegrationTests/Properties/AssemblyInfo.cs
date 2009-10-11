@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("IntegrationTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("J&P Cycles")]
+[assembly: AssemblyCompany("Groop")]
 [assembly: AssemblyProduct("IntegrationTests")]
 [assembly: AssemblyCopyright("Copyright © J&P Cycles 2008")]
 [assembly: AssemblyTrademark("")]

@@ -1,7 +1,7 @@
 using System.Web.Mvc;
-using CRIneta.Web.Core;
+using Groop.Core;
 
-namespace CRIneta.Website.Controllers
+namespace Groop.Website.Controllers
 {
     public class FlashMessageComponentController : Controller
     {

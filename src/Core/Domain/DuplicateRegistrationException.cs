@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace CRIneta.Web.Core.Domain
+namespace Groop.Core.Domain
 {
     public class DuplicateRegistrationException : Exception
     {

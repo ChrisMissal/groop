@@ -1,7 +1,7 @@
 using System;
 using Castle.Components.Validator;
 
-namespace CRIneta.Website.Models
+namespace Groop.Website.Models
 {
     public class MeetingData
     {

@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import Namespace="Groop.Website.Helpers"%>
 
 <asp:Content runat="server" ContentPlaceHolderID="mainContent">
 	<div class="post">

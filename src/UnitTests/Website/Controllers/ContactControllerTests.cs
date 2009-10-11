@@ -1,12 +1,12 @@
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Presentation;
-using CRIneta.Web.Core.Services;
-using CRIneta.Web.Core.Validation;
-using CRIneta.Website.Controllers;
+using Groop.Core;
+using Groop.Core.Presentation;
+using Groop.Core.Services;
+using Groop.Core.Validation;
+using Groop.Website.Controllers;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace CRIneta.UnitTests.Website.Controllers
+namespace Groop.UnitTests.Website.Controllers
 {
     [TestFixture]
     public class ContactControllerTests

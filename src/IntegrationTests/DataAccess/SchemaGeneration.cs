@@ -1,11 +1,11 @@
 using System.IO;
-using CRIneta.DataAccess;
+using Groop.DataAccess;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
 
 
-namespace IntegrationTests.DataAccess
+namespace Groop.IntegrationTests.DataAccess
 {
     [TestFixture]
     public class SchemaGeneration

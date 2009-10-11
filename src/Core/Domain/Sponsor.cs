@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CRIneta.Web.Core.Domain
+namespace Groop.Core.Domain
 {
     /// <summary>
     /// Represents an entity which helps covering costs

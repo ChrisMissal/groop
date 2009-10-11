@@ -1,6 +1,6 @@
 using System.Security.Principal;
 
-namespace CRIneta.Website.Impl.Security.Principal
+namespace Groop.Website.Impl.Security.Principal
 {
     public class GuestIdentity : IIdentity
     {

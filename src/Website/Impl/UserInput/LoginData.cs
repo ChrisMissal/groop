@@ -1,6 +1,6 @@
 using Castle.Components.Validator;
 
-namespace CRIneta.Website.Impl.UserInput
+namespace Groop.Website.Impl.UserInput
 {
     public class LoginData
     {

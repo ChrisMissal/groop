@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="CRIneta.Web.Core" namespace="CRIneta.Web.Core.Domain">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Groop.Core" namespace="Groop.Core.Domain">
     <class name="Member" table="Members">
         <id name="MemberId" column="MemberId" type="Int32" unsaved-value="0">
             <generator class="native" />

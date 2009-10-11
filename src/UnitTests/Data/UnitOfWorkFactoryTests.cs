@@ -1,10 +1,9 @@
-using CRIneta.DataAccess;
+using Groop.DataAccess;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace CRIneta.UnitTests.Data
+namespace Groop.UnitTests.Data
 {
-
     [TestFixture]
     public class UnitOfWorkFactoryTests
     {

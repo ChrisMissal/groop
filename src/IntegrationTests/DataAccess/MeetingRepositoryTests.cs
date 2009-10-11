@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CRIneta.DataAccess;
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Domain;
+using Groop.DataAccess;
+using IntegrationTests.DataAccess;
 using NUnit.Framework;
 
-namespace IntegrationTests.DataAccess
+namespace Groop.IntegrationTests.DataAccess
 {
     [TestFixture]
     public class MeetingRepositoryTests : RepositoryTestBase
@@ -38,7 +39,7 @@ namespace IntegrationTests.DataAccess
             IList<Meeting> meetings = meetingRepository.GetAllMeetings();
 
             // Act
-            Assert.That(meetings.Count, Is.EqualTo(5));
+            Assert.That(meetings.Count, Is.EqualTo(8));
         }
 
         [Test]
@@ -85,17 +86,17 @@ namespace IntegrationTests.DataAccess
                                   EndTime = DateTime.Parse("1/1/2009"),
                                   Presenter = "Tim Barcz",
                                   Facility = new Facility() { 
-                                      Address = new Address()
-                                                    {
-                                                        Street = "123 Oak Street",
-                                                        City="Cedar Rapids",
-                                                        Region = "Iowa",
-                                                        ZipCode = "52402"
-                                                    },
-                                      Description = "Sample Facility",
-                                      Name = "Test Facility",
-                                      ImageUrl = "http://www.google.com"
-                                  }
+                                                                Address = new Address()
+                                                                              {
+                                                                                  Street = "123 Oak Street",
+                                                                                  City="Cedar Rapids",
+                                                                                  Region = "Iowa",
+                                                                                  ZipCode = "52402"
+                                                                              },
+                                                                Description = "Sample Facility",
+                                                                Name = "Test Facility",
+                                                                ImageUrl = "http://www.google.com"
+                                                            }
                               };
             // Act
             meetingRepository.Add(meeting);

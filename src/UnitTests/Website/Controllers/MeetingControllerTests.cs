@@ -1,15 +1,12 @@
 using System;
 using System.Web.Mvc;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Web.Core.Services;
-using CRIneta.Website.Controllers;
-using CRIneta.Website.Models;
+using Groop.Core;
+using Groop.Core.Services;
+using Groop.Website.Controllers;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace CRIneta.UnitTests.Website.Controllers
+namespace Groop.UnitTests.Website.Controllers
 {
     [TestFixture]
     public class MeetingControllerTests

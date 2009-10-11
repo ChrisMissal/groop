@@ -1,10 +1,10 @@
 using System.Web.Mvc;
-using CRIneta.Web.Core;
-using CRIneta.Website.Controllers;
+using Groop.Core;
+using Groop.Website.Controllers;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace CRIneta.UnitTests.Website.Controllers
+namespace Groop.UnitTests.Website.Controllers
 {
     [TestFixture]
     public class SponsorControllerTests

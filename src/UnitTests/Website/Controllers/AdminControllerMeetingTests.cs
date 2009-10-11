@@ -1,10 +1,10 @@
-using CRIneta.Web.Core;
+using Groop.Core;
 using NUnit.Framework;
 
 using Rhino.Mocks;
 using System.Web.Mvc;
 
-namespace CRIneta.UnitTests.Website.Controllers
+namespace Groop.UnitTests.Website.Controllers
 {
     [TestFixture]
     public class AdminControllerMeetingTests : AdminControllerTestBase
@@ -19,7 +19,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             Assert.That(result.ViewName, Is.EqualTo("ViewMeetings"));
             userSession.AssertWasCalled(x => 
-                x.PushUserMessage(FlashMessage.MessageType.Error, "Meeting not found."));
+                                        x.PushUserMessage(FlashMessage.MessageType.Error, "Meeting not found."));
         }
 
         [Test]
@@ -32,7 +32,7 @@ namespace CRIneta.UnitTests.Website.Controllers
 
             Assert.That(result.ViewName, Is.EqualTo("Index"));
             userSession.AssertWasCalled(x => 
-                x.PushUserMessage(FlashMessage.MessageType.Error, "No meetings found."));
+                                        x.PushUserMessage(FlashMessage.MessageType.Error, "No meetings found."));
         }
     }
 }

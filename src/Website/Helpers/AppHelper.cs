@@ -1,7 +1,7 @@
 using System;
 using System.Web;
 
-namespace CRIneta.Website.Helpers
+namespace Groop.Website.Helpers
 {
     /// <summary>
     /// Provide methods that help you wade through common activities

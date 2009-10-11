@@ -1,6 +1,6 @@
 using Castle.Components.Validator;
 
-namespace CRIneta.Web.Core.Presentation
+namespace Groop.Core.Presentation
 {
     public class RegistrationData
     {

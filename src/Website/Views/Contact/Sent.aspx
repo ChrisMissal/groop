@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
+<%@ Import Namespace="Groop.Core.Domain"%>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">
 	<div style="margin-bottom: 10px;"><img src="/Content/images/supliment-twophones.jpg" alt="" /></div>

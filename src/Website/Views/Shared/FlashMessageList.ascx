@@ -1,5 +1,5 @@
-﻿<%@ Import Namespace="CRIneta.Web.Core"%>
-<%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Import Namespace="Groop.Core"%>
 
 <%@ Import Namespace="System.Collections.Generic"%>
 <%@ Import Namespace="MvcContrib"%>

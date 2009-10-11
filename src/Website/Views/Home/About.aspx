@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import Namespace="Groop.Website.Controllers"%>
 
 <asp:Content ContentPlaceHolderID="mainContent" runat="server">
 	<div style="margin-bottom: 10px;"><img src="/Content/images/supliment-openroad.jpg" alt="" /></div>

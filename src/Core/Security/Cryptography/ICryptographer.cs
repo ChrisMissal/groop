@@ -1,4 +1,4 @@
-namespace CRIneta.Web.Core.Security.Cryptography
+namespace Groop.Core.Security.Cryptography
 {
     public interface ICryptographer
     {

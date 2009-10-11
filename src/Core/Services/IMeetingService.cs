@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Domain;
 using NHibernate;
 
-namespace CRIneta.Web.Core.Services
+namespace Groop.Core.Services
 {
     public interface IMeetingService
     {

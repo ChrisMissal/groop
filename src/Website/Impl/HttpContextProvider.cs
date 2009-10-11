@@ -1,7 +1,7 @@
 ﻿using System.Web;
-using CRIneta.Web.Core;
+using Groop.Core;
 
-namespace CRIneta.Website.Impl
+namespace Groop.Website.Impl
 {
     public class HttpContextProvider : IHttpContextProvider
     {

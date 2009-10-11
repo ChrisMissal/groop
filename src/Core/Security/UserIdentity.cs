@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CRIneta.Framework;
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Domain;
+using Groop.Framework;
 
-namespace CRIneta.Web.Core.Security
+namespace Groop.Core.Security
 {
     public class UserIdentity : IUserIdentity
     {

@@ -1,7 +1,7 @@
-using CRIneta.Web.Core.Security;
+using Groop.Core.Security;
 using NUnit.Framework;
 
-namespace CRIneta.UnitTests.Core.Security
+namespace Groop.UnitTests.Core.Security
 {
     [TestFixture]
     public class UserIdentityTests

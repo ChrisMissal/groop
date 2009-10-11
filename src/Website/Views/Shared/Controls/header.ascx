@@ -1,6 +1,6 @@
 ﻿<%@ Import Namespace="System.Web.Mvc.Html"%>
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewUserControl" %>
-<%@ Import Namespace="CRIneta.Website.Controllers"%>
+<%@ Import Namespace="Groop.Website.Controllers"%>
 <div id="header">
 	<div id="logo">
 		<h1><%=Html.ActionLink<HomeController>(x=>x.Index(),"Cedar Rapids .NET User Group")%></h1>

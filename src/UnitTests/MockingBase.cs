@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace CRIneta.UnitTests
+namespace Groop.UnitTests
 {
     [TestFixture]
     public abstract class MockingBase

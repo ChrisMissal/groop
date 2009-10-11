@@ -1,7 +1,7 @@
 using System.Web.Security;
-using CRIneta.Web.Core.Security;
+using Groop.Core.Security;
 
-namespace CRIneta.Website.Impl
+namespace Groop.Website.Impl
 {
     public class FormsAuthenticationGateway : IFormsAuthenticationGateway
     {

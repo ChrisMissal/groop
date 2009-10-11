@@ -1,6 +1,6 @@
 using Castle.Components.Validator;
 
-namespace CRIneta.Web.Core.Validation
+namespace Groop.Core.Validation
 {
     public class PresentationValidator : ValidatorRunner, IValidator
     {

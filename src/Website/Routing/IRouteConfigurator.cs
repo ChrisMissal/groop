@@ -1,4 +1,4 @@
-namespace CRIneta.Website.Routing
+namespace Groop.Website.Routing
 {
     public interface IRouteConfigurator
     {

@@ -1,16 +1,15 @@
 ﻿using System.Web.Mvc;
 using Castle.Components.Validator;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Web.Core.Presentation;
-using CRIneta.Web.Core.Security;
-using CRIneta.Web.Core.Security.Cryptography;
-using CRIneta.Web.Core.Services;
-using CRIneta.Website.Impl.UserInput;
+using Groop.Core;
+using Groop.Core.Domain;
+using Groop.Core.Presentation;
+using Groop.Core.Security;
+using Groop.Core.Security.Cryptography;
+using Groop.Core.Services;
+using Groop.Website.Impl.UserInput;
 using MvcContrib;
 
-namespace CRIneta.Website.Controllers
+namespace Groop.Website.Controllers
 {
     /// <summary>
     /// 

@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Castle.Core;
-using CRIneta.Framework;
-using CRIneta.Web.Core.Security;
-using CRIneta.Website.Helpers;
-using CRIneta.Website.Routing;
+using Groop.Core.Security;
+using Groop.Framework;
+using Groop.Website.Helpers;
+using Groop.Website.Routing;
 using MvcContrib.Castle;
 
-namespace CRIneta.Website
+namespace Groop.Website
 {
     public class GlobalApplication : HttpApplication
     {

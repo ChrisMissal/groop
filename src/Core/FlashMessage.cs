@@ -1,4 +1,4 @@
-namespace CRIneta.Web.Core
+namespace Groop.Core
 {
     public class FlashMessage
     {

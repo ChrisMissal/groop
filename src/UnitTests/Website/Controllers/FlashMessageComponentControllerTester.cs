@@ -1,15 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using CRIneta.UnitTests;
-using CRIneta.Web.Core;
-using CRIneta.Website.Controllers;
+using Groop.Core;
+using Groop.Website.Controllers;
 using MvcContrib;
 using NUnit.Framework;
 
 using Rhino.Mocks;
 
-namespace CRIneta.UnitTests.Website.Controllers
+namespace Groop.UnitTests.Website.Controllers
 {
     [TestFixture]
     public class FlashMessageComponentControllerTester : MockingBase

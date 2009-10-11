@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Data;
+using Groop.Core.Domain;
 using NHibernate;
 using NHibernate.Criterion;
 
-namespace CRIneta.DataAccess
+namespace Groop.DataAccess
 {
     public class FacilityRepository : RepositoryBaseUoW<Facility,int>, IFacilityRepository
     {

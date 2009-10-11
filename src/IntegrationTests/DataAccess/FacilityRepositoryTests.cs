@@ -1,8 +1,9 @@
-using CRIneta.DataAccess;
+using Groop.DataAccess;
+using IntegrationTests.DataAccess;
 using Microdesk.Utility.UnitTest;
 using NUnit.Framework;
 
-namespace IntegrationTests.DataAccess
+namespace Groop.IntegrationTests.DataAccess
 {
     [TestFixture]
     public class FacilityRepositoryTests : RepositoryTestBase

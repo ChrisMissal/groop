@@ -1,4 +1,4 @@
-namespace CRIneta.Web.Core.Validation
+namespace Groop.Core.Validation
 {
     public interface IValidator
     {

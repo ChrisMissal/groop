@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CRIneta.Web.Core.Domain
+namespace Groop.Core.Domain
 {
     public class Meeting
     {

@@ -1,8 +1,8 @@
 using System.Web;
-using CRIneta.DataAccess;
+using Groop.DataAccess;
 using NHibernate;
 
-namespace CRIneta.Website
+namespace Groop.Website
 {
     public class NHibernateSessionModule : IHttpModule
     {

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Website.Models;
+using Groop.Core;
+using Groop.Core.Data;
+using Groop.Core.Domain;
+using Groop.Website.Models;
 
-namespace CRIneta.Website.Controllers
+namespace Groop.Website.Controllers
 {
     [Authorize(Roles = "Administrators")]
     public class AdminController : Controller

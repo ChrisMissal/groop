@@ -2,7 +2,7 @@ using System;
 using System.Web.Mvc;
 using MvcContrib;
 
-namespace CRIneta.Website
+namespace Groop.Website
 {
     public class RebindTempDataAttribute : ActionFilterAttribute
     {

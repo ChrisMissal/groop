@@ -1,6 +1,6 @@
 using NHibernate;
 
-namespace CRIneta.DataAccess
+namespace Groop.DataAccess
 {
     public interface IActiveSessionManager
     {

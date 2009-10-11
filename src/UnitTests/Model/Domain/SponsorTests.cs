@@ -1,9 +1,8 @@
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Domain;
 using NUnit.Framework;
 
-namespace CRIneta.UnitTests.Model.Domain
+namespace Groop.UnitTests.Model.Domain
 {
-
     [TestFixture]
     public class SponsorTests
     {

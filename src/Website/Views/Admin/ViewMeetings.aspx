@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage`1[[System.Collections.Generic.IList`1[[CRIneta.Web.Core.Domain.Meeting, CRIneta.Web.Core]], mscorlib]]" %>
-<%@ Import Namespace="CRIneta.Website.Controllers"%>
-<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
+<%@ Import Namespace="Groop.Website.Controllers"%>
+<%@ Import Namespace="Groop.Core.Domain"%>
 
 <asp:Content ContentPlaceHolderID="mainContent" runat="server">
 <% Html.RenderAction<FlashMessageComponentController>(x => x.GetMessages()); %>

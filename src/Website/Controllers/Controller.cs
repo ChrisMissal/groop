@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
-using CRIneta.Web.Core;
+using Groop.Core;
 using MvcContrib;
 
-namespace CRIneta.Website.Controllers
+namespace Groop.Website.Controllers
 {
     public abstract class Controller : System.Web.Mvc.Controller
     {

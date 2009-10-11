@@ -1,8 +1,8 @@
 using System.Net.Mail;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Web.Core.Services;
+using Groop.Core.Domain;
+using Groop.Core.Services;
 
-namespace CRIneta.Website.Services.Email
+namespace Groop.Website.Services.Email
 {
     public class FakeEmailService : IEmailService
     {

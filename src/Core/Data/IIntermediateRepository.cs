@@ -1,4 +1,4 @@
-namespace CRIneta.Web.Core.Data
+namespace Groop.Core.Data
 {
     public interface IIntermediateRepository<TEntity, TKey> : IRepository<TEntity, TKey>
     {

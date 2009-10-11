@@ -4,7 +4,7 @@ using Castle.Core;
 using Castle.Windsor;
 using Castle.Windsor.Configuration.Interpreters;
 
-namespace CRIneta.Website.Helpers
+namespace Groop.Website.Helpers
 {
     /// <summary>
     /// Inversion of Control container access

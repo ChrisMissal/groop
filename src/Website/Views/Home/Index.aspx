@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
-<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
 
 <asp:Content ContentPlaceHolderID="headerContent" runat="server">
 <script type="text/javascript">

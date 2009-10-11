@@ -1,9 +1,9 @@
 using System;
 using System.Web.Mvc;
 using System.Web.Routing;
-using CRIneta.Framework;
+using Groop.Framework;
 
-namespace CRIneta.Website.Routing
+namespace Groop.Website.Routing
 {
     public static class RouteCollectionExtensions
     {

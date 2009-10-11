@@ -1,6 +1,6 @@
 using System;
 
-namespace CRIneta.Web.Core.Domain
+namespace Groop.Core.Domain
 {
     /// <summary>
     /// Represents a user who was a guest but has upgraded their account

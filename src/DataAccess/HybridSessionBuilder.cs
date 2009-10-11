@@ -1,8 +1,9 @@
+
 using System.Web;
 using NHibernate;
 using NHibernate.Cfg;
 
-namespace CRIneta.DataAccess
+namespace Groop.DataAccess
 {
     public class HybridSessionBuilder : ISessionBuilder
     {

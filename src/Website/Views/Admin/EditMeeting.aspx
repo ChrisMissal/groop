@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage`1[[CRIneta.Website.Models.MeetingData, CRIneta.Website]]" %>
-<%@ Import Namespace="CRIneta.Website.Controllers"%>
-<%@ Import Namespace="CRIneta.Website.Helpers"%>
-<%@ Import Namespace="CRIneta.Web.Core.Domain"%>
+<%@ Import Namespace="Groop.Website.Helpers"%>
+<%@ Import Namespace="Groop.Website.Controllers"%>
 
 <asp:Content ContentPlaceHolderID="headerContent" runat="server">
     <link rel="stylesheet" href="<%= AppHelper.CssUrl("ui-darkness/jquery-ui-1.7.2.custom.css") %>" />

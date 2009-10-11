@@ -1,4 +1,4 @@
-namespace CRIneta.Web.Core.Domain
+namespace Groop.Core.Domain
 {
     public class Role : Entity<int>
     {

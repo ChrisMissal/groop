@@ -2,14 +2,14 @@ using System;
 using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Web.Core.Security;
-using CRIneta.Web.Core.Security.Cryptography;
-using CRIneta.Framework;
-using CRIneta.Website.Impl.Security.Principal;
+using Groop.Core;
+using Groop.Core.Domain;
+using Groop.Core.Security;
+using Groop.Core.Security.Cryptography;
+using Groop.Framework;
+using Groop.Website.Impl.Security.Principal;
 
-namespace CRIneta.Website.Impl.Security
+namespace Groop.Website.Impl.Security
 {
     public class Authenticator : IAuthenticator
     {

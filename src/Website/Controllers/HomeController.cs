@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Web.Mvc;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Services;
+using Groop.Core;
+using Groop.Core.Services;
 
-namespace CRIneta.Website.Controllers
+namespace Groop.Website.Controllers
 {
     [HandleError]
     public class HomeController : Controller

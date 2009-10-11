@@ -1,6 +1,6 @@
-using CRIneta.Web.Core.Domain;
+using Groop.Core.Domain;
 
-namespace CRIneta.Web.Core.Services
+namespace Groop.Core.Services
 {
     public interface IEmailService
     {

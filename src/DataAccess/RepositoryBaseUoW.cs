@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using CRIneta.Framework;
+using Groop.Framework;
 using NHibernate;
 using NHibernate.Criterion;
 
-namespace CRIneta.DataAccess
+namespace Groop.DataAccess
 {
     public abstract class RepositoryBaseUoW<TEntity,TKey>
     {

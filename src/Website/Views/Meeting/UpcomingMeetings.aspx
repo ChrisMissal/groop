@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<Meeting[]>" %>
+<%@ Import Namespace="Groop.Core.Domain"%>
 
 <%  
     var meetings = ViewData.Model;

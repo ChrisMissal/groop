@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Security.Principal;
-using CRIneta.Web.Core.Domain;
 using System.Linq;
 
-namespace CRIneta.Web.Core.Security
+namespace Groop.Core.Security
 {
     public class UserPrincipal : IPrincipal
     {

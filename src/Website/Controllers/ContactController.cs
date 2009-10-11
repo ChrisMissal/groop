@@ -1,12 +1,12 @@
 using System;
 using System.Web.Mvc;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Web.Core.Presentation;
-using CRIneta.Web.Core.Services;
-using IValidator=CRIneta.Web.Core.Validation.IValidator;
+using Groop.Core;
+using Groop.Core.Domain;
+using Groop.Core.Presentation;
+using Groop.Core.Services;
+using IValidator=Groop.Core.Validation.IValidator;
 
-namespace CRIneta.Website.Controllers
+namespace Groop.Website.Controllers
 {
     public class ContactController : Controller
     {

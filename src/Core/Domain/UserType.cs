@@ -1,4 +1,4 @@
-namespace CRIneta.Web.Core.Domain
+namespace Groop.Core.Domain
 {
     /// <summary>
     /// Represents the different types of users

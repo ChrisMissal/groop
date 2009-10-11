@@ -1,9 +1,9 @@
-﻿using CRIneta.Web.Core;
-using CRIneta.Web.Core.Domain;
+﻿using Groop.Core;
+using Groop.Core.Domain;
 using NUnit.Framework;
 
 
-namespace CRIneta.UnitTests.Model
+namespace Groop.UnitTests.Model
 {
     [TestFixture]
     public class UserDataTests

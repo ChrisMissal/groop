@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Security.Principal;
 using System.Web;
-using CRIneta.Web.Core;
-using CRIneta.Web.Core.Data;
-using CRIneta.Web.Core.Domain;
-using CRIneta.Web.Core.Security;
+using Groop.Core;
+using Groop.Core.Data;
+using Groop.Core.Domain;
+using Groop.Core.Security;
 
-namespace CRIneta.Website.Impl.Security
+namespace Groop.Website.Impl.Security
 {
     public class UserSession : IUserSession
     {

@@ -2,9 +2,8 @@ using NHibernate;
 using NHibernate.Cfg;
 using NUnit.Framework;
 
-namespace CRIneta.UnitTests
+namespace Groop.UnitTests
 {
-
     [TestFixture]
     public class NHibernatInitializationTests
     {

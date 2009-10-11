@@ -10,6 +10,26 @@
     <Region>Iowa</Region>
     <PostalCode>52402</PostalCode>
   </Facilities>
+  <Facilities>
+    <Id>2</Id>
+    <Name>Sample Location</Name>
+    <ImageUrl>http://www.google.com</ImageUrl>
+    <Description>This is a sample location</Description>
+    <Address>123 Happy Street</Address>
+    <City>Gilmore</City>
+    <Region>Iowa</Region>
+    <PostalCode>52402</PostalCode>
+  </Facilities>
+  <Facilities>
+    <Id>3</Id>
+    <Name>Awesome Location</Name>
+    <ImageUrl>http://www.google.com</ImageUrl>
+    <Description>Another Sample location</Description>
+    <Address>123 Oak Street</Address>
+    <City>Marion</City>
+    <Region>Iowa</Region>
+    <PostalCode>52302</PostalCode>
+  </Facilities>
   <Sponsors>
     <Id>2</Id>
     <Name>TLCA</Name>
@@ -91,6 +111,33 @@
     <EndsAt>2009-04-06T09:00:00-05:00</EndsAt>
     <Description>This is the description</Description>
     <Presenter>Ron Popeil</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Meetings>
+    <Id>6</Id>
+    <Title>Test Meeting #6</Title>
+    <StartsAt>2009-10-05T08:00:00-05:00</StartsAt>
+    <EndsAt>2009-10-05T09:00:00-05:00</EndsAt>
+    <Description>This is the description</Description>
+    <Presenter>Shamwow Guy</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Meetings>
+    <Id>7</Id>
+    <Title>Test Meeting #7</Title>
+    <StartsAt>2009-11-04T07:00:00-06:00</StartsAt>
+    <EndsAt>2009-11-04T08:00:00-06:00</EndsAt>
+    <Description>This is the description</Description>
+    <Presenter>Shamwow Guy</Presenter>
+    <FacilityId>1</FacilityId>
+  </Meetings>
+  <Meetings>
+    <Id>8</Id>
+    <Title>Test Meeting #8</Title>
+    <StartsAt>2009-12-03T07:00:00-06:00</StartsAt>
+    <EndsAt>2009-12-03T08:00:00-06:00</EndsAt>
+    <Description>This is the description</Description>
+    <Presenter>Shamwow Guy</Presenter>
     <FacilityId>1</FacilityId>
   </Meetings>
   <MeetingSponsors>
