@@ -1,10 +1,23 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
-namespace Groop.Framework
+namespace System.Collections
 {
     public static class Extensions
+    {
+        public static void ForEach<T>(this IEnumerable<T> @this, Action<T> action)
+        {
+            foreach (var item in @this)
+            {
+                action(item);
+            }
+        }
+    }
+}
+
+namespace System
+{
+    public static class StringExtensions
     {
         public static bool IsNullOrEmpty(this string @this)
         {
@@ -14,14 +27,6 @@ namespace Groop.Framework
         public static string FormatWith(this string @this, params object[] args)
         {
             return String.Format(@this, args);
-        }
-
-        public static void ForEach<T>(this IEnumerable<T> @this, Action<T> action)
-        {
-            foreach (var item in @this)
-            {
-                action(item);
-            }
         }
     }
 }

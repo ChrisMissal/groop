@@ -4,7 +4,7 @@ using MvcContrib;
 
 namespace Groop.Website.Controllers
 {
-    public abstract class Controller : System.Web.Mvc.Controller
+    public abstract class Controller : ControllerBase
     {
         protected readonly IUserSession userSession;
         private bool hasLoaded;

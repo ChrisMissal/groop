@@ -1,7 +1,0 @@
-C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.Website\windsor.config.xml
-C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.Website\hibernate.cfg.xml
-C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.Website\CRIneta.Website.dll
-C:\dev\sandbox\Groop\build\AutomatedDebug\CRIneta.Website\CRIneta.Website.pdb
-C:\dev\sandbox\Groop\src\Website\obj\AutomatedDebug\ResolveAssemblyReference.cache
-C:\dev\sandbox\Groop\src\Website\obj\AutomatedDebug\CRIneta.Website.dll
-C:\dev\sandbox\Groop\src\Website\obj\AutomatedDebug\CRIneta.Website.pdb

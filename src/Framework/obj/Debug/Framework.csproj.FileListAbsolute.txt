@@ -1,5 +1,0 @@
-C:\dev\sandbox\groop\src\Framework\obj\Debug\ResolveAssemblyReference.cache
-C:\dev\sandbox\groop\src\Framework\bin\Debug\Groop.Framework.dll
-C:\dev\sandbox\groop\src\Framework\bin\Debug\Groop.Framework.pdb
-C:\dev\sandbox\groop\src\Framework\obj\Debug\Groop.Framework.dll
-C:\dev\sandbox\groop\src\Framework\obj\Debug\Groop.Framework.pdb

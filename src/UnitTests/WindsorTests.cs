@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Web.Mvc;
 using Castle.Windsor;
-using Groop.Framework;
+using System.Collections;
 using Groop.Website.Controllers;
 using NUnit.Framework;
 

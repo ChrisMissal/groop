@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using System.Web.Security;
 using Castle.Core;
 using Groop.Core.Security;
-using Groop.Framework;
 using Groop.Website.Helpers;
 using Groop.Website.Routing;
 using MvcContrib.Castle;

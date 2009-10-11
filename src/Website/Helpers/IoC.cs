@@ -76,7 +76,7 @@ namespace Groop.Website.Helpers
         public static void Register(string key, Type type, LifestyleType lifestyleType)
         {
             EnsureInitialized();
-            container.AddComponentWithLifestyle(key, type, lifestyleType);
+            container.AddComponentLifeStyle(key, type, lifestyleType);
         }
 
         public static IWindsorContainer GetContainer()
