@@ -33,7 +33,7 @@ namespace Groop.IntegrationTests.DataAccess
 
             var exporter = new SchemaExport(config);
 
-            exporter.SetOutputFile(@"C:\temp\CRinetaSchema.ddl");
+            exporter.SetOutputFile(@"C:\temp\GroopSchema.ddl");
             exporter.Create(true, false);
         }
 

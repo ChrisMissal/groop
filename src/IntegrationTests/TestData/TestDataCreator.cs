@@ -3,7 +3,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using Microdesk.Utility.UnitTest;
 
-namespace CRIneta.IntegrationTests.TestData
+namespace Groop.IntegrationTests.TestData
 {
     public class TestDataCreator : DatabaseUnitTestBase
     {

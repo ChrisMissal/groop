@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{274B5E
 		..\builddatabase.bat = ..\builddatabase.bat
 		..\clean.bat = ..\clean.bat
 		..\go.bat = ..\go.bat
+		..\groop.build = ..\groop.build
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{6C050A4D-D368-45C1-82D7-9B62413E8556}"

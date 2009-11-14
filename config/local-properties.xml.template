@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="CRIneta" xmlns="http://nant.sf.net/schemas/nant.xsd">
+<project name="Groop" xmlns="http://nant.sf.net/schemas/nant.xsd">
 
     <!-- copy this file to local-properties.xml and change the settings to match your machine's settings -->
     <echo message="Loading machine specific settings from config\local-properties.xml" />

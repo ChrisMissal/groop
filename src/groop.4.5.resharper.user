@@ -11,14 +11,11 @@
   </NAntValidationSettings>
   <RecentFiles>
     <RecentFiles>
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Routing/f:LowercaseRoute.cs" caret="1537" fromTop="41" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Services/d:Email/f:SmtpEmailService.cs" caret="2490" fromTop="85" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1923" fromTop="65" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/d:Security/d:Cryptography/f:Cryptographer.cs" caret="0" fromTop="0" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:NHibernateSessionModule.cs" caret="86" fromTop="4" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:RebindTempDataAttribute.cs" caret="296" fromTop="12" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:log4net.config" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml" caret="709" fromTop="12" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:log4net.config/l:..?log4net.config" caret="0" fromTop="0" />
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/f:ActiveSessionManager.cs" caret="227" fromTop="10" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Domain/f:MeetingSponsor.cs" caret="49" fromTop="2" />
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Attendee.hbm.xml" caret="134" fromTop="1" />
@@ -29,24 +26,26 @@
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Facility.hbm.xml" caret="110" fromTop="1" />
       <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:NHibernatInitializationTests.cs" caret="578" fromTop="23" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/d:Cryptography/f:ICryptographer.cs" caret="68" fromTop="2" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml" caret="526" fromTop="15" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml/l:..?windsor.config.xml" caret="526" fromTop="15" />
       <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="655" fromTop="21" />
       <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:TestData/f:TestData.xml" caret="4649" fromTop="19" />
       <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:DataAccess/f:MeetingRepositoryTests.cs" caret="1461" fromTop="29" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:ControllerBase.cs" caret="186" fromTop="6" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="3581" fromTop="76" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="1139" fromTop="39" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Models/f:LoginInput.cs" caret="257" fromTop="10" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="6254" fromTop="91" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Layouts/f:Default.Master" caret="270" fromTop="4" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:Copy of Show.aspx" caret="354" fromTop="5" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="381" fromTop="12" />
+      <File id="837960F7-C0F2-441C-87DD-3AA3AFE199EC/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:ControllerBase.cs" caret="137" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="129" fromTop="6" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="245" fromTop="8" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:HomeController.cs" caret="640" fromTop="20" />
+      <File id="274B5E99-7C5C-4E35-8266-CD369B864745/f:groop.build/l:F!?dev?oss?groop?groop.build" caret="3134" fromTop="21" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml/l:..?hibernate.cfg.xml" caret="705" fromTop="11" />
     </RecentFiles>
     <RecentEdits>
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:NHibernateSessionModule.cs" caret="88" fromTop="4" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:RebindTempDataAttribute.cs" caret="82" fromTop="4" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml" caret="643" fromTop="9" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml/l:..?windsor.config.xml" caret="0" fromTop="0" />
       <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:NHibernatInitializationTests.cs" caret="567" fromTop="22" />
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:MeetingSponsor.hbm.xml" caret="425" fromTop="5" />
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Attendee.hbm.xml" caret="134" fromTop="1" />
@@ -55,7 +54,7 @@
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Sponsor.hbm.xml" caret="133" fromTop="1" />
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:MeetingSponsor.hbm.xml" caret="105" fromTop="1" />
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Facility.hbm.xml" caret="110" fromTop="1" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml" caret="584" fromTop="17" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml/l:..?windsor.config.xml" caret="584" fromTop="17" />
       <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:DataAccess/f:MeetingRepositoryTests.cs" caret="1461" fromTop="29" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="0" fromTop="0" />
@@ -67,12 +66,13 @@
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Models/f:LoginInput.cs" caret="117" fromTop="4" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Models/f:LoginInput.cs" caret="257" fromTop="10" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="578" fromTop="11" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:Copy of Show.aspx" caret="1035" fromTop="24" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="6254" fromTop="35" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:Copy of Show.aspx" caret="61" fromTop="0" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1053" fromTop="21" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1300" fromTop="27" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="381" fromTop="12" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="413" fromTop="13" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="244" fromTop="8" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml/l:..?hibernate.cfg.xml" caret="707" fromTop="9" />
+      <File id="274B5E99-7C5C-4E35-8266-CD369B864745/f:groop.build/l:F!?dev?oss?groop?groop.build" caret="3134" fromTop="21" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -92,7 +92,7 @@
       <Item value="var" priority="0" />
       <Item value="ctor" priority="0" />
       <Item value="IAuthorizationFilter" priority="0" />
-      <Item value="authenticationService" priority="0" />
+      <Item value="authenticationService" priority="1" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

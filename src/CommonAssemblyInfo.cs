@@ -14,9 +14,9 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyVersionAttribute("1.0.27809.1817")]
 [assembly: AssemblyFileVersionAttribute("1.0.27809.1817")]
-[assembly: AssemblyCopyrightAttribute("Copyright © 2003-2009 CRineta")]
-[assembly: AssemblyProductAttribute("CRineta")]
-[assembly: AssemblyCompanyAttribute("CRineta")]
+[assembly: AssemblyCopyrightAttribute("Copyright © 2003-2009 Groop")]
+[assembly: AssemblyProductAttribute("Groop")]
+[assembly: AssemblyCompanyAttribute("Groop")]
 [assembly: AssemblyConfigurationAttribute("")]
 [assembly: AssemblyInformationalVersionAttribute("1.0.27809.1817")]
 
