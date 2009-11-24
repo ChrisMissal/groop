@@ -7,5 +7,6 @@ namespace Groop.Core.Security
         void SignOut();
         string Encrypt(FormsAuthenticationTicket ticket);
         string FormsCookieName { get; }
+        void RedirectFromLoginPage(string username, bool createPersistentCookie);
     }
 }

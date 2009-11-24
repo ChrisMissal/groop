@@ -52,6 +52,14 @@
                    service="Groop.Core.Validation.IValidator, Groop.Core"
                    type="Groop.Core.Validation.PresentationValidator, Groop.Core" />
 
+        <component id="IValidatorRunner"
+                   service="Castle.Components.Validator.IValidatorRunner, Castle.Components.Validator"
+                   type="Castle.Components.Validator.ValidatorRunner, Castle.Components.Validator" />
+
+        <component id="IValidatorRegistry"
+                   service="Castle.Components.Validator.IValidatorRegistry, Castle.Components.Validator"
+                   type="Castle.Components.Validator.CachedValidationRegistry, Castle.Components.Validator" />
+        
         <!-- Services -->
 
         <component id="IEmailService"

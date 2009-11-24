@@ -11,68 +11,68 @@
   </NAntValidationSettings>
   <RecentFiles>
     <RecentFiles>
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1923" fromTop="65" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/d:Security/d:Cryptography/f:Cryptographer.cs" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:NHibernateSessionModule.cs" caret="86" fromTop="4" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:RebindTempDataAttribute.cs" caret="296" fromTop="12" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:log4net.config/l:..?log4net.config" caret="0" fromTop="0" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/f:ActiveSessionManager.cs" caret="227" fromTop="10" />
-      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Domain/f:MeetingSponsor.cs" caret="49" fromTop="2" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Attendee.hbm.xml" caret="134" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Meeting.hbm.xml" caret="133" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:MeetingSponsor.hbm.xml" caret="115" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Member.hbm.xml" caret="133" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Sponsor.hbm.xml" caret="859" fromTop="13" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Facility.hbm.xml" caret="110" fromTop="1" />
-      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:NHibernatInitializationTests.cs" caret="578" fromTop="23" />
-      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/d:Cryptography/f:ICryptographer.cs" caret="68" fromTop="2" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml/l:..?hibernate.cfg.xml" caret="709" fromTop="12" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Account/f:Login.aspx" caret="0" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/d:Security/f:Authenticator.cs" caret="2011" fromTop="32" />
+      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/d:Website/d:Controllers/f:AccountControllerTests.cs" caret="1733" fromTop="22" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Password.aspx" caret="255" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Extensions/f:MvcHelperExtensions.cs" caret="513" fromTop="16" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:HtmlExtensions.cs" caret="421" fromTop="12" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="521" fromTop="13" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="920" fromTop="19" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Content/d:css/f:style.css" caret="0" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1515" fromTop="11" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml/l:..?windsor.config.xml" caret="526" fromTop="15" />
-      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="655" fromTop="21" />
-      <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:TestData/f:TestData.xml" caret="4649" fromTop="19" />
-      <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:DataAccess/f:MeetingRepositoryTests.cs" caret="1461" fromTop="29" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="3581" fromTop="76" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Models/f:LoginInput.cs" caret="257" fromTop="10" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="6254" fromTop="91" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Layouts/f:Default.Master" caret="270" fromTop="4" />
-      <File id="837960F7-C0F2-441C-87DD-3AA3AFE199EC/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:ControllerBase.cs" caret="137" fromTop="5" />
+      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="446" fromTop="17" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="2585" fromTop="3" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="204" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:ControllerBase.cs" caret="186" fromTop="6" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/f:FormsAuthenticationGateway.cs" caret="557" fromTop="14" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="1139" fromTop="39" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="1970" fromTop="11" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="0" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="954" fromTop="23" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="381" fromTop="12" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="129" fromTop="6" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="245" fromTop="8" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:HomeController.cs" caret="640" fromTop="20" />
-      <File id="274B5E99-7C5C-4E35-8266-CD369B864745/f:groop.build/l:F!?dev?oss?groop?groop.build" caret="3134" fromTop="21" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml/l:..?hibernate.cfg.xml" caret="705" fromTop="11" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Account/f:ChangePassword.aspx" caret="605" fromTop="14" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Attributes/f:HiddenAttribute.cs" caret="0" fromTop="0" />
+      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/f:RepositoryBaseUoW.cs" caret="1446" fromTop="16" />
     </RecentFiles>
     <RecentEdits>
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:NHibernateSessionModule.cs" caret="88" fromTop="4" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:RebindTempDataAttribute.cs" caret="82" fromTop="4" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Content/d:css/f:style.css" caret="5123" fromTop="4" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1627" fromTop="35" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml/l:..?windsor.config.xml" caret="0" fromTop="0" />
-      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:NHibernatInitializationTests.cs" caret="567" fromTop="22" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:MeetingSponsor.hbm.xml" caret="425" fromTop="5" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Attendee.hbm.xml" caret="134" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Meeting.hbm.xml" caret="133" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Member.hbm.xml" caret="133" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Sponsor.hbm.xml" caret="133" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:MeetingSponsor.hbm.xml" caret="105" fromTop="1" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/d:Mappings/f:Facility.hbm.xml" caret="110" fromTop="1" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml/l:..?hibernate.cfg.xml" caret="643" fromTop="9" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Content/d:css/f:style.css" caret="1707" fromTop="43" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Content/d:css/f:style.css" caret="0" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="2320" fromTop="44" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="365" fromTop="9" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="1081" fromTop="31" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1515" fromTop="11" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="582" fromTop="16" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="226" fromTop="7" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml/l:..?windsor.config.xml" caret="584" fromTop="17" />
-      <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:DataAccess/f:MeetingRepositoryTests.cs" caret="1461" fromTop="29" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:ControllerBase.cs" caret="179" fromTop="5" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1557" fromTop="39" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="635" fromTop="22" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="156" fromTop="6" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="734" fromTop="13" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Models/f:LoginInput.cs" caret="117" fromTop="4" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Models/f:LoginInput.cs" caret="257" fromTop="10" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="578" fromTop="11" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="6254" fromTop="35" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1053" fromTop="21" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1300" fromTop="27" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="413" fromTop="13" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="913" fromTop="17" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="720" fromTop="22" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="709" fromTop="19" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Filters/f:ValidateModelAttribute.cs" caret="1749" fromTop="22" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml/l:..?windsor.config.xml" caret="2584" fromTop="31" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1677" fromTop="26" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="2021" fromTop="44" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1293" fromTop="17" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1551" fromTop="23" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/f:FormsAuthenticationGateway.cs" caret="152" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/f:FormsAuthenticationGateway.cs" caret="647" fromTop="16" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="757" fromTop="19" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="3637" fromTop="37" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="954" fromTop="23" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="381" fromTop="12" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="244" fromTop="8" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml/l:..?hibernate.cfg.xml" caret="707" fromTop="9" />
-      <File id="274B5E99-7C5C-4E35-8266-CD369B864745/f:groop.build/l:F!?dev?oss?groop?groop.build" caret="3134" fromTop="21" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -83,16 +83,83 @@
   </UnitTestRunnerMSTest>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="System" priority="1" />
-      <Item value="Web" priority="1" />
+      <Item value="System" priority="2" />
+      <Item value="Web" priority="2" />
       <Item value="Mvc" priority="1" />
       <Item value="Controller" priority="1" />
       <Item value="ControllerBase" priority="0" />
       <Item value="messages" priority="0" />
       <Item value="var" priority="0" />
-      <Item value="ctor" priority="0" />
+      <Item value="ctor" priority="1" />
       <Item value="IAuthorizationFilter" priority="0" />
       <Item value="authenticationService" priority="1" />
+      <Item value="public" priority="1" />
+      <Item value="static" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="namespace" priority="0" />
+      <Item value="using" priority="0" />
+      <Item value="Collections" priority="0" />
+      <Item value="Html" priority="0" />
+      <Item value="string" priority="0" />
+      <Item value="IUserSession" priority="0" />
+      <Item value="userSession" priority="2" />
+      <Item value="override" priority="0" />
+      <Item value="GetType" priority="0" />
+      <Item value="LoginInput" priority="1" />
+      <Item value="IoC" priority="2" />
+      <Item value="ValidateModelAttribute" priority="0" />
+      <Item value="this" priority="1" />
+      <Item value="IValidatorRunner" priority="2" />
+      <Item value="typeof" priority="1" />
+      <Item value="viewModelType" priority="0" />
+      <Item value="loginInput" priority="1" />
+      <Item value="if" priority="1" />
+      <Item value="ModelState" priority="1" />
+      <Item value="return" priority="1" />
+      <Item value="View" priority="1" />
+      <Item value="IMemberService" priority="0" />
+      <Item value="service" priority="0" />
+      <Item value="memberService" priority="1" />
+      <Item value="input" priority="1" />
+      <Item value="formsAuthenticationGateway" priority="0" />
+      <Item value="FormsAuthentication" priority="0" />
+      <Item value="username" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ForEach" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.Windsor.IWindsorContainer">
+      <Item value="AddComponentLifeStyle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ViewDataDictionary">
+      <Item value="Get" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="InputForm" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Groop.Website.Helpers.IoC">
+      <Item value="Resolve" priority="2" />
+      <Item value="Register" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelStateDictionary">
+      <Item value="IsValid" priority="0" />
+      <Item value="AddModelError" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Services.IMemberService">
+      <Item value="GetByUsername" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Services.IAuthenticationService">
+      <Item value="SignIn" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Website.Models.LoginInput">
+      <Item value="Username" priority="0" />
+      <Item value="Password" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Security.FormsAuthentication">
+      <Item value="RedirectFromLoginPage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Website.Controllers.LoginController">
+      <Item value="userSession" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

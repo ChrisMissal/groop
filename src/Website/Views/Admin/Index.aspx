@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ContentPlaceHolderID="mainContent" runat="server">
 	<div style="margin-bottom: 10px;"><img src="/Content/images/supliment-openroad.jpg" alt="" /></div>

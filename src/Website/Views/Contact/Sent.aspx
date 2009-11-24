@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
 <%@ Import Namespace="Groop.Core.Domain"%>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">

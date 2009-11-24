@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage`1[[System.Web.Mvc.HandleErrorInfo, System.Web.Mvc]]" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Default.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage`1[[System.Web.Mvc.HandleErrorInfo, System.Web.Mvc]]" %>
 <%@ Import namespace="MvcContrib"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="mainContent" runat="server">
     <h2>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage`1[[CRIneta.Website.Models.MeetingData, CRIneta.Website]]" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Default.Master" Inherits="System.Web.Mvc.ViewPage`1[[CRIneta.Website.Models.MeetingData, CRIneta.Website]]" %>
 <%@ Import Namespace="Groop.Website.Helpers"%>
 <%@ Import Namespace="Groop.Website.Controllers"%>
 

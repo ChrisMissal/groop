@@ -15,7 +15,7 @@ padding:0;
 text-align:justify;
 }
 h1, h2, h3 {
-color:#FFFFFF;
+color:#fff;
 font-weight:normal;
 margin-top:0;
 }
@@ -84,7 +84,7 @@ margin:0 auto;
 width:900px;
 }
 #header {
-height:100px;
+height:80px;
 margin:0 auto;
 width:900px;
 }
@@ -103,7 +103,7 @@ line-height:normal;
 margin:0;
 }
 #logo h1 {
-padding:40px 0 0;
+padding:20px 0 0;
 }
 #logo p {
 text-indent:-99999px;
@@ -117,7 +117,7 @@ list-style-image:none;
 list-style-position:outside;
 list-style-type:none;
 margin:0;
-padding:49px 0 0;
+padding:29px 0 0;
 }
 #menu li {
 float:left;
@@ -325,4 +325,82 @@ color:#FFFFFF;
 	color: #FFA711;
 	background-color: inherit;
 	cursor: pointer;
+}
+#user-status
+{
+	float:right;
+	margin: 5px 10px 0 0;
+}
+#user-status, #user-status a
+{
+	color:#fff;
+}
+
+fieldset
+{
+    background-color: #eee;
+    margin: 10px auto;    
+    border: solid 4px #c0c0c0;
+    border-top: solid 20px #c0c0c0;
+    width: 480px;
+}
+
+fieldset h3
+{
+	color:#333;
+}
+
+fieldset a.cancel
+{
+    text-align:center;
+    margin-left:250px;
+    position:relative;
+    top:-28px;
+}
+
+fieldset label
+{
+    float: left;
+    display: block;
+    width: 125px;
+    text-align: right;
+    height: 20px;
+    margin: 7px;
+}
+
+fieldset input[type='submit']
+{
+    text-align:center;
+}
+
+
+.cleaner
+{
+    clear: both;
+    height: 0px;
+}
+.required
+{
+    color: Red;
+}
+
+.field-validation-error
+{
+    color:Red;
+    font-size:28px;
+    vertical-align:top;
+}
+
+.validation-summary-errors
+{
+    background-color: #FFBBBB;
+    color: Black;
+    border: solid 1px red;
+    font-size: 14px;
+}
+
+.display-label
+{
+    font-weight:bold;
+    font-size: larger;
 }

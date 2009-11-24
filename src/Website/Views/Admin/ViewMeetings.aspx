@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Layouts/Default.Master" Inherits="System.Web.Mvc.ViewPage`1[[System.Collections.Generic.IList`1[[CRIneta.Web.Core.Domain.Meeting, CRIneta.Web.Core]], mscorlib]]" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Default.Master" Inherits="System.Web.Mvc.ViewPage`1[[System.Collections.Generic.IList`1[[CRIneta.Web.Core.Domain.Meeting, CRIneta.Web.Core]], mscorlib]]" %>
 <%@ Import Namespace="Groop.Website.Controllers"%>
 <%@ Import Namespace="Groop.Core.Domain"%>
 

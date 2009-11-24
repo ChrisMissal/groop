@@ -59,7 +59,23 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\AppHelper.cs" />
+    <Compile Include="Helpers\Attributes\HiddenAttribute.cs" />
+    <Compile Include="Helpers\Attributes\LabelAttribute.cs" />
+    <Compile Include="Helpers\Attributes\MultilineAttribute.cs" />
+    <Compile Include="Helpers\Attributes\NoInputAttribute.cs" />
+    <Compile Include="Helpers\Attributes\ShowAsRequiredAttribute.cs" />
+    <Compile Include="Helpers\Attributes\UserDropDownAttribute.cs" />
+    <Compile Include="Helpers\Extensions\MvcHelperExtensions.cs" />
+    <Compile Include="Helpers\Filters\ValidateModelAttribute.cs" />
     <Compile Include="Helpers\IoC.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredDateAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredDateTimeAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredDecimalAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredEmailAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredIntegerAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\ValidateKeyAttribute.cs" />
+    <Compile Include="HtmlExtensions.cs" />
     <Compile Include="Impl\HttpContextProvider.cs" />
     <Compile Include="Impl\FormsAuthenticationGateway.cs" />
     <Compile Include="Impl\Security\Authenticator.cs" />
@@ -120,9 +136,6 @@
     <Content Include="Views\Shared\Controls\rightExample.ascx" />
     <Content Include="Views\Shared\Controls\mainExample.ascx" />
     <Content Include="Views\Shared\Controls\header.ascx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Layouts\Default.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\hibernate.cfg.xml">
@@ -309,6 +322,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Default.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Submit.aspx" />
+    <Content Include="Views\Shared\Field.Master" />
+    <Content Include="Views\Shared\Password.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Impl\Data\" />

@@ -1,3 +1,4 @@
+using System;
 using System.Web.Security;
 using Groop.Core.Security;
 
@@ -18,6 +19,11 @@ namespace Groop.Website.Impl
         public string FormsCookieName
         {
             get { return FormsAuthentication.FormsCookieName; }
+        }
+
+        public void RedirectFromLoginPage(string username, bool createPersistentCookie)
+        {
+            FormsAuthentication.RedirectFromLoginPage(username, createPersistentCookie);
         }
     }
 }

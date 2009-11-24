@@ -1,0 +1,708 @@
+<<<<<<< Updated upstream
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Groop.Website</RootNamespace>
+    <AssemblyName>Groop.Website</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AutomatedDebug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\build\AutomatedDebug\CRIneta.Website\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\FlashMessageComponentController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MeetingController.cs" />
+    <Compile Include="Controllers\SponsorController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AppHelper.cs" />
+    <Compile Include="Helpers\IoC.cs" />
+    <Compile Include="Impl\HttpContextProvider.cs" />
+    <Compile Include="Impl\FormsAuthenticationGateway.cs" />
+    <Compile Include="Impl\Security\Authenticator.cs" />
+    <Compile Include="Impl\Security\Cryptography\Cryptographer.cs" />
+    <Compile Include="Impl\Security\Principal\GuestIdentity.cs" />
+    <Compile Include="Impl\Security\UserSession.cs" />
+    <Compile Include="Impl\UserInput\LoginData.cs" />
+    <Compile Include="Models\LoginInput.cs" />
+    <Compile Include="Models\MeetingData.cs" />
+    <Compile Include="Models\ModelExtensions.cs" />
+    <Compile Include="Models\RsvpData.cs" />
+    <Compile Include="NHibernateSessionModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RebindTempDataAttribute.cs" />
+    <Compile Include="Routing\IRouteConfigurator.cs" />
+    <Compile Include="Routing\LowercaseRoute.cs" />
+    <Compile Include="Routing\RouteCollectionExtensions.cs" />
+    <Compile Include="Routing\RouteConfigurator.cs" />
+    <Compile Include="Services\Email\SmtpEmailService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\windsor.config.xml">
+      <Link>windsor.config.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Sponsor\Index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\log4net.config">
+      <Link>log4net.config</Link>
+    </Content>
+    <Content Include="Content\images\img01.jpg" />
+    <Content Include="Content\images\img02.jpg" />
+    <Content Include="Content\images\img03.jpg" />
+    <Content Include="Content\images\img04.jpg" />
+    <Content Include="Content\images\img05.jpg" />
+    <Content Include="Content\images\img06.jpg" />
+    <Content Include="Content\images\img07.gif" />
+    <Content Include="Content\images\img08.jpg" />
+    <Content Include="Content\images\spacer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Contact\Index.aspx" />
+    <Content Include="Views\Meeting\Show.aspx" />
+    <Content Include="Views\Shared\Controls\footerExample.ascx" />
+    <Content Include="Views\Shared\Controls\rightExample.ascx" />
+    <Content Include="Views\Shared\Controls\mainExample.ascx" />
+    <Content Include="Views\Shared\Controls\header.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Layouts\Default.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\hibernate.cfg.xml">
+      <Link>hibernate.cfg.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\account.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\css\ui-darkness\jquery-ui-1.7.2.custom.css" />
+    <Content Include="Content\images\bg_journey.JPG" />
+    <Content Include="Content\images\busipeople.jpg" />
+    <Content Include="Content\images\clouds.jpg" />
+    <Content Include="Content\images\cri-1-large.png" />
+    <Content Include="Content\images\cri-1-medium.png" />
+    <Content Include="Content\images\cri-1-small.png" />
+    <Content Include="Content\images\cri-2-large.png" />
+    <Content Include="Content\images\cri-2-medium.png" />
+    <Content Include="Content\images\cri-2-small.png" />
+    <Content Include="Content\images\cri-3-large.png" />
+    <Content Include="Content\images\cri-3-medium.png" />
+    <Content Include="Content\images\cri-3-small.png" />
+    <Content Include="Content\images\cri-4-large.png" />
+    <Content Include="Content\images\cri-4-medium.png" />
+    <Content Include="Content\images\cri-4-small.png" />
+    <Content Include="Content\images\img07.jpg" />
+    <Content Include="Content\images\img08.gif" />
+    <Content Include="Content\images\img09.jpg" />
+    <Content Include="Content\images\img10.gif" />
+    <Content Include="Content\images\img11.gif" />
+    <Content Include="Content\images\logos.html" />
+    <Content Include="Content\images\officers\BillKVS.jpg" />
+    <Content Include="Content\images\officers\ChrisMissal.jpg" />
+    <Content Include="Content\images\officers\dpVS.jpg" />
+    <Content Include="Content\images\officers\eric.jpg" />
+    <Content Include="Content\images\officers\GregSVS.jpg" />
+    <Content Include="Content\images\officers\jbrunken.jpg" />
+    <Content Include="Content\images\officers\Mike002.jpg" />
+    <Content Include="Content\images\officers\no-photo.gif" />
+    <Content Include="Content\images\officers\TimBVS.jpg" />
+    <Content Include="Content\images\officers\Travis2.JPG" />
+    <Content Include="Content\images\officers\ZacHVS.jpg" />
+    <Content Include="Content\images\openroad.jpg" />
+    <Content Include="Content\images\sponsors\apress.gif" />
+    <Content Include="Content\images\sponsors\awlogo.gif" />
+    <Content Include="Content\images\sponsors\c1logo.gif" />
+    <Content Include="Content\images\sponsors\DDJ.gif" />
+    <Content Include="Content\images\sponsors\devexpress_logo.jpg" />
+    <Content Include="Content\images\sponsors\godaddy_logo.jpg" />
+    <Content Include="Content\images\sponsors\ineta_box.gif" />
+    <Content Include="Content\images\sponsors\infralogo.gif" />
+    <Content Include="Content\images\sponsors\logo_jetbrains_small.gif" />
+    <Content Include="Content\images\sponsors\microsoft.gif" />
+    <Content Include="Content\images\sponsors\oreilly.gif" />
+    <Content Include="Content\images\sponsors\redgate.gif" />
+    <Content Include="Content\images\sponsors\rht_logo.gif" />
+    <Content Include="Content\images\sponsors\sams.gif" />
+    <Content Include="Content\images\sponsors\scootersoftware.png" />
+    <Content Include="Content\images\sponsors\syncfusion_logo.jpg" />
+    <Content Include="Content\images\sponsors\teksystems_logo.gif" />
+    <Content Include="Content\images\sponsors\tlc_logo.jpg" />
+    <Content Include="Content\images\supliment-busipeople.jpg" />
+    <Content Include="Content\images\supliment-clouds.jpg" />
+    <Content Include="Content\images\supliment-openroad.jpg" />
+    <Content Include="Content\images\supliment-twophones.jpg" />
+    <Content Include="Content\images\supliment-typewriter.jpg" />
+    <Content Include="Content\images\twophones.jpg" />
+    <Content Include="Content\images\typewriter.jpg" />
+    <Content Include="Content\js\crineta.datepicker.js" />
+    <Content Include="Content\js\jquery-1.3.2.min.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.validate.js" />
+    <Content Include="Views\Account\Index.aspx" />
+    <Content Include="Views\Admin\AddMeeting.aspx" />
+    <Content Include="Views\Admin\ViewMeetings.aspx" />
+    <Content Include="Views\Admin\EditMeeting.aspx" />
+    <Content Include="Views\Contact\Sent.aspx" />
+    <Content Include="Views\Admin\Index.aspx" />
+    <Content Include="Views\Home\Officers.aspx" />
+    <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Meeting\UpcomingMeetings.aspx" />
+    <Content Include="Views\Shared\Controls\admin\links.ascx" />
+    <Content Include="Views\Shared\Controls\rsvp.ascx" />
+    <Content Include="Views\Shared\Controls\userStatus.ascx" />
+    <Content Include="Views\Shared\FlashMessageList.ascx" />
+    <Content Include="Views\Shared\RSVP.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=0.3.1.71, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\automapper\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Validator, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.Components.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nhibernate\2.0\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=1.0.0.916, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\mvccontrib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.Castle, Version=1.0.0.916, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\mvccontrib\MvcContrib.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nhibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\System.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Default.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Impl\Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56988</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+=======
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Groop.Website</RootNamespace>
+    <AssemblyName>Groop.Website</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AutomatedDebug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\build\AutomatedDebug\CRIneta.Website\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\FlashMessageComponentController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MeetingController.cs" />
+    <Compile Include="Controllers\SponsorController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AppHelper.cs" />
+    <Compile Include="Helpers\Attributes\HiddenAttribute.cs" />
+    <Compile Include="Helpers\Attributes\LabelAttribute.cs" />
+    <Compile Include="Helpers\Attributes\MultilineAttribute.cs" />
+    <Compile Include="Helpers\Attributes\NoInputAttribute.cs" />
+    <Compile Include="Helpers\Attributes\ShowAsRequiredAttribute.cs" />
+    <Compile Include="Helpers\Attributes\UserDropDownAttribute.cs" />
+    <Compile Include="Helpers\Extensions\MvcHelperExtensions.cs" />
+    <Compile Include="Helpers\Filters\ValidateModelAttribute.cs" />
+    <Compile Include="Helpers\IoC.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredDateAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredDateTimeAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredDecimalAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredEmailAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\RequiredIntegerAttribute.cs" />
+    <Compile Include="Helpers\Validation\Attributes\ValidateKeyAttribute.cs" />
+    <Compile Include="HtmlExtensions.cs" />
+    <Compile Include="Impl\HttpContextProvider.cs" />
+    <Compile Include="Impl\FormsAuthenticationGateway.cs" />
+    <Compile Include="Impl\Security\Authenticator.cs" />
+    <Compile Include="Impl\Security\Cryptography\Cryptographer.cs" />
+    <Compile Include="Impl\Security\Principal\GuestIdentity.cs" />
+    <Compile Include="Impl\Security\UserSession.cs" />
+    <Compile Include="Impl\UserInput\LoginData.cs" />
+    <Compile Include="Models\LoginInput.cs" />
+    <Compile Include="Models\MeetingData.cs" />
+    <Compile Include="Models\ModelExtensions.cs" />
+    <Compile Include="Models\RsvpData.cs" />
+    <Compile Include="NHibernateSessionModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RebindTempDataAttribute.cs" />
+    <Compile Include="Routing\IRouteConfigurator.cs" />
+    <Compile Include="Routing\LowercaseRoute.cs" />
+    <Compile Include="Routing\RouteCollectionExtensions.cs" />
+    <Compile Include="Routing\RouteConfigurator.cs" />
+    <Compile Include="Services\Email\SmtpEmailService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\windsor.config.xml">
+      <Link>windsor.config.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Sponsor\Index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\log4net.config">
+      <Link>log4net.config</Link>
+    </Content>
+    <Content Include="Content\images\img01.jpg" />
+    <Content Include="Content\images\img02.jpg" />
+    <Content Include="Content\images\img03.jpg" />
+    <Content Include="Content\images\img04.jpg" />
+    <Content Include="Content\images\img05.jpg" />
+    <Content Include="Content\images\img06.jpg" />
+    <Content Include="Content\images\img07.gif" />
+    <Content Include="Content\images\img08.jpg" />
+    <Content Include="Content\images\spacer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Contact\Index.aspx" />
+    <Content Include="Views\Meeting\Show.aspx" />
+    <Content Include="Views\Shared\Controls\footerExample.ascx" />
+    <Content Include="Views\Shared\Controls\rightExample.ascx" />
+    <Content Include="Views\Shared\Controls\mainExample.ascx" />
+    <Content Include="Views\Shared\Controls\header.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\hibernate.cfg.xml">
+      <Link>hibernate.cfg.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\account.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\css\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\css\ui-darkness\jquery-ui-1.7.2.custom.css" />
+    <Content Include="Content\images\bg_journey.JPG" />
+    <Content Include="Content\images\busipeople.jpg" />
+    <Content Include="Content\images\clouds.jpg" />
+    <Content Include="Content\images\cri-1-large.png" />
+    <Content Include="Content\images\cri-1-medium.png" />
+    <Content Include="Content\images\cri-1-small.png" />
+    <Content Include="Content\images\cri-2-large.png" />
+    <Content Include="Content\images\cri-2-medium.png" />
+    <Content Include="Content\images\cri-2-small.png" />
+    <Content Include="Content\images\cri-3-large.png" />
+    <Content Include="Content\images\cri-3-medium.png" />
+    <Content Include="Content\images\cri-3-small.png" />
+    <Content Include="Content\images\cri-4-large.png" />
+    <Content Include="Content\images\cri-4-medium.png" />
+    <Content Include="Content\images\cri-4-small.png" />
+    <Content Include="Content\images\img07.jpg" />
+    <Content Include="Content\images\img08.gif" />
+    <Content Include="Content\images\img09.jpg" />
+    <Content Include="Content\images\img10.gif" />
+    <Content Include="Content\images\img11.gif" />
+    <Content Include="Content\images\logos.html" />
+    <Content Include="Content\images\officers\BillKVS.jpg" />
+    <Content Include="Content\images\officers\ChrisMissal.jpg" />
+    <Content Include="Content\images\officers\dpVS.jpg" />
+    <Content Include="Content\images\officers\eric.jpg" />
+    <Content Include="Content\images\officers\GregSVS.jpg" />
+    <Content Include="Content\images\officers\jbrunken.jpg" />
+    <Content Include="Content\images\officers\Mike002.jpg" />
+    <Content Include="Content\images\officers\no-photo.gif" />
+    <Content Include="Content\images\officers\TimBVS.jpg" />
+    <Content Include="Content\images\officers\Travis2.JPG" />
+    <Content Include="Content\images\officers\ZacHVS.jpg" />
+    <Content Include="Content\images\openroad.jpg" />
+    <Content Include="Content\images\sponsors\apress.gif" />
+    <Content Include="Content\images\sponsors\awlogo.gif" />
+    <Content Include="Content\images\sponsors\c1logo.gif" />
+    <Content Include="Content\images\sponsors\DDJ.gif" />
+    <Content Include="Content\images\sponsors\devexpress_logo.jpg" />
+    <Content Include="Content\images\sponsors\godaddy_logo.jpg" />
+    <Content Include="Content\images\sponsors\ineta_box.gif" />
+    <Content Include="Content\images\sponsors\infralogo.gif" />
+    <Content Include="Content\images\sponsors\logo_jetbrains_small.gif" />
+    <Content Include="Content\images\sponsors\microsoft.gif" />
+    <Content Include="Content\images\sponsors\oreilly.gif" />
+    <Content Include="Content\images\sponsors\redgate.gif" />
+    <Content Include="Content\images\sponsors\rht_logo.gif" />
+    <Content Include="Content\images\sponsors\sams.gif" />
+    <Content Include="Content\images\sponsors\scootersoftware.png" />
+    <Content Include="Content\images\sponsors\syncfusion_logo.jpg" />
+    <Content Include="Content\images\sponsors\teksystems_logo.gif" />
+    <Content Include="Content\images\sponsors\tlc_logo.jpg" />
+    <Content Include="Content\images\supliment-busipeople.jpg" />
+    <Content Include="Content\images\supliment-clouds.jpg" />
+    <Content Include="Content\images\supliment-openroad.jpg" />
+    <Content Include="Content\images\supliment-twophones.jpg" />
+    <Content Include="Content\images\supliment-typewriter.jpg" />
+    <Content Include="Content\images\twophones.jpg" />
+    <Content Include="Content\images\typewriter.jpg" />
+    <Content Include="Content\js\crineta.datepicker.js" />
+    <Content Include="Content\js\jquery-1.3.2.min.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.validate.js" />
+    <Content Include="Views\Account\Index.aspx" />
+    <Content Include="Views\Admin\AddMeeting.aspx" />
+    <Content Include="Views\Admin\ViewMeetings.aspx" />
+    <Content Include="Views\Admin\EditMeeting.aspx" />
+    <Content Include="Views\Contact\Sent.aspx" />
+    <Content Include="Views\Admin\Index.aspx" />
+    <Content Include="Views\Home\Officers.aspx" />
+    <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Meeting\UpcomingMeetings.aspx" />
+    <Content Include="Views\Shared\Controls\admin\links.ascx" />
+    <Content Include="Views\Shared\Controls\rsvp.ascx" />
+    <Content Include="Views\Shared\Controls\userStatus.ascx" />
+    <Content Include="Views\Shared\FlashMessageList.ascx" />
+    <Content Include="Views\Shared\RSVP.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=0.3.1.71, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\automapper\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Validator, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.Components.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\castle\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nhibernate\2.0\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=1.0.0.916, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\mvccontrib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.Castle, Version=1.0.0.916, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\mvccontrib\MvcContrib.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.0.1001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nhibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\System.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\system.web.mvc\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Default.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Submit.aspx" />
+    <Content Include="Views\Shared\Field.Master" />
+    <Content Include="Views\Shared\Password.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Impl\Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58734</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+>>>>>>> Stashed changes
+</Project>
