@@ -14,14 +14,7 @@ namespace Groop.Website.Routing
             routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" });
 
             // Default/fallback route
-            RouteCollectionExtensions.MapRoute(routes, "Default", "{controller}/{action}/{id}",
-                                               new { controller = "Home", action = "Index", id = "" });
-
-            // please not that this route will never actually get hit...the route above will ALWAYS
-            // match before this one is hit...TB
-            RouteCollectionExtensions.MapRoute(routes, "AdminViewMeetings", "{controller}/{action}/{id}",
-                                               new { controller = "Admin", action = "EditMeeting", id = "" });
-
+            routes.MapRoute("Default", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = "" });
         }
     }
 }
