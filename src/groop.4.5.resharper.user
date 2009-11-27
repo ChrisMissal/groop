@@ -11,9 +11,6 @@
   </NAntValidationSettings>
   <RecentFiles>
     <RecentFiles>
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:log4net.config/l:..?log4net.config" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml/l:..?hibernate.cfg.xml" caret="709" fromTop="12" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Account/f:Login.aspx" caret="0" fromTop="0" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/d:Security/f:Authenticator.cs" caret="2011" fromTop="32" />
       <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/d:Website/d:Controllers/f:AccountControllerTests.cs" caret="1733" fromTop="22" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Password.aspx" caret="255" fromTop="5" />
@@ -22,7 +19,6 @@
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="521" fromTop="13" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="920" fromTop="19" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Content/d:css/f:style.css" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1515" fromTop="11" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:windsor.config.xml/l:..?windsor.config.xml" caret="526" fromTop="15" />
       <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="446" fromTop="17" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="2585" fromTop="3" />
@@ -40,7 +36,11 @@
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:hibernate.cfg.xml/l:..?hibernate.cfg.xml" caret="705" fromTop="11" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Account/f:ChangePassword.aspx" caret="605" fromTop="14" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/d:Attributes/f:HiddenAttribute.cs" caret="0" fromTop="0" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/f:RepositoryBaseUoW.cs" caret="1446" fromTop="16" />
+      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/f:RepositoryBaseUoW.cs" caret="1247" fromTop="10" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/f:AppHelper.cs" caret="231" fromTop="10" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1849" fromTop="20" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Routing/f:RouteCollectionExtensions.cs" caret="564" fromTop="16" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Routing/f:RouteConfigurator.cs" caret="511" fromTop="16" />
     </RecentFiles>
     <RecentEdits>
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Content/d:css/f:style.css" caret="5123" fromTop="4" />
