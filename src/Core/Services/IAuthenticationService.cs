@@ -53,9 +53,9 @@ namespace Groop.Core.Services
 
                 FormsAuthentication.SignOut();
 
-                var identity = new UserIdentity().From(member);
+                //var identity = new UserIdentity().From(member);
 
-                SetActiveIdentity(identity);
+                //SetActiveIdentity(identity);
 
                 return true;
             }

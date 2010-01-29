@@ -25,7 +25,7 @@
         <div id="user-status">
             <asp:LoginView ID="LoginView3" runat="server">
 		        <LoggedInTemplate>
-			        Welcome, <%--<%=ViewData.Get<User>().Name%>	| <%=Html.ActionLink<UserController>("My Profile", c=>c.Edit((User)null)) %>--%>
+			        Welcome, <%=ViewData.Get<User>().Name%> %>
 			        (<a href="<%=Url.Action<LoginController>(c=>c.LogOut()) %>">Log out</a>) 
 		        </LoggedInTemplate>
 		        <AnonymousTemplate>

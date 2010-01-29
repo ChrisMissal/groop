@@ -22,7 +22,7 @@ namespace Groop.Website
     {
         public GlobalApplication()
         {
-            AuthenticateRequest += GlobalApplication_AuthenticateRequest;
+            //AuthenticateRequest += GlobalApplication_AuthenticateRequest;
         }
 
         void GlobalApplication_AuthenticateRequest(object sender, EventArgs e)
