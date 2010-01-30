@@ -23,6 +23,7 @@ namespace Groop.UnitTests
             
             return container;
         }
+
         [Test]
         public void Can_initiate_Windsor()
         {

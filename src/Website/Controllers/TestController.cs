@@ -1,4 +1,6 @@
 using System.Web.Mvc;
+using Groop.Core;
+using Groop.Website.Helpers;
 
 namespace Groop.Website.Controllers
 {
@@ -6,9 +8,10 @@ namespace Groop.Website.Controllers
     {
         public ContentResult Test()
         {
+            var sessionInfo = IoC.Resolve<IUserSession>();
             return new ContentResult()
                        {
-                           Content = "Hello World"
+                           Content = "Hello World" + sessionInfo.GetType()
                        };
         }
     }
