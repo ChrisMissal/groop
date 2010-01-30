@@ -326,8 +326,9 @@
     <Content Include="Views\Shared\Default.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Meeting\meeting-summary.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\Meeting.aspx" />
     <Content Include="Views\Shared\Submit.aspx" />
-    <Content Include="Views\Shared\Field.Master" />
     <Content Include="Views\Shared\Password.aspx" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<Meeting[]>" %>
+﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<IList<Meeting>>" %>
 <%@ Import Namespace="Groop.Core.Domain"%>
 
 <%  
@@ -10,14 +10,8 @@
     <%  foreach (var meeting in meetings)
         { 
     %>
-            <p><strong><%=meeting.Title%></strong><br /><small>
-                <strong>Location:&nbsp;</strong><%=meeting.Facility.Name%><br />
-                <strong>Time:&nbsp;</strong><%=meeting.StartTime.ToString("h:mm tt")%> - <%=meeting.EndTime.ToString("MMM, d yyyy h:mm tt")%>
-            </small></p>
-            <div class="entry">
-                <p><%=meeting.Description%></p>
-                <p><a href="/meeting/<%=meeting.MeetingId %>" class="more">Read More</a></p>
-            </div>
+        <%
+            Html.RenderPartial("~/views/meeting/meetingSummary.ascx", meeting); %>
     <% }
     }
     else

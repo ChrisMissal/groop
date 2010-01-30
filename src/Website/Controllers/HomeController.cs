@@ -17,10 +17,8 @@ namespace Groop.Website.Controllers
 
         public ActionResult Index()
         {
-            var upcomingMeetings = meetingService.GetUpcomingMeetings(DateTime.Now, 5);
-            ViewData["upcomingMeetings"] = upcomingMeetings;
-
-            return View("Index");
+            var upcomingMeeting = meetingService.GetNextMeeting(DateTime.Now);
+            return View("Index", upcomingMeeting);
         }
 
         public ActionResult Officers()

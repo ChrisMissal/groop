@@ -49,42 +49,10 @@
                                     <%--<% Html.RenderPartial("~/views/shared/controls/userStatus.ascx",ViewData); %>--%>
                                 </li>
                                 <li>
-                                    <%  var meetings = (IList<Meeting>)ViewData["upcomingMeetings"];
-                                        if (meetings != null && meetings.Count > 0)
-                                        {   %>
-                                    <h2>
-                                        Upcoming Meetings</h2>
-                                    <%  foreach (var meeting in meetings)
-                                        { %>
-                                    <p>
-                                        <strong>
-                                            <%=meeting.Title%></strong><br />
-                                        <small><strong>Location:&nbsp;</strong><%=meeting.Facility.Name%><br />
-                                            <strong>Time:&nbsp;</strong><%=meeting.StartTime.ToString("h:mm tt")%>
-                                            -
-                                            <%=meeting.EndTime.ToString("MMM, d yyyy h:mm tt")%>
-                                        </small>
-                                    </p>
-                                    <div class="entry">
-                                        <p>
-                                            <%=meeting.Description%></p>
-                                        <p>
-                                            <%= Html.ActionLink<MeetingController>(x=>x.Detail(meeting.MeetingId),"Read More", new { @class="more"}) %></p>
-                                    </div>
-                                    <% }
-            }
-            else
-            { %>
-                                    <h2>
-                                        No Upcoming Meetings</h2>
-                                    <p>
-                                        There are no meetings currently scheduled in advance. Try back later to check for
-                                        any updates.</p>
-                                    <% }%>
+                                    <% Html.RenderAction<MeetingController>(x => x.UpcomingMeetings()); %>
                                 </li>
                                 <li>
-                                    <h2>
-                                        Unscheduled Topics</h2>
+                                    <h2>Unscheduled Topics</h2>
                                     <p>
                                         If you are interested in speaking on any of these topics, or other .NET topics,
                                         please
@@ -105,7 +73,7 @@
         </div>
     </div>
     <div id="footer">
-        <p>
+        <p> 
             &copy;
             <%= DateTime.Now.Year %>
             CRineta. All Rights Reserved. Design by <a href="http://www.freecsstemplates.org/">Free
