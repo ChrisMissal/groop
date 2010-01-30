@@ -11,29 +11,40 @@
   </NAntValidationSettings>
   <RecentFiles>
     <RecentFiles>
-      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="446" fromTop="17" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:UserIdentity.cs" caret="191" fromTop="8" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="2975" fromTop="10" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:IUserIdentity.cs" caret="144" fromTop="5" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/f:IoC.cs" caret="267" fromTop="11" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Routing/f:RouteConfigurator.cs" caret="480" fromTop="15" />
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/f:RepositoryBaseUoW.cs" caret="1509" fromTop="15" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1105" fromTop="17" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="465" fromTop="13" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax" caret="107" fromTop="2" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="2150" fromTop="40" />
+      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="611" fromTop="20" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11113" fromTop="7" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:TestController.cs" caret="112" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:HomeController.cs" caret="489" fromTop="18" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1167" fromTop="15" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:Controls/f:userStatus.ascx" caret="0" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1302" fromTop="19" />
     </RecentFiles>
     <RecentEdits>
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="2975" fromTop="28" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="2975" fromTop="10" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:IUserIdentity.cs" caret="2975" fromTop="5" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="2007" fromTop="17" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1917" fromTop="17" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="643" fromTop="13" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1059" fromTop="8" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1484" fromTop="16" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1495" fromTop="16" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="408" fromTop="9" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1547" fromTop="13" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="2150" fromTop="40" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="2060" fromTop="40" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="278" fromTop="10" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11765" fromTop="14" />
+      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="755" fromTop="25" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1424" fromTop="27" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11112" fromTop="7" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:TestController.cs" caret="430" fromTop="13" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="4797" fromTop="21" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1301" fromTop="19" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -137,6 +148,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Security.Principal.IIdentity">
       <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.IUserSession">
+      <Item value="GetType" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
