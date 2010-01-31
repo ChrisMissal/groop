@@ -21,8 +21,7 @@ namespace Groop.Core.Services.Impl
         {
             using (unitOfWorkFactory.Create())
             {
-                var meetings = meetingRepository.GetUpcomingMeetings(time, maxNumberMeetings);
-                return meetings;
+                return meetingRepository.GetUpcomingMeetings(time, maxNumberMeetings);
             }
         }
 
@@ -35,8 +34,15 @@ namespace Groop.Core.Services.Impl
         {
             using (unitOfWorkFactory.Create())
             {
-                var meetings = meetingRepository.GetMeetingsBetween(DateTime.Parse("1/1/1900"), time);
-                return meetings;
+                return meetingRepository.GetMeetingsBetween(DateTime.Parse("1/1/1900"), time);
+            }
+        }
+
+        public Meeting GetById(int id)
+        {
+            using (unitOfWorkFactory.Create())
+            {
+                return meetingRepository.GetById(id);
             }
         }
     }

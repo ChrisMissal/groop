@@ -328,6 +328,7 @@
     <Content Include="Content\css\old\style.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Views\Meeting\Archive.aspx" />
+    <Content Include="Views\Meeting\Detail.aspx" />
     <Content Include="Views\Meeting\UnscheduledTopics.aspx" />
     <Content Include="Views\Meeting\meeting-summary.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Meeting.aspx" />

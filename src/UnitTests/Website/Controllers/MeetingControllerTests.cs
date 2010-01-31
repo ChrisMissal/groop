@@ -11,17 +11,6 @@ namespace Groop.UnitTests.Website.Controllers
     [TestFixture]
     public class MeetingControllerTests
     {
-        [Test]
-        public void MeetingController_should_call_meetingRepository_GetUpcomingMeetings_for_List()
-        {
-            var fakeMeetingService = MockRepository.GenerateMock<IMeetingService>();
-            var fakeUserSession = MockRepository.GenerateMock<IUserSession>();
-            var controller = new MeetingController(fakeUserSession, fakeMeetingService);
-
-            controller.List();
-
-            fakeMeetingService.AssertWasCalled(x => x.GetUpcomingMeetings(Arg<DateTime>.Is.Anything, Arg<int>.Is.Anything));
-        }
 
         [Test]
         public void MeetingController_should_call_meetingRepository_GetNextMeeting_for_Show()

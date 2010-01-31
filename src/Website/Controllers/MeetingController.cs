@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 using Groop.Core;
+using Groop.Core.Data;
 using Groop.Core.Services;
 using Groop.Website.Models;
 
@@ -15,27 +16,16 @@ namespace Groop.Website.Controllers
             this.meetingService = meetingService;
         }
 
-        public ActionResult List()
-        {
-            var allMeetings = meetingService.GetUpcomingMeetings(DateTime.Now, 10);
-            ViewData["allMeetings"] = allMeetings;
-
-            return View("List");
-        }
-
         public ActionResult Show()
         {
             var nextMeeting = meetingService.GetNextMeeting(DateTime.Now);
-            
             return View("Show", nextMeeting);
         }
 
-        public ContentResult Detail(int id)
+        public ViewResult Detail(int id)
         {
-            return new ContentResult()
-                       {
-                           Content = id.ToString()
-                       };
+            var meeting = meetingService.GetById(id);
+            return View(meeting);
         }
 
         public ViewResult Archive()
