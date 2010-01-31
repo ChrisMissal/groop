@@ -7,5 +7,5 @@
 </small></p>
 <div class="entry">
     <p><%=Model.Description%></p>
-    <p><a href="/Model/<%=Model.MeetingId %>" class="more">Read More</a></p>
+    <p><%= Html.ActionLink<MeetingController>(x=>x.Detail(Model.MeetingId),"Read More...", new { @class = "more"}) %>
 </div>

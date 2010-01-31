@@ -30,5 +30,14 @@ namespace Groop.Core.Services.Impl
         {
             return GetUpcomingMeetings(time, 1).FirstOrDefault();
         }
+
+        public IList<Meeting> GetPastMeetings(DateTime time)
+        {
+            using (unitOfWorkFactory.Create())
+            {
+                var meetings = meetingRepository.GetMeetingsBetween(DateTime.Parse("1/1/1900"), time);
+                return meetings;
+            }
+        }
     }
 }

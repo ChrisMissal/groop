@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Groop.Core.Domain;
-using NHibernate;
 
 namespace Groop.Core.Services
 {
@@ -9,5 +8,6 @@ namespace Groop.Core.Services
     {
         IList<Meeting> GetUpcomingMeetings(DateTime time, int maxNumberMeetings);
         Meeting GetNextMeeting(DateTime time);
+        IList<Meeting> GetPastMeetings(DateTime time);
     }
 }

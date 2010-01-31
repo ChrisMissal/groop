@@ -11,7 +11,7 @@
         { 
     %>
         <%
-            Html.RenderPartial("~/views/meeting/meetingSummary.ascx", meeting); %>
+            Html.RenderPartial("~/views/meeting/meeting-summary.ascx", meeting); %>
     <% }
     }
     else

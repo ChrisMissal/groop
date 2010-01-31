@@ -3,6 +3,7 @@
 
 <asp:Content ContentPlaceHolderID="headerContent" runat="server">
 <script type="text/javascript">
+    /*
     $(document).ready(function() {
         var $div = $("#content div:first");
         $div.append(
@@ -16,6 +17,7 @@
                 })
             ));
         });
+        */
 </script>
 </asp:Content>
 

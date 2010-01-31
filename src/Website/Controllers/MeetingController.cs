@@ -38,6 +38,12 @@ namespace Groop.Website.Controllers
                        };
         }
 
+        public ViewResult Archive()
+        {
+            var pastMeetings = meetingService.GetPastMeetings(DateTime.Now);
+            return View(pastMeetings);
+        }
+
         [Authorize(Roles = "Users")]
         [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult RSVP()
@@ -69,7 +75,7 @@ namespace Groop.Website.Controllers
 
         public ActionResult UpcomingMeetings()
         {
-            var upcomingMeetings = meetingService.GetUpcomingMeetings(DateTime.Now, 5);
+            var upcomingMeetings = meetingService.GetUpcomingMeetings(DateTime.Now, 2);
             return View(upcomingMeetings);
         }
 

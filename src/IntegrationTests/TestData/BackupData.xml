@@ -10,4 +10,13 @@
     <Region>Iowa</Region>
     <PostalCode>52404</PostalCode>
   </Facilities>
+  <Members>
+    <MemberId>1</MemberId>
+    <Username>admin</Username>
+    <Password>3n1RCvncOCi9+9nWyK1XDPsaou8=</Password>
+    <PasswordSalt>UIVFf8iHNxO7quYe5CimUbXFHZOO0dsAMjUjOUSRn5SM//btm6wWGuZG+UfIrtpTcsCt+IcpA1Q00Q4FZLYUDg==</PasswordSalt>
+    <First>Administrator</First>
+    <Last>Account</Last>
+    <EmailAddress>webmaster@crineta.org</EmailAddress>
+  </Members>
 </Database>
