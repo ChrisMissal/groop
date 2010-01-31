@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Default.Master" Inherits="System.Web.Mvc.ViewPage<IList<Sponsor>>" %>
 <%@ Import Namespace="Groop.Website.Helpers"%>
 
 <asp:Content runat="server" ContentPlaceHolderID="mainContent">

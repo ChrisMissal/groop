@@ -17,34 +17,54 @@
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/f:IoC.cs" caret="267" fromTop="11" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Routing/f:RouteConfigurator.cs" caret="480" fromTop="15" />
       <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/f:RepositoryBaseUoW.cs" caret="1509" fromTop="15" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="465" fromTop="13" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax" caret="107" fromTop="2" />
       <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="611" fromTop="20" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11113" fromTop="7" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:TestController.cs" caret="112" fromTop="5" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:HomeController.cs" caret="489" fromTop="18" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1167" fromTop="15" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:Controls/f:userStatus.ascx" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1302" fromTop="19" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:MeetingController.cs" caret="2320" fromTop="20" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:UpcomingMeetings.aspx" caret="332" fromTop="11" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:meeting-summary.ascx" caret="530" fromTop="10" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:HomeController.cs" caret="603" fromTop="20" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="6657" fromTop="39" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Home/f:Index.aspx" caret="1509" fromTop="14" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:DisplayTemplates/f:Meeting.aspx" caret="1039" fromTop="16" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1318" fromTop="14" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="0" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="527" fromTop="13" />
     </RecentFiles>
     <RecentEdits>
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="2975" fromTop="28" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="2975" fromTop="10" />
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:IUserIdentity.cs" caret="2975" fromTop="5" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1917" fromTop="17" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="643" fromTop="13" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1495" fromTop="16" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="408" fromTop="9" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1481" fromTop="16" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="2060" fromTop="40" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="278" fromTop="10" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11765" fromTop="14" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11819" fromTop="14" />
       <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="755" fromTop="25" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1424" fromTop="27" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11112" fromTop="7" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11166" fromTop="7" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:TestController.cs" caret="430" fromTop="13" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="4797" fromTop="21" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1301" fromTop="19" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="643" fromTop="9" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:MeetingController.cs" caret="2259" fromTop="19" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:UpcomingMeetings.aspx" caret="71" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:meeting-summary.ascx" caret="225" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:meeting-summary.ascx" caret="487" fromTop="10" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:meeting-summary.ascx" caret="125" fromTop="2" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:UpcomingMeetings.aspx" caret="426" fromTop="13" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="2550" fromTop="17" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:HomeController.cs" caret="623" fromTop="21" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Home/f:Index.aspx" caret="118" fromTop="1" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="6813" fromTop="42" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:DisplayTemplates/f:Meeting.aspx" caret="3391" fromTop="41" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Home/f:Index.aspx" caret="982" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1105" fromTop="11" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="3505" fromTop="40" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:DisplayTemplates/f:Meeting.aspx" caret="71" fromTop="1" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="421" fromTop="10" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -71,7 +91,7 @@
       <Item value="namespace" priority="0" />
       <Item value="using" priority="0" />
       <Item value="Collections" priority="0" />
-      <Item value="Html" priority="0" />
+      <Item value="Html" priority="3" />
       <Item value="string" priority="0" />
       <Item value="IUserSession" priority="0" />
       <Item value="userSession" priority="2" />
@@ -98,6 +118,12 @@
       <Item value="username" priority="0" />
       <Item value="HttpContext" priority="0" />
       <Item value="MvcHtmlString" priority="0" />
+      <Item value="MeetingController" priority="0" />
+      <Item value="XPathSelect" priority="0" />
+      <Item value="x" priority="1" />
+      <Item value="ViewData" priority="0" />
+      <Item value="meetingService" priority="0" />
+      <Item value="DateTime" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="ForEach" priority="0" />
@@ -110,7 +136,10 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
       <Item value="InputForm" priority="0" />
-      <Item value="EditorForModel" priority="0" />
+      <Item value="EditorForModel" priority="1" />
+      <Item value="RenderPartial" priority="1" />
+      <Item value="DisplayFor" priority="0" />
+      <Item value="DisplayForModel" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Groop.Website.Helpers.IoC">
       <Item value="Resolve" priority="2" />
@@ -151,6 +180,12 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Groop.Core.IUserSession">
       <Item value="GetType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Domain.Meeting">
+      <Item value="MeetingId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Services.IMeetingService">
+      <Item value="GetNextMeeting" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

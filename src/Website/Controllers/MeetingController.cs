@@ -72,5 +72,11 @@ namespace Groop.Website.Controllers
             var upcomingMeetings = meetingService.GetUpcomingMeetings(DateTime.Now, 5);
             return View(upcomingMeetings);
         }
+
+        public ActionResult UnscheduledTopics()
+        {
+            return View();
+        }
     }
 }
+

@@ -134,7 +134,6 @@
     <Content Include="Views\Shared\Controls\footerExample.ascx" />
     <Content Include="Views\Shared\Controls\rightExample.ascx" />
     <Content Include="Views\Shared\Controls\mainExample.ascx" />
-    <Content Include="Views\Shared\Controls\header.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\hibernate.cfg.xml">
@@ -326,6 +325,9 @@
     <Content Include="Views\Shared\Default.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\old\style.css" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Views\Meeting\UnscheduledTopics.aspx" />
     <Content Include="Views\Meeting\meeting-summary.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Meeting.aspx" />
     <Content Include="Views\Shared\Submit.aspx" />
