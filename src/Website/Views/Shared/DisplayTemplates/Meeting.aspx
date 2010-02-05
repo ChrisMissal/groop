@@ -1,11 +1,12 @@
 <%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<Meeting>" %>
+<%@ Import Namespace="Groop.Website.Helpers.Extensions"%>
 
 	<%-- <div style="margin-bottom: 10px;"><img src="/Content/images/supliment-clouds.jpg" alt="" /></div> --%>
 	<div id="featuredtopic" class="post">
 		<h1 class="title"><%= Model.Title %></h1>
 		<div class="entry">
 			<p class="jq-presenter"><strong>Featured Topic: Presented By <%= Model.Presenter %></strong></p>
-			<%= Model.Description %>
+			<%= Html.Text(Model.Description) %>
 	    </div>
 	    <div class="rsvp" style="border:solid 1px black">
 	        This is the RSVP area

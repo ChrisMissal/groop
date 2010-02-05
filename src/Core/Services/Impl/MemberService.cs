@@ -6,28 +6,20 @@ namespace Groop.Core.Services.Impl
     public class MemberService : IMemberService
     {
         private readonly IMemberRepository memberRepository;
-        private readonly IUnitOfWorkFactory unitOfWorkFactory;
 
-        public MemberService(IMemberRepository memberRepository, IUnitOfWorkFactory unitOfWorkFactory)
+        public MemberService(IMemberRepository memberRepository)
         {
             this.memberRepository = memberRepository;
-            this.unitOfWorkFactory = unitOfWorkFactory;
         }
 
         public Member GetByUsername(string username)
         {
-            using (unitOfWorkFactory.Create())
-            {
-                return memberRepository.GetByUsername(username);
-            }
+            return memberRepository.GetByUsername(username);
         }
 
         public void Add(Member member)
         {
-            using (unitOfWorkFactory.Create())
-            {
-                memberRepository.Add(member);
-            }
+            memberRepository.Add(member);
         }
     }
 }

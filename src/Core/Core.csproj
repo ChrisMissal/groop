@@ -75,7 +75,6 @@
     <Compile Include="Data\IMemberRepository.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\ISponsorRepository.cs" />
-    <Compile Include="Data\IUnitOfWorkFactory.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\Attendee.cs" />
     <Compile Include="Domain\ContactMessage.cs" />
@@ -91,6 +90,8 @@
     <Compile Include="Domain\MemberAttendee.cs" />
     <Compile Include="Domain\PromotedAttendee.cs" />
     <Compile Include="Domain\Role.cs" />
+    <Compile Include="Domain\UnknownFacility.cs" />
+    <Compile Include="Domain\UnknownMeeting.cs" />
     <Compile Include="Domain\UserType.cs" />
     <Compile Include="FlashMessage.cs" />
     <Compile Include="IHttpContextProvider.cs" />

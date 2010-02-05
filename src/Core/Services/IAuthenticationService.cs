@@ -1,8 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Web;
 using System.Web.Security;
 using Groop.Core.Data;
@@ -22,14 +18,12 @@ namespace Groop.Core.Services
     public class AuthenticationService : IAuthenticationService
     {
         private readonly ICryptographer cryptographer;
-        private readonly IUnitOfWorkFactory unitOfWorkFactory;
         private readonly IMemberRepository memberRepository;
 
-        public AuthenticationService(IMemberRepository memberRepository, ICryptographer cryptographer, IUnitOfWorkFactory unitOfWorkFactory)
+        public AuthenticationService(IMemberRepository memberRepository, ICryptographer cryptographer)
         {
             this.memberRepository = memberRepository;
             this.cryptographer = cryptographer;
-            this.unitOfWorkFactory = unitOfWorkFactory;
         }
 
         #region Implementation of IAuthenticationService
@@ -42,23 +36,20 @@ namespace Groop.Core.Services
 
         public bool SignIn(string username, string password)
         {
-            using(unitOfWorkFactory.Create())
+            var member = memberRepository.GetByUsername(username);
+
+            if (member == null || !VerifyAccount(member, password))
             {
-                var member = memberRepository.GetByUsername(username);
-
-                if (member == null || !VerifyAccount(member, password))
-                {
-                    return false;
-                }
-
-                FormsAuthentication.SignOut();
-
-                //var identity = new UserIdentity().From(member);
-
-                //SetActiveIdentity(identity);
-
-                return true;
+                return false;
             }
+
+            FormsAuthentication.SignOut();
+
+            //var identity = new UserIdentity().From(member);
+
+            //SetActiveIdentity(identity);
+
+            return true;
         }
 
         public void SetActiveIdentity(IUserIdentity identity)

@@ -65,6 +65,7 @@
     <Compile Include="Helpers\Attributes\NoInputAttribute.cs" />
     <Compile Include="Helpers\Attributes\ShowAsRequiredAttribute.cs" />
     <Compile Include="Helpers\Attributes\UserDropDownAttribute.cs" />
+    <Compile Include="Helpers\Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Helpers\Extensions\MvcHelperExtensions.cs" />
     <Compile Include="Helpers\Filters\ValidateModelAttribute.cs" />
     <Compile Include="Helpers\IoC.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="Models\MeetingData.cs" />
     <Compile Include="Models\ModelExtensions.cs" />
     <Compile Include="Models\RsvpData.cs" />
-    <Compile Include="NHibernateSessionModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RebindTempDataAttribute.cs" />
     <Compile Include="Routing\IRouteConfigurator.cs" />
@@ -312,9 +312,9 @@
       <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
       <Name>Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
-      <Name>DataAccess</Name>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{8BC0DF11-7D1D-4BB4-A0EB-B43889792C80}</Project>
+      <Name>Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework\Framework.csproj">
       <Project>{837960F7-C0F2-441C-87DD-3AA3AFE199EC}</Project>

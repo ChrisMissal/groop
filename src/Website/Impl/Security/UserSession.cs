@@ -13,13 +13,11 @@ namespace Groop.Website.Impl.Security
         private readonly IAuthenticator authenticator;
         private readonly IMemberRepository memberRepository;
         private readonly IHttpContextProvider httpContextProvider;
-        private readonly IUnitOfWorkFactory unitOfWorkFactory;
 
-        public UserSession(IAuthenticator authenticator, IMemberRepository memberRepository, IHttpContextProvider httpContextProvider, IUnitOfWorkFactory unitOfWorkFactory)
+        public UserSession(IAuthenticator authenticator, IMemberRepository memberRepository, IHttpContextProvider httpContextProvider)
         {
             this.authenticator = authenticator;
             this.httpContextProvider = httpContextProvider;
-            this.unitOfWorkFactory = unitOfWorkFactory;
             this.memberRepository = memberRepository;
         }
 
@@ -35,10 +33,7 @@ namespace Groop.Website.Impl.Security
                 return null;
             }
 
-            using (unitOfWorkFactory.Create())
-            {
-                return memberRepository.GetByUsername(identity.Name);    
-            }
+            return memberRepository.GetByUsername(identity.Name);    
         }
 
         /// <summary>

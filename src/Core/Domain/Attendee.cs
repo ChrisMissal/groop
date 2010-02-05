@@ -28,17 +28,19 @@ namespace Groop.Core.Domain
         public virtual string Email
         {
             get { return email; }
+            set { email = value; }
         }
 
         public virtual Meeting Meeting
         {
             get { return meeting; }
+            set { meeting = value; }
         }
 
         public virtual DateTime DateRegistered
         {
             get { return dateRegistered; }
-            internal set { dateRegistered = value; }
+            set { dateRegistered = value; }
         }
 
         public override bool Equals(object obj)

@@ -69,13 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess\DataHelper.cs" />
-    <Compile Include="DataAccess\FacilityRepositoryTests.cs" />
-    <Compile Include="DataAccess\MeetingRepositoryTests.cs" />
-    <Compile Include="DataAccess\MemberRepositoryTests.cs" />
-    <Compile Include="DataAccess\RepositoryTestBase.cs" />
-    <Compile Include="DataAccess\SchemaGeneration.cs" />
-    <Compile Include="DataAccess\SponsorRepositoryTests.cs" />
+    <Compile Include="Data\FacilityRepositoryTests.cs" />
+    <Compile Include="Data\MeetingRepositoryTests.cs" />
+    <Compile Include="Data\MemberRepositoryTests.cs" />
+    <Compile Include="Data\SponsorRepositoryTests.cs" />
+    <Compile Include="Data\XmlRepositoryTesterBase.cs" />
+    <Compile Include="Data\XmlRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -119,9 +118,9 @@
       <Project>{6C050A4D-D368-45C1-82D7-9B62413E8556}</Project>
       <Name>Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6}</Project>
-      <Name>DataAccess</Name>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{8BC0DF11-7D1D-4BB4-A0EB-B43889792C80}</Project>
+      <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

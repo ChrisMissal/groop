@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace Groop.Core.Domain
 {
     public class Meeting
     {
-        private readonly IList<Attendee> attendees;
+        private List<Attendee> attendees;
         private readonly IList<MeetingSponsor> sponsors;
 
         public Meeting()
@@ -23,9 +24,10 @@ namespace Groop.Core.Domain
         public virtual string Presenter { get; set; }
         public virtual Facility Facility { get; set; }
 
-        public virtual IList<Attendee> Attendees
+        public virtual List<Attendee> Attendees
         {
             get { return attendees; }
+            set { attendees = value; }
         }
 
         public virtual int AttendeeCount

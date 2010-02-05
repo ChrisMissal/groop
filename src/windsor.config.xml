@@ -11,6 +11,7 @@
         <Smtp.Port>25</Smtp.Port>
         <Smtp.From>webmaster@Groop.org</Smtp.From>
         <Smtp.To>webmaster@Groop.org</Smtp.To>
+        <DataFile.Location>/groop-data.xml</DataFile.Location>
     </properties>
     <components>
 
@@ -22,10 +23,10 @@
 				   service="Groop.Core.IHttpContextProvider, Groop.Core"
 				   type="Groop.Website.Impl.HttpContextProvider, Groop.Website" />
 
-        <component id="ISessionBuilder"
+        <!--<component id="ISessionBuilder"
 				       service="Groop.DataAccess.ISessionBuilder, Groop.DataAccess"
 				       type="Groop.DataAccess.HybridSessionBuilder, Groop.DataAccess"
-				       lifestyle="singleton" />
+				       lifestyle="singleton" />-->
 
         <component id="IFormsAuthenticationGateway"
 				   service="Groop.Core.Security.IFormsAuthenticationGateway, Groop.Core"
@@ -89,20 +90,33 @@
 
         <component id="IMemberRepository"
                    service="Groop.Core.Data.IMemberRepository, Groop.Core"
-                   type="Groop.DataAccess.MemberRepository, Groop.DataAccess">
+                   type="Groop.Data.MemberRepository, Groop.Data">
         </component>
 
         <component id="IMeetingRepository"
                    service="Groop.Core.Data.IMeetingRepository, Groop.Core"
-                   type="Groop.DataAccess.MeetingRepository, Groop.DataAccess">
+                   type="Groop.Data.MeetingRepository, Groop.Data">
         </component>
 
         <component id="IFacilityRepository"
                    service="Groop.Core.Data.IFacilityRepository, Groop.Core"
-                   type="Groop.DataAccess.FacilityRepository, Groop.DataAccess">
+                   type="Groop.Data.FacilityRepository, Groop.Data">
         </component>
 
-        <component id="ISessionFactory"
+      <component id="IXmlRepository"
+                 service="Groop.Data.IXmlRepository, Groop.Data"
+                 type="Groop.Data.XmlRepository, Groop.Data">
+        <parameters>
+          <fileLocation>#{DataFile.Location}</fileLocation>
+          <serializationProvider>${ISerializationProvider}</serializationProvider>
+        </parameters>
+      </component>
+
+      <component id="ISerializationProvider"
+                 service="Groop.Data.ISerializationProvider, Groop.Data"
+                 type="Groop.Data.SerializationProvider, Groop.Data" />
+
+        <!--<component id="ISessionFactory"
                    service="Groop.DataAccess.ISessionFactory, Groop.DataAccess"
                    type="Groop.DataAccess.SessionFactory, Groop.DataAccess"
                    lifestyle="singleton">
@@ -118,7 +132,7 @@
                    service="Groop.Core.Data.IUnitOfWorkFactory, Groop.Core"
                    type="Groop.DataAccess.UnitOfWorkFactory, Groop.DataAccess"
                    lifestyle="singleton">
-        </component>
+        </component>-->
         
         <!--
         <component id="IUnitOfWork"

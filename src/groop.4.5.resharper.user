@@ -16,7 +16,6 @@
       <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:IUserIdentity.cs" caret="144" fromTop="5" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/f:IoC.cs" caret="267" fromTop="11" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Routing/f:RouteConfigurator.cs" caret="480" fromTop="15" />
-      <File id="1DC85ABB-03F5-4215-9AB9-2EFC9360F2E6/f:RepositoryBaseUoW.cs" caret="1509" fromTop="15" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax" caret="107" fromTop="2" />
       <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="611" fromTop="20" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:TestController.cs" caret="112" fromTop="5" />
@@ -33,13 +32,11 @@
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1318" fromTop="14" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="0" fromTop="0" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="527" fromTop="13" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:FacilityRepository.cs" caret="1255" fromTop="47" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="147" fromTop="6" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MemberRepository.cs" caret="1458" fromTop="56" />
     </RecentFiles>
     <RecentEdits>
-      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="2975" fromTop="28" />
-      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="2975" fromTop="10" />
-      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:IUserIdentity.cs" caret="2975" fromTop="5" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1917" fromTop="17" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1481" fromTop="16" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="2060" fromTop="40" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="278" fromTop="10" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11819" fromTop="14" />
@@ -65,6 +62,11 @@
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="3505" fromTop="40" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:DisplayTemplates/f:Meeting.aspx" caret="71" fromTop="1" />
       <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="421" fromTop="10" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:FacilityRepository.cs" caret="120" fromTop="5" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:FacilityRepository.cs" caret="1255" fromTop="47" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="0" fromTop="0" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="147" fromTop="6" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MemberRepository.cs" caret="1458" fromTop="56" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>

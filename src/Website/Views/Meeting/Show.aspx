@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Default.Master" Inherits="System.Web.Mvc.ViewPage" %>
+<%@ Import Namespace="Groop.Website.Helpers.Extensions"%>
 <%@ Import Namespace="Groop.Website.Controllers"%>
 <%@ Import Namespace="Groop.Core.Domain"%>
 
@@ -21,7 +22,7 @@
 		<div class="entry">
 			<p class="meta"><small><strong>Location:&nbsp;</strong><%=meeting.Facility.Name%><br /><strong>Time:&nbsp;</strong><%=meeting.StartTime.ToString("MMM, d yyyy h:mm tt")%> - <%=meeting.EndTime.ToString("MMM, d yyyy h:mm tt")%></small></p>
 			<p><strong>Featured Topic: Presented By <%= meeting.Presenter %></strong></p>
-			<p><%=meeting.Description%></p>
+			<p><%= Html.Text(meeting.Description)%></p>
 		</div>
 	</div>
 	<% } %>
