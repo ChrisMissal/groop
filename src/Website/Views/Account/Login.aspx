@@ -15,7 +15,7 @@
     <div id="loginContainer" class="centered">
         <h1>Login</h1>
         <% Html.RenderAction<FlashMessageComponentController>(x => x.GetMessages()); %>
-        <% using (Html.BeginForm()) { %>
+        <% using (Html.BeginForm<AccountController>(x => x.Login("", "", ""))) { %>
             <fieldset>
                 <label for="lusername"><span class="sectionHeader"> Login ID: </span></label>            
                 <%= Html.TextBox("Username", null, new { @class="input required" } )%><%= Html.ValidationMessage("Username","*") %>

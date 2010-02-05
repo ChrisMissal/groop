@@ -173,7 +173,7 @@ namespace Groop.Website.Controllers
 
             authenticator.SignIn(member);
 
-            return RedirectToAction("Index", "Account");
+            return RedirectToAction("Index");
         }
 
         #endregion

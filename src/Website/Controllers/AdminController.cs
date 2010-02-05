@@ -7,7 +7,7 @@ using Groop.Website.Models;
 
 namespace Groop.Website.Controllers
 {
-    [Authorize(Roles = "Administrators")]
+    [Authorize(Roles = "Administrator")]
     public class AdminController : Controller
     {
         private readonly IMeetingRepository meetingRepository;

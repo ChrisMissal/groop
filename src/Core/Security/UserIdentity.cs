@@ -44,6 +44,13 @@ namespace Groop.Core.Security
             First = member.FirstName;
             Last = member.LastName;
 
+            var type = member.UserType;
+            while(type >= 0)
+            {
+                roles.Add(type.ToString());
+                type--;
+            }
+
             return this;
         }
 
