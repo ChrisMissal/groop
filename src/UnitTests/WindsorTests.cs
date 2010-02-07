@@ -3,6 +3,8 @@ using System.Linq;
 using System.Web.Mvc;
 using Castle.Windsor;
 using System.Collections;
+using Groop.Core;
+using Groop.Data;
 using Groop.Website.Controllers;
 using NUnit.Framework;
 
@@ -22,6 +24,16 @@ namespace Groop.UnitTests
                 .ForEach(type => container.AddComponent(type.Name.ToLower(), type));
             
             return container;
+        }
+
+        [Test]
+        public void Can_resolve_IPathResolver()
+        {
+            var container = GetContainer();
+
+            var resolver = container.Resolve<IXmlRepository>();
+
+            Console.WriteLine(resolver.GetType());
         }
 
         [Test]

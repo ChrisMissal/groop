@@ -1,4 +1,6 @@
+using System;
 using System.Xml.Linq;
+using Groop.Core;
 using Groop.Data;
 using NUnit.Framework;
 
@@ -7,7 +9,7 @@ namespace Groop.IntegrationTests.Data
     [TestFixture]
     public class XmlRepositoryTesterBase
     {
-        private static readonly IXmlRepository instance = new XmlRepository("C:\\temp\\groop-data.xml", new SerializationProvider());
+        private static readonly IXmlRepository instance = new XmlRepository("groop-data.xml", new SerializationProvider(), new TempPathResolver());
 
         [SetUp]
         public void SetFixture()
@@ -24,6 +26,14 @@ namespace Groop.IntegrationTests.Data
         protected IXmlRepository TestXmlRepository
         {
             get { return instance; }
+        }
+    }
+
+    internal class TempPathResolver : IPathResolver
+    {
+        public string Resolve(string path)
+        {
+            return "C:\\temp\\" + path;
         }
     }
 }

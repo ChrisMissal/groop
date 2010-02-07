@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Groop.Core;
 using Groop.Data;
 using NUnit.Framework;
 
@@ -10,12 +11,13 @@ namespace Groop.IntegrationTests.Data
     public class XmlRepositoryTests
     {
         private readonly ISerializationProvider serializationProvider = new SerializationProvider();
+        private readonly IPathResolver pathResolver = new TempPathResolver();
 
         [Test]
         public void Ctor_will_create_file_if_it_doesnt_exist()
         {
             const string file = "\\temp.xml";
-            new XmlRepository(file, serializationProvider);
+            new XmlRepository(file, serializationProvider, pathResolver);
             new FileInfo(file).Delete();
         }
 
@@ -24,7 +26,7 @@ namespace Groop.IntegrationTests.Data
         {
             const string file = "\\somefile.xml";
 
-            var repository = new XmlRepository(file, serializationProvider);
+            var repository = new XmlRepository(file, serializationProvider, pathResolver);
 
             Assert.Throws<InvalidOperationException>(() => repository.Get<MeetingRepository>(0));
             Assert.Throws<InvalidOperationException>(() => repository.GetAll<MeetingRepository>());
@@ -38,7 +40,7 @@ namespace Groop.IntegrationTests.Data
         {
             const string file = "\\dummyfile.xml";
 
-            new XmlRepository(file, serializationProvider);
+            new XmlRepository(file, serializationProvider, pathResolver);
 
             var document = XDocument.Load(file);
 

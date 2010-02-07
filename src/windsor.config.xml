@@ -11,7 +11,7 @@
         <Smtp.Port>25</Smtp.Port>
         <Smtp.From>webmaster@Groop.org</Smtp.From>
         <Smtp.To>webmaster@Groop.org</Smtp.To>
-        <DataFile.Location>/groop-data.xml</DataFile.Location>
+        <DataFile.Location>~/data/groop-data.xml</DataFile.Location>
     </properties>
     <components>
 
@@ -48,7 +48,7 @@
 				   type="Groop.Core.Services.AuthenticationService, Groop.Core" />
 
         <!-- General -->
-        
+
         <component id="IValidator"
                    service="Groop.Core.Validation.IValidator, Groop.Core"
                    type="Groop.Core.Validation.PresentationValidator, Groop.Core" />
@@ -60,7 +60,7 @@
         <component id="IValidatorRegistry"
                    service="Castle.Components.Validator.IValidatorRegistry, Castle.Components.Validator"
                    type="Castle.Components.Validator.CachedValidationRegistry, Castle.Components.Validator" />
-        
+
         <!-- Services -->
 
         <component id="IEmailService"
@@ -103,18 +103,24 @@
                    type="Groop.Data.FacilityRepository, Groop.Data">
         </component>
 
-      <component id="IXmlRepository"
-                 service="Groop.Data.IXmlRepository, Groop.Data"
-                 type="Groop.Data.XmlRepository, Groop.Data">
-        <parameters>
-          <fileLocation>#{DataFile.Location}</fileLocation>
-          <serializationProvider>${ISerializationProvider}</serializationProvider>
-        </parameters>
-      </component>
 
-      <component id="ISerializationProvider"
-                 service="Groop.Data.ISerializationProvider, Groop.Data"
-                 type="Groop.Data.SerializationProvider, Groop.Data" />
+        <component id="ISerializationProvider"
+                   service="Groop.Data.ISerializationProvider, Groop.Data"
+                   type="Groop.Data.SerializationProvider, Groop.Data" />
+
+        <component id="IPathResolver"
+                 service="Groop.Core.IPathResolver, Groop.Core"
+                 type="Groop.Website.ApplicationPathResolver, Groop.Website" />
+
+
+        <component id="IXmlRepository"
+                   service="Groop.Data.IXmlRepository, Groop.Data"
+                   type="Groop.Data.XmlRepository, Groop.Data">
+            <parameters>
+                <fileLocation>#{DataFile.Location}</fileLocation>
+                <serializationProvider>${ISerializationProvider}</serializationProvider>
+            </parameters>
+        </component>
 
         <!--<component id="ISessionFactory"
                    service="Groop.DataAccess.ISessionFactory, Groop.DataAccess"
@@ -133,7 +139,7 @@
                    type="Groop.DataAccess.UnitOfWorkFactory, Groop.DataAccess"
                    lifestyle="singleton">
         </component>-->
-        
+
         <!--
         <component id="IUnitOfWork"
                    service="Groop.Core.Data.IUnitOfWork, Groop.Core"
