@@ -3,6 +3,7 @@
     <string />
     <integer />
     <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
@@ -11,62 +12,56 @@
   </NAntValidationSettings>
   <RecentFiles>
     <RecentFiles>
-      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:UserIdentity.cs" caret="191" fromTop="8" />
-      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="2975" fromTop="10" />
-      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:IUserIdentity.cs" caret="144" fromTop="5" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Helpers/f:IoC.cs" caret="267" fromTop="11" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Routing/f:RouteConfigurator.cs" caret="480" fromTop="15" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax" caret="107" fromTop="2" />
-      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="611" fromTop="20" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:TestController.cs" caret="112" fromTop="5" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1167" fromTop="15" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:Controls/f:userStatus.ascx" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:MeetingController.cs" caret="2320" fromTop="20" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:UpcomingMeetings.aspx" caret="332" fromTop="11" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:meeting-summary.ascx" caret="530" fromTop="10" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:HomeController.cs" caret="603" fromTop="20" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="6657" fromTop="39" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Home/f:Index.aspx" caret="1509" fromTop="14" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:DisplayTemplates/f:Meeting.aspx" caret="1039" fromTop="16" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1318" fromTop="14" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="0" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="527" fromTop="13" />
-      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:FacilityRepository.cs" caret="1255" fromTop="47" />
-      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="147" fromTop="6" />
-      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MemberRepository.cs" caret="1458" fromTop="56" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:LoginController.cs" caret="1304" fromTop="14" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Domain/f:Member.cs" caret="319" fromTop="13" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/d:Security/d:Cryptography/f:Cryptographer.cs" caret="2052" fromTop="17" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:DataChangedEventArgs.cs" caret="179" fromTop="6" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:XmlRepositoryEventArgs.cs" caret="244" fromTop="11" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:ItemAddedEventArgs.cs" caret="175" fromTop="6" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MemberRepository.cs" caret="1237" fromTop="12" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/d:Impl/f:MemberService.cs" caret="598" fromTop="20" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:UserIdentity.cs" caret="1614" fromTop="11" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/f:FormsAuthenticationGateway.cs" caret="428" fromTop="16" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/f:HttpContextProvider.cs" caret="329" fromTop="12" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Impl/d:Security/f:Authenticator.cs" caret="1667" fromTop="20" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="1558" fromTop="16" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="416" fromTop="0" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:FacilityRepository.cs" caret="1085" fromTop="12" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:XmlRepository.cs" caret="2284" fromTop="20" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Admin/f:ViewMeetings.aspx" caret="1062" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Models/f:MeetingData.cs" caret="105" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Admin/f:EditMeeting.aspx" caret="2237" fromTop="9" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:Controller.cs" caret="129" fromTop="3" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:ControllerBase.cs" caret="147" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AdminController.cs" caret="4037" fromTop="14" />
+      <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:Data/f:FacilityRepositoryTests.cs" caret="1256" fromTop="43" />
+      <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:Data/f:XmlRepositoryTesterBase.cs" caret="972" fromTop="19" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="2767" fromTop="4" />
+      <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:Data/f:MeetingRepositoryTests.cs" caret="4821" fromTop="4" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Domain/f:Meeting.cs" caret="802" fromTop="14" />
     </RecentFiles>
     <RecentEdits>
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="2060" fromTop="40" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="278" fromTop="10" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11819" fromTop="14" />
-      <File id="2B93AFC7-578C-4705-83BF-F094F2129F58/f:WindsorTests.cs" caret="755" fromTop="25" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Global.asax.cs" caret="1424" fromTop="27" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="11166" fromTop="7" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:TestController.cs" caret="430" fromTop="13" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="4797" fromTop="21" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="643" fromTop="9" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:MeetingController.cs" caret="2259" fromTop="19" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:UpcomingMeetings.aspx" caret="71" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:meeting-summary.ascx" caret="225" fromTop="5" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:meeting-summary.ascx" caret="487" fromTop="10" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:meeting-summary.ascx" caret="125" fromTop="2" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Meeting/f:UpcomingMeetings.aspx" caret="426" fromTop="13" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="2550" fromTop="17" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:HomeController.cs" caret="623" fromTop="21" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Home/f:Index.aspx" caret="118" fromTop="1" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/f:Web.config" caret="6813" fromTop="42" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:DisplayTemplates/f:Meeting.aspx" caret="3391" fromTop="41" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Home/f:Index.aspx" caret="982" fromTop="0" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="1105" fromTop="11" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/f:Default.Master" caret="3505" fromTop="40" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Shared/d:DisplayTemplates/f:Meeting.aspx" caret="71" fromTop="1" />
-      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Login/f:Index.aspx" caret="421" fromTop="10" />
-      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:FacilityRepository.cs" caret="120" fromTop="5" />
-      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:FacilityRepository.cs" caret="1255" fromTop="47" />
-      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="0" fromTop="0" />
-      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="147" fromTop="6" />
-      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MemberRepository.cs" caret="1458" fromTop="56" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Domain/f:UnknownMeeting.cs" caret="171" fromTop="6" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Account/f:Login.aspx" caret="842" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="5958" fromTop="11" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Services/f:IAuthenticationService.cs" caret="1558" fromTop="8" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:UserIdentity.cs" caret="183" fromTop="0" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:UserIdentity.cs" caret="738" fromTop="9" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Security/f:UserIdentity.cs" caret="1123" fromTop="12" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="2679" fromTop="13" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AccountController.cs" caret="3567" fromTop="15" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AdminController.cs" caret="4037" fromTop="5" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Admin/f:ViewMeetings.aspx" caret="1062" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Views/d:Admin/f:EditMeeting.aspx" caret="2237" fromTop="0" />
+      <File id="AA875666-EEA6-42A5-8D3D-A7C11AEF5C4F/d:Controllers/f:AdminController.cs" caret="4037" fromTop="19" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="2767" fromTop="10" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="2767" fromTop="17" />
+      <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:Data/f:XmlRepositoryTesterBase.cs" caret="972" fromTop="6" />
+      <File id="C88E35F3-D955-4101-BC1A-4EF44714DAF6/d:Data/f:XmlRepositoryTesterBase.cs" caret="972" fromTop="19" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="2767" fromTop="11" />
+      <File id="8BC0DF11-7D1D-4BB4-A0EB-B43889792C80/f:MeetingRepository.cs" caret="2767" fromTop="4" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Domain/f:Meeting.cs" caret="3624" fromTop="6" />
+      <File id="6C050A4D-D368-45C1-82D7-9B62413E8556/d:Domain/f:Meeting.cs" caret="417" fromTop="6" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -83,33 +78,33 @@
       <Item value="Controller" priority="1" />
       <Item value="ControllerBase" priority="0" />
       <Item value="messages" priority="0" />
-      <Item value="var" priority="0" />
+      <Item value="var" priority="12" />
       <Item value="ctor" priority="1" />
       <Item value="IAuthorizationFilter" priority="0" />
       <Item value="authenticationService" priority="1" />
-      <Item value="public" priority="1" />
+      <Item value="public" priority="7" />
       <Item value="static" priority="0" />
-      <Item value="class" priority="0" />
+      <Item value="class" priority="1" />
       <Item value="namespace" priority="0" />
       <Item value="using" priority="0" />
       <Item value="Collections" priority="0" />
-      <Item value="Html" priority="3" />
-      <Item value="string" priority="0" />
-      <Item value="IUserSession" priority="0" />
-      <Item value="userSession" priority="2" />
-      <Item value="override" priority="0" />
-      <Item value="GetType" priority="0" />
+      <Item value="Html" priority="6" />
+      <Item value="string" priority="2" />
+      <Item value="IUserSession" priority="1" />
+      <Item value="userSession" priority="3" />
+      <Item value="override" priority="1" />
+      <Item value="GetType" priority="1" />
       <Item value="LoginInput" priority="1" />
       <Item value="IoC" priority="2" />
       <Item value="ValidateModelAttribute" priority="0" />
-      <Item value="this" priority="1" />
+      <Item value="this" priority="3" />
       <Item value="IValidatorRunner" priority="2" />
-      <Item value="typeof" priority="1" />
+      <Item value="typeof" priority="3" />
       <Item value="viewModelType" priority="0" />
       <Item value="loginInput" priority="1" />
-      <Item value="if" priority="1" />
+      <Item value="if" priority="6" />
       <Item value="ModelState" priority="1" />
-      <Item value="return" priority="1" />
+      <Item value="return" priority="8" />
       <Item value="View" priority="1" />
       <Item value="IMemberService" priority="0" />
       <Item value="service" priority="0" />
@@ -122,10 +117,77 @@
       <Item value="MvcHtmlString" priority="0" />
       <Item value="MeetingController" priority="0" />
       <Item value="XPathSelect" priority="0" />
-      <Item value="x" priority="1" />
-      <Item value="ViewData" priority="0" />
-      <Item value="meetingService" priority="0" />
-      <Item value="DateTime" priority="0" />
+      <Item value="x" priority="2" />
+      <Item value="ViewData" priority="1" />
+      <Item value="meetingService" priority="1" />
+      <Item value="DateTime" priority="1" />
+      <Item value="attendees" priority="2" />
+      <Item value="Is" priority="17" />
+      <Item value="else" priority="1" />
+      <Item value="Assert" priority="2" />
+      <Item value="test" priority="4" />
+      <Item value="new" priority="14" />
+      <Item value="FacilityRepository" priority="0" />
+      <Item value="repository" priority="0" />
+      <Item value="MeetingServiceTests" priority="0" />
+      <Item value="void" priority="2" />
+      <Item value="dateTime" priority="1" />
+      <Item value="IXmlRepository" priority="3" />
+      <Item value="xmlRepository" priority="7" />
+      <Item value="protected" priority="0" />
+      <Item value="TestXmlRepository" priority="2" />
+      <Item value="configInterpreter" priority="0" />
+      <Item value="FileInfo" priority="0" />
+      <Item value="file" priority="0" />
+      <Item value="Initialize" priority="0" />
+      <Item value="fileLocation" priority="0" />
+      <Item value="fileInfo" priority="2" />
+      <Item value="XmlRepository" priority="0" />
+      <Item value="nguid" priority="0" />
+      <Item value="Guid" priority="0" />
+      <Item value="serializationProvider" priority="0" />
+      <Item value="stubMeetingRepository" priority="0" />
+      <Item value="Arg" priority="2" />
+      <Item value="null" priority="2" />
+      <Item value="GetService" priority="0" />
+      <Item value="meeting" priority="5" />
+      <Item value="description" priority="2" />
+      <Item value="Environment" priority="0" />
+      <Item value="HtmlHelperExtensions" priority="0" />
+      <Item value="output" priority="0" />
+      <Item value="T" priority="1" />
+      <Item value="value" priority="3" />
+      <Item value="meetingRepository" priority="6" />
+      <Item value="time" priority="0" />
+      <Item value="Meeting" priority="2" />
+      <Item value="email" priority="0" />
+      <Item value="foreach" priority="1" />
+      <Item value="attendee" priority="4" />
+      <Item value="virtual" priority="0" />
+      <Item value="Attendee" priority="0" />
+      <Item value="throw" priority="0" />
+      <Item value="InvalidAsynchronousStateException" priority="0" />
+      <Item value="InvalidOperationException" priority="0" />
+      <Item value="Facility" priority="3" />
+      <Item value="AccountController" priority="1" />
+      <Item value="UserIdentity" priority="1" />
+      <Item value="MemberwiseClone" priority="0" />
+      <Item value="Member" priority="0" />
+      <Item value="UserType" priority="1" />
+      <Item value="member" priority="0" />
+      <Item value="while" priority="0" />
+      <Item value="type" priority="2" />
+      <Item value="roles" priority="0" />
+      <Item value="AdminController" priority="0" />
+      <Item value="facilityRepository" priority="1" />
+      <Item value="IFacilityRepository" priority="0" />
+      <Item value="MockRepository" priority="1" />
+      <Item value="IMeetingRepository" priority="0" />
+      <Item value="controller" priority="0" />
+      <Item value="MeetingData" priority="1" />
+      <Item value="MeetingId" priority="0" />
+      <Item value="FacilityId" priority="0" />
+      <Item value="meetingData" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="ForEach" priority="0" />
@@ -188,6 +250,112 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Groop.Core.Services.IMeetingService">
       <Item value="GetNextMeeting" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Is">
+      <Item value="EqualTo" priority="12" />
+      <Item value="LessThanOrEqualTo" priority="0" />
+      <Item value="SameAs" priority="1" />
+      <Item value="TypeOf" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="Fail" priority="0" />
+      <Item value="That" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Data.FacilityRepository">
+      <Item value="GetAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Data.IMeetingRepository">
+      <Item value="GetUpcomingMeetings" priority="0" />
+      <Item value="Stub" priority="1" />
+      <Item value="GetNextMeeting" priority="1" />
+      <Item value="AssertWasNotCalled" priority="0" />
+      <Item value="Add" priority="0" />
+      <Item value="AssertWasCalled" priority="0" />
+      <Item value="Update" priority="1" />
+      <Item value="GetById" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.IntegrationTests.Data.XmlRepositoryTesterBase">
+      <Item value="TestXmlRepository" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.Windsor.Configuration.Interpreters.XmlInterpreter">
+      <Item value="Kernel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileInfo">
+      <Item value="Exists" priority="0" />
+      <Item value="Create" priority="0" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="GetCallingAssembly" priority="0" />
+      <Item value="GetAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Guid">
+      <Item value="ToString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Data.XmlRepository">
+      <Item value="GetType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="Namespace" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Replace" priority="1" />
+      <Item value="ToLowerInvariant" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Rhino.Mocks.Arg`1">
+      <Item value="Is" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Rhino.Mocks.Constraints.IsArg`1">
+      <Item value="Anything" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Rhino.Mocks.Interfaces.IMethodOptions`1">
+      <Item value="Repeat" priority="1" />
+      <Item value="Return" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Services.Impl.MeetingService">
+      <Item value="GetNextMeeting" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="NewLine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Domain.Attendee">
+      <Item value="Meeting" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Security.UserIdentity">
+      <Item value="From" priority="0" />
+      <Item value="Roles" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Groop.Core.Domain.UserType">
+      <Item value="Administrator" priority="1" />
+      <Item value="Member" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Contains" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Domain.Member">
+      <Item value="UserType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Domain.UserType">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Rhino.Mocks.MockRepository">
+      <Item value="GenerateMock" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Website.Controllers.AdminController">
+      <Item value="SaveMeeting" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Core.Data.IFacilityRepository">
+      <Item value="Stub" priority="0" />
+      <Item value="GetById" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Groop.Website.Models.MeetingData">
+      <Item value="MeetingId" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

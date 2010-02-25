@@ -1,4 +1,5 @@
 using System;
+using System.Xml.Serialization;
 
 namespace Groop.Core.Domain
 {
@@ -31,6 +32,7 @@ namespace Groop.Core.Domain
             set { email = value; }
         }
 
+        [XmlIgnore]
         public virtual Meeting Meeting
         {
             get { return meeting; }
