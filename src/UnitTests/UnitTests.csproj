@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="Core\Presentation\ContactMessageDataTests.cs" />
     <Compile Include="Core\Security\UserIdentityTests.cs" />
+    <Compile Include="Core\Services\MemberServiceTests.cs" />
     <Compile Include="Core\Services\MeetingServiceTests.cs" />
     <Compile Include="Model\Domain\MemberTests.cs" />
     <Compile Include="Model\Domain\SponsorTests.cs" />
