@@ -4,22 +4,27 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using Groop.Core;
 
 namespace Groop.Data
 {
     public class XmlRepository : IXmlRepository
     {
+        public IPathResolver PathResolver { get; set; }
         private readonly string fileLocation;
+        private readonly IPathResolver pathResolver;
         private readonly XDocument document;
         private readonly IDictionary<Type, XmlSerializer> serializers = new Dictionary<Type, XmlSerializer>();
 
-        public XmlRepository(string fileLocation, ISerializationProvider serializationProvider)
+        public XmlRepository(string fileLocation, ISerializationProvider serializationProvider, IPathResolver pathResolver)
         {
-            this.fileLocation = fileLocation;
+            PathResolver = pathResolver;
+            this.fileLocation = pathResolver.Resolve(fileLocation);
+            this.pathResolver = pathResolver;
 
-            InitializeFile(fileLocation);
+            InitializeFile(this.fileLocation);
 
-            document = XDocument.Load(fileLocation);
+            document = XDocument.Load(this.fileLocation);
 
             foreach (var serializer in serializationProvider.XmlSerializers)
             {
@@ -27,7 +32,7 @@ namespace Groop.Data
                 serializers.Add(type, serializer);
             }
             Initialize(document, serializers.Select(x => x.Key));
-            document.Save(fileLocation);
+            document.Save(this.fileLocation);
         }
 
         public event EventHandler ItemAddedEventHandler = (o, e) => { };
@@ -148,6 +153,11 @@ namespace Groop.Data
 
             if(fileInfo.Exists)
                 return;
+
+            if (!fileInfo.Directory.Exists)
+            {
+                fileInfo.Directory.Create();
+            }
 
             using (var writer = fileInfo.CreateText())
             {

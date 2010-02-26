@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<groop-data>
+  <Meetings />
+  <Sponsors />
+  <Members>
+    <Member xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <MemberId>1</MemberId>
+      <Username>ChrisMissal</Username>
+      <FirstName>Chris</FirstName>
+      <LastName>Missal</LastName>
+      <Email>chris.missal@gmail.com</Email>
+      <Password>NFg18pBNxtHyNuk5kENgF8OUaQU=</Password>
+      <PasswordSalt>6DL9zEvEeR9lYUOhaUVw1niZwYHhuRQDqGCZ11Ozf4W73k5XfiSNUx+NoDw/ZjHc1SIIv5JTjM+ImJa7Z87rxQ==</PasswordSalt>
+      <UserType>Administrator</UserType>
+    </Member>
+  </Members>
+  <Facilities />
+</groop-data>
